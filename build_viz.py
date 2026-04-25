@@ -1,4 +1,4 @@
-"""viz_data.json + 템플릿 → visualization.html (자체 포함 단일 파일)."""
+"""viz_data.json + 템플릿 → visualization.html (자체 포함, KO/EN 토글)."""
 import json
 import os
 
@@ -12,7 +12,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>Roboticists Oral History — 행적 시각화</title>
+<title>Roboticists Oral History — Career Timeline</title>
 <style>
 :root {
   --bg: #fafafa;
@@ -21,20 +21,28 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   --border: #e5e5e5;
   --row-h: 14px;
   --col-w: 7px;
-  --name-w: 140px;
+  --name-w: 200px;
   --year-h: 28px;
 }
 * { box-sizing: border-box; }
 body { margin: 0; font-family: -apple-system, "Helvetica Neue", "Apple SD Gothic Neo", sans-serif;
        background: var(--bg); color: var(--fg); font-size: 13px; }
-header { padding: 12px 18px; border-bottom: 1px solid var(--border); background: #fff; }
-h1 { margin: 0 0 4px; font-size: 16px; }
+header { padding: 12px 18px; border-bottom: 1px solid var(--border); background: #fff;
+         display: flex; justify-content: space-between; align-items: flex-start; }
+.title h1 { margin: 0 0 4px; font-size: 16px; }
 .sub { color: var(--muted); font-size: 12px; }
+.lang-toggle { display: flex; gap: 0; border: 1px solid var(--border); border-radius: 4px;
+               overflow: hidden; }
+.lang-toggle button { border: 0; background: #fff; padding: 6px 14px; font-size: 12px;
+                     cursor: pointer; font-weight: 500; color: var(--muted); }
+.lang-toggle button.active { background: #222; color: #fff; }
+.lang-toggle button:not(.active):hover { background: #f0f0f0; }
+
 .controls { padding: 10px 18px; border-bottom: 1px solid var(--border); background: #fff;
             display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
 .controls label { font-size: 12px; }
 .controls input[type=text] { padding: 4px 8px; border: 1px solid var(--border); border-radius: 4px;
-                             font-size: 12px; width: 160px; }
+                             font-size: 12px; width: 180px; }
 .controls select { padding: 4px 6px; border: 1px solid var(--border); border-radius: 4px;
                    font-size: 12px; background: #fff; }
 .legend { display: flex; gap: 8px; flex-wrap: wrap; padding: 6px 18px;
@@ -51,8 +59,6 @@ h1 { margin: 0 0 4px; font-size: 16px; }
 .year-header .tick { position: absolute; top: 8px; font-size: 10px; color: var(--muted);
                      transform: translateX(-50%); }
 .year-header .tick.major { font-weight: 600; color: var(--fg); }
-.year-header .gridline { position: absolute; top: var(--year-h); width: 1px;
-                         background: rgba(0,0,0,0.04); }
 
 .rows { position: relative; }
 .row { position: relative; height: var(--row-h); border-bottom: 1px solid rgba(0,0,0,0.03); }
@@ -67,7 +73,6 @@ h1 { margin: 0 0 4px; font-size: 16px; }
          width: var(--col-w); border-radius: 1px; cursor: pointer;
          transition: transform 0.05s; }
 .event:hover { transform: scaleY(1.4); z-index: 4; }
-.event.dim { opacity: 0.12; }
 .event.inferred { opacity: 0.45; }
 .event.inferred:hover { opacity: 0.85; }
 
@@ -77,7 +82,7 @@ h1 { margin: 0 0 4px; font-size: 16px; }
            box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
 .tooltip.show { opacity: 1; pointer-events: auto; }
 .tooltip .person { font-weight: 600; margin-bottom: 4px; }
-.tooltip .year { color: #aaa; font-size: 11px; }
+.tooltip .year { color: #aaa; font-size: 11px; font-weight: normal; }
 .tooltip .ev { margin: 4px 0; }
 .tooltip .meta { color: #aaa; font-size: 11px; }
 .tooltip a { color: #6cf; text-decoration: none; display: block; margin-top: 6px;
@@ -86,34 +91,41 @@ h1 { margin: 0 0 4px; font-size: 16px; }
 
 footer { padding: 8px 18px; color: var(--muted); font-size: 11px;
          border-top: 1px solid var(--border); background: #fff; }
+footer a { color: var(--muted); }
 </style>
 </head>
 <body>
 <header>
-  <h1>Roboticists Oral History — 행적 시각화</h1>
-  <div class="sub">110명의 거장 / 2778개 이벤트 (반투명 셀 = 원문에 연도 미상, 앞뒤 컨텍스트로 추론)</div>
+  <div class="title">
+    <h1 id="page_title"></h1>
+    <div class="sub" id="page_sub"></div>
+  </div>
+  <div class="lang-toggle">
+    <button id="btn_ko" class="active">한국어</button>
+    <button id="btn_en">English</button>
+  </div>
 </header>
 
 <div class="controls">
-  <label>정렬:
+  <label><span id="lbl_sort"></span>
     <select id="sort">
-      <option value="alpha">이름순 (가나다)</option>
-      <option value="birth">출생/최초연도순 (오래된 순)</option>
-      <option value="count">이벤트 수 (많은 순)</option>
+      <option value="birth"></option>
+      <option value="alpha"></option>
+      <option value="count"></option>
     </select>
   </label>
-  <label>검색:
-    <input type="text" id="search" placeholder="인물명 (영문)">
+  <label><span id="lbl_search"></span>
+    <input type="text" id="search">
   </label>
-  <label>페이즈:
+  <label><span id="lbl_phase"></span>
     <select id="phase">
-      <option value="">전체</option>
-      <option value="k12">k12</option>
-      <option value="undergrad">undergrad</option>
-      <option value="grad">grad</option>
-      <option value="early_career">early_career</option>
-      <option value="mid_career">mid_career</option>
-      <option value="senior">senior</option>
+      <option value=""></option>
+      <option value="k12"></option>
+      <option value="undergrad"></option>
+      <option value="grad"></option>
+      <option value="early_career"></option>
+      <option value="mid_career"></option>
+      <option value="senior"></option>
     </select>
   </label>
   <span class="sub" id="visible_count"></span>
@@ -129,8 +141,7 @@ footer { padding: 8px 18px; color: var(--muted); font-size: 11px;
 <div class="tooltip" id="tooltip"></div>
 
 <footer>
-  데이터 출처: <a href="__REPO__" target="_blank">__REPO__</a> ·
-  클릭 시 GitHub의 한국어 인터뷰로 이동
+  <span id="footer_text"></span>
 </footer>
 
 <script>
@@ -150,23 +161,105 @@ const TYPE_COLOR = {
   '외부 영향':    '#5D4037',
 };
 
+const TYPE_EN = {
+  '개인사':       'Personal',
+  '교육':         'Education',
+  '직업 이력':    'Career',
+  '연구·프로젝트': 'Research / Projects',
+  '창업·산업':    'Industry / Founding',
+  '학회·커뮤니티': 'Community',
+  '수상·명예':    'Honors',
+  '네트워크':     'Network',
+  '실패·전환':    'Setback / Pivot',
+  '외부 영향':    'External Events',
+};
+
+const PHASE_LABELS = {
+  ko: { '': '전체', k12: 'K-12 (학창)', undergrad: '학부생',
+        grad: '대학원생', early_career: '박사후·신임',
+        mid_career: '중견', senior: '시니어/원로' },
+  en: { '': 'All', k12: 'K-12', undergrad: 'Undergrad',
+        grad: 'Grad student', early_career: 'Early career',
+        mid_career: 'Mid career', senior: 'Senior' },
+};
+
+const I18N = {
+  ko: {
+    title: 'Roboticists Oral History — 행적 시각화',
+    sub: '110명의 거장 / 2778개 이벤트 (반투명 셀 = 원문에 연도 미상, 앞뒤 컨텍스트로 추론)',
+    sort: '정렬:',
+    sort_birth: '출생/최초연도순',
+    sort_alpha: '이름순 (가나다)',
+    sort_count: '이벤트 수 (많은 순)',
+    search: '검색:',
+    search_ph: '이름 (영문)',
+    phase: '페이즈:',
+    visible: (n) => `표시 중: ${n}명`,
+    tip_timeline: '→ 타임라인의 해당 라인 열기',
+    tip_interview: '→ 한국어 인터뷰 전문 열기',
+    tip_year_inferred: (raw, y) => `(원문: "${raw}" · 추론 ${y}년)`,
+    footer: `데이터: <a href="${REPO}" target="_blank">${REPO}</a> · 클릭 시 GitHub의 한국어 인터뷰로 이동`,
+  },
+  en: {
+    title: 'Roboticists Oral History — Career Timeline',
+    sub: '110 pioneers / 2778 events (translucent cell = year unknown in source, inferred from context)',
+    sort: 'Sort:',
+    sort_birth: 'By birth / earliest year',
+    sort_alpha: 'Alphabetical',
+    sort_count: 'Event count (most first)',
+    search: 'Search:',
+    search_ph: 'name',
+    phase: 'Phase:',
+    visible: (n) => `Showing: ${n} people`,
+    tip_timeline: '→ Open this line in timeline (Korean)',
+    tip_interview: '→ Open full English interview',
+    tip_year_inferred: (raw, y) => `(source: "${raw}" · inferred ${y})`,
+    footer: `Data: <a href="${REPO}" target="_blank">${REPO}</a> · Click to open the original interview on GitHub`,
+  },
+};
+
 const COL_W = 7, ROW_H = 14;
 const Y_MIN = VIZ_DATA.year_min;
 const Y_MAX = VIZ_DATA.year_max;
 
+let lang = 'ko';
 let activeTypes = new Set(Object.keys(TYPE_COLOR));
-let currentSort = 'alpha';
+let currentSort = 'birth';
 let currentSearch = '';
 let currentPhase = '';
+
+function applyLang() {
+  const t = I18N[lang];
+  document.title = t.title;
+  document.getElementById('page_title').textContent = t.title;
+  document.getElementById('page_sub').textContent = t.sub;
+  document.getElementById('lbl_sort').textContent = t.sort;
+  document.getElementById('lbl_search').textContent = t.search;
+  document.getElementById('lbl_phase').textContent = t.phase;
+  document.getElementById('search').placeholder = t.search_ph;
+  document.getElementById('footer_text').innerHTML = t.footer;
+
+  const sortSel = document.getElementById('sort');
+  sortSel.options[0].textContent = t.sort_birth;
+  sortSel.options[1].textContent = t.sort_alpha;
+  sortSel.options[2].textContent = t.sort_count;
+
+  const phaseSel = document.getElementById('phase');
+  const ph = PHASE_LABELS[lang];
+  for (const o of phaseSel.options) o.textContent = ph[o.value];
+
+  buildLegend();
+  render();
+}
 
 function buildLegend() {
   const el = document.getElementById('legend');
   el.innerHTML = '';
   for (const [t, c] of Object.entries(TYPE_COLOR)) {
     const it = document.createElement('div');
-    it.className = 'item';
-    it.dataset.type = t;
-    it.innerHTML = `<span class="swatch" style="background:${c}"></span><span>${t}</span>`;
+    it.className = 'item' + (activeTypes.has(t) ? '' : ' off');
+    const label = lang === 'en' ? TYPE_EN[t] : t;
+    it.innerHTML = `<span class="swatch" style="background:${c}"></span><span>${label}</span>`;
     it.onclick = () => {
       if (activeTypes.has(t)) activeTypes.delete(t);
       else activeTypes.add(t);
@@ -197,9 +290,9 @@ function buildYearHeader() {
 function getPersonOrder() {
   const ps = Object.keys(VIZ_DATA.persons);
   if (currentSort === 'alpha') {
-    return ps.sort();
+    return ps.sort((a, b) =>
+      (VIZ_DATA.persons[a].full_name || a).localeCompare(VIZ_DATA.persons[b].full_name || b));
   } else if (currentSort === 'birth') {
-    // birth_year 없으면 그 인물의 최초 이벤트 연도로 fallback
     const earliest = {};
     for (const e of VIZ_DATA.events) {
       if (e.year != null) {
@@ -224,68 +317,79 @@ function render() {
   const span = Y_MAX - Y_MIN + 1;
   const width = span * COL_W;
 
-  // 인물별 이벤트 모으기
   const byPerson = {};
   for (const p of order) byPerson[p] = [];
   for (const e of VIZ_DATA.events) {
     if (e.year == null) continue;
     if (!activeTypes.has(e.type)) continue;
     if (currentPhase && e.phase !== currentPhase) continue;
-    if (currentSearch && !e.person.includes(currentSearch.toLowerCase())) continue;
     if (byPerson[e.person]) byPerson[e.person].push(e);
   }
 
   let visible = 0;
+  const searchLower = currentSearch.toLowerCase();
   for (const p of order) {
-    const evs = byPerson[p];
-    if (currentSearch && !p.includes(currentSearch.toLowerCase())) continue;
+    const meta = VIZ_DATA.persons[p];
+    const fullName = meta.full_name || p;
+    if (searchLower && !fullName.toLowerCase().includes(searchLower)
+                    && !p.toLowerCase().includes(searchLower)) continue;
     visible++;
+
+    const evs = byPerson[p];
     const row = document.createElement('div');
     row.className = 'row';
-    row.style.width = (width + 140) + 'px';
-    row.style.marginLeft = '-140px';
+    row.style.width = (width + 200) + 'px';
+    row.style.marginLeft = '-200px';
 
     const name = document.createElement('div');
     name.className = 'name';
-    name.textContent = p;
-    name.title = `${p} (이벤트 ${VIZ_DATA.persons[p].event_count}개)`;
-    name.onclick = () => window.open(`${REPO}/blob/main/translated_kor/${p}.md`, '_blank');
+    const yrTag = meta.birth_year ? ` (${meta.birth_year}-)` : '';
+    name.textContent = fullName + yrTag;
+    name.title = `${fullName}${yrTag}\n${meta.event_count} events`;
+    name.onclick = () => {
+      const tgt = lang === 'en' ? 'ethw_source_eng' : 'translated_kor';
+      window.open(`${REPO}/blob/main/${tgt}/${p}.md`, '_blank');
+    };
     row.appendChild(name);
 
     for (const e of evs) {
       const div = document.createElement('div');
       div.className = 'event' + (e.year_inferred ? ' inferred' : '');
-      div.style.left = (140 + (e.year - Y_MIN) * COL_W) + 'px';
+      div.style.left = (200 + (e.year - Y_MIN) * COL_W) + 'px';
       div.style.background = TYPE_COLOR[e.type] || '#666';
       div.addEventListener('mouseenter', (ev) => showTip(ev, e));
       div.addEventListener('mouseleave', hideTip);
       div.addEventListener('click', () => clickEvent(e));
       row.appendChild(div);
     }
-
     rows.appendChild(row);
   }
-  document.getElementById('visible_count').textContent =
-    `표시 중: ${visible}명`;
+  document.getElementById('visible_count').textContent = I18N[lang].visible(visible);
 }
 
 let tipTimeout;
 function showTip(ev, e) {
   clearTimeout(tipTimeout);
   const t = document.getElementById('tooltip');
+  const i = I18N[lang];
   const tlUrl = e.line_no
     ? `${REPO}/blob/main/timelines_kor/${e.person}.md#L${e.line_no}`
     : `${REPO}/blob/main/timelines_kor/${e.person}.md`;
-  const intUrl = `${REPO}/blob/main/translated_kor/${e.person}.md`;
+  const intUrl = lang === 'en'
+    ? `${REPO}/blob/main/ethw_source_eng/${e.person}.md`
+    : `${REPO}/blob/main/translated_kor/${e.person}.md`;
+  const fullName = (VIZ_DATA.persons[e.person]?.full_name) || e.person;
   const yearLabel = e.year_inferred
-    ? `(원문: "${escapeHtml(e.year_raw)}" · 추론 ${e.year}년)`
+    ? i.tip_year_inferred(escapeHtml(e.year_raw), e.year)
     : `(${escapeHtml(e.year_raw)})`;
+  const typeLabel = lang === 'en' ? (TYPE_EN[e.type] || e.type) : e.type;
+  const phaseLabel = PHASE_LABELS[lang][e.phase] || e.phase;
   t.innerHTML = `
-    <div class="person">${e.person} <span class="year">${yearLabel}</span></div>
+    <div class="person">${escapeHtml(fullName)} <span class="year">${yearLabel}</span></div>
     <div class="ev">${escapeHtml(e.event)}</div>
-    <div class="meta">${e.type} / ${e.subtype} / ${e.phase}</div>
-    <a href="${tlUrl}" target="_blank">→ 타임라인의 해당 라인 열기</a>
-    <a href="${intUrl}" target="_blank">→ 한국어 인터뷰 전문 열기</a>
+    <div class="meta">${typeLabel} / ${e.subtype} / ${phaseLabel}</div>
+    <a href="${tlUrl}" target="_blank">${i.tip_timeline}</a>
+    <a href="${intUrl}" target="_blank">${i.tip_interview}</a>
   `;
   t.classList.add('show');
   positionTip(ev);
@@ -295,10 +399,9 @@ function positionTip(ev) {
   const x = ev.clientX + 12;
   const y = ev.clientY + 12;
   t.style.left = Math.min(x, window.innerWidth - 380) + 'px';
-  t.style.top = Math.min(y, window.innerHeight - 160) + 'px';
+  t.style.top = Math.min(y, window.innerHeight - 180) + 'px';
 }
 function hideTip() {
-  // 200ms 지연: 사용자가 툴팁의 링크로 이동할 시간
   tipTimeout = setTimeout(() => {
     document.getElementById('tooltip').classList.remove('show');
   }, 250);
@@ -310,7 +413,7 @@ function clickEvent(e) {
   window.open(url, '_blank');
 }
 function escapeHtml(s) {
-  return s.replace(/[&<>"']/g, c => ({
+  return String(s).replace(/[&<>"']/g, c => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[c]));
 }
@@ -318,12 +421,23 @@ function escapeHtml(s) {
 document.getElementById('tooltip').addEventListener('mouseenter', () => clearTimeout(tipTimeout));
 document.getElementById('tooltip').addEventListener('mouseleave', hideTip);
 document.getElementById('sort').addEventListener('change', (e) => { currentSort = e.target.value; render(); });
-document.getElementById('search').addEventListener('input', (e) => { currentSearch = e.target.value.toLowerCase(); render(); });
+document.getElementById('search').addEventListener('input', (e) => { currentSearch = e.target.value; render(); });
 document.getElementById('phase').addEventListener('change', (e) => { currentPhase = e.target.value; render(); });
+document.getElementById('btn_ko').addEventListener('click', () => {
+  lang = 'ko';
+  document.getElementById('btn_ko').classList.add('active');
+  document.getElementById('btn_en').classList.remove('active');
+  applyLang();
+});
+document.getElementById('btn_en').addEventListener('click', () => {
+  lang = 'en';
+  document.getElementById('btn_en').classList.add('active');
+  document.getElementById('btn_ko').classList.remove('active');
+  applyLang();
+});
 
-buildLegend();
 buildYearHeader();
-render();
+applyLang();
 </script>
 </body>
 </html>

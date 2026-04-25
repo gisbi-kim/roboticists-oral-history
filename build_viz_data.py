@@ -68,13 +68,26 @@ def build_line_map(person):
     return mapping
 
 
+FULL_NAME_RE = re.compile(r'^#\s*(.+?)\s*[—–-]\s*행적')
+
+
+def get_full_name(person):
+    path = os.path.join(TIMELINES_DIR, f'{person}.md')
+    with open(path, 'r', encoding='utf-8') as f:
+        first = f.readline().strip()
+    m = FULL_NAME_RE.match(first)
+    return m.group(1).strip() if m else person
+
+
 def main():
-    # 인물별 line map
+    # 인물별 line map + 풀네임
     line_maps = {}
+    full_names = {}
     for fn in os.listdir(TIMELINES_DIR):
         if fn.endswith('.md'):
             person = fn[:-3]
             line_maps[person] = build_line_map(person)
+            full_names[person] = get_full_name(person)
 
     # CSV 로드 + 부착
     events = []
@@ -162,6 +175,7 @@ def main():
     persons = sorted(set(e['person'] for e in events))
     person_meta = {
         p: {
+            'full_name': full_names.get(p, p),
             'birth_year': person_birth.get(p),
             'event_count': person_events[p],
         }
