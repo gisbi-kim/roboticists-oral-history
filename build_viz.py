@@ -61,8 +61,11 @@ header { padding: 12px 18px; border-bottom: 1px solid var(--border); background:
 .year-header .tick.major { font-weight: 600; color: var(--fg); }
 
 .rows { position: relative; }
-.row { position: relative; height: var(--row-h); border-bottom: 1px solid rgba(0,0,0,0.03); }
+.row { position: relative; height: var(--row-h); border-bottom: 1px solid rgba(0,0,0,0.03);
+       transition: background 0.08s; }
 .row:nth-child(even) { background: rgba(0,0,0,0.015); }
+.row.hl, .row.hl:nth-child(even) { background: #fff4c2; }
+.row.hl .name { background: #fff4c2; font-weight: 600; }
 .name { position: absolute; left: 0; top: 0; width: var(--name-w); padding: 0 8px;
         line-height: var(--row-h); font-size: 11px; color: var(--fg);
         white-space: nowrap; overflow: hidden;
@@ -344,6 +347,8 @@ function render() {
     row.className = 'row';
     row.style.width = (width + 280) + 'px';
     row.style.marginLeft = '-280px';
+    row.addEventListener('mouseenter', () => row.classList.add('hl'));
+    row.addEventListener('mouseleave', () => row.classList.remove('hl'));
 
     const name = document.createElement('div');
     name.className = 'name';
