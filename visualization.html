@@ -72,6 +72,8 @@ header { padding: 12px 18px; border-bottom: 1px solid var(--border); background:
 .event:hover { transform: scaleY(1.4); z-index: 4; }
 .event.inferred { opacity: 0.45; }
 .event.inferred:hover { opacity: 0.85; }
+.event.selected { outline: 2px solid #111; outline-offset: 1px; z-index: 6; }
+.event.selected.inferred { opacity: 1; }
 
 .tooltip { position: fixed; background: #222; color: #fff; padding: 8px 10px;
            border-radius: 6px; font-size: 12px; max-width: 360px; line-height: 1.5;
@@ -240,6 +242,8 @@ let activeTypes = new Set(Object.keys(TYPE_COLOR));
 let currentSort = 'birth';
 let currentSearch = '';
 let currentPhase = '';
+let selectedDiv = null;
+let selectedEvent = null;
 
 function applyLang() {
   const t = I18N[lang];
@@ -341,6 +345,7 @@ function render() {
   const span = Y_MAX - Y_MIN + 1;
   const width = span * COL_W;
 
+  // 화살표 네비 위해 인물별 이벤트를 연도순 정렬
   const byPerson = {};
   for (const p of order) byPerson[p] = [];
   for (const e of VIZ_DATA.events) {
@@ -349,6 +354,7 @@ function render() {
     if (currentPhase && e.phase !== currentPhase) continue;
     if (byPerson[e.person]) byPerson[e.person].push(e);
   }
+  for (const p of order) byPerson[p].sort((a, b) => a.year - b.year);
 
   let visible = 0;
   const searchLower = currentSearch.toLowerCase();
@@ -387,10 +393,16 @@ function render() {
       div.className = 'event' + (e.year_inferred ? ' inferred' : '');
       div.style.left = (NAME_W + (e.year - Y_MIN) * COL_W) + 'px';
       div.style.background = TYPE_COLOR[e.type] || '#666';
+      div._eventData = e;
       div.addEventListener('mouseenter', (ev) => showTip(ev, e));
       div.addEventListener('mousemove', positionTip);
       div.addEventListener('mouseleave', hideTip);
-      div.addEventListener('click', () => clickEvent(e));
+      div.addEventListener('click', (ev) => { ev.stopPropagation(); clickEvent(e, div); });
+      // 선택 상태가 유지되도록 재렌더 후에도 같은 셀 다시 표시
+      if (selectedEvent && e === selectedEvent) {
+        div.classList.add('selected');
+        selectedDiv = div;
+      }
       row.appendChild(div);
     }
     rows.appendChild(row);
@@ -437,12 +449,74 @@ function positionTip(ev) {
 }
 function hideTip() {
   tipTimeout = setTimeout(() => {
-    document.getElementById('tooltip').classList.remove('show');
+    if (selectedDiv && selectedEvent) {
+      // 선택된 셀이 있으면 그 정보로 복원
+      showTipAtCell(selectedDiv, selectedEvent);
+    } else {
+      document.getElementById('tooltip').classList.remove('show');
+    }
   }, 250);
 }
-function clickEvent(e) {
-  const tgt = lang === 'en' ? 'ethw_source_eng' : 'translated_kor';
-  window.open(`${REPO}/blob/main/${tgt}/${e.person}.md`, '_blank');
+function clickEvent(e, div) {
+  // 같은 셀 다시 클릭 → 해제 (토글)
+  if (selectedDiv === div) {
+    clearSelection();
+    return;
+  }
+  selectEvent(div, e);
+}
+
+function selectEvent(div, e) {
+  if (selectedDiv && selectedDiv !== div) selectedDiv.classList.remove('selected');
+  selectedDiv = div;
+  selectedEvent = e;
+  div.classList.add('selected');
+  showTipAtCell(div, e);
+}
+
+function clearSelection() {
+  if (selectedDiv) selectedDiv.classList.remove('selected');
+  selectedDiv = null;
+  selectedEvent = null;
+  document.getElementById('tooltip').classList.remove('show');
+}
+
+function showTipAtCell(div, e) {
+  // 호버 툴팁과 동일 콘텐츠를 셀 옆에 고정
+  clearTimeout(tipTimeout);
+  const t = document.getElementById('tooltip');
+  const i = I18N[lang];
+  const _pm = VIZ_DATA.persons[e.person];
+  const fullName = (_pm && _pm.full_name) || e.person;
+  const eventText = (lang === 'en' && e.event_en) ? e.event_en : e.event;
+  const yearRaw = (lang === 'en' && e.year_raw_en) ? e.year_raw_en : e.year_raw;
+  const yearLabel = e.year_inferred
+    ? i.tip_year_inferred(escapeHtml(yearRaw), e.year)
+    : `(${escapeHtml(yearRaw)})`;
+  const typeLabel = lang === 'en' ? (TYPE_EN[e.type] || e.type) : e.type;
+  const phaseLabel = PHASE_LABELS[lang][e.phase] || e.phase;
+  const hint = lang === 'en'
+    ? '<div class="meta" style="margin-top:6px;color:#7af">← →: navigate · Esc: deselect</div>'
+    : '<div class="meta" style="margin-top:6px;color:#7af">← →: 좌/우 셀 이동 · Esc: 해제</div>';
+  t.innerHTML = `
+    <div class="person">${escapeHtml(fullName)} <span class="year">${yearLabel}</span></div>
+    <div class="ev">${escapeHtml(eventText)}</div>
+    <div class="meta">${typeLabel} / ${e.subtype} / ${phaseLabel}</div>
+    ${hint}
+  `;
+  t.classList.add('show');
+  // 셀 옆에 위치 (오른쪽이 화면 밖이면 왼쪽으로)
+  const rect = div.getBoundingClientRect();
+  const tw = t.offsetWidth || 320;
+  const th = t.offsetHeight || 120;
+  let x = rect.right + 8;
+  let y = rect.top - 4;
+  if (x + tw > window.innerWidth - 8) x = rect.left - tw - 8;
+  if (x < 8) x = 8;
+  if (y + th > window.innerHeight - 8) y = window.innerHeight - th - 8;
+  if (y < 8) y = 8;
+  t.style.left = x + 'px';
+  t.style.top = y + 'px';
 }
 function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, c => ({
@@ -466,6 +540,27 @@ document.getElementById('btn_en').addEventListener('click', () => {
   document.getElementById('btn_en').classList.add('active');
   document.getElementById('btn_ko').classList.remove('active');
   applyLang();
+});
+
+// 키보드: ←/→ 같은 인물의 이전/다음 셀, Esc 해제
+document.addEventListener('keydown', (ev) => {
+  if (!selectedDiv) return;
+  if (ev.key === 'Escape') { ev.preventDefault(); clearSelection(); return; }
+  if (ev.key !== 'ArrowLeft' && ev.key !== 'ArrowRight') return;
+  // 입력 필드에선 무시
+  const tag = (ev.target && ev.target.tagName) || '';
+  if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA') return;
+  ev.preventDefault();
+  const dir = ev.key === 'ArrowLeft' ? -1 : 1;
+  const row = selectedDiv.parentElement;
+  if (!row) return;
+  const cells = Array.from(row.querySelectorAll('.event'));
+  const idx = cells.indexOf(selectedDiv);
+  const newDiv = cells[idx + dir];
+  if (newDiv && newDiv._eventData) {
+    selectEvent(newDiv, newDiv._eventData);
+    newDiv.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+  }
 });
 
 // 윈도우 리사이즈 → cell 폭 재계산 + 재렌더 (디바운스)
