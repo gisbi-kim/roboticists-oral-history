@@ -230,9 +230,20 @@ const I18N = {
   },
 };
 
-const COL_W = 7, ROW_H = 14;
+const ROW_H = 14;
+const NAME_W = 280;
+const MIN_COL_W = 7;
+let COL_W = MIN_COL_W;  // 윈도우 너비에 맞춰 동적 계산
 const Y_MIN = VIZ_DATA.year_min;
 const Y_MAX = VIZ_DATA.year_max;
+const YEAR_SPAN = Y_MAX - Y_MIN + 1;
+
+function computeColW() {
+  // 사용 가능한 가로 너비를 연 수로 나눠서 cell 너비 결정
+  const avail = window.innerWidth - NAME_W - 24;  // 24px 우측 여유
+  const w = Math.max(MIN_COL_W, Math.floor(avail / YEAR_SPAN));
+  COL_W = w;
+}
 
 let lang = 'ko';
 let activeTypes = new Set(Object.keys(TYPE_COLOR));
@@ -358,8 +369,8 @@ function render() {
     const evs = byPerson[p];
     const row = document.createElement('div');
     row.className = 'row';
-    row.style.width = (width + 280) + 'px';
-    row.style.marginLeft = '-280px';
+    row.style.width = (width + NAME_W) + 'px';
+    row.style.marginLeft = (-NAME_W) + 'px';
     row.addEventListener('mouseenter', () => row.classList.add('hl'));
     row.addEventListener('mouseleave', () => row.classList.remove('hl'));
 
@@ -381,7 +392,7 @@ function render() {
     for (const e of evs) {
       const div = document.createElement('div');
       div.className = 'event' + (e.year_inferred ? ' inferred' : '');
-      div.style.left = (280 + (e.year - Y_MIN) * COL_W) + 'px';
+      div.style.left = (NAME_W + (e.year - Y_MIN) * COL_W) + 'px';
       div.style.background = TYPE_COLOR[e.type] || '#666';
       div.addEventListener('mouseenter', (ev) => showTip(ev, e));
       div.addEventListener('mousemove', positionTip);
@@ -463,6 +474,18 @@ document.getElementById('btn_en').addEventListener('click', () => {
   applyLang();
 });
 
+// 윈도우 리사이즈 → cell 폭 재계산 + 재렌더 (디바운스)
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    computeColW();
+    buildYearHeader();
+    render();
+  }, 100);
+});
+
+computeColW();
 buildYearHeader();
 applyLang();
 </script>
