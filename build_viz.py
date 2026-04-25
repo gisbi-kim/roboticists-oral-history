@@ -32,7 +32,9 @@ body { margin: 0; font-family: -apple-system, "Helvetica Neue", "Apple SD Gothic
 header { padding: 12px 18px; border-bottom: 1px solid var(--border); background: #fff;
          display: flex; justify-content: space-between; align-items: flex-start; }
 .title h1 { margin: 0 0 4px; font-size: 16px; }
-.sub { color: var(--muted); font-size: 12px; }
+.sub { color: var(--muted); font-size: 12px; margin-top: 2px; }
+.sub a { color: #06c; text-decoration: none; }
+.sub a:hover { text-decoration: underline; }
 .lang-toggle { display: flex; gap: 0; border: 1px solid var(--border); border-radius: 4px;
                overflow: hidden; }
 .lang-toggle button { border: 0; background: #fff; padding: 6px 14px; font-size: 12px;
@@ -152,6 +154,7 @@ footer a { color: var(--muted); }
   <div class="title">
     <h1 id="page_title"></h1>
     <div class="sub" id="page_sub"></div>
+    <div class="sub" id="page_source"></div>
   </div>
   <div class="lang-toggle">
     <button id="btn_ko" class="active">한국어</button>
@@ -265,6 +268,7 @@ const I18N = {
   ko: {
     title: 'Roboticists Oral History — 커리어 시각화',
     sub: '110명의 거장 / 2778개 이벤트 (반투명 셀 = 원문에 연도 미상, 앞뒤 컨텍스트로 추론)',
+    source: '원문 출처: <a href="https://ethw.org/Oral-History:List_of_all_Oral_Histories" target="_blank">ETHW Oral Histories</a> (IEEE History Center) · 본 사이트는 한국어 번역과 시각화를 추가한 비영리 학습 자료',
     sort: '정렬:',
     sort_birth: '출생/최초연도순',
     sort_alpha: '이름순 (가나다)',
@@ -285,6 +289,7 @@ const I18N = {
   en: {
     title: 'Roboticists Oral History — Career Timeline',
     sub: '110 pioneers / 2778 events (translucent cell = year unknown in source, inferred from context)',
+    source: 'Source: <a href="https://ethw.org/Oral-History:List_of_all_Oral_Histories" target="_blank">ETHW Oral Histories</a> (IEEE History Center) · This site adds Korean translations and visualization for non-commercial study',
     sort: 'Sort:',
     sort_birth: 'By birth / earliest year',
     sort_alpha: 'Alphabetical',
@@ -335,6 +340,7 @@ function applyLang() {
   document.title = t.title;
   document.getElementById('page_title').textContent = t.title;
   document.getElementById('page_sub').textContent = t.sub;
+  document.getElementById('page_source').innerHTML = t.source;
   document.getElementById('lbl_sort').textContent = t.sort;
   document.getElementById('lbl_search').textContent = t.search;
   document.getElementById('lbl_phase').textContent = t.phase;
