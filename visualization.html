@@ -35,6 +35,11 @@ header { padding: 12px 18px; border-bottom: 1px solid var(--border); background:
                              font-size: 12px; width: 180px; }
 .controls select { padding: 4px 6px; border: 1px solid var(--border); border-radius: 4px;
                    font-size: 12px; background: #fff; }
+.controls input[type=range] { width: 90px; vertical-align: middle; }
+.controls .yr_label { display: inline-block; min-width: 86px; text-align: center; font-variant-numeric: tabular-nums; }
+.controls button { padding: 4px 10px; border: 1px solid var(--border); border-radius: 4px;
+                   font-size: 12px; background: #fff; cursor: pointer; }
+.controls button:hover { background: #f0f0f0; }
 .legend { display: flex; gap: 8px; flex-wrap: wrap; padding: 6px 18px;
           border-bottom: 1px solid var(--border); background: #fff; }
 .legend .item { display: flex; align-items: center; gap: 4px; cursor: pointer; user-select: none;
@@ -127,6 +132,12 @@ footer a { color: var(--muted); }
       <option value="senior"></option>
     </select>
   </label>
+  <label><span id="lbl_year"></span>
+    <input type="range" id="ymin">
+    <span class="yr_label" id="yr_label"></span>
+    <input type="range" id="ymax">
+  </label>
+  <button id="btn_reset"></button>
   <span class="sub" id="visible_count"></span>
 </div>
 
@@ -198,6 +209,8 @@ const I18N = {
     search: '검색:',
     search_ph: '이름 (영문)',
     phase: '페이즈:',
+    year_range: '연도:',
+    reset: '필터 초기화',
     visible: (n) => `표시 중: ${n}명`,
     tip_year_inferred: (raw, y) => `(원문: "${raw}" · 추론 ${y}년)`,
     footer: `데이터: <a href="${REPO}" target="_blank">${REPO}</a>`,
@@ -214,6 +227,8 @@ const I18N = {
     search: 'Search:',
     search_ph: 'name',
     phase: 'Phase:',
+    year_range: 'Years:',
+    reset: 'Reset filters',
     visible: (n) => `Showing: ${n} people`,
     tip_year_inferred: (raw, y) => `(source: "${raw}" · inferred ${y})`,
     footer: `Data: <a href="${REPO}" target="_blank">${REPO}</a>`,
@@ -242,8 +257,11 @@ let activeTypes = new Set(Object.keys(TYPE_COLOR));
 let currentSort = 'birth';
 let currentSearch = '';
 let currentPhase = '';
+let yearMin = Y_MIN;
+let yearMax = Y_MAX;
 let selectedDiv = null;
 let selectedEvent = null;
+let urlUpdatePending = false;
 
 function applyLang() {
   const t = I18N[lang];
@@ -253,6 +271,8 @@ function applyLang() {
   document.getElementById('lbl_sort').textContent = t.sort;
   document.getElementById('lbl_search').textContent = t.search;
   document.getElementById('lbl_phase').textContent = t.phase;
+  document.getElementById('lbl_year').textContent = t.year_range;
+  document.getElementById('btn_reset').textContent = t.reset;
   document.getElementById('search').placeholder = t.search_ph;
   document.getElementById('footer_text').innerHTML = t.footer;
 
@@ -282,6 +302,7 @@ function buildLegend() {
       else activeTypes.add(t);
       it.classList.toggle('off');
       render();
+      updateUrl();
     };
     el.appendChild(it);
   }
@@ -350,6 +371,7 @@ function render() {
   for (const p of order) byPerson[p] = [];
   for (const e of VIZ_DATA.events) {
     if (e.year == null) continue;
+    if (e.year < yearMin || e.year > yearMax) continue;
     if (!activeTypes.has(e.type)) continue;
     if (currentPhase && e.phase !== currentPhase) continue;
     if (byPerson[e.person]) byPerson[e.person].push(e);
@@ -472,6 +494,7 @@ function selectEvent(div, e) {
   selectedEvent = e;
   div.classList.add('selected');
   showTipAtCell(div, e);
+  updateUrl();
 }
 
 function clearSelection() {
@@ -479,6 +502,7 @@ function clearSelection() {
   selectedDiv = null;
   selectedEvent = null;
   document.getElementById('tooltip').classList.remove('show');
+  updateUrl();
 }
 
 function showTipAtCell(div, e) {
@@ -534,13 +558,132 @@ document.getElementById('btn_ko').addEventListener('click', () => {
   document.getElementById('btn_ko').classList.add('active');
   document.getElementById('btn_en').classList.remove('active');
   applyLang();
+  updateUrl();
 });
 document.getElementById('btn_en').addEventListener('click', () => {
   lang = 'en';
   document.getElementById('btn_en').classList.add('active');
   document.getElementById('btn_ko').classList.remove('active');
   applyLang();
+  updateUrl();
 });
+
+// 연도 범위 슬라이더 초기화
+const ymin = document.getElementById('ymin');
+const ymax = document.getElementById('ymax');
+ymin.min = Y_MIN; ymin.max = Y_MAX; ymin.value = yearMin;
+ymax.min = Y_MIN; ymax.max = Y_MAX; ymax.value = yearMax;
+function updateYearRangeUI() {
+  document.getElementById('yr_label').textContent = `${yearMin} – ${yearMax}`;
+}
+function onRangeChange() {
+  let lo = parseInt(ymin.value, 10);
+  let hi = parseInt(ymax.value, 10);
+  if (lo > hi) { const tmp = lo; lo = hi; hi = tmp; }
+  yearMin = lo; yearMax = hi;
+  ymin.value = lo; ymax.value = hi;
+  updateYearRangeUI();
+  render();
+  updateUrl();
+}
+ymin.addEventListener('input', onRangeChange);
+ymax.addEventListener('input', onRangeChange);
+
+document.getElementById('btn_reset').addEventListener('click', () => {
+  activeTypes = new Set(Object.keys(TYPE_COLOR));
+  currentSort = 'birth';
+  currentSearch = '';
+  currentPhase = '';
+  yearMin = Y_MIN; yearMax = Y_MAX;
+  ymin.value = Y_MIN; ymax.value = Y_MAX;
+  document.getElementById('search').value = '';
+  document.getElementById('phase').value = '';
+  document.getElementById('sort').value = 'birth';
+  clearSelection();
+  updateYearRangeUI();
+  buildLegend();
+  render();
+  updateUrl();
+});
+
+// 모든 상태 변경 시 URL 갱신 훅
+const _origSort = document.getElementById('sort').onchange;
+document.getElementById('sort').addEventListener('change', updateUrl);
+document.getElementById('search').addEventListener('input', updateUrl);
+document.getElementById('phase').addEventListener('change', updateUrl);
+
+// ---- 퍼말링크: URL ↔ state ----
+function updateUrl() {
+  if (urlUpdatePending) return;
+  urlUpdatePending = true;
+  requestAnimationFrame(() => {
+    urlUpdatePending = false;
+    const p = new URLSearchParams();
+    if (lang !== 'ko') p.set('lang', lang);
+    if (currentSort !== 'birth') p.set('sort', currentSort);
+    if (currentSearch) p.set('q', currentSearch);
+    if (currentPhase) p.set('phase', currentPhase);
+    if (yearMin !== Y_MIN) p.set('y1', yearMin);
+    if (yearMax !== Y_MAX) p.set('y2', yearMax);
+    const allTypes = Object.keys(TYPE_COLOR);
+    if (activeTypes.size !== allTypes.length) {
+      // 짧게: 비활성만 기록 (보통 더 적음)
+      const off = allTypes.filter(t => !activeTypes.has(t));
+      p.set('off', off.join(','));
+    }
+    if (selectedEvent) {
+      const key = `${selectedEvent.person}|${selectedEvent.year}|${selectedEvent.event.slice(0, 50)}`;
+      p.set('sel', key);
+    }
+    const qs = p.toString();
+    const url = window.location.pathname + (qs ? '?' + qs : '') + window.location.hash;
+    history.replaceState(null, '', url);
+  });
+}
+
+function applyUrlState() {
+  const p = new URLSearchParams(window.location.search);
+  if (p.get('lang') === 'en') lang = 'en';
+  if (p.get('sort')) currentSort = p.get('sort');
+  if (p.get('q')) currentSearch = p.get('q');
+  if (p.get('phase')) currentPhase = p.get('phase');
+  if (p.get('y1')) yearMin = parseInt(p.get('y1'), 10) || Y_MIN;
+  if (p.get('y2')) yearMax = parseInt(p.get('y2'), 10) || Y_MAX;
+  if (p.get('off')) {
+    const offSet = new Set(p.get('off').split(','));
+    activeTypes = new Set(Object.keys(TYPE_COLOR).filter(t => !offSet.has(t)));
+  }
+  // UI 동기화
+  document.getElementById('sort').value = currentSort;
+  document.getElementById('search').value = currentSearch;
+  document.getElementById('phase').value = currentPhase;
+  ymin.value = yearMin; ymax.value = yearMax;
+  if (lang === 'en') {
+    document.getElementById('btn_en').classList.add('active');
+    document.getElementById('btn_ko').classList.remove('active');
+  }
+}
+
+function applySelectionFromUrl() {
+  const p = new URLSearchParams(window.location.search);
+  const sel = p.get('sel');
+  if (!sel) return;
+  const parts = sel.split('|');
+  if (parts.length < 3) return;
+  const [person, yearStr, prefix] = parts;
+  const year = parseInt(yearStr, 10);
+  // DOM에서 매칭 셀 찾기
+  const allDivs = document.querySelectorAll('.event');
+  for (const d of allDivs) {
+    const e = d._eventData;
+    if (e && e.person === person && e.year === year &&
+        e.event.slice(0, 50) === prefix) {
+      selectEvent(d, e);
+      d.scrollIntoView({ block: 'center', inline: 'center' });
+      return;
+    }
+  }
+}
 
 // 키보드: ←/→ 같은 인물의 이전/다음 셀, Esc 해제
 document.addEventListener('keydown', (ev) => {
@@ -576,7 +719,10 @@ window.addEventListener('resize', () => {
 
 computeColW();
 buildYearHeader();
+applyUrlState();
+updateYearRangeUI();
 applyLang();
+applySelectionFromUrl();
 </script>
 </body>
 </html>
