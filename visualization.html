@@ -11,7 +11,7 @@
   --border: #e5e5e5;
   --row-h: 14px;
   --col-w: 7px;
-  --name-w: 200px;
+  --name-w: 280px;
   --year-h: 28px;
 }
 * { box-sizing: border-box; }
@@ -55,10 +55,14 @@ header { padding: 12px 18px; border-bottom: 1px solid var(--border); background:
 .row:nth-child(even) { background: rgba(0,0,0,0.015); }
 .name { position: absolute; left: 0; top: 0; width: var(--name-w); padding: 0 8px;
         line-height: var(--row-h); font-size: 11px; color: var(--fg);
-        white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        white-space: nowrap; overflow: hidden;
         border-right: 1px solid var(--border); background: #fff;
-        cursor: pointer; }
-.name:hover { background: #eef; }
+        display: flex; align-items: center; gap: 4px; }
+.name .pname { flex: 1; overflow: hidden; text-overflow: ellipsis; cursor: pointer; }
+.name .pname:hover { color: #06c; text-decoration: underline; }
+.name .lnk { color: #888; font-size: 10px; padding: 0 3px; border-radius: 2px;
+             text-decoration: none; flex-shrink: 0; }
+.name .lnk:hover { background: #eef; color: #06c; }
 .event { position: absolute; height: calc(var(--row-h) - 2px); top: 1px;
          width: var(--col-w); border-radius: 1px; cursor: pointer;
          transition: transform 0.05s; }
@@ -186,7 +190,9 @@ const I18N = {
     phase: '페이즈:',
     visible: (n) => `표시 중: ${n}명`,
     tip_year_inferred: (raw, y) => `(원문: "${raw}" · 추론 ${y}년)`,
-    footer: `데이터: <a href="${REPO}" target="_blank">${REPO}</a> · 셀/이름 클릭 시 GitHub의 한국어 인터뷰 열림`,
+    footer: `데이터: <a href="${REPO}" target="_blank">${REPO}</a>`,
+    link_timeline: '[타임라인]',
+    link_interview: '[인터뷰전문]',
   },
   en: {
     title: 'Roboticists Oral History — Career Timeline',
@@ -200,7 +206,9 @@ const I18N = {
     phase: 'Phase:',
     visible: (n) => `Showing: ${n} people`,
     tip_year_inferred: (raw, y) => `(source: "${raw}" · inferred ${y})`,
-    footer: `Data: <a href="${REPO}" target="_blank">${REPO}</a> · Click cell/name to open the original interview on GitHub`,
+    footer: `Data: <a href="${REPO}" target="_blank">${REPO}</a>`,
+    link_timeline: '[Timeline]',
+    link_interview: '[Interview]',
   },
 };
 
@@ -324,24 +332,28 @@ function render() {
     const evs = byPerson[p];
     const row = document.createElement('div');
     row.className = 'row';
-    row.style.width = (width + 200) + 'px';
-    row.style.marginLeft = '-200px';
+    row.style.width = (width + 280) + 'px';
+    row.style.marginLeft = '-280px';
 
     const name = document.createElement('div');
     name.className = 'name';
     const yrTag = meta.birth_year ? ` (${meta.birth_year}-)` : '';
-    name.textContent = fullName + yrTag;
-    name.title = `${fullName}${yrTag}\n${meta.event_count} events`;
-    name.onclick = () => {
-      const tgt = lang === 'en' ? 'ethw_source_eng' : 'translated_kor';
-      window.open(`${REPO}/blob/main/${tgt}/${p}.md`, '_blank');
+    const intvTgt = lang === 'en' ? 'ethw_source_eng' : 'translated_kor';
+    const i18 = I18N[lang];
+    name.innerHTML = `
+      <span class="pname" title="${escapeHtml(fullName)}${yrTag} · ${meta.event_count} events">${escapeHtml(fullName)}${yrTag}</span>
+      <a class="lnk" href="${REPO}/blob/main/timelines_kor/${p}.md" target="_blank">${i18.link_timeline}</a>
+      <a class="lnk" href="${REPO}/blob/main/${intvTgt}/${p}.md" target="_blank">${i18.link_interview}</a>
+    `;
+    name.querySelector('.pname').onclick = () => {
+      window.open(`${REPO}/blob/main/${intvTgt}/${p}.md`, '_blank');
     };
     row.appendChild(name);
 
     for (const e of evs) {
       const div = document.createElement('div');
       div.className = 'event' + (e.year_inferred ? ' inferred' : '');
-      div.style.left = (200 + (e.year - Y_MIN) * COL_W) + 'px';
+      div.style.left = (280 + (e.year - Y_MIN) * COL_W) + 'px';
       div.style.background = TYPE_COLOR[e.type] || '#666';
       div.addEventListener('mouseenter', (ev) => showTip(ev, e));
       div.addEventListener('mousemove', positionTip);
