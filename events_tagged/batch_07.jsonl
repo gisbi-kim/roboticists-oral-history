@@ -1,0 +1,274 @@
+{"person": "matthies", "year_raw": "출생", "event": "캐나다 Saskatchewan주 North Battleford 출생, 5형제 중 장남", "type": "개인사", "subtype": "birth", "phase": "k12"}
+{"person": "matthies", "year_raw": "고교 12학년", "event": "11학년 컴퓨터과학 과목 수강, 화학에서 컴퓨터로 관심 전환", "type": "교육", "subtype": "k12_enroll", "phase": "k12"}
+{"person": "matthies", "year_raw": "학부 시절", "event": "Saskatchewan에서 학사 학위 취득", "type": "교육", "subtype": "bs_graduate", "phase": "undergrad"}
+{"person": "matthies", "year_raw": "석사 과정", "event": "University of Waterloo 컴퓨터과학 석사", "type": "교육", "subtype": "ms_graduate", "phase": "grad"}
+{"person": "matthies", "year_raw": "1981년 가을", "event": "Carnegie Mellon University 박사 과정 입학", "type": "교육", "subtype": "phd_enroll", "phase": "grad"}
+{"person": "matthies", "year_raw": "1982년 가을", "event": "CMU에서 컴퓨터 비전 연구 시작 (Hans Moravec 모바일 로봇 랩)", "type": "교육", "subtype": "phd_advisor", "phase": "grad"}
+{"person": "matthies", "year_raw": "박사 과정 중", "event": "Hans Moravec → Steve Schaffer로 지도 교수 변경, Takeo Kanade 공동 지도", "type": "교육", "subtype": "phd_advisor", "phase": "grad"}
+{"person": "matthies", "year_raw": "박사 과정 중", "event": "스테레오비전 기반 모바일 로봇 자율 항법 연구 (visual odometry의 시초)", "type": "교육", "subtype": "phd_thesis", "phase": "grad"}
+{"person": "matthies", "year_raw": "박사 과정 중", "event": "Hans Moravec, Alberto Elfes와 occupancy grid 다중 센서 융합 논문 공동 집필", "type": "연구·프로젝트", "subtype": "paper", "phase": "grad"}
+{"person": "matthies", "year_raw": "1989", "event": "CMU 박사 학위 취득 후 JPL 입사 (Senior Research Scientist)", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "matthies", "year_raw": "1989 직후", "event": "Mars Rover Sample Return (MRSR) 프로그램 참여, 스테레오비전 알고리즘 개발 (반시간 → 6초로 단축)", "type": "연구·프로젝트", "subtype": "breakthrough", "phase": "early_career"}
+{"person": "matthies", "year_raw": "1989~1992 무렵", "event": "MRSR 프로그램 취소 후 마이크로 로봇 방향으로 전환", "type": "실패·전환", "subtype": "pivot", "phase": "early_career"}
+{"person": "matthies", "year_raw": "1990년대 중반", "event": "착륙 위험 탐지(landing hazard detection) 연구비 확보, 팀 구축", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "mid_career"}
+{"person": "matthies", "year_raw": "1997", "event": "Mars Pathfinder 미션 (Sojourner 로버) 지원, Light Striper 센서 디버깅 참여", "type": "연구·프로젝트", "subtype": "demo", "phase": "mid_career"}
+{"person": "matthies", "year_raw": "1990년대~2000년대", "event": "DARPA Demo II, PerceptOR 프로그램에서 근적외선/LIDAR 식생 분류 연구", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "mid_career"}
+{"person": "matthies", "year_raw": "2003~2004 무렵", "event": "Mars Exploration Rover (MER) 착륙용 수평속도 추정 카메라 시스템 긴급 개발", "type": "연구·프로젝트", "subtype": "breakthrough", "phase": "mid_career"}
+{"person": "matthies", "year_raw": "21년간", "event": "JPL Computer Vision Group 책임자 역임", "type": "직업 이력", "subtype": "admin_role", "phase": "mid_career"}
+{"person": "matthies", "year_raw": "2년간", "event": "Mars 사무소에서 내부 기술 투자 조정 업무", "type": "직업 이력", "subtype": "admin_role", "phase": "senior"}
+{"person": "matthies", "year_raw": "2008", "event": "IEEE Robotics and Automation Award 공동 수상 (로봇 우주 탐사 기여)", "type": "수상·명예", "subtype": "lifetime_award", "phase": "senior"}
+{"person": "matthies", "year_raw": "2011", "event": "IEEE History Center 구술 인터뷰 (Pasadena, CA)", "type": "개인사", "subtype": "personal_other", "phase": "senior"}
+{"person": "matthies", "year_raw": "지속적으로", "event": "USC 컴퓨터과학 겸임 교수, Caltech 컴퓨터 비전 강의 담당", "type": "직업 이력", "subtype": "admin_role", "phase": "senior"}
+{"person": "matthies", "year_raw": "지속적으로", "event": "Autonomous Robots, Journal of Field Robotics 편집위원", "type": "학회·커뮤니티", "subtype": "editorship", "phase": "senior"}
+{"person": "mccarthy", "year_raw": "1927-09-04", "event": "미국 매사추세츠주 Boston 출생", "type": "개인사", "subtype": "birth", "phase": "k12"}
+{"person": "mccarthy", "year_raw": "유년기", "event": "Boston 공립학교 진학", "type": "교육", "subtype": "k12_enroll", "phase": "k12"}
+{"person": "mccarthy", "year_raw": "1947", "event": "Caltech에서 수학 학사 취득", "type": "교육", "subtype": "bs_graduate", "phase": "undergrad"}
+{"person": "mccarthy", "year_raw": "1948년 가을", "event": "Caltech의 Hixon Symposium 참석, 컴퓨터로 지능적 행동을 구현하는 아이디어 착안", "type": "네트워크", "subtype": "influence", "phase": "grad"}
+{"person": "mccarthy", "year_raw": "1948~1949", "event": "Caltech 대학원 1년 수료 후 Princeton 수학 박사 과정 진학", "type": "교육", "subtype": "phd_enroll", "phase": "grad"}
+{"person": "mccarthy", "year_raw": "1949", "event": "Princeton 입학 후 von Neumann과 면담, 확률적 오토마타 아이디어 논의", "type": "네트워크", "subtype": "mentor_meet", "phase": "grad"}
+{"person": "mccarthy", "year_raw": "1951", "event": "Princeton에서 수학 박사 학위 취득 (\"미분방정식 해법\")", "type": "교육", "subtype": "phd_graduate", "phase": "grad"}
+{"person": "mccarthy", "year_raw": "1951~1953", "event": "Princeton에서 강사로 2년 근무", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "mccarthy", "year_raw": "1952년 여름", "event": "Bell Labs에서 여름 근무, Claude Shannon과 만남", "type": "네트워크", "subtype": "mentor_meet", "phase": "early_career"}
+{"person": "mccarthy", "year_raw": "1953~1954 무렵", "event": "Stanford에서 임시 조교수로 1년, 재임용 탈락", "type": "실패·전환", "subtype": "forced_move", "phase": "early_career"}
+{"person": "mccarthy", "year_raw": "1954 무렵", "event": "Dartmouth로 이직", "type": "직업 이력", "subtype": "move", "phase": "early_career"}
+{"person": "mccarthy", "year_raw": "1955년 여름", "event": "IBM 여름 근무를 통해 컴퓨팅 분야 진출", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "mccarthy", "year_raw": "1955-08-31", "event": "Dartmouth 여름 연구 제안서 작성, \"artificial intelligence\" 용어 최초 사용", "type": "연구·프로젝트", "subtype": "breakthrough", "phase": "early_career"}
+{"person": "mccarthy", "year_raw": "1956", "event": "Dartmouth 여름 컨퍼런스 개최 (AI 분야의 출발점)", "type": "학회·커뮤니티", "subtype": "conf_create", "phase": "early_career"}
+{"person": "mccarthy", "year_raw": "1956년 9월", "event": "Boston IRE/IEEE 회의에서 Dartmouth 프로젝트 및 AI 현황 발표", "type": "학회·커뮤니티", "subtype": "conf_attend", "phase": "early_career"}
+{"person": "mccarthy", "year_raw": "1958", "event": "\"Programs with Common Sense\" 논문 발표, 논리적 AI의 출발점", "type": "연구·프로젝트", "subtype": "paper", "phase": "early_career"}
+{"person": "mccarthy", "year_raw": "1958년 가을", "event": "LISP 프로그래밍 언어 개발 시작", "type": "연구·프로젝트", "subtype": "breakthrough", "phase": "early_career"}
+{"person": "mccarthy", "year_raw": "1958 무렵", "event": "MIT로 이직 (Sloan Foundation Fellowship 후 Communication Sciences 조교수)", "type": "직업 이력", "subtype": "move", "phase": "early_career"}
+{"person": "mccarthy", "year_raw": "1958 무렵", "event": "Marvin Minsky와 함께 MIT AI Lab 설립", "type": "직업 이력", "subtype": "admin_role", "phase": "early_career"}
+{"person": "mccarthy", "year_raw": "1959 초", "event": "LISP 보편 함수 보고서 작성, Steve Russell이 인터프리터로 구현", "type": "연구·프로젝트", "subtype": "breakthrough", "phase": "early_career"}
+{"person": "mccarthy", "year_raw": "1962", "event": "MIT 부교수 승진", "type": "직업 이력", "subtype": "promotion", "phase": "early_career"}
+{"person": "mccarthy", "year_raw": "1962년 봄", "event": "George Forsythe로부터 Stanford 정교수 제안 받음", "type": "직업 이력", "subtype": "promotion", "phase": "early_career"}
+{"person": "mccarthy", "year_raw": "1962년 가을", "event": "Stanford로 이직 (정교수)", "type": "직업 이력", "subtype": "move", "phase": "mid_career"}
+{"person": "mccarthy", "year_raw": "1965 무렵", "event": "Stanford AI Lab 설립, DARPA 자금으로 PDP-6 도입", "type": "직업 이력", "subtype": "admin_role", "phase": "mid_career"}
+{"person": "mccarthy", "year_raw": "1965 이후", "event": "Victor Scheinman의 유압식/전기식 로봇 팔 개발 지원", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "mid_career"}
+{"person": "mccarthy", "year_raw": "1971", "event": "Turing Award 수상", "type": "수상·명예", "subtype": "lifetime_award", "phase": "senior"}
+{"person": "mccarthy", "year_raw": "1989 무렵", "event": "Stanford AI Lab을 캠퍼스로 이전, DARPA 자금난 시작", "type": "실패·전환", "subtype": "funding_crisis", "phase": "senior"}
+{"person": "mccarthy", "year_raw": "1991", "event": "National Medal of Science 수상", "type": "수상·명예", "subtype": "gov_honor", "phase": "senior"}
+{"person": "mccarthy", "year_raw": "2000", "event": "Stanford 은퇴", "type": "직업 이력", "subtype": "retire", "phase": "senior"}
+{"person": "mccarthy", "year_raw": "2011-06-08", "event": "IEEE History Center 구술 인터뷰 (Stanford, CA)", "type": "개인사", "subtype": "personal_other", "phase": "senior"}
+{"person": "mccarthy", "year_raw": "2011-10-24", "event": "심장병 합병증으로 사망 (84세)", "type": "개인사", "subtype": "death", "phase": "senior"}
+{"person": "mcghee", "year_raw": "1929", "event": "미국 미시간주 Detroit 출생", "type": "개인사", "subtype": "birth", "phase": "k12"}
+{"person": "mcghee", "year_raw": "유년기", "event": "Detroit 인근 및 오하이오주 Toledo 일대에서 성장", "type": "개인사", "subtype": "relocation", "phase": "k12"}
+{"person": "mcghee", "year_raw": "1952-02", "event": "University of Michigan(Ann Arbor) 학사 졸업, 동시에 결혼", "type": "교육", "subtype": "bs_graduate", "phase": "undergrad"}
+{"person": "mcghee", "year_raw": "1952", "event": "미 육군 Ordinance Corps 장교로 입대 (유도 미사일 정비 장교)", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "mcghee", "year_raw": "1952~1955", "event": "육군 복무, 탄도 미사일·관성 항법 분야에 관심", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "mcghee", "year_raw": "1955", "event": "Hughes Aircraft Company 입사 (1955~1963 기술진)", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "mcghee", "year_raw": "1957", "event": "University of Southern California에서 전기공학 석사", "type": "교육", "subtype": "ms_graduate", "phase": "grad"}
+{"person": "mcghee", "year_raw": "1963", "event": "USC에서 전기공학 박사 학위", "type": "교육", "subtype": "phd_graduate", "phase": "grad"}
+{"person": "mcghee", "year_raw": "1963", "event": "USC 전기공학과 조교수 임용 (1963~1967)", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "mcghee", "year_raw": "1964", "event": "University of Belgrade의 Rajko Tomović 교수 USC 방문, 전자식 하지 의수 연구로 협업 시작", "type": "네트워크", "subtype": "collab_start", "phase": "early_career"}
+{"person": "mcghee", "year_raw": "1966", "event": "George Bekey, 대학원생 Andrew Frank와 함께 \"Phony Pony\" 제작 (세계 최초 전자 협응 보행 차량)", "type": "연구·프로젝트", "subtype": "breakthrough", "phase": "early_career"}
+{"person": "mcghee", "year_raw": "1967~1968", "event": "USC 부교수 승진", "type": "직업 이력", "subtype": "promotion", "phase": "early_career"}
+{"person": "mcghee", "year_raw": "1968", "event": "Ohio State University 전기공학과 정교수로 이직", "type": "직업 이력", "subtype": "move", "phase": "mid_career"}
+{"person": "mcghee", "year_raw": "1970년대 초", "event": "Bionic Bug 개발 시작 (NSF 자금, 6족 300파운드 보행기)", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "mid_career"}
+{"person": "mcghee", "year_raw": "1974", "event": "소련 Moscow State University Okhotsimski 연구실 방문", "type": "교육", "subtype": "sabbatical_visit", "phase": "mid_career"}
+{"person": "mcghee", "year_raw": "1976", "event": "두 번째 소련 방문, 보행기 공통 구성 채택", "type": "교육", "subtype": "sabbatical_visit", "phase": "mid_career"}
+{"person": "mcghee", "year_raw": "1980 무렵", "event": "PDP-11/70 + 1MB 메모리로 Bionic Bug 실시간 제어", "type": "연구·프로젝트", "subtype": "demo", "phase": "mid_career"}
+{"person": "mcghee", "year_raw": "1980년대 초", "event": "DARPA Adaptive Suspension Vehicle (ASV) 프로젝트 시작 (Kenneth Waldron과 협업)", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "mid_career"}
+{"person": "mcghee", "year_raw": "1980년대 중후반", "event": "ASV 완성 (7,000파운드 6족 보행기), Ohio State 및 Virginia Piedmont 지역에서 테스트", "type": "연구·프로젝트", "subtype": "demo", "phase": "mid_career"}
+{"person": "mcghee", "year_raw": "1986", "event": "Naval Postgraduate School (NPS) 컴퓨터과학과 정교수로 이직", "type": "직업 이력", "subtype": "move", "phase": "senior"}
+{"person": "mcghee", "year_raw": "1986~1990 무렵", "event": "보행 로봇 연구 종료, 무인 잠수정 연구로 전환", "type": "실패·전환", "subtype": "pivot", "phase": "senior"}
+{"person": "mcghee", "year_raw": "1988 무렵", "event": "Sehung Kwak의 Prolog 기반 자유 보행 논문 (Advanced Robotics 게재)", "type": "네트워크", "subtype": "student_notable", "phase": "senior"}
+{"person": "mcghee", "year_raw": "1990년대 후반", "event": "Monterey Bay에서 무인 잠수정 trilingual (C++/LISP/Prolog) 시스템 운용", "type": "연구·프로젝트", "subtype": "demo", "phase": "senior"}
+{"person": "mcghee", "year_raw": "1992 무렵", "event": "일본 Porton Harbor Research Institute와 Aqua robot 공동 연구", "type": "네트워크", "subtype": "collab_start", "phase": "senior"}
+{"person": "mcghee", "year_raw": "2005~2006", "event": "NPS에서 은퇴", "type": "직업 이력", "subtype": "retire", "phase": "senior"}
+{"person": "mcghee", "year_raw": "은퇴 후", "event": "명예 교수로 인간 발 추적용 관성 항법 기술 자원 봉사 연구", "type": "직업 이력", "subtype": "emeritus", "phase": "senior"}
+{"person": "mcghee", "year_raw": "2010-11-19", "event": "IEEE History Center 구술 인터뷰 (Monterey, CA)", "type": "개인사", "subtype": "personal_other", "phase": "senior"}
+{"person": "mintz", "year_raw": "1942-09-04", "event": "미드웨이 해전 약 3개월 후 출생, 뉴욕시 외곽에서 성장", "type": "개인사", "subtype": "birth", "phase": "k12"}
+{"person": "mintz", "year_raw": "유년기 (10세)", "event": "Cortlandt Street(현 World Trade Center 부지) Radio Row에서 진공관 부품 구입", "type": "개인사", "subtype": "personal_other", "phase": "k12"}
+{"person": "mintz", "year_raw": "유년기", "event": "아마추어 무선 자격증 취득", "type": "개인사", "subtype": "personal_other", "phase": "k12"}
+{"person": "mintz", "year_raw": "18세", "event": "Cornell University 전기공학과 입학 (8년간 재학)", "type": "교육", "subtype": "bs_enroll", "phase": "undergrad"}
+{"person": "mintz", "year_raw": "1965", "event": "Cornell에서 학사·석사·박사 (확률 시스템 제어 이론) 수료 시작", "type": "교육", "subtype": "phd_enroll", "phase": "grad"}
+{"person": "mintz", "year_raw": "1965-11-22~23", "event": "Northeast 대정전 발생 시기에 Ithaca에서 대학원 재학 중", "type": "외부 영향", "subtype": "disaster", "phase": "grad"}
+{"person": "mintz", "year_raw": "1965~1968", "event": "차분 게임(differential game) 분야 대학원 연구", "type": "교육", "subtype": "phd_thesis", "phase": "grad"}
+{"person": "mintz", "year_raw": "1968~1969", "event": "Yale University 박사후연구원", "type": "교육", "subtype": "postdoc", "phase": "early_career"}
+{"person": "mintz", "year_raw": "1969 무렵", "event": "Yale 조교수 (제어이론·전기공학)", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "mintz", "year_raw": "1972~1974", "event": "University of Illinois CSL 그룹에서 강의", "type": "직업 이력", "subtype": "move", "phase": "early_career"}
+{"person": "mintz", "year_raw": "1974", "event": "University of Pennsylvania Electrical Systems Engineering 합류", "type": "직업 이력", "subtype": "move", "phase": "early_career"}
+{"person": "mintz", "year_raw": "1976~1986", "event": "미 공군과 협력하여 다중 미사일 회피 휴리스틱 알고리즘 연구", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "mid_career"}
+{"person": "mintz", "year_raw": "1979 무렵", "event": "Ruzena Bajcsy가 GRASP Lab 시작 (지하 단일 손가락 촉각 센서로)", "type": "네트워크", "subtype": "collab_start", "phase": "mid_career"}
+{"person": "mintz", "year_raw": "1984", "event": "Ruzena Bajcsy의 권유로 GRASP Lab 합류", "type": "네트워크", "subtype": "collab_start", "phase": "mid_career"}
+{"person": "mintz", "year_raw": "1986", "event": "UPenn Computer and Information Science 학과로 소속 변경", "type": "직업 이력", "subtype": "move", "phase": "mid_career"}
+{"person": "mintz", "year_raw": "1986 이후", "event": "박사 지도 시작 (Greg Hager가 첫 CIS 박사 학생)", "type": "네트워크", "subtype": "student_notable", "phase": "mid_career"}
+{"person": "mintz", "year_raw": "1988 무렵", "event": "Greg Hager 박사 학위 (능동적 정보 획득 연구)", "type": "네트워크", "subtype": "student_notable", "phase": "mid_career"}
+{"person": "mintz", "year_raw": "1990~1995", "event": "TRC LabMate 모바일 로봇으로 다중 에이전트 연구 (Ruzena Bajcsy, Vijay Kumar, Lou Paul와 협업)", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "mid_career"}
+{"person": "mintz", "year_raw": "1995", "event": "Robbie Mandelbaum 박사 학위 취득", "type": "네트워크", "subtype": "student_notable", "phase": "mid_career"}
+{"person": "mintz", "year_raw": "2000년대 이후", "event": "양자 계산(quantum computation) 연구로 관심 전환, 학부생 강의", "type": "실패·전환", "subtype": "pivot", "phase": "senior"}
+{"person": "mintz", "year_raw": "2007 무렵", "event": "UPenn 로봇공학 석사 과정 신설 (George Pappas, Vijay Kumar, Kostas Daniilidis 주도)", "type": "직업 이력", "subtype": "admin_role", "phase": "senior"}
+{"person": "mintz", "year_raw": "2011-05-24", "event": "IEEE History Center 구술 인터뷰 (Philadelphia, PA), GRASP Lab 27년 재직", "type": "개인사", "subtype": "personal_other", "phase": "senior"}
+{"person": "mondada", "year_raw": "1967-03-17", "event": "스위스 Locarno (이탈리아어권) 출생", "type": "개인사", "subtype": "birth", "phase": "k12"}
+{"person": "mondada", "year_raw": "유년기", "event": "기계 교사인 아버지의 작업장에서 기계 작업 학습", "type": "개인사", "subtype": "personal_other", "phase": "k12"}
+{"person": "mondada", "year_raw": "1981 무렵", "event": "콘테스트로 Commodore VIC-20 컴퓨터 당첨, 프로그래밍 시작", "type": "개인사", "subtype": "personal_other", "phase": "k12"}
+{"person": "mondada", "year_raw": "대학 진학 전", "event": "Commodore Plus/4로 로봇 팔 제작", "type": "개인사", "subtype": "personal_other", "phase": "k12"}
+{"person": "mondada", "year_raw": "1986", "event": "EPFL 입학, microtechnique(시스템 공학) 전공", "type": "교육", "subtype": "bs_enroll", "phase": "undergrad"}
+{"person": "mondada", "year_raw": "학부 초기", "event": "Nicoud 연구실에서 5개 모터 6족 로봇 첫 프로젝트 (작동 실패)", "type": "실패·전환", "subtype": "proj_fail", "phase": "undergrad"}
+{"person": "mondada", "year_raw": "졸업 프로젝트", "event": "HC11 마이크로컨트롤러 기반 저글링 로봇 (경사면, 25fps 비전 처리)", "type": "연구·프로젝트", "subtype": "demo", "phase": "undergrad"}
+{"person": "mondada", "year_raw": "1991", "event": "EPFL micro-engineering 석사 (Nicoud 랩)", "type": "교육", "subtype": "ms_graduate", "phase": "grad"}
+{"person": "mondada", "year_raw": "1991 이후", "event": "Nicoud 랩 일반 조교로 시작 (박사 의도 없음)", "type": "직업 이력", "subtype": "hire", "phase": "grad"}
+{"person": "mondada", "year_raw": "1992~1993", "event": "Khepera 로봇 첫 시제품 개발 (Edo Franzi, André Guignard와 공동)", "type": "연구·프로젝트", "subtype": "breakthrough", "phase": "grad"}
+{"person": "mondada", "year_raw": "박사 과정 중", "event": "신경망/생체모방 알고리즘을 모바일 로봇에 적용 연구", "type": "교육", "subtype": "phd_thesis", "phase": "grad"}
+{"person": "mondada", "year_raw": "박사 과정 중", "event": "Dario Floreano, Paul Verschure, Rolf Pfeifer 등과 협업", "type": "네트워크", "subtype": "collab_start", "phase": "grad"}
+{"person": "mondada", "year_raw": "1995", "event": "K-Team 회사 공동 창업 (3,000 스위스 프랑에 Khepera 판매 시작)", "type": "창업·산업", "subtype": "company_found", "phase": "grad"}
+{"person": "mondada", "year_raw": "1997", "event": "EPFL 박사 학위 취득 (Khepera 로봇이 핵심)", "type": "교육", "subtype": "phd_graduate", "phase": "grad"}
+{"person": "mondada", "year_raw": "1997~1999", "event": "K-Team 50%, EPFL 50% 병행", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "mondada", "year_raw": "1999~2000", "event": "K-Team 풀타임 CEO (1년)", "type": "창업·산업", "subtype": "industry_collab", "phase": "early_career"}
+{"person": "mondada", "year_raw": "2000", "event": "자신이 CEO에 맞지 않음을 깨닫고 EPFL 연구로 복귀", "type": "실패·전환", "subtype": "pivot", "phase": "early_career"}
+{"person": "mondada", "year_raw": "2000년대 초", "event": "Swarm-bots / S-bot 프로젝트 시작 (André Guignard, Michael Bonani와)", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "early_career"}
+{"person": "mondada", "year_raw": "2000년대", "event": "Swarmanoid 프로젝트 진행 (자체 조립 로봇)", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "early_career"}
+{"person": "mondada", "year_raw": "2000년대 후반", "event": "E-puck 교육용 로봇 개발 (오픈소스, 수천 대 판매)", "type": "연구·프로젝트", "subtype": "breakthrough", "phase": "mid_career"}
+{"person": "mondada", "year_raw": "이후", "event": "비영리 단체 Mobsya 설립, Thymio 교육용 로봇 개발", "type": "창업·산업", "subtype": "company_found", "phase": "mid_career"}
+{"person": "mondada", "year_raw": "이후", "event": "Jean-Louis Deneubourg(Brussels)와 동물-로봇 상호작용 연구 (바퀴벌레, 병아리)", "type": "네트워크", "subtype": "collab_start", "phase": "mid_career"}
+{"person": "mondada", "year_raw": "2011-07-18", "event": "IEEE History Center 구술 인터뷰 (Lausanne, Switzerland)", "type": "개인사", "subtype": "personal_other", "phase": "mid_career"}
+{"person": "mondada", "year_raw": "현재", "event": "EPFL 로봇공학 부교수, 모바일 로봇 메카트로닉 설계 연구", "type": "직업 이력", "subtype": "promotion", "phase": "mid_career"}
+{"person": "murphy", "year_raw": "1957 무렵", "event": "미국 앨라배마주 Mobile 출생 (Sputnik 발사 며칠 후, 우주 경쟁 시기)", "type": "개인사", "subtype": "birth", "phase": "k12"}
+{"person": "murphy", "year_raw": "유년기", "event": "조지아주 Douglas로 이주, 학교 진학", "type": "개인사", "subtype": "relocation", "phase": "k12"}
+{"person": "murphy", "year_raw": "유년기", "event": "우주 정거장에서 일하는 미래를 꿈꿈, 기계공학자 아버지의 영향", "type": "네트워크", "subtype": "influence", "phase": "k12"}
+{"person": "murphy", "year_raw": "대학", "event": "Georgia Tech에서 기계공학 학사 취득", "type": "교육", "subtype": "bs_graduate", "phase": "undergrad"}
+{"person": "murphy", "year_raw": "학부 후", "event": "Dow Chemical에서 공정 제어 기계공학자로 근무", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "murphy", "year_raw": "이후", "event": "Atlanta의 Turbitrol(현 Johnson Controls 일부)에서 근무", "type": "직업 이력", "subtype": "move", "phase": "early_career"}
+{"person": "murphy", "year_raw": "1980년대 후반", "event": "컴퓨터 공정 제어 경험을 살려 Georgia Tech 컴퓨터과학 석사로 복귀", "type": "교육", "subtype": "ms_enroll", "phase": "grad"}
+{"person": "murphy", "year_raw": "1988", "event": "Georgia Tech 컴퓨터과학 석사", "type": "교육", "subtype": "ms_graduate", "phase": "grad"}
+{"person": "murphy", "year_raw": "박사 과정 초", "event": "Computer Integrative Manufacturing Systems Fellowship으로 박사 진학", "type": "교육", "subtype": "phd_enroll", "phase": "grad"}
+{"person": "murphy", "year_raw": "박사 과정", "event": "Ron Arkin의 첫 박사 학생으로 합류 (반응형 로봇 패러다임)", "type": "교육", "subtype": "phd_advisor", "phase": "grad"}
+{"person": "murphy", "year_raw": "박사 과정", "event": "Rockwell International Fellow로 인지 심리학자 Herb Pick 외부 위원 초빙, 센서 융합 연구", "type": "교육", "subtype": "phd_thesis", "phase": "grad"}
+{"person": "murphy", "year_raw": "1992", "event": "Georgia Tech College of Computing 최초의 로봇공학 박사 학위", "type": "교육", "subtype": "phd_graduate", "phase": "grad"}
+{"person": "murphy", "year_raw": "1992~1998", "event": "Colorado School of Mines 부교수", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "murphy", "year_raw": "1995", "event": "Oklahoma City 폭탄 테러, Kobe 지진 발생; Satoshi Tadokoro와 재난 로봇 분야 시작", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "early_career"}
+{"person": "murphy", "year_raw": "1997~1998", "event": "Defense Science Study Group 멤버", "type": "학회·커뮤니티", "subtype": "committee", "phase": "early_career"}
+{"person": "murphy", "year_raw": "1998", "event": "University of South Florida로 이직, Florida Task Force 3과 협업", "type": "직업 이력", "subtype": "move", "phase": "early_career"}
+{"person": "murphy", "year_raw": "2001", "event": "9/11 World Trade Center 사고에서 지상 로봇 첫 응급 대응 사용", "type": "연구·프로젝트", "subtype": "demo", "phase": "early_career"}
+{"person": "murphy", "year_raw": "2001 이후", "event": "Satoshi Tadokoro, Paolo Fiorini와 RAS Safety, Security and Rescue Robotics 기술위원회 창립", "type": "학회·커뮤니티", "subtype": "conf_create", "phase": "early_career"}
+{"person": "murphy", "year_raw": "2003", "event": "University of South Florida 정교수 승진", "type": "직업 이력", "subtype": "promotion", "phase": "mid_career"}
+{"person": "murphy", "year_raw": "2004", "event": "Hurricane Charley에서 지상 로봇의 한계 확인", "type": "연구·프로젝트", "subtype": "demo", "phase": "mid_career"}
+{"person": "murphy", "year_raw": "2005", "event": "Hurricane Katrina에서 Pearlington, Mississippi에서 UAV 비행", "type": "연구·프로젝트", "subtype": "demo", "phase": "mid_career"}
+{"person": "murphy", "year_raw": "2005", "event": "U.S. Air Force Exemplary Civilian Service Award 수상", "type": "수상·명예", "subtype": "gov_honor", "phase": "mid_career"}
+{"person": "murphy", "year_raw": "2008", "event": "Texas A&M University로 이직, Disaster City 활용", "type": "직업 이력", "subtype": "move", "phase": "mid_career"}
+{"person": "murphy", "year_raw": "2010", "event": "다큐멘터리 \"Living With Robots\"에 출연 (Sundance Film Festival)", "type": "개인사", "subtype": "personal_other", "phase": "mid_career"}
+{"person": "murphy", "year_raw": "2011", "event": "Tohoku 지진/Fukushima Daiichi 원전 사고; Tokyo에서 Honeywell T-Hawk UAV 팀 자문", "type": "연구·프로젝트", "subtype": "demo", "phase": "mid_career"}
+{"person": "murphy", "year_raw": "2011 후속", "event": "무인 수중 차량으로 항만 청소·실종자 수색 지원", "type": "연구·프로젝트", "subtype": "demo", "phase": "mid_career"}
+{"person": "murphy", "year_raw": "2014", "event": "ACM Eugene L. Lawler Award 수상", "type": "수상·명예", "subtype": "lifetime_award", "phase": "senior"}
+{"person": "murphy", "year_raw": "2014", "event": "저서 \"Disaster Robotics\" 출간", "type": "연구·프로젝트", "subtype": "paper", "phase": "senior"}
+{"person": "murphy", "year_raw": "2015-01-22", "event": "IEEE History Center 구술 인터뷰 (College Station, TX)", "type": "개인사", "subtype": "personal_other", "phase": "senior"}
+{"person": "murphy", "year_raw": "2016", "event": "시리아 보트 난민 위기 대응", "type": "연구·프로젝트", "subtype": "demo", "phase": "senior"}
+{"person": "murphy", "year_raw": "2017", "event": "Hurricane Harvey 대응 (총 27건 재난 투입 누적)", "type": "연구·프로젝트", "subtype": "demo", "phase": "senior"}
+{"person": "murray", "year_raw": "유년기", "event": "텍사스주 El Paso에서 성장, 고교까지 El Paso에서 진학", "type": "교육", "subtype": "k12_enroll", "phase": "k12"}
+{"person": "murray", "year_raw": "1981", "event": "Caltech 학부 입학, 전기공학 전공", "type": "교육", "subtype": "bs_enroll", "phase": "undergrad"}
+{"person": "murray", "year_raw": "1985", "event": "Caltech 전기공학 학사", "type": "교육", "subtype": "bs_graduate", "phase": "undergrad"}
+{"person": "murray", "year_raw": "1985", "event": "UC Berkeley 대학원 진학, S. Shankar Sastry 지도하에 로봇공학·파지 연구", "type": "교육", "subtype": "phd_enroll", "phase": "grad"}
+{"person": "murray", "year_raw": "박사 과정", "event": "Kris Pister와 함께 평면 매니퓰레이터 \"Styx\" 제작", "type": "연구·프로젝트", "subtype": "demo", "phase": "grad"}
+{"person": "murray", "year_raw": "박사 과정", "event": "Non-holonomic 모션 플래닝 연구", "type": "교육", "subtype": "phd_thesis", "phase": "grad"}
+{"person": "murray", "year_raw": "1988", "event": "UC Berkeley 전기공학·컴퓨터과학 석사", "type": "교육", "subtype": "ms_graduate", "phase": "grad"}
+{"person": "murray", "year_raw": "1990", "event": "UC Berkeley 박사 학위 취득 (파지/조작 + 비홀로노믹 운동)", "type": "교육", "subtype": "phd_graduate", "phase": "grad"}
+{"person": "murray", "year_raw": "1990 후반", "event": "Berkeley에서 6개월간 강사 근무", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "murray", "year_raw": "1991", "event": "Caltech 기계공학과 부교수로 복귀, Joel Burdick과 협업", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "murray", "year_raw": "1990년대 초~중", "event": "비홀로노믹 모바일 로봇·수중 유영 로봇 연구", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "early_career"}
+{"person": "murray", "year_raw": "1990년대 중반", "event": "UAV(무인 항공기) 동역학·궤적 생성 연구로 확장", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "early_career"}
+{"person": "murray", "year_raw": "1995", "event": "NSF Early Faculty Development Award 수상", "type": "수상·명예", "subtype": "paper_award", "phase": "early_career"}
+{"person": "murray", "year_raw": "1997", "event": "AACC Donald P. Eckman Award 수상", "type": "수상·명예", "subtype": "paper_award", "phase": "early_career"}
+{"person": "murray", "year_raw": "1997~2000", "event": "Caltech 부교수", "type": "직업 이력", "subtype": "promotion", "phase": "early_career"}
+{"person": "murray", "year_raw": "1998~2000", "event": "United Technologies Research Center 안식년 (Hartford, CT)", "type": "교육", "subtype": "sabbatical_visit", "phase": "early_career"}
+{"person": "murray", "year_raw": "2000~2005", "event": "Caltech 정교수, Engineering and Applied Science 학과장 역임", "type": "직업 이력", "subtype": "promotion", "phase": "mid_career"}
+{"person": "murray", "year_raw": "2000년대 초", "event": "다중 차량/네트워크 협업 시스템 연구로 확장", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "mid_career"}
+{"person": "murray", "year_raw": "2003 무렵", "event": "DARPA Grand Challenge 1회 참가, 60~70명 학부생 동원하여 1.1마일 주행", "type": "연구·프로젝트", "subtype": "demo", "phase": "mid_career"}
+{"person": "murray", "year_raw": "2004", "event": "DARPA Grand Challenge 본선 참가", "type": "연구·프로젝트", "subtype": "demo", "phase": "mid_career"}
+{"person": "murray", "year_raw": "2005", "event": "DARPA Grand Challenge 2회 참가, 차량 \"Alice\"가 콘크리트 장벽 넘는 사건", "type": "연구·프로젝트", "subtype": "demo", "phase": "mid_career"}
+{"person": "murray", "year_raw": "2005~2006", "event": "Caltech Control and Dynamical Systems 교수", "type": "직업 이력", "subtype": "move", "phase": "mid_career"}
+{"person": "murray", "year_raw": "2006~2009", "event": "Everhart 교수, Information Science and Technology 학과장", "type": "직업 이력", "subtype": "admin_role", "phase": "mid_career"}
+{"person": "murray", "year_raw": "2007 무렵", "event": "DARPA Urban Challenge 참가 (예선 통과, 결승 진출 실패), JPL과 공동 작업", "type": "연구·프로젝트", "subtype": "demo", "phase": "mid_career"}
+{"person": "murray", "year_raw": "2007~2008 무렵", "event": "NSF Expeditions 프로그램에 분자 프로그래밍 프로젝트 제안 및 수주", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "mid_career"}
+{"person": "murray", "year_raw": "2008~2009", "event": "Engineering Applied Science 학과장 임시 역임", "type": "직업 이력", "subtype": "admin_role", "phase": "mid_career"}
+{"person": "murray", "year_raw": "2009 이후", "event": "Everhart 교수 (Control and Dynamical Systems 및 Bioengineering)", "type": "직업 이력", "subtype": "admin_role", "phase": "mid_career"}
+{"person": "murray", "year_raw": "2011-06-06", "event": "IEEE History Center 구술 인터뷰 (Pasadena, CA)", "type": "개인사", "subtype": "personal_other", "phase": "mid_career"}
+{"person": "murray", "year_raw": "이후", "event": "합성 생물학·DNA origami 분야 협업 (Paul Rothemund, Erik Winfree 등)", "type": "네트워크", "subtype": "collab_start", "phase": "mid_career"}
+{"person": "murray", "year_raw": "이후", "event": "카페테리아 군중 환경 내 로봇 항법 등 인간-로봇 상호작용 연구", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "mid_career"}
+{"person": "nagpal", "year_raw": "출생", "event": "아버지의 Georgia Tech 박사 과정 중 미국에서 출생", "type": "개인사", "subtype": "birth", "phase": "k12"}
+{"person": "nagpal", "year_raw": "유년기 (8세까지)", "event": "가족과 함께 인도 Amritsar로 이주, 학교 진학", "type": "개인사", "subtype": "relocation", "phase": "k12"}
+{"person": "nagpal", "year_raw": "고교 시절", "event": "Amritsar의 정치적 혼란·통금 속에서 미국 대학 지원 결심", "type": "외부 영향", "subtype": "social_movement", "phase": "k12"}
+{"person": "nagpal", "year_raw": "1987", "event": "National Talent Search Scholarship Award (인도) 수상", "type": "수상·명예", "subtype": "gov_honor", "phase": "k12"}
+{"person": "nagpal", "year_raw": "1989", "event": "MIT 학부 입학 (학비 지원 프로그램 덕분)", "type": "교육", "subtype": "bs_enroll", "phase": "undergrad"}
+{"person": "nagpal", "year_raw": "학부 1년", "event": "6.001 컴퓨터과학 수업으로 진로 결정", "type": "교육", "subtype": "bs_major", "phase": "undergrad"}
+{"person": "nagpal", "year_raw": "1992~1993", "event": "Bell Labs에서 학생 인턴 시작 (Rae McLellan과 협업)", "type": "직업 이력", "subtype": "hire", "phase": "undergrad"}
+{"person": "nagpal", "year_raw": "1993~1994", "event": "Bell Labs 인턴 연장, 대학원 1년 연기", "type": "직업 이력", "subtype": "hire", "phase": "undergrad"}
+{"person": "nagpal", "year_raw": "1994", "event": "MIT 전기공학·컴퓨터과학 학사·석사 (S.B./S.M.)", "type": "교육", "subtype": "ms_graduate", "phase": "grad"}
+{"person": "nagpal", "year_raw": "1995~2001", "event": "AT&T Bell Labs Graduate Fellowship for Women", "type": "수상·명예", "subtype": "fellow", "phase": "grad"}
+{"person": "nagpal", "year_raw": "박사 과정", "event": "MIT 박사 진학, Gerry Sussman·Hal Abelson 지도", "type": "교육", "subtype": "phd_advisor", "phase": "grad"}
+{"person": "nagpal", "year_raw": "박사 과정", "event": "Amorphous Computing 프로젝트 합류 (Sussman, Knight, Abelson)", "type": "교육", "subtype": "phd_thesis", "phase": "grad"}
+{"person": "nagpal", "year_raw": "박사 과정 중", "event": "대학원생일 때 딸 출산", "type": "개인사", "subtype": "family", "phase": "grad"}
+{"person": "nagpal", "year_raw": "2001", "event": "MIT 전기공학·컴퓨터과학 박사 (\"Programmable Self-Assembly using Biologically-Inspired Local Interactions\")", "type": "교육", "subtype": "phd_graduate", "phase": "grad"}
+{"person": "nagpal", "year_raw": "2001 이후", "event": "닷컴 붕괴로 Bell Labs 복귀 무산, MIT lecturer 직 수행", "type": "실패·전환", "subtype": "forced_move", "phase": "early_career"}
+{"person": "nagpal", "year_raw": "이후", "event": "Mark Kirschner의 권유로 생물학 연구실에서 1년 체류 (시스템 생물학)", "type": "교육", "subtype": "postdoc", "phase": "early_career"}
+{"person": "nagpal", "year_raw": "이후", "event": "Harvard 컴퓨터과학과 조교수 임용", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "nagpal", "year_raw": "교수 초기", "event": "Lego Mindstorms로 첫 로봇 실험 (자가 조립, 흰개미에서 영감)", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "early_career"}
+{"person": "nagpal", "year_raw": "2005", "event": "Microsoft New Faculty Fellowship 수상", "type": "수상·명예", "subtype": "fellow", "phase": "early_career"}
+{"person": "nagpal", "year_raw": "2007", "event": "NSF Career Award 수상", "type": "수상·명예", "subtype": "paper_award", "phase": "early_career"}
+{"person": "nagpal", "year_raw": "2007 무렵", "event": "TERMES 클라이밍 로봇 프로젝트 시작", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "early_career"}
+{"person": "nagpal", "year_raw": "2010", "event": "Anita Borg Early Career Award (BECA) 수상", "type": "수상·명예", "subtype": "paper_award", "phase": "early_career"}
+{"person": "nagpal", "year_raw": "이후", "event": "Mike Rubenstein 박사후연구원 합류, Kilobot 프로젝트 시작", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "early_career"}
+{"person": "nagpal", "year_raw": "2012", "event": "Radcliffe Institute Fellowship 수상", "type": "수상·명예", "subtype": "fellow", "phase": "mid_career"}
+{"person": "nagpal", "year_raw": "2014", "event": "Science 선정 Top 10 Breakthroughs", "type": "수상·명예", "subtype": "paper_award", "phase": "mid_career"}
+{"person": "nagpal", "year_raw": "2014-12", "event": "Nature 선정 \"Top 10 scientists and engineers who mattered\"", "type": "수상·명예", "subtype": "lifetime_award", "phase": "mid_career"}
+{"person": "nagpal", "year_raw": "2015-01-24", "event": "IEEE History Center 구술 인터뷰 (College Station, Texas)", "type": "개인사", "subtype": "personal_other", "phase": "mid_career"}
+{"person": "nagpal", "year_raw": "2015", "event": "Harvard McDonald Award for Excellence in Mentoring 수상", "type": "수상·명예", "subtype": "lifetime_award", "phase": "mid_career"}
+{"person": "nagpal", "year_raw": "2017-04", "event": "Vancouver TED 컨퍼런스 발표", "type": "학회·커뮤니티", "subtype": "conf_attend", "phase": "mid_career"}
+{"person": "nelson", "year_raw": "출생", "event": "미국 일리노이주 Murphysboro 출생", "type": "개인사", "subtype": "birth", "phase": "k12"}
+{"person": "nelson", "year_raw": "유년기", "event": "일리노이의 작은 마을에서 성장, Normal에서 고교", "type": "개인사", "subtype": "relocation", "phase": "k12"}
+{"person": "nelson", "year_raw": "1969-07", "event": "7세, Apollo 11 달 착륙 시청 후 공학에 매료", "type": "네트워크", "subtype": "influence", "phase": "k12"}
+{"person": "nelson", "year_raw": "학부", "event": "University of Illinois (Urbana-Champaign) 기계공학 학사", "type": "교육", "subtype": "bs_graduate", "phase": "undergrad"}
+{"person": "nelson", "year_raw": "1984", "event": "University of Minnesota 기계공학 석사 과정 시작 (Max Donath 지도)", "type": "교육", "subtype": "ms_enroll", "phase": "grad"}
+{"person": "nelson", "year_raw": "1984~ (석사 중)", "event": "Honeywell의 DARPA Intelligent Task Automation 프로젝트 참여, 마이크로스위치 조립", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "grad"}
+{"person": "nelson", "year_raw": "석사 논문", "event": "\"Optimal Location of Assembly Tasks in a Manipulator Workspace\"", "type": "교육", "subtype": "ms_graduate", "phase": "grad"}
+{"person": "nelson", "year_raw": "석사 후", "event": "보츠와나 미국 평화봉사단(Peace Corps) 자원봉사", "type": "개인사", "subtype": "personal_other", "phase": "early_career"}
+{"person": "nelson", "year_raw": "이후", "event": "Motorola에서 무선 디지털 통신 관련 소프트웨어 엔지니어", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "nelson", "year_raw": "1990", "event": "Carnegie Mellon University 로봇공학 박사 과정 입학 (Pradeep Khosla 지도)", "type": "교육", "subtype": "phd_enroll", "phase": "grad"}
+{"person": "nelson", "year_raw": "박사 과정", "event": "Troikabot (3대 PUMA 560)으로 비전·힘 융합 servoing 연구", "type": "교육", "subtype": "phd_thesis", "phase": "grad"}
+{"person": "nelson", "year_raw": "박사 논문", "event": "\"Port-Based Agents for Assimilating Disparate Sensory Feedback\"", "type": "교육", "subtype": "phd_thesis", "phase": "grad"}
+{"person": "nelson", "year_raw": "1995", "event": "CMU 로봇공학 박사 학위 취득", "type": "교육", "subtype": "phd_graduate", "phase": "grad"}
+{"person": "nelson", "year_raw": "1995", "event": "University of Illinois at Chicago 기계공학과 조교수 임용 ($30,000 스타트업)", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "nelson", "year_raw": "1995", "event": "IROS Pittsburgh에서 Fumi Arai/Toshio Fukuda, Ron Fearing의 마이크로 매니퓰레이션 논문 접하고 방향 전환", "type": "실패·전환", "subtype": "pivot", "phase": "early_career"}
+{"person": "nelson", "year_raw": "1995", "event": "Wentworth probe station을 개조해 첫 마이크로로보틱스 시스템 구축", "type": "연구·프로젝트", "subtype": "demo", "phase": "early_career"}
+{"person": "nelson", "year_raw": "1998", "event": "University of Minnesota 부교수로 이직 (마이크로 팹 시설 활용)", "type": "직업 이력", "subtype": "move", "phase": "early_career"}
+{"person": "nelson", "year_raw": "1998 무렵", "event": "중국에서 Yu Sun을 만나 박사 학생으로 영입", "type": "네트워크", "subtype": "student_notable", "phase": "early_career"}
+{"person": "nelson", "year_raw": "2002", "event": "개별 생체 세포 조작 시스템 시연", "type": "연구·프로젝트", "subtype": "demo", "phase": "early_career"}
+{"person": "nelson", "year_raw": "2002년 가을~2003", "event": "ETH Zurich 로봇·지능 시스템 정교수로 이직 (17명 동행 이주)", "type": "직업 이력", "subtype": "move", "phase": "mid_career"}
+{"person": "nelson", "year_raw": "2003", "event": "무선 마이크로로봇 개발 시작 (Karl Vollmers, Berk Yesin 등과)", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "mid_career"}
+{"person": "nelson", "year_raw": "2005", "event": "\"Scientific American 50\" 선정", "type": "수상·명예", "subtype": "lifetime_award", "phase": "mid_career"}
+{"person": "nelson", "year_raw": "2007, 2009", "event": "RoboCup Nanogram Competition 수상", "type": "수상·명예", "subtype": "paper_award", "phase": "mid_career"}
+{"person": "nelson", "year_raw": "2007~2008", "event": "Felix Beyeler가 FemtoTools 스핀오프 창업", "type": "창업·산업", "subtype": "company_found", "phase": "mid_career"}
+{"person": "nelson", "year_raw": "2010년 가을", "event": "ANT Scientific (현 Aeon Scientific) 스핀오프 창업", "type": "창업·산업", "subtype": "company_found", "phase": "mid_career"}
+{"person": "nelson", "year_raw": "2011-07-17", "event": "IEEE History Center 구술 인터뷰 (Zurich, Switzerland), ETH 8.5년 재직 시점", "type": "개인사", "subtype": "personal_other", "phase": "mid_career"}
+{"person": "nelson", "year_raw": "지속적", "event": "IEEE Transactions on Nanotechnology 편집자", "type": "학회·커뮤니티", "subtype": "editorship", "phase": "mid_career"}
+{"person": "nicoud", "year_raw": "1938-08-31", "event": "스위스 Lausanne 출생", "type": "개인사", "subtype": "birth", "phase": "k12"}
+{"person": "nicoud", "year_raw": "유년기", "event": "Grey Walter의 거북 로봇(Scientific American 1950년대 중반 기사)에 매료", "type": "네트워크", "subtype": "influence", "phase": "k12"}
+{"person": "nicoud", "year_raw": "학부", "event": "EPFL(Ecole Polytechnique)에서 물리학 전공", "type": "교육", "subtype": "bs_major", "phase": "undergrad"}
+{"person": "nicoud", "year_raw": "1963", "event": "EPFL 물리학 학위 취득", "type": "교육", "subtype": "bs_graduate", "phase": "undergrad"}
+{"person": "nicoud", "year_raw": "졸업 후", "event": "한 college에서 교편을 잡으나 물리 강의 기회를 얻지 못해 전자공학으로 전환", "type": "실패·전환", "subtype": "pivot", "phase": "early_career"}
+{"person": "nicoud", "year_raw": "1965", "event": "Bosch가 폐기한 1,000개 트랜지스터 봉투를 받아 첫 로봇 제작 (Grey Walter 영감, 릴레이 로직)", "type": "연구·프로젝트", "subtype": "demo", "phase": "early_career"}
+{"person": "nicoud", "year_raw": "1965 이후", "event": "EPFL로 복귀, 계산기 연구 본격화", "type": "교육", "subtype": "phd_enroll", "phase": "grad"}
+{"person": "nicoud", "year_raw": "1969", "event": "EPFL 박사 학위 취득 (\"십진수→이진수 변환과 릴레이\")", "type": "교육", "subtype": "phd_graduate", "phase": "grad"}
+{"person": "nicoud", "year_raw": "1971", "event": "회사 DIDEL 설립 (didactiques électroniques)", "type": "창업·산업", "subtype": "company_found", "phase": "early_career"}
+{"person": "nicoud", "year_raw": "1973", "event": "EPFL 정교수 임용", "type": "직업 이력", "subtype": "hire", "phase": "mid_career"}
+{"person": "nicoud", "year_raw": "1974", "event": "제1회 International Conference on Microprocessors 조직", "type": "학회·커뮤니티", "subtype": "conf_create", "phase": "mid_career"}
+{"person": "nicoud", "year_raw": "1974", "event": "Microcomputer Laboratory 책임자 취임 (~2000)", "type": "직업 이력", "subtype": "admin_role", "phase": "mid_career"}
+{"person": "nicoud", "year_raw": "1974", "event": "Digital Equipment(DEC)를 위한 개인용 컴퓨터 설계", "type": "창업·산업", "subtype": "industry_collab", "phase": "mid_career"}
+{"person": "nicoud", "year_raw": "1975~1976", "event": "DEC용 개인용 컴퓨터 6대 제작", "type": "창업·산업", "subtype": "commercialize", "phase": "mid_career"}
+{"person": "nicoud", "year_raw": "1980~1982", "event": "IEEE P896 위원회 부의장", "type": "학회·커뮤니티", "subtype": "standards", "phase": "mid_career"}
+{"person": "nicoud", "year_raw": "1980 무렵", "event": "Smaky 개인 컴퓨터 패밀리 개발, 매주 수요일 아동들에게 연구실 개방", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "mid_career"}
+{"person": "nicoud", "year_raw": "1980년대", "event": "기술자 André Guignard의 Depraz Mouse 기계 설계 (Logitech 마우스의 토대)", "type": "창업·산업", "subtype": "industry_collab", "phase": "mid_career"}
+{"person": "nicoud", "year_raw": "1980년대", "event": "CALM (Common Assembly Language for Microprocessors) 개발", "type": "연구·프로젝트", "subtype": "breakthrough", "phase": "mid_career"}
+{"person": "nicoud", "year_raw": "1991 무렵", "event": "Cyclop 로봇 제작 (선형 카메라+HC-11), 학생 컨테스트에 활용", "type": "연구·프로젝트", "subtype": "demo", "phase": "mid_career"}
+{"person": "nicoud", "year_raw": "1991", "event": "Trento에서 첫 로봇 컨퍼런스 참석", "type": "학회·커뮤니티", "subtype": "conf_attend", "phase": "mid_career"}
+{"person": "nicoud", "year_raw": "1991", "event": "Cafer 5cm 로봇 학생 프로젝트 진행", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "mid_career"}
+{"person": "nicoud", "year_raw": "1990년대 초", "event": "박사학생 30명 규모 로봇 연구실 운영", "type": "직업 이력", "subtype": "admin_role", "phase": "mid_career"}
+{"person": "nicoud", "year_raw": "1992~1993", "event": "Khepera 로봇 개발 (Francesco Mondada가 Cafer 기반으로 재설계)", "type": "연구·프로젝트", "subtype": "breakthrough", "phase": "mid_career"}
+{"person": "nicoud", "year_raw": "1995~1996 무렵", "event": "Dario Floreano를 연구실로 영입, 신경망/유전 알고리즘 연구", "type": "네트워크", "subtype": "collab_start", "phase": "mid_career"}
+{"person": "nicoud", "year_raw": "1995~1996", "event": "1입방 인치/1입방 cm 로봇, 일본 Fukuda의 마이크로 로봇 컨테스트 출품", "type": "연구·프로젝트", "subtype": "demo", "phase": "mid_career"}
+{"person": "nicoud", "year_raw": "1997", "event": "모든 프로젝트 정리 시작", "type": "직업 이력", "subtype": "retire", "phase": "senior"}
+{"person": "nicoud", "year_raw": "2000", "event": "EPFL 은퇴, DIDEL SA 사기업 운영에 전념", "type": "직업 이력", "subtype": "retire", "phase": "senior"}
+{"person": "nicoud", "year_raw": "2000년대", "event": "Jean-Christophe Zufferey와 5g 비행 로봇 제작", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "senior"}
+{"person": "nicoud", "year_raw": "2008 무렵", "event": "5g 비행 로봇 완성 (총 10g 비행체)", "type": "연구·프로젝트", "subtype": "proj_complete", "phase": "senior"}
+{"person": "nicoud", "year_raw": "2011-07-18", "event": "IEEE History Center 구술 인터뷰 (Lausanne, Switzerland)", "type": "개인사", "subtype": "personal_other", "phase": "senior"}
+{"person": "nicoud", "year_raw": "이후", "event": "DIDEL에서 어린이 교육용 로봇 키트, C 언어 임베디드 모듈 개발", "type": "창업·산업", "subtype": "commercialize", "phase": "senior"}

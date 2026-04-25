@@ -1,0 +1,226 @@
+{"person": "nilsson", "year_raw": "1933", "event": "미국 미시간 주 새기노(Saginaw)에서 출생", "type": "개인사", "subtype": "birth", "phase": "k12"}
+{"person": "nilsson", "year_raw": "1944년경", "event": "11세 때 가족과 함께 캘리포니아로 이주", "type": "개인사", "subtype": "relocation", "phase": "k12"}
+{"person": "nilsson", "year_raw": "고등학교 시절", "event": "캘리포니아 글렌데일에서 고등학교 진학", "type": "교육", "subtype": "k12_enroll", "phase": "k12"}
+{"person": "nilsson", "year_raw": "학부 시절", "event": "스탠포드 대학교 입학, 전기공학 전공 (정보이론 특화)", "type": "교육", "subtype": "bs_enroll", "phase": "undergrad"}
+{"person": "nilsson", "year_raw": "1956", "event": "스탠포드 대학원 1학년, 정보이론 연구 시작", "type": "교육", "subtype": "phd_enroll", "phase": "grad"}
+{"person": "nilsson", "year_raw": "석사 과정 중", "event": "Air Force ROTC 소속, 학사 없이 5년제 석사 과정 진학", "type": "교육", "subtype": "ms_enroll", "phase": "grad"}
+{"person": "nilsson", "year_raw": "1958", "event": "스탠포드 PhD 학위 취득 (지도교수 Willis Harmon, 게임이론 기반 레이더 수신 연구)", "type": "교육", "subtype": "phd_graduate", "phase": "grad"}
+{"person": "nilsson", "year_raw": "PhD 직후", "event": "미 공군 입대, 뉴욕 주 Rome Air Development Center에서 3년 복무 (레이더/펄스 압축 연구 모니터링)", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "nilsson", "year_raw": "공군 복무 후", "event": "SRI(Stanford Research Institute) 입사, Charlie Rosen 휘하 The Learning Machines Group 합류, 신경망(perceptron) 연구", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "nilsson", "year_raw": "1960년대 초반", "event": "Frank Rosenblatt와 교류, SRI에서 perceptron 변형 시스템 개발", "type": "네트워크", "subtype": "collab_start", "phase": "early_career"}
+{"person": "nilsson", "year_raw": "1960년대 중반", "event": "육군 통신단 지원으로 손글씨 FORTRAN 코딩 시트 인식 등 패턴 인식 연구", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "early_career"}
+{"person": "nilsson", "year_raw": "1963~1964", "event": "Charlie Rosen이 SHAKEY(automaton) 메모 작성, ARPA 자금 확보", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "early_career"}
+{"person": "nilsson", "year_raw": "1968", "event": "SRI에서 스탠포드 AI 연구소(Arastradero Road)로 반년 파견", "type": "교육", "subtype": "sabbatical_visit", "phase": "mid_career"}
+{"person": "nilsson", "year_raw": "SHAKEY 시기", "event": "A* 알고리즘과 STRIPS 자동 계획 시스템 공동 개발, 3-layer 아키텍처 정립", "type": "연구·프로젝트", "subtype": "breakthrough", "phase": "mid_career"}
+{"person": "nilsson", "year_raw": "1971~1972년경", "event": "SHAKEY 영상 촬영, SHAKEY 프로젝트 사실상 종료", "type": "연구·프로젝트", "subtype": "proj_complete", "phase": "mid_career"}
+{"person": "nilsson", "year_raw": "1970년대", "event": "ARPA 로봇 지원 중단 후 Computer Based Consultant 프로젝트 시도, 이후 자연어 DB 접근(TEAM 등)으로 전환", "type": "실패·전환", "subtype": "pivot", "phase": "mid_career"}
+{"person": "nilsson", "year_raw": "1970년대 후반", "event": "Peter Hart, Dick Duda와 함께 Prospector 전문가 시스템 개발 (몰리브덴 광상 예측 성공, Science지 게재)", "type": "연구·프로젝트", "subtype": "breakthrough", "phase": "mid_career"}
+{"person": "nilsson", "year_raw": "1980", "event": "Peter Hart의 퇴사 후 SRI AI Center 책임자 취임", "type": "직업 이력", "subtype": "admin_role", "phase": "mid_career"}
+{"person": "nilsson", "year_raw": "1985", "event": "스탠포드 컴퓨터과학과 학과장으로 부임", "type": "직업 이력", "subtype": "admin_role", "phase": "senior"}
+{"person": "nilsson", "year_raw": "1985~1991", "event": "스탠포드 학과장 6년 임기 수행", "type": "직업 이력", "subtype": "admin_role", "phase": "senior"}
+{"person": "nilsson", "year_raw": "1990 가을~", "event": "사반티칼: MIT(Rod Brooks 연구실)·하버드 및 Santa Fe Institute 방문", "type": "교육", "subtype": "sabbatical_visit", "phase": "senior"}
+{"person": "nilsson", "year_raw": "1991 여름까지", "event": "Teleo-reactive program 개념 개발, 학생들과 시뮬레이션 로봇·소프트웨어 에이전트 연구", "type": "연구·프로젝트", "subtype": "breakthrough", "phase": "senior"}
+{"person": "nilsson", "year_raw": "2011", "event": "IEEE Intelligent Systems' AI Hall of Fame 헌액", "type": "수상·명예", "subtype": "lifetime_award", "phase": "senior"}
+{"person": "nilsson", "year_raw": "2011년 6월 14일", "event": "Peter Asaro와 ETHW 구술 인터뷰 진행 (오리건 주 메드포드)", "type": "개인사", "subtype": "personal_other", "phase": "senior"}
+{"person": "nourbakhsh", "year_raw": "출생", "event": "이란 테헤란에서 출생 (영국·미국 유학파 부모 사이)", "type": "개인사", "subtype": "birth", "phase": "k12"}
+{"person": "nourbakhsh", "year_raw": "유년기", "event": "이란에서 유아·초등 저학년 교육", "type": "교육", "subtype": "k12_enroll", "phase": "k12"}
+{"person": "nourbakhsh", "year_raw": "초등학교 2~3학년경", "event": "미주리 주 Platte City(인구 300명 농촌)로 이주, Kansas City의 Pembroke Country Day(사립) 고등학교까지 통학", "type": "개인사", "subtype": "relocation", "phase": "k12"}
+{"person": "nourbakhsh", "year_raw": "어린 시절", "event": "Star Wars 관람 후 R2D2에 매료, Simon 게임을 개조해 모터 구동 로봇 자작 (Timex Sinclair zx81, TRS-80도 사용)", "type": "개인사", "subtype": "personal_other", "phase": "k12"}
+{"person": "nourbakhsh", "year_raw": "학부 시절", "event": "스탠포드 대학교 입학 (지원한 학교 중 유일한 합격), 비교문학·유기화학 거쳐 컴퓨터과학 전공", "type": "교육", "subtype": "bs_enroll", "phase": "undergrad"}
+{"person": "nourbakhsh", "year_raw": "학부 시절", "event": "Michael Genesereth의 \"Agents\" 수업 수강 후 AI·로봇으로 전환", "type": "교육", "subtype": "bs_major", "phase": "undergrad"}
+{"person": "nourbakhsh", "year_raw": "1991", "event": "Mike Genesereth와 함께 Nomadic Technologies 두 번째 로봇 구입 (Common Lisp + Mac PowerBook 탑재)", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "undergrad"}
+{"person": "nourbakhsh", "year_raw": "1992", "event": "Stanford 캠퍼스 quad 매핑(1/10 인치 정밀도), Book Store Project 시작 (\"Shallow Thought\" 플래너)", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "undergrad"}
+{"person": "nourbakhsh", "year_raw": "1992", "event": "학부 졸업, Bell Labs 취업 직전 Genesereth의 권유로 PhD 진학", "type": "교육", "subtype": "phd_enroll", "phase": "grad"}
+{"person": "nourbakhsh", "year_raw": "1992", "event": "스탠포드 컴퓨터과학 BS 취득 (이후 동대학원 진학)", "type": "교육", "subtype": "bs_graduate", "phase": "undergrad"}
+{"person": "nourbakhsh", "year_raw": "1994", "event": "Stanford에서 MS 취득", "type": "교육", "subtype": "ms_graduate", "phase": "grad"}
+{"person": "nourbakhsh", "year_raw": "PhD 시절", "event": "항공기 조종사 면허·계기비행·헬리콥터 조종사 면허 취득, 클래식 기타 시작", "type": "개인사", "subtype": "personal_other", "phase": "grad"}
+{"person": "nourbakhsh", "year_raw": "PhD 시절", "event": "로봇 Dervish로 AAAI 콘테스트 참가, John McCarthy·Carlo Tomasi 등과 교류", "type": "연구·프로젝트", "subtype": "demo", "phase": "grad"}
+{"person": "nourbakhsh", "year_raw": "1996", "event": "스탠포드 PhD 취득 (Computer Science)", "type": "교육", "subtype": "phd_graduate", "phase": "grad"}
+{"person": "nourbakhsh", "year_raw": "1996년경", "event": "Mike Genesereth와 Blue Pumpkin Software 창업 (스케줄링 SW), 콜센터 시장 공략", "type": "창업·산업", "subtype": "company_found", "phase": "early_career"}
+{"person": "nourbakhsh", "year_raw": "1997년 1월", "event": "Carnegie Mellon University 조교수 부임 (받은 유일한 교수직 제안)", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "nourbakhsh", "year_raw": "1997~1998", "event": "Chuck Thorpe의 Automated Highway System(AHS) 프로젝트 참여 (\"universal plan\" 개발)", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "early_career"}
+{"person": "nourbakhsh", "year_raw": "1997~2005", "event": "Blue Pumpkin Software 창업자 겸 Chief Scientist 역임", "type": "창업·산업", "subtype": "company_found", "phase": "early_career"}
+{"person": "nourbakhsh", "year_raw": "CMU 초기", "event": "Carnegie Museum of Natural History Dinosaur Hall 투어 가이드 로봇 프로젝트 시작 (XR4000, 5년간 운영)", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "early_career"}
+{"person": "nourbakhsh", "year_raw": "CMU 시기", "event": "Palm Pilot Robot Kit, CMUcam 등 오픈소스 교육 로봇 프로젝트 진행", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "early_career"}
+{"person": "nourbakhsh", "year_raw": "CMU 시기", "event": "Insect Telepresence(곤충 텔레프레전스) 박물관 전시물 개발", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "early_career"}
+{"person": "nourbakhsh", "year_raw": "2004", "event": "CMU 사반티칼, NASA Ames Research Center에서 Intelligent Robotics Group 리더로 활동 (~약 1.5년)", "type": "교육", "subtype": "sabbatical_visit", "phase": "mid_career"}
+{"person": "nourbakhsh", "year_raw": "2004 무렵", "event": "첫째 딸 출생 (샌프란시스코 거주 중)", "type": "개인사", "subtype": "family", "phase": "mid_career"}
+{"person": "nourbakhsh", "year_raw": "2009", "event": "미국 과학아카데미 Kavli Fellow 선정", "type": "수상·명예", "subtype": "fellow", "phase": "mid_career"}
+{"person": "nourbakhsh", "year_raw": "2010년 11월 23일", "event": "Peter Asaro·Selma Šabanović와 ETHW 구술 인터뷰 (피츠버그)", "type": "개인사", "subtype": "personal_other", "phase": "mid_career"}
+{"person": "nourbakhsh", "year_raw": "2013", "event": "Junes Harless West Virginia Hall of Fame 헌액", "type": "수상·명예", "subtype": "lifetime_award", "phase": "mid_career"}
+{"person": "oh", "year_raw": "1954년 10월 3일", "event": "대한민국 서울에서 출생", "type": "개인사", "subtype": "birth", "phase": "k12"}
+{"person": "oh", "year_raw": "유년기", "event": "호기심으로 백과사전을 10~20번 통독, 라디오·워키토키·오디오 자작", "type": "개인사", "subtype": "personal_other", "phase": "k12"}
+{"person": "oh", "year_raw": "1977", "event": "연세대학교 기계공학과 학사 학위 취득", "type": "교육", "subtype": "bs_graduate", "phase": "undergrad"}
+{"person": "oh", "year_raw": "1979", "event": "연세대학교 기계공학 석사 학위 취득", "type": "교육", "subtype": "ms_graduate", "phase": "grad"}
+{"person": "oh", "year_raw": "1979년경 이후", "event": "한국에너지연구소(Korea Energy Research Institute)에서 약 2년 6개월 근무", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "oh", "year_raw": "유학 시기", "event": "UC Berkeley 박사과정 진학 (지도교수 Masayoshi Tomizuka)", "type": "교육", "subtype": "phd_enroll", "phase": "grad"}
+{"person": "oh", "year_raw": "1985", "event": "UC Berkeley에서 박사 학위 취득 (논문 주제: 밀링 머신의 적응 제어)", "type": "교육", "subtype": "phd_graduate", "phase": "grad"}
+{"person": "oh", "year_raw": "1985년경", "event": "귀국, KAIST 교수 부임", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "oh", "year_raw": "1980년대 후반~90년대 초", "event": "취미로 RC 헬리콥터 시뮬레이터 자체 개발, 카메라 기반 호버링 자동제어 논문 발표 (헬기 호버링 분야 초기 논문)", "type": "연구·프로젝트", "subtype": "paper", "phase": "early_career"}
+{"person": "oh", "year_raw": "2002", "event": "자비 5만 달러로 첫 휴머노이드 로봇 자체 제작 시작", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "mid_career"}
+{"person": "oh", "year_raw": "2002", "event": "KAIST 동료들에게 첫 휴머노이드 시연 후 교내 자금 확보, 두 번째 로봇 제작", "type": "연구·프로젝트", "subtype": "demo", "phase": "mid_career"}
+{"person": "oh", "year_raw": "2003", "event": "정부로부터 약 50만 달러 지원 확보, 본격 휴머노이드 연구 착수", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "mid_career"}
+{"person": "oh", "year_raw": "2004", "event": "KHR-1 등 거쳐 HUBO 공식 발표, 본인의 IEEE/로봇공학자 정체성 시작", "type": "연구·프로젝트", "subtype": "breakthrough", "phase": "mid_career"}
+{"person": "oh", "year_raw": "2004 이후", "event": "Frontier Initiative 프로그램(연 약 50만 달러) 지원으로 HUBO 시리즈 지속 개발", "type": "연구·프로젝트", "subtype": "next_gen", "phase": "mid_career"}
+{"person": "oh", "year_raw": "이후", "event": "미국 Drexel 등 7기, 싱가포르 2기, 중국·국내 기관에 HUBO 납품 (총 12~16대 제작, 대당 40만 달러)", "type": "창업·산업", "subtype": "commercialize", "phase": "senior"}
+{"person": "oh", "year_raw": "이후", "event": "KAIST 라이선스로 Rainbow Co. 설립 (KAIST가 지분 20% 보유)", "type": "창업·산업", "subtype": "company_found", "phase": "senior"}
+{"person": "oh", "year_raw": "2012년 5월 15일", "event": "Peter Asaro·Selma Sabanovic와 ETHW 구술 인터뷰 (미국 St. Paul, MN)", "type": "개인사", "subtype": "personal_other", "phase": "senior"}
+{"person": "oh", "year_raw": "2015", "event": "DARPA Robotics Challenge 우승 (KAIST팀)", "type": "수상·명예", "subtype": "lifetime_award", "phase": "senior"}
+{"person": "okamura", "year_raw": "출생", "event": "미국 캘리포니아 Fontana 출생, Riverside에서 성장", "type": "개인사", "subtype": "birth", "phase": "k12"}
+{"person": "okamura", "year_raw": "학부 시절", "event": "UC Berkeley 기계공학과 진학, 학부에서는 로봇공학 미수행 (CAD 교육 연구 보조)", "type": "교육", "subtype": "bs_enroll", "phase": "undergrad"}
+{"person": "okamura", "year_raw": "1994", "event": "UC Berkeley 기계공학 학사 취득", "type": "교육", "subtype": "bs_graduate", "phase": "undergrad"}
+{"person": "okamura", "year_raw": "대학원 입학", "event": "스탠포드 대학교 기계공학 진학, Mark Cutkosky 연구실 합류", "type": "교육", "subtype": "phd_enroll", "phase": "grad"}
+{"person": "okamura", "year_raw": "초기 박사과정", "event": "첫 로봇공학 프로젝트: 두 손가락 로봇 손가락 끝의 dexterous manipulation 연구", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "grad"}
+{"person": "okamura", "year_raw": "1996", "event": "스탠포드 기계공학 석사 취득", "type": "교육", "subtype": "ms_graduate", "phase": "grad"}
+{"person": "okamura", "year_raw": "박사과정 중", "event": "Phantom 햅틱 디바이스로 코스 프로젝트, Sensable사 디바이스에 매료", "type": "교육", "subtype": "phd_thesis", "phase": "grad"}
+{"person": "okamura", "year_raw": "박사과정 중", "event": "Silicon Valley의 Immersion사에서 파트타임으로 햅틱 디바이스 설계·분석", "type": "창업·산업", "subtype": "industry_collab", "phase": "grad"}
+{"person": "okamura", "year_raw": "박사과정 중", "event": "Robert Howe(Harvard) 및 Jack Dennerlein과 진동 피드백 협업 (첫 저널 논문)", "type": "네트워크", "subtype": "collab_start", "phase": "grad"}
+{"person": "okamura", "year_raw": "2000", "event": "스탠포드 기계공학 박사 학위 취득", "type": "교육", "subtype": "phd_graduate", "phase": "grad"}
+{"person": "okamura", "year_raw": "2000", "event": "존스 홉킨스 대학교 기계공학과 조교수 부임", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "okamura", "year_raw": "존스 홉킨스 초기", "event": "Russ Taylor의 Computer Integrated Surgical Systems ERC 합류, da Vinci Surgical System 햅틱 연구 시작", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "early_career"}
+{"person": "okamura", "year_raw": "존스 홉킨스 시기", "event": "Greg Hager(CS)와 cooperative manipulation 로봇(steady-hand) 연구, Virtual Fixtures 개념 정립", "type": "연구·프로젝트", "subtype": "breakthrough", "phase": "early_career"}
+{"person": "okamura", "year_raw": "존스 홉킨스 시기", "event": "Bob Webster, Greg Chirikjian, Noah Cowan, Ken Goldberg 등과 steerable needle 대규모 협업 (NIH 다년 지원)", "type": "네트워크", "subtype": "collab_start", "phase": "early_career"}
+{"person": "okamura", "year_raw": "2004", "event": "NSF CAREER Award 수상", "type": "수상·명예", "subtype": "paper_award", "phase": "early_career"}
+{"person": "okamura", "year_raw": "2005", "event": "IEEE RAS Early Career Award 수상", "type": "수상·명예", "subtype": "paper_award", "phase": "early_career"}
+{"person": "okamura", "year_raw": "사반티칼", "event": "Amy Bastian의 신경과학 연구실에서 사반티칼 (Hopkins 잔류), 재활 로봇·신경과학 연구 진입", "type": "교육", "subtype": "sabbatical_visit", "phase": "early_career"}
+{"person": "okamura", "year_raw": "2009", "event": "IEEE Technical Committee on Haptics Early Career Award 수상", "type": "수상·명예", "subtype": "paper_award", "phase": "early_career"}
+{"person": "okamura", "year_raw": "존스 홉킨스 후기", "event": "부교수→정교수, 기계공학과 부학과장(Vice Chair) 역임 (총 11년 재직)", "type": "직업 이력", "subtype": "promotion", "phase": "mid_career"}
+{"person": "okamura", "year_raw": "2011", "event": "남편이 Hopkins에서 테뉴어 실패, 가족 사정으로 캘리포니아 이주, 스탠포드 기계공학 교수로 부임", "type": "직업 이력", "subtype": "move", "phase": "mid_career"}
+{"person": "okamura", "year_raw": "스탠포드 시기", "event": "Pieter Abbeel·Ken Goldberg(Berkeley) 등과 NRI 대형 프로젝트, prosthetics·BMI·needle steering 연구 지속", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "mid_career"}
+{"person": "okamura", "year_raw": "2014년 9월 16일", "event": "Peter Asaro와 ETHW 구술 인터뷰 (시카고)", "type": "개인사", "subtype": "personal_other", "phase": "mid_career"}
+{"person": "okamura", "year_raw": "2015", "event": "IEEE ICRA Editor-in-Chief(편집위원장) 시작 (3년 임기)", "type": "학회·커뮤니티", "subtype": "editorship", "phase": "mid_career"}
+{"person": "pappas", "year_raw": "출생", "event": "미국 뉴욕 출생 (그리스인 부모)", "type": "개인사", "subtype": "birth", "phase": "k12"}
+{"person": "pappas", "year_raw": "5세", "event": "가족과 함께 그리스로 귀국", "type": "개인사", "subtype": "relocation", "phase": "k12"}
+{"person": "pappas", "year_raw": "유년~고등학교", "event": "그리스에서 초·중·고 교육 이수 (이중국적자)", "type": "교육", "subtype": "k12_enroll", "phase": "k12"}
+{"person": "pappas", "year_raw": "학부 시기", "event": "미국 Rensselaer Polytechnic Institute(RPI) 진학, Computer & Systems Engineering 전공 (NASA Center on Space Robotics 영향)", "type": "교육", "subtype": "bs_enroll", "phase": "undergrad"}
+{"person": "pappas", "year_raw": "학부 2학년경", "event": "어려운 제어공학 시험 일화로 로봇·제어 분야 진로 결심 (Joe Chow의 권유)", "type": "교육", "subtype": "bs_major", "phase": "undergrad"}
+{"person": "pappas", "year_raw": "1991", "event": "RPI에서 BS 취득", "type": "교육", "subtype": "bs_graduate", "phase": "undergrad"}
+{"person": "pappas", "year_raw": "1992", "event": "RPI에서 MS 취득 (지도교수 Kostas Kyriakopoulos, parallel parking 알고리즘 연구)", "type": "교육", "subtype": "ms_graduate", "phase": "grad"}
+{"person": "pappas", "year_raw": "박사과정 시작", "event": "UC Berkeley 진학 (지도교수 Shankar Sastry)", "type": "교육", "subtype": "phd_enroll", "phase": "grad"}
+{"person": "pappas", "year_raw": "박사과정 중", "event": "하이브리드 시스템·항공 교통 관리(air traffic management) 연구", "type": "교육", "subtype": "phd_thesis", "phase": "grad"}
+{"person": "pappas", "year_raw": "박사과정 중", "event": "Harvard에서 1년 방문 연구", "type": "교육", "subtype": "sabbatical_visit", "phase": "grad"}
+{"person": "pappas", "year_raw": "1996", "event": "UC San Diego 인근 Highway 5에서 PATH 프로젝트 platoon 시연 등 자동화 고속도로 환경 노출", "type": "연구·프로젝트", "subtype": "demo", "phase": "grad"}
+{"person": "pappas", "year_raw": "1998", "event": "UC Berkeley EECS 박사 학위 취득", "type": "교육", "subtype": "phd_graduate", "phase": "grad"}
+{"person": "pappas", "year_raw": "1998", "event": "University of Pennsylvania 조교수 부임, GRASP Lab 합류", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "pappas", "year_raw": "2000년대 초반", "event": "단일 로봇에서 다중 로봇으로 연구 전환, 생물학 인터페이스 탐구 시작", "type": "실패·전환", "subtype": "pivot", "phase": "early_career"}
+{"person": "pappas", "year_raw": "2005~2008", "event": "GRASP Lab 디렉터 역임, Master's in Robotics 프로그램 신설", "type": "직업 이력", "subtype": "admin_role", "phase": "mid_career"}
+{"person": "pappas", "year_raw": "2008년 이후", "event": "UPenn Electrical & Systems Engineering 학과장, Joseph Moore Professor 등 보임 (CIS·MEAM 겸임, PRECISE Center 멤버)", "type": "직업 이력", "subtype": "admin_role", "phase": "mid_career"}
+{"person": "pappas", "year_raw": "2011년 5월 23일", "event": "Selma Sabanovic·Peter Asaro와 ETHW 구술 인터뷰 (필라델피아)", "type": "개인사", "subtype": "personal_other", "phase": "mid_career"}
+{"person": "pappas", "year_raw": "이후", "event": "School of Engineering and Applied Science Deputy Dean for Research 역임", "type": "직업 이력", "subtype": "admin_role", "phase": "senior"}
+{"person": "parker", "year_raw": "출생", "event": "미국 테네시 주 녹스빌(Knoxville) 출생", "type": "개인사", "subtype": "birth", "phase": "k12"}
+{"person": "parker", "year_raw": "어린 시절", "event": "1살 위 언니가 공학 전공 결정, 본인은 차별화 위해 컴퓨터과학 선택 (아버지 권유)", "type": "개인사", "subtype": "personal_other", "phase": "k12"}
+{"person": "parker", "year_raw": "학부 시기", "event": "Tennessee Tech University (Cookeville) 컴퓨터과학 학사 취득", "type": "교육", "subtype": "bs_graduate", "phase": "undergrad"}
+{"person": "parker", "year_raw": "석사 과정", "event": "University of Tennessee, Knoxville 야간 과정으로 컴퓨터과학 석사 진학", "type": "교육", "subtype": "ms_enroll", "phase": "grad"}
+{"person": "parker", "year_raw": "석사 과정 중", "event": "Oak Ridge National Lab(ORNL) 풀타임 근무, Chuck Weismann의 AI 강의 수강 후 ORNL CESAR 로봇 연구실 입사", "type": "직업 이력", "subtype": "hire", "phase": "grad"}
+{"person": "parker", "year_raw": "ORNL 초기", "event": "HERMES 시리즈 모바일 로봇으로 Human-Robot Symbiosis 프로젝트 참여 (task allocation 담당)", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "grad"}
+{"person": "parker", "year_raw": "석사 논문", "event": "다중 이동 표적 환경에서 로봇 내비게이션(시뮬레이션) 알고리즘 연구", "type": "교육", "subtype": "ms_graduate", "phase": "grad"}
+{"person": "parker", "year_raw": "1989", "event": "ORNL 휴직, MIT 박사과정 입학 (지도교수 Rodney Brooks)", "type": "교육", "subtype": "phd_enroll", "phase": "grad"}
+{"person": "parker", "year_raw": "박사 과정", "event": "다중 로봇 협업 연구, ALLIANCE 분산 아키텍처 개발 (multi-robot 분야 세계 최초의 박사논문)", "type": "교육", "subtype": "phd_thesis", "phase": "grad"}
+{"person": "parker", "year_raw": "1994", "event": "MIT 컴퓨터과학 박사 학위 취득, ORNL 복귀", "type": "교육", "subtype": "phd_graduate", "phase": "grad"}
+{"person": "parker", "year_raw": "1994~2002", "event": "ORNL Distinguished R&D Staff Member로 다중 로봇 연구 지속", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "parker", "year_raw": "2002", "event": "University of Tennessee, Knoxville EECS 학과 부임 (CISML 센터 소속)", "type": "직업 이력", "subtype": "move", "phase": "mid_career"}
+{"person": "parker", "year_raw": "박사후 시기", "event": "학생·포스닥 Yi Guo, Raj Madhavan, Stefano Carpin, Daisy Tang, Hao Zhang 등 배출", "type": "네트워크", "subtype": "student_notable", "phase": "mid_career"}
+{"person": "parker", "year_raw": "UTK 시기", "event": "Distributed Intelligence Lab 설립, Meka 로봇으로 peer-to-peer HRI 연구", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "mid_career"}
+{"person": "parker", "year_raw": "2012~2014", "event": "IEEE Transactions on Robotics 편집 역임 후 ICRA Conference Editorial Board 편집장 (2012, 13, 14)", "type": "학회·커뮤니티", "subtype": "editorship", "phase": "mid_career"}
+{"person": "parker", "year_raw": "2014", "event": "ICRA 2014(홍콩) Editor-in-Chief of CEB로 활동 (program chair: Bill Hamel)", "type": "학회·커뮤니티", "subtype": "editorship", "phase": "mid_career"}
+{"person": "parker", "year_raw": "2015", "event": "IEEE ICRA 2015 General Chair (전원 여성 조직위원회, 본인 포함)", "type": "학회·커뮤니티", "subtype": "committee", "phase": "senior"}
+{"person": "parker", "year_raw": "2017년 초", "event": "NSF로 파견, Information and Intelligent Systems(IIS) Division Director 부임 (CISE 소속, NRI·Big Data 등 관할)", "type": "직업 이력", "subtype": "admin_role", "phase": "senior"}
+{"person": "parker", "year_raw": "2017년 12월 15일", "event": "Peter Asaro와 ETHW 구술 인터뷰 (인디애나 대학)", "type": "개인사", "subtype": "personal_other", "phase": "senior"}
+{"person": "parker", "year_raw": "이후", "event": "UTK Tickle College of Engineering 학장 보좌·임시 학장 역임", "type": "직업 이력", "subtype": "admin_role", "phase": "senior"}
+{"person": "parker", "year_raw": "이후", "event": "White House OSTP Deputy CTO 겸 Assistant Director of AI 부임", "type": "직업 이력", "subtype": "admin_role", "phase": "senior"}
+{"person": "pfeifer", "year_raw": "출생", "event": "스위스 취리히 출생", "type": "개인사", "subtype": "birth", "phase": "k12"}
+{"person": "pfeifer", "year_raw": "학부~석사", "event": "ETH Zurich에서 물리학·수학 석사", "type": "교육", "subtype": "ms_graduate", "phase": "grad"}
+{"person": "pfeifer", "year_raw": "ETH 시기", "event": "사이버네틱스 세미나 공동 운영, Gordon Pask·Thomas Charles Helvey 등 초청", "type": "네트워크", "subtype": "influence", "phase": "grad"}
+{"person": "pfeifer", "year_raw": "석사 후", "event": "취리히대 심리학과에서 Ulrich Moser의 꿈 시뮬레이션 프로젝트 참여 (Swiss NSF 지원, 스웨덴 컴퓨테이셔널 언어학 그룹과 협업)", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "grad"}
+{"person": "pfeifer", "year_raw": "박사 과정", "event": "ETH Zurich에서 컴퓨터과학·심리학 융합 박사 (인지 프로세스 시뮬레이션)", "type": "교육", "subtype": "phd_graduate", "phase": "grad"}
+{"person": "pfeifer", "year_raw": "1982~1984", "event": "미국 Carnegie Mellon University 포스닥 (Herbert Simon 휘하, John Anderson·Pat Langley 등과 교류, 감정 계산 모델)", "type": "교육", "subtype": "postdoc", "phase": "early_career"}
+{"person": "pfeifer", "year_raw": "이후", "event": "Yale 이동, Robert Abelson·Roger Schank와 AI·언어 연구", "type": "직업 이력", "subtype": "move", "phase": "early_career"}
+{"person": "pfeifer", "year_raw": "1987년경", "event": "취리히대 컴퓨터학부 교수 부임 (전문가 시스템 강의 담당), AI Lab 디렉터 취임", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "pfeifer", "year_raw": "1987 이후", "event": "Schindler·은행·보험사 등과 전문가 시스템 프로젝트, William J. Clancey 초청 후 한계 인식", "type": "창업·산업", "subtype": "industry_collab", "phase": "early_career"}
+{"person": "pfeifer", "year_raw": "사반티칼", "event": "Brussels에서 Luc Steels 연구실 방문, 인공진화·로봇공학 입문", "type": "교육", "subtype": "sabbatical_visit", "phase": "mid_career"}
+{"person": "pfeifer", "year_raw": "1991", "event": "벨기에 Corsendonk 워크숍 참가 (Brooks·Mataric·Smithers·Hallam·McFarland·Varela·Clancey 등 참여)", "type": "학회·커뮤니티", "subtype": "conf_attend", "phase": "mid_career"}
+{"person": "pfeifer", "year_raw": "1990년대 초반", "event": "첫 로봇공학 프로젝트 \"Design Principles for Autonomous Agents\" 유럽 프로젝트 시작", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "mid_career"}
+{"person": "pfeifer", "year_raw": "1990년대", "event": "Rüdiger Wehner와 사하라 사막개미(cataglyphis) 항법 모방 로봇 (Dimitri Lambrinos 박사연구)", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "mid_career"}
+{"person": "pfeifer", "year_raw": "1995", "event": "Monte Verità(스위스)에서 \"Practicing Future of Autonomous Agents\" 컨퍼런스 공동 주최", "type": "학회·커뮤니티", "subtype": "conf_create", "phase": "mid_career"}
+{"person": "pfeifer", "year_raw": "1999", "event": "\"Understanding Intelligence\" 출간 (디자인 원리 10년 정리)", "type": "연구·프로젝트", "subtype": "paper", "phase": "mid_career"}
+{"person": "pfeifer", "year_raw": "2000년대", "event": "소프트 로보틱스·재료 기반 지능 연구, 수중 로봇·바이브드(bivalve)·핸드 의수 등 다수 프로젝트", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "senior"}
+{"person": "pfeifer", "year_raw": "2009", "event": "Shanghai Jiao Tong University에서 Shanghai Lectures 프로젝트 시작", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "senior"}
+{"person": "pfeifer", "year_raw": "2010년 11월", "event": "IROS Taipei 개회 기조강연", "type": "학회·커뮤니티", "subtype": "conf_attend", "phase": "senior"}
+{"person": "pfeifer", "year_raw": "2011년 7월 15일", "event": "Peter Asaro와 ETHW 구술 인터뷰 (취리히)", "type": "개인사", "subtype": "personal_other", "phase": "senior"}
+{"person": "pfeifer", "year_raw": "2014", "event": "취리히대 은퇴, Osaka University 교수직 및 Shanghai Jiao Tong University 객원교수 지속", "type": "직업 이력", "subtype": "retire", "phase": "senior"}
+{"person": "pfeifer", "year_raw": "이후", "event": "스위스 NCCR Robotics 부소장, EU Robot Companion flagship 프로젝트 준비 참여", "type": "직업 이력", "subtype": "admin_role", "phase": "senior"}
+{"person": "riener", "year_raw": "출생", "event": "독일 뮌헨에서 출생, 동지에서 성장 (아버지는 자동차 기술자)", "type": "개인사", "subtype": "birth", "phase": "k12"}
+{"person": "riener", "year_raw": "어린 시절", "event": "기술자/의사 사이에서 진로 고민", "type": "개인사", "subtype": "personal_other", "phase": "k12"}
+{"person": "riener", "year_raw": "1988~1993", "event": "TU München 및 University of Maryland에서 기계공학 수학", "type": "교육", "subtype": "bs_enroll", "phase": "undergrad"}
+{"person": "riener", "year_raw": "1993", "event": "TU München Dipl.-Ing. 학위 취득", "type": "교육", "subtype": "bs_graduate", "phase": "undergrad"}
+{"person": "riener", "year_raw": "1993", "event": "Institute of Automatic Control Engineering 합류, 신경보철·기능적 전기자극(FES) 연구 시작 (멘토 Jochen Quintern, 정형외과 Rainer Burgkart)", "type": "교육", "subtype": "phd_enroll", "phase": "grad"}
+{"person": "riener", "year_raw": "박사 과정", "event": "신경보철 시뮬레이션·제어, 기립·착석·보행·계단 오르기 제어 연구", "type": "교육", "subtype": "phd_thesis", "phase": "grad"}
+{"person": "riener", "year_raw": "1997", "event": "TU München 박사 학위(Dr.) 취득", "type": "교육", "subtype": "phd_graduate", "phase": "grad"}
+{"person": "riener", "year_raw": "1998~1999", "event": "Politecnico di Milano Centro di Bioingegneria 포스닥, 다양한 경사에서의 보행/계단 데이터 측정 (선구적)", "type": "교육", "subtype": "postdoc", "phase": "early_career"}
+{"person": "riener", "year_raw": "1999 이후", "event": "TU München 복귀, Habilitation(생체기전공학) 진행", "type": "교육", "subtype": "sabbatical_visit", "phase": "early_career"}
+{"person": "riener", "year_raw": "TU München 후기", "event": "Burgkart와 햅틱 인터페이스 기반 무릎 진단 시뮬레이터 개발, 분만 시뮬레이터 상용화", "type": "창업·산업", "subtype": "commercialize", "phase": "early_career"}
+{"person": "riener", "year_raw": "2003", "event": "스위스 ETH Zurich 교수 부임 (Volker Dietz·Gery Colombo의 Lokomat 그룹과 합류)", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "riener", "year_raw": "ETH 초기", "event": "뇌졸중 환자용 ARMin 외골격 팔 재활 로봇 등 개발 시작, 능동 하지 보철 프로젝트", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "early_career"}
+{"person": "riener", "year_raw": "2010", "event": "ETH Department of Health Sciences and Technology 정교수(Sensory-Motor Systems) 및 Rehabilitation Engineering 정교수 보임", "type": "직업 이력", "subtype": "promotion", "phase": "mid_career"}
+{"person": "riener", "year_raw": "이후", "event": "Spinal Cord Injury Center, Balgrist University Hospital 활동", "type": "직업 이력", "subtype": "admin_role", "phase": "mid_career"}
+{"person": "riener", "year_raw": "2011", "event": "euRobotics Technology Transfer Award 수상", "type": "수상·명예", "subtype": "paper_award", "phase": "mid_career"}
+{"person": "riener", "year_raw": "2011년 7월 15일", "event": "Peter Asaro와 ETHW 구술 인터뷰 (취리히)", "type": "개인사", "subtype": "personal_other", "phase": "mid_career"}
+{"person": "riener", "year_raw": "2012", "event": "euRobotics Technology Transfer Award 재수상", "type": "수상·명예", "subtype": "paper_award", "phase": "mid_career"}
+{"person": "riener", "year_raw": "이후", "event": "Hocoma와 Lokomat 신모델·VR 시나리오 협업 지속", "type": "창업·산업", "subtype": "industry_collab", "phase": "mid_career"}
+{"person": "roth", "year_raw": "출생", "event": "미국 뉴욕 시 Bronx에서 출생, 동지에서 성장", "type": "개인사", "subtype": "birth", "phase": "k12"}
+{"person": "roth", "year_raw": "고등학교", "event": "Stuyvesant High School 입학 후 Christopher Columbus High School로 전학·졸업", "type": "교육", "subtype": "k12_graduate", "phase": "k12"}
+{"person": "roth", "year_raw": "학부", "event": "City College of New York 기계공학과 졸업", "type": "교육", "subtype": "bs_graduate", "phase": "undergrad"}
+{"person": "roth", "year_raw": "졸업 직후", "event": "City College 강사 및 Hunter College 미술과 강사(드래프팅) 시작, 결혼", "type": "직업 이력", "subtype": "hire", "phase": "grad"}
+{"person": "roth", "year_raw": "대학원 시작", "event": "Columbia University 야간 석·박사과정 진학 (지도교수 강의 후 야간 수강, IBM 650 등 사용)", "type": "교육", "subtype": "ms_enroll", "phase": "grad"}
+{"person": "roth", "year_raw": "박사 막바지", "event": "City College 강의 사임, 컬럼비아 펠로우십으로 박사 마무리 (논문 분야: kinematics, continuation method 개발)", "type": "교육", "subtype": "phd_thesis", "phase": "grad"}
+{"person": "roth", "year_raw": "1958", "event": "Columbia 기계공학 MS", "type": "교육", "subtype": "ms_graduate", "phase": "grad"}
+{"person": "roth", "year_raw": "1962", "event": "Columbia 기계공학 PhD 취득, 가족과 함께 캘리포니아 스탠포드 부임 (연봉 8천 달러)", "type": "교육", "subtype": "phd_graduate", "phase": "grad"}
+{"person": "roth", "year_raw": "1962", "event": "스탠포드 기계공학과 조교수, 운동학(kinematics) 강의 담당", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "roth", "year_raw": "1964년경", "event": "Frederick Terman의 전화로 John McCarthy의 SAIL 프로젝트에 합류, 로봇팔 개발 시작", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "early_career"}
+{"person": "roth", "year_raw": "1960년대 중후반", "event": "Rancho 인공보철 팔 개조해 로봇팔(별명 Shaky/Butter Fingers) 컴퓨터 제어 구현", "type": "연구·프로젝트", "subtype": "breakthrough", "phase": "early_career"}
+{"person": "roth", "year_raw": "1960년대 후반", "event": "디지털 공압식 팔 ORM(노르웨이어 \"뱀\") 개발, 유압식 팔 등 후속 개발", "type": "연구·프로젝트", "subtype": "next_gen", "phase": "early_career"}
+{"person": "roth", "year_raw": "1968~1969", "event": "첫 사반티칼: 네덜란드 Delft 공대 방문 (\"Theoretical Kinematics\" 저술 시작), 학생 Vic Scheinman·Ken Waldron이 Stanford에서 대리 운영", "type": "교육", "subtype": "sabbatical_visit", "phase": "early_career"}
+{"person": "roth", "year_raw": "1969 봄", "event": "IFTOMM 창립 컨퍼런스에서 SAIL 영상 상영, Ivan Ivanovich Artobolevskii 등과 만남", "type": "학회·커뮤니티", "subtype": "conf_attend", "phase": "early_career"}
+{"person": "roth", "year_raw": "1969 이후", "event": "소련 Academy 교환방문, Aron Kobrinsky와 친교, 동서 교류 모색", "type": "네트워크", "subtype": "collab_start", "phase": "early_career"}
+{"person": "roth", "year_raw": "1972 이후", "event": "Vic Scheinman, Vicarm 창업 후 Joe Engelberger의 Unimation 인수, Puma 개발", "type": "창업·산업", "subtype": "commercialize", "phase": "mid_career"}
+{"person": "roth", "year_raw": "1973", "event": "유고슬라비아 IFTOMM 회의에서 Romansy 시리즈 결성, 미국위원으로 활동", "type": "학회·커뮤니티", "subtype": "conf_create", "phase": "mid_career"}
+{"person": "roth", "year_raw": "1970년대 중반", "event": "Lou Paul 첫 로봇공학 교과서 집필, 후일 John Craig의 책 후원", "type": "연구·프로젝트", "subtype": "paper", "phase": "mid_career"}
+{"person": "roth", "year_raw": "1980년대", "event": "Systems Development Foundation 지원으로 Sun-1 컴퓨터·John Craig 책 자금 확보, NSF로 자금 다변화", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "mid_career"}
+{"person": "roth", "year_raw": "1980년대", "event": "Ken Salisbury(다지 핸드 박사논문)·Jeff Kerr(파지)·John Craig(제어)·Madhu Raghavan(역기구학) 등 지도", "type": "네트워크", "subtype": "student_notable", "phase": "mid_career"}
+{"person": "roth", "year_raw": "이후", "event": "파리 로봇 연구소 매년 1개월씩 방문 (Mavroidis 지도)", "type": "교육", "subtype": "sabbatical_visit", "phase": "senior"}
+{"person": "roth", "year_raw": "이후", "event": "Shigeo Hirose(도쿄)·Georges Giralt·Raja Chatila(LAAS) 등과 교류, 인도(Bangalore·Kanpur·New Delhi) 객원교수", "type": "네트워크", "subtype": "collab_start", "phase": "senior"}
+{"person": "roth", "year_raw": "2000", "event": "ASME Outstanding Design Educator Award 수상", "type": "수상·명예", "subtype": "lifetime_award", "phase": "senior"}
+{"person": "roth", "year_raw": "이후", "event": "Hasso Plattner Institute of Design(d.school) 공동 창립, Dave Kelley 와병 시 임시 디렉터, 이후 공동 운영", "type": "직업 이력", "subtype": "admin_role", "phase": "senior"}
+{"person": "roth", "year_raw": "2007", "event": "University of Paris 명예박사 학위", "type": "수상·명예", "subtype": "honorary_degree", "phase": "senior"}
+{"person": "roth", "year_raw": "2010년 11월 18일", "event": "Peter Asaro·Selma Šabanović와 ETHW 구술 인터뷰 (스탠포드)", "type": "개인사", "subtype": "personal_other", "phase": "senior"}
+{"person": "ruoff", "year_raw": "출생", "event": "미국 캘리포니아 로스앤젤레스 출생, Compton에서 성장", "type": "개인사", "subtype": "birth", "phase": "k12"}
+{"person": "ruoff", "year_raw": "1960", "event": "Compton Senior High School 졸업", "type": "교육", "subtype": "k12_graduate", "phase": "k12"}
+{"person": "ruoff", "year_raw": "1960년 초반", "event": "일하다가 Ohio의 Graceland College(종교계 학교) 진학, 한 학기 만에 자퇴", "type": "교육", "subtype": "bs_enroll", "phase": "undergrad"}
+{"person": "ruoff", "year_raw": "1961~1967", "event": "Arrowhead Metal Products·Philco-Ford·TRW·Purex 등에서 기계 설계자로 근무", "type": "직업 이력", "subtype": "hire", "phase": "undergrad"}
+{"person": "ruoff", "year_raw": "1967", "event": "California State University, Long Beach 수학 학사 취득", "type": "교육", "subtype": "bs_graduate", "phase": "undergrad"}
+{"person": "ruoff", "year_raw": "1967~1970", "event": "McDonnell-Douglas Aircraft에서 과학 프로그래머", "type": "직업 이력", "subtype": "hire", "phase": "grad"}
+{"person": "ruoff", "year_raw": "1968~1969", "event": "UCLA 물리학과 강사", "type": "직업 이력", "subtype": "hire", "phase": "grad"}
+{"person": "ruoff", "year_raw": "1970~1971", "event": "UCLA 강사 재차 활동", "type": "직업 이력", "subtype": "hire", "phase": "grad"}
+{"person": "ruoff", "year_raw": "1971", "event": "UCLA 물리학 석사 학위 (입자물리 지망 → 취업난으로 전향)", "type": "교육", "subtype": "ms_graduate", "phase": "grad"}
+{"person": "ruoff", "year_raw": "1971 여름", "event": "Information International 여름직 (기계어 프로그래밍 경험)", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "ruoff", "year_raw": "1972년 4월", "event": "Bendix(오하이오 Dayton) 입사, 결혼 직후 폭스바겐으로 이주, PACS 스마트 로봇 프로젝트 합류", "type": "직업 이력", "subtype": "hire", "phase": "early_career"}
+{"person": "ruoff", "year_raw": "1972~1974", "event": "Bendix에서 PACS 제어 시스템 매니저 역임 (1974 Machine Tool Show 시연 준비)", "type": "직업 이력", "subtype": "admin_role", "phase": "early_career"}
+{"person": "ruoff", "year_raw": "1977년 9월", "event": "General Electric R&D Center(Schenectady) 입사, 로봇·컴퓨터비전 연구", "type": "직업 이력", "subtype": "move", "phase": "early_career"}
+{"person": "ruoff", "year_raw": "1977", "event": "출장 중 SRI International 방문, JPL 인사들과 접촉", "type": "네트워크", "subtype": "collab_start", "phase": "early_career"}
+{"person": "ruoff", "year_raw": "1978년 10월", "event": "Jet Propulsion Lab(JPL) 입사, Robotics & Teleoperator Group, 1984 Mars Rover 프로젝트 마무리", "type": "직업 이력", "subtype": "move", "phase": "early_career"}
+{"person": "ruoff", "year_raw": "1978 이후", "event": "상사가 Boeing 이직 후 Robotics Group 슈퍼바이저로 승진", "type": "직업 이력", "subtype": "promotion", "phase": "early_career"}
+{"person": "ruoff", "year_raw": "1982", "event": "오랫동안 Bendix에서 함께 일한 Brian Wilcox 채용", "type": "네트워크", "subtype": "collab_start", "phase": "early_career"}
+{"person": "ruoff", "year_raw": "1982", "event": "Caltech의 Feinman·Carver Mead·John Hopfield의 \"Physics of Computation\" 강의에서 Fred Culick 만남", "type": "네트워크", "subtype": "mentor_meet", "phase": "early_career"}
+{"person": "ruoff", "year_raw": "1984", "event": "Fred Culick과 JPL/Caltech 공동 로봇공학 제안서 작성, 연 30만 달러 DDF 확보", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "early_career"}
+{"person": "ruoff", "year_raw": "1985", "event": "Caltech 박사과정 입학 (지도교수 Fred Culick, 부전공 CS는 Carver Mead 지도)", "type": "교육", "subtype": "phd_enroll", "phase": "early_career"}
+{"person": "ruoff", "year_raw": "1985", "event": "JPL에서 Telerobotics Project 시작 (~30명 규모), local autonomy 제안", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "early_career"}
+{"person": "ruoff", "year_raw": "1989", "event": "JPL 인근 arroyo에서 자율 주행 야외 시연 (Brian Wilcox 등과 함께)", "type": "연구·프로젝트", "subtype": "demo", "phase": "early_career"}
+{"person": "ruoff", "year_raw": "1990년대", "event": "Sojourner 화성 로버 프로젝트 참여 (1997년 화성 도착, Donna Shirley 프로젝트 매니저)", "type": "연구·프로젝트", "subtype": "proj_start", "phase": "mid_career"}
+{"person": "ruoff", "year_raw": "1993", "event": "Caltech 기계공학 박사 학위 취득 (논문: 신경망 기반 hand-eye coordination 및 catching 학습)", "type": "교육", "subtype": "phd_graduate", "phase": "mid_career"}
+{"person": "ruoff", "year_raw": "1995~", "event": "UCLA 기계항공공학과 강사 시작", "type": "직업 이력", "subtype": "hire", "phase": "mid_career"}
+{"person": "ruoff", "year_raw": "1996", "event": "JPL Outstanding Mentor Award", "type": "수상·명예", "subtype": "paper_award", "phase": "mid_career"}
+{"person": "ruoff", "year_raw": "1996~2000", "event": "Caltech 기계공학과 객원 부교수", "type": "직업 이력", "subtype": "hire", "phase": "mid_career"}
+{"person": "ruoff", "year_raw": "1990년대 후반", "event": "Robotics Section 매니저 역임, Sojourner 등 다수 화성 프로젝트 지원", "type": "직업 이력", "subtype": "admin_role", "phase": "mid_career"}
+{"person": "ruoff", "year_raw": "2001~", "event": "JPL Observational Systems Division & Science Division 디비전 테크놀로지스트", "type": "직업 이력", "subtype": "admin_role", "phase": "senior"}
+{"person": "ruoff", "year_raw": "2008", "event": "NASA Exceptional Service Medal 수상", "type": "수상·명예", "subtype": "gov_honor", "phase": "senior"}
+{"person": "ruoff", "year_raw": "2011년 6월 2일", "event": "Selma Šabanović·Peter Asaro와 ETHW 구술 인터뷰 (Pasadena)", "type": "개인사", "subtype": "personal_other", "phase": "senior"}
