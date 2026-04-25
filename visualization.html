@@ -322,8 +322,11 @@ function getPersonOrder() {
       }
     }
     return ps.sort((a, b) => {
-      const ay = VIZ_DATA.persons[a].birth_year ?? earliest[a] ?? 9999;
-      const by = VIZ_DATA.persons[b].birth_year ?? earliest[b] ?? 9999;
+      const ma = VIZ_DATA.persons[a], mb = VIZ_DATA.persons[b];
+      const ay = (ma.birth_year != null) ? ma.birth_year :
+                 (earliest[a] != null) ? earliest[a] : 9999;
+      const by = (mb.birth_year != null) ? mb.birth_year :
+                 (earliest[b] != null) ? earliest[b] : 9999;
       return ay - by;
     });
   } else {
@@ -400,7 +403,8 @@ function showTip(ev, e) {
   clearTimeout(tipTimeout);
   const t = document.getElementById('tooltip');
   const i = I18N[lang];
-  const fullName = (VIZ_DATA.persons[e.person]?.full_name) || e.person;
+  const _pm = VIZ_DATA.persons[e.person];
+  const fullName = (_pm && _pm.full_name) || e.person;
   // 언어에 따라 이벤트 텍스트와 year_raw 스왑
   const eventText = (lang === 'en' && e.event_en) ? e.event_en : e.event;
   const yearRaw = (lang === 'en' && e.year_raw_en) ? e.year_raw_en : e.year_raw;
