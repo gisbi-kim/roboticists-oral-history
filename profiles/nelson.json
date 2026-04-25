@@ -1,0 +1,34 @@
+{
+  "person": "nelson",
+  "full_name": "Brad Nelson",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "University of Illinois at Urbana-Champaign", "field": "Mechanical Engineering", "year": null, "country": "USA"},
+    "ms": {"school": "University of Minnesota", "field": "Mechanical Engineering", "year": null, "country": "USA"},
+    "phd": {"school": "Carnegie Mellon University", "field": "Robotics", "year": 1995, "country": "USA", "advisor": "Pradeep Khosla", "thesis_topic": "Port-Based Agents for Assimilating Disparate Sensory Feedback"}
+  },
+  "career_path": [
+    {"org": "Honeywell", "role": "Computer Vision Researcher", "type": "industry", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "U.S. Peace Corps (Botswana)", "role": "Volunteer", "type": "govlab", "country": "Botswana", "year_start": null, "year_end": null},
+    {"org": "Motorola", "role": "Software Engineer", "type": "industry", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "University of Illinois at Chicago", "role": "Assistant Professor", "type": "academia", "country": "USA", "year_start": 1995, "year_end": 1998},
+    {"org": "University of Minnesota", "role": "Associate Professor", "type": "academia", "country": "USA", "year_start": 1998, "year_end": 2002},
+    {"org": "ETH Zurich", "role": "Professor of Robotics and Intelligent Systems", "type": "academia", "country": "Switzerland", "year_start": 2002, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "University of Illinois at Chicago", "type": "academia", "country": "USA", "year": 1995},
+  "companies_founded": [
+    {"name": "FemtoTools", "year": 2007, "role": "Co-founder (with Felix Beyeler)", "status": "active"},
+    {"name": "ANT Scientific (Aeon Scientific)", "year": 2010, "role": "Co-founder", "status": "active"}
+  ],
+  "topics": ["microrobotics", "nanorobotics", "micro-assembly", "mems", "visual servoing", "force control", "biomedical robotics"],
+  "awards": [
+    {"name": "Scientific American 50", "year": 2005},
+    {"name": "RoboCup Nanogram Competition", "year": 2007},
+    {"name": "RoboCup Nanogram Competition", "year": 2009},
+    {"name": "ONR Young Investigator Award", "year": null}
+  ],
+  "external_events_mentioned": ["Apollo 11 moon landing (1969)", "DARPA Intelligent Task Automation project", "IROS Pittsburgh 1995 micro-manipulation papers", "Da Vinci surgical robot release", "Given Imaging camera pill release"]
+}

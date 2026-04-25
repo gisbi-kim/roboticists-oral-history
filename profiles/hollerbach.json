@@ -1,0 +1,30 @@
+{
+  "person": "hollerbach",
+  "full_name": "John Hollerbach",
+  "birth_year": null,
+  "birth_country": "Germany",
+  "gender": "M",
+  "interview_year": 2012,
+  "education": {
+    "bs": {"school": "University of Michigan", "field": "Other: Chemistry", "year": 1968, "country": "USA"},
+    "ms": {"school": "University of Michigan", "field": "Mathematics", "year": 1969, "country": "USA"},
+    "phd": {"school": "Massachusetts Institute of Technology", "field": "Electrical Engineering", "year": 1978, "country": "USA", "advisor": "David Marr", "thesis_topic": "human handwriting model and robot implementation"}
+  },
+  "career_path": [
+    {"org": "IBM", "role": "Chemist", "type": "industry", "country": "USA", "year_start": 1969, "year_end": 1971},
+    {"org": "MIT AI Laboratory", "role": "Research Scientist (Department of Psychology)", "type": "academia", "country": "USA", "year_start": 1978, "year_end": 1982},
+    {"org": "Massachusetts Institute of Technology", "role": "Assistant Professor (Psychology) / Associate Professor (Brain and Cognitive Sciences)", "type": "academia", "country": "USA", "year_start": 1982, "year_end": 1989},
+    {"org": "McGill University", "role": "NSERC/CIAR Industrial Chair in Robotics, Department of Mechanical Engineering and Biomedical Engineering", "type": "academia", "country": "Canada", "year_start": 1989, "year_end": 1994},
+    {"org": "University of Utah", "role": "Professor of Computing and Research Professor of Mechanical Engineering", "type": "academia", "country": "USA", "year_start": 1994, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "MIT AI Laboratory", "type": "academia", "country": "USA", "year": 1978},
+  "companies_founded": [],
+  "topics": ["robot motion planning", "haptics", "human motor control", "virtual environments", "rehabilitation robotics", "robotics journals/community"],
+  "awards": [
+    {"name": "NSF Presidential Young Investigator Award", "year": 1984},
+    {"name": "Canadian Institute for Advanced Research Fellow", "year": 1988},
+    {"name": "IEEE Fellow", "year": 1996},
+    {"name": "IEEE RAS Distinguished Service Award", "year": 2012}
+  ],
+  "external_events_mentioned": ["Year of the Robot program", "First ISRR 1983", "ICRA Atlanta 1984", "ICRA Scottsdale 1989", "founding of IJRR 1983", "founding of IEEE Journal of Robotics and Automation 1984"]
+}

@@ -1,0 +1,27 @@
+{
+  "person": "dillmann",
+  "full_name": "Rüdiger Dillmann",
+  "birth_year": 1949,
+  "birth_country": "Germany",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "University of Karlsruhe", "field": "Electrical Engineering", "year": null, "country": "Germany"},
+    "ms": {"school": "University of Karlsruhe", "field": "Electrical Engineering", "year": null, "country": "Germany"},
+    "phd": {"school": "University of Karlsruhe", "field": "Control Engineering", "year": 1980, "country": "Germany", "advisor": "Otto Föllinger / Paul Frank", "thesis_topic": "Pulse frequency controlled systems (muscle stimulation and Viking satellite)"}
+  },
+  "career_path": [
+    {"org": "Scientific Precision Instruments", "role": "Founder / Consultant", "type": "industry", "country": "Germany", "year_start": 1969, "year_end": null},
+    {"org": "University of Karlsruhe (KIT) – Real-time Computer Systems Institute", "role": "Researcher → Associate Professor (1986) → Full Professor (1987) → Director Humanoids and Intelligence Systems Lab", "type": "academia", "country": "Germany", "year_start": 1976, "year_end": null},
+    {"org": "FZI Research Center for Information Science", "role": "Director of Innovation Lab", "type": "academia", "country": "Germany", "year_start": 2002, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "University of Karlsruhe", "type": "academia", "country": "Germany", "year": 1980},
+  "companies_founded": [
+    {"name": "Scientific Precision Instruments", "year": 1969, "role": "Founder", "status": "active"}
+  ],
+  "topics": ["humanoid", "machine learning", "programming by demonstration", "computer-supported surgery", "walking robots", "industrial robots", "human-robot interaction"],
+  "awards": [
+    {"name": "IEEE Fellow", "year": null}
+  ],
+  "external_events_mentioned": ["IARP NATO International Advanced Robotics Program", "ESPRIT CIM project", "SFB 588 Humanoid Robots Collaborative Research Center (2001-)", "EURON co-founding", "Tsukuba Expo Waseda piano humanoid", "ARMAR humanoid platform", "Institute of Anthropomatics founding (2009)"]
+}

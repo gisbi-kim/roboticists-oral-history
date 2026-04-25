@@ -1,0 +1,31 @@
+{
+  "person": "craig",
+  "full_name": "John Craig",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "Rensselaer Polytechnic Institute", "field": "Electrical Engineering", "year": null, "country": "USA"},
+    "ms": {"school": "Rensselaer Polytechnic Institute", "field": "Electrical Engineering", "year": null, "country": "USA"},
+    "phd": {"school": "Stanford University", "field": "Electrical Engineering", "year": 1986, "country": "USA", "advisor": "Bernard Roth", "thesis_topic": "Adaptive control of manipulators"}
+  },
+  "career_path": [
+    {"org": "NASA Jet Propulsion Laboratory", "role": "Researcher", "type": "govlab", "country": "USA", "year_start": 1977, "year_end": null},
+    {"org": "Stanford University", "role": "PhD student / Lecturer", "type": "academia", "country": "USA", "year_start": null, "year_end": 1986},
+    {"org": "General Motors Technical Center", "role": "Summer researcher", "type": "industry", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Silma Inc.", "role": "Co-founder", "type": "industry", "country": "USA", "year_start": 1986, "year_end": null},
+    {"org": "Adept Technology", "role": "Researcher (after Silma acquisition)", "type": "industry", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Invenios", "role": "Engineer (encoder technology)", "type": "industry", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Veterinary radiology software / plastic horseshoe company", "role": "Software developer / entrepreneur", "type": "industry", "country": "USA", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Silma Inc.", "type": "industry", "country": "USA", "year": 1986},
+  "companies_founded": [
+    {"name": "Silma Inc.", "year": 1986, "role": "Co-founder", "status": "acquired by Adept"}
+  ],
+  "topics": ["force control", "manipulation", "adaptive control", "industrial robots", "offline programming", "robot programming languages", "high-precision encoders"],
+  "awards": [
+    {"name": "ACC Best Paper Award (with Ken Salisbury)", "year": null}
+  ],
+  "external_events_mentioned": ["RPI Mars Rover project", "Cosmos TV series with Carl Sagan", "IEEE ICRA", "American Control Conference", "International Symposium on Robotics Research"]
+}

@@ -1,0 +1,29 @@
+{
+  "person": "kaplan",
+  "full_name": "Frederic Kaplan",
+  "birth_year": null,
+  "birth_country": "France",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "Ecole Nationale Superieure des Telecommunications", "field": "Other: Engineering (Telecommunications, AI specialization)", "year": 1997, "country": "France"},
+    "ms": null,
+    "phd": {"school": "Universite Pierre et Marie Curie (Paris VI)", "field": "Other: Artificial Intelligence", "year": 2000, "country": "France", "advisor": "Luc Steels", "thesis_topic": "Multi-agent systems and the evolution of language"}
+  },
+  "career_path": [
+    {"institution": "Sony Computer Science Laboratory Paris", "country": "France", "type": "industry", "role": "Researcher (Robotics Department)", "start_year": 1997, "end_year": 2006},
+    {"institution": "EPFL (CRAFT Laboratory / Rolex Learning Center)", "country": "Switzerland", "type": "academia", "role": "Researcher", "start_year": 2006, "end_year": 2012},
+    {"institution": "EPFL", "country": "Switzerland", "type": "academia", "role": "Professor and Chair of Digital Humanities, Director of DHLAB", "start_year": 2012, "end_year": null}
+  ],
+  "first_job_after_phd": {"institution": "Sony Computer Science Laboratory Paris", "country": "France", "type": "industry", "role": "Researcher"},
+  "companies_founded": [
+    {"name": "OZWE", "year": 2008, "country": "Switzerland"},
+    {"name": "Bookapp.com", "year": 2010, "country": "Switzerland"}
+  ],
+  "topics": ["developmental robotics", "language acquisition", "human-robot interaction", "intrinsic motivation", "multi-agent systems", "digital humanities"],
+  "awards": [],
+  "external_events_mentioned": [
+    "MoMA 'Design and the Elastic Mind' exhibition 2008",
+    "Talking Heads experiments"
+  ]
+}

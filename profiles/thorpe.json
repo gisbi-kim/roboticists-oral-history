@@ -1,0 +1,30 @@
+{
+  "person": "thorpe",
+  "full_name": "Charles E. \"Chuck\" Thorpe",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "North Park College", "field": "Other: Natural Science", "year": null, "country": "USA"},
+    "ms": {"school": null, "field": null, "year": null, "country": null},
+    "phd": {"school": "Carnegie Mellon University", "field": "Computer Science", "year": 1984, "country": "USA", "advisor": "Raj Reddy", "thesis_topic": "Improving stereo vision-based mobile robot performance (with Hans Moravec as co-advisor)"}
+  },
+  "career_path": [
+    {"org": "Carnegie Mellon University Robotics Institute", "role": "Postdoctoral researcher -> Faculty -> NavLab project leader -> Director of Robotics Institute", "type": "academia", "country": "USA", "year_start": 1984, "year_end": 2004},
+    {"org": "Carnegie Mellon University in Qatar", "role": "Founding Dean", "type": "academia", "country": "Qatar", "year_start": 2004, "year_end": 2010},
+    {"org": "Clarkson University (Potsdam, New York)", "role": "Senior Vice President and Provost", "type": "academia", "country": "USA", "year_start": 2010, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Carnegie Mellon University Robotics Institute", "type": "academia", "country": "USA", "year": 1984},
+  "companies_founded": [],
+  "topics": ["autonomous vehicles", "mobile robotics", "computer vision", "navlab", "automated highway systems", "collision avoidance"],
+  "awards": [],
+  "external_events_mentioned": [
+    "DARPA Strategic Computing / Autonomous Land Vehicle program 1984",
+    "ALVINN neural network 1990",
+    "No Hands Across America drive 1995",
+    "Automated Highway System demo 1997 San Diego",
+    "DARPA Grand Challenges",
+    "Google self-driving car project"
+  ]
+}

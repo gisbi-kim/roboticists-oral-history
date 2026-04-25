@@ -1,0 +1,27 @@
+{
+  "person": "yuta",
+  "full_name": "Shinichi Yuta",
+  "birth_year": 1948,
+  "birth_country": "Japan",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "Keio University", "field": "Electrical Engineering", "year": null, "country": "Japan"},
+    "ms": {"school": "Keio University", "field": "Electrical Engineering", "year": null, "country": "Japan"},
+    "phd": {"school": "Keio University", "field": "Electrical Engineering", "year": 1975, "country": "Japan", "advisor": "Takahashi", "thesis_topic": "electrical circuit and system theory, optimization, control systems"}
+  },
+  "career_path": [
+    {"org": "Tokyo University of Agriculture and Technology", "role": "Research Associate", "type": "academia", "country": "Japan", "year_start": 1975, "year_end": 1978},
+    {"org": "University of Tsukuba", "role": "Lecturer to Professor / Dean / Vice President", "type": "academia", "country": "Japan", "year_start": 1978, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Tokyo University of Agriculture and Technology", "type": "academia", "country": "Japan", "year": 1975},
+  "companies_founded": [],
+  "topics": ["mobile robots", "autonomous navigation", "slam", "medical imaging", "range sensors", "robotics education"],
+  "awards": [],
+  "external_events_mentioned": [
+    "Tsukuba Challenge open autonomous navigation event",
+    "Hokuyo laser range sensor co-development",
+    "Mitsubishi Heavy Industry wakamaru robot",
+    "Ultrasound CT imaging research"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "person": "khosla",
+  "full_name": "Pradeep Khosla",
+  "birth_year": null,
+  "birth_country": "India",
+  "gender": "M",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "Indian Institute of Technology Kharagpur", "field": "Electrical Engineering", "year": 1980, "country": "India"},
+    "ms": {"school": "Carnegie Mellon University", "field": "Electrical Engineering", "year": 1984, "country": "USA"},
+    "phd": {"school": "Carnegie Mellon University", "field": "Other: Electrical and Computer Engineering", "year": 1986, "country": "USA", "advisor": "Takeo Kanade", "thesis_topic": "CMU Direct-Drive Arm II (SCARA configuration, real-time control)"}
+  },
+  "career_path": [
+    {"institution": "Carnegie Mellon University", "country": "USA", "type": "academia", "role": "Assistant Professor (ECE and Robotics), promoted to University Professor in 2008", "start_year": 1986, "end_year": 2012},
+    {"institution": "DARPA (Software and Intelligent Systems Technology Office)", "country": "USA", "type": "govlab", "role": "Program Manager", "start_year": 1994, "end_year": 1996},
+    {"institution": "UC San Diego", "country": "USA", "type": "academia", "role": "Chancellor (8th)", "start_year": 2012, "end_year": null}
+  ],
+  "first_job_after_phd": {"institution": "Carnegie Mellon University", "country": "USA", "type": "academia", "role": "Assistant Professor of ECE and Robotics"},
+  "companies_founded": [],
+  "topics": ["manipulation", "force control", "modular robotics", "swarm robotics", "embedded systems security", "direct-drive arms"],
+  "awards": [
+    {"name": "Light of India Award", "year": 2012}
+  ],
+  "external_events_mentioned": [
+    "Founded CMU CyLab 2001",
+    "DARPA Millibots project featured in Scientific American",
+    "Founded ICES (Institute for Complex Engineered Systems) 1997"
+  ]
+}

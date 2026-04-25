@@ -1,0 +1,37 @@
+{
+  "person": "volz",
+  "full_name": "Richard Volz",
+  "birth_year": 1937,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2012,
+  "education": {
+    "bs": {"school": "Northwestern University", "field": "Electrical Engineering", "year": null, "country": "USA"},
+    "ms": {"school": "Northwestern University", "field": "Electrical Engineering", "year": null, "country": "USA"},
+    "phd": {"school": "Northwestern University", "field": "Electrical Engineering", "year": null, "country": "USA", "advisor": "Gordon Murphy", "thesis_topic": "parameter sensitivity of control systems and optimization"}
+  },
+  "career_path": [
+    {"org": "University of Michigan", "role": "Professor of Electrical Engineering / Robotics Research Lab Director", "type": "academia", "country": "USA", "year_start": 1964, "year_end": 1988},
+    {"org": "Texas A&M University", "role": "Department Head of Computer Science / Professor", "type": "academia", "country": "USA", "year_start": 1988, "year_end": 2004}
+  ],
+  "first_job_after_phd": {"org": "University of Michigan", "type": "academia", "country": "USA", "year": 1964},
+  "companies_founded": [],
+  "topics": ["telerobotics", "real-time systems", "control systems", "haptics", "ada language", "space robotics"],
+  "awards": [
+    {"name": "Eshbach Award (Northwestern Technological Institute)", "year": 1960},
+    {"name": "IRE Outstanding Student Award", "year": 1960},
+    {"name": "Cabell Fellowship (Northwestern Technological Institute)", "year": 1963},
+    {"name": "Eta Kappa Nu Outstanding Teacher Award (University of Michigan)", "year": 1975},
+    {"name": "NASA Special Service Award", "year": 1993},
+    {"name": "Decoration for Exceptional Civilian Service (U.S. Air Force)", "year": 1994},
+    {"name": "IEEE Millennium Medal", "year": null},
+    {"name": "IEEE Robotics and Automation Society Distinguished Service Award", "year": null}
+  ],
+  "external_events_mentioned": [
+    "Challenger disaster (1986)",
+    "Apollo 1 fire (1967)",
+    "Reagan space station announcement (1984)",
+    "First ICRA conference (Atlanta, 1983)",
+    "IEEE RAS founding (1988)"
+  ]
+}

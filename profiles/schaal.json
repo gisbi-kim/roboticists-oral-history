@@ -1,0 +1,31 @@
+{
+  "person": "schaal",
+  "full_name": "Stefan Schaal",
+  "birth_year": null,
+  "birth_country": "Germany",
+  "gender": "M",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": null, "field": null, "year": null, "country": null},
+    "ms": {"school": "Technical University of Munich", "field": "Mechanical Engineering", "year": 1988, "country": "Germany"},
+    "phd": {"school": "Technical University of Munich", "field": "Mechanical Engineering", "year": 1991, "country": "Germany", "advisor": "Klaus Ehrlenspiel", "thesis_topic": "Computer-aided design and artificial intelligence"}
+  },
+  "career_path": [
+    {"org": "MIT (Brain & Cognitive Sciences / AI Lab)", "role": "Post-Doctoral Fellow", "type": "academia", "country": "USA", "year_start": 1991, "year_end": 1994},
+    {"org": "ATR Human Information Processing Research Lab", "role": "Invited Researcher", "type": "govlab", "country": "Japan", "year_start": 1992, "year_end": 2002},
+    {"org": "Georgia Institute of Technology", "role": "Adjunct Assistant Professor", "type": "academia", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Pennsylvania State University (Kinesiology)", "role": "Adjunct Assistant Professor", "type": "academia", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "University of Southern California", "role": "Professor of Computer Science, Neuroscience, and Biomedical Engineering", "type": "academia", "country": "USA", "year_start": 1997, "year_end": null},
+    {"org": "Max-Planck Institute for Intelligent Systems (Tuebingen)", "role": "Founding Director", "type": "govlab", "country": "Germany", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "MIT (Brain & Cognitive Sciences / AI Lab)", "type": "academia", "country": "USA", "year": 1991},
+  "companies_founded": [],
+  "topics": ["machine learning", "computational motor control", "imitation learning", "humanoid robots", "manipulation", "motor primitives"],
+  "awards": [],
+  "external_events_mentioned": [
+    "Japanese ERATO program (1996)",
+    "DARPA Little Dog program",
+    "Robotics: Science and Systems (RSS) co-founding",
+    "Santa Fe Complex Systems Summer School 1992"
+  ]
+}

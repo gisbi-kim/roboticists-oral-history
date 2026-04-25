@@ -1,0 +1,25 @@
+{
+  "person": "arai",
+  "full_name": "Tatsuo Arai",
+  "birth_year": 1952,
+  "birth_country": "Japan",
+  "gender": "M",
+  "interview_year": 2013,
+  "education": {
+    "bs": {"school": "University of Tokyo", "field": "Other: Applied Mathematics and Instrumentation Physics", "year": 1975, "country": "Japan"},
+    "ms": {"school": "University of Tokyo", "field": "Other: Applied Mathematics and Instrumentation Physics", "year": 1977, "country": "Japan"},
+    "phd": {"school": "University of Tokyo", "field": "Other: Applied Mathematics and Instrumentation Physics", "year": 1986, "country": "Japan", "advisor": null, "thesis_topic": "Walking robot and bilateral teleoperation for mobile manipulation"}
+  },
+  "career_path": [
+    {"org": "Mechanical Engineering Laboratory, MITI/AIST", "role": "Researcher", "type": "govlab", "country": "Japan", "year_start": 1977, "year_end": 1997},
+    {"org": "MIT", "role": "Visiting scientist (Tom Sheridan group)", "type": "academia", "country": "USA", "year_start": 1986, "year_end": 1987},
+    {"org": "Osaka University", "role": "Full Professor, Department of Systems Innovation, Graduate School of Engineering Science", "type": "academia", "country": "Japan", "year_start": 1997, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Mechanical Engineering Laboratory, MITI", "type": "govlab", "country": "Japan", "year": 1977},
+  "companies_founded": [],
+  "topics": ["manipulation", "mobile robots", "parallel mechanisms", "micro robotics", "humanoid", "telerobotics", "legged robots"],
+  "awards": [
+    {"name": "IEEE Fellow", "year": 2016}
+  ],
+  "external_events_mentioned": []
+}

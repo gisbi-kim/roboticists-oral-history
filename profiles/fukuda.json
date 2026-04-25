@@ -1,0 +1,39 @@
+{
+  "person": "fukuda",
+  "full_name": "Toshio Fukuda",
+  "birth_year": 1948,
+  "birth_country": "Japan",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "Waseda University", "field": "Mechanical Engineering", "year": 1971, "country": "Japan"},
+    "ms": {"school": "University of Tokyo", "field": "Mechanical Engineering", "year": 1973, "country": "Japan"},
+    "phd": {"school": "University of Tokyo", "field": "Mechanical Engineering", "year": 1977, "country": "Japan", "advisor": null, "thesis_topic": null}
+  },
+  "career_path": [
+    {"org": "Yale University", "role": "Visiting researcher (advanced adaptive control)", "type": "academia", "country": "USA", "year_start": 1973, "year_end": 1977},
+    {"org": "National Mechanical Engineering Laboratory, AIST (Tsukuba)", "role": "Research Scientist", "type": "govlab", "country": "Japan", "year_start": 1977, "year_end": 1979},
+    {"org": "University of Stuttgart", "role": "Visiting Research Fellow", "type": "academia", "country": "Germany", "year_start": 1979, "year_end": 1980},
+    {"org": "Science University of Tokyo", "role": "Associate Professor", "type": "academia", "country": "Japan", "year_start": 1981, "year_end": 1989},
+    {"org": "Nagoya University", "role": "Professor of Mechanical Engineering", "type": "academia", "country": "Japan", "year_start": 1989, "year_end": 2013},
+    {"org": "Meijo University", "role": "Professor", "type": "academia", "country": "Japan", "year_start": 2013, "year_end": null},
+    {"org": "Beijing Institute of Technology", "role": "Professor", "type": "academia", "country": "China", "year_start": 2013, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "National Mechanical Engineering Laboratory, AIST", "type": "govlab", "country": "Japan", "year": 1977},
+  "companies_founded": [
+    {"name": "Vascular simulator spin-off (university venture)", "year": null, "role": "Founder", "status": "active"}
+  ],
+  "topics": ["modular robots", "cellular robotic systems", "micro robots", "nano robotics", "bio-robotics", "medical robotics", "inspection and maintenance robots", "fuzzy control"],
+  "awards": [
+    {"name": "IEEE Fellow", "year": 1995},
+    {"name": "IEEE Eugene Mittelmann Achievement Award", "year": 1997},
+    {"name": "IEEE Third Millennium Medal", "year": 2000},
+    {"name": "IEEE Robotics and Automation Society Pioneer Award", "year": 2004},
+    {"name": "IEEE RAS George Saridis Leadership Award in Robotics and Automation", "year": 2009},
+    {"name": "IEEE Technical Field Award on Robotics and Automation", "year": 2010},
+    {"name": "IEEE/RSJ IROS Harashima Award for Innovative Technologies", "year": 2011},
+    {"name": "Medal of Honor with Purple Ribbon (Japan)", "year": 2015},
+    {"name": "Foreign Member, Chinese Academy of Sciences", "year": 2017}
+  ],
+  "external_events_mentioned": ["IROS 1988 Tokyo founding", "MHS founding 1990", "ARSO founding 2005", "SII founding 2008", "IEEE RAS President 1998-1999", "IEEE Nanotechnology Council founding President 2002-2005", "IEEE President-Elect 2019"]
+}

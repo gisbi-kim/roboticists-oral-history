@@ -1,0 +1,21 @@
+{
+  "person": "ambrose",
+  "full_name": "Robert Ambrose",
+  "birth_year": 1964,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "Washington University in St. Louis", "field": "Mechanical Engineering", "year": null, "country": "USA"},
+    "ms": {"school": "Washington University in St. Louis", "field": "Mechanical Engineering", "year": null, "country": "USA"},
+    "phd": {"school": "University of Texas at Austin", "field": "Mechanical Engineering", "year": 1991, "country": "USA", "advisor": "Delbert (Dell) Tesar", "thesis_topic": "Robot manipulator design methodology with modular joints and links"}
+  },
+  "career_path": [
+    {"org": "NASA Johnson Space Center", "role": "Engineer (contract); Robonaut project leader (1999-); Division leader; PI Game Changing Development Program", "type": "govlab", "country": "USA", "year_start": 1991, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "NASA Johnson Space Center", "type": "govlab", "country": "USA", "year": 1991},
+  "companies_founded": [],
+  "topics": ["humanoid", "space robotics", "manipulation", "telerobotics", "human-robot interaction", "mobile manipulation"],
+  "awards": [],
+  "external_events_mentioned": ["1969 Apollo Moon landing", "Cancellation of Flight Telerobotic Servicer (FTS) program", "NASA shift to lunar exploration (2005-2006)"]
+}

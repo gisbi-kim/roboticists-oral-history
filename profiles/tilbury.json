@@ -1,0 +1,27 @@
+{
+  "person": "tilbury",
+  "full_name": "Dawn Tilbury",
+  "birth_year": 1966,
+  "birth_country": "USA",
+  "gender": "F",
+  "interview_year": 2015,
+  "education": {
+    "bs": {"school": "University of Minnesota", "field": "Electrical Engineering", "year": null, "country": "USA"},
+    "ms": {"school": "University of California, Berkeley", "field": "Electrical Engineering", "year": null, "country": "USA"},
+    "phd": {"school": "University of California, Berkeley", "field": "Electrical Engineering", "year": 1994, "country": "USA", "advisor": "Shankar Sastry", "thesis_topic": "Motion planning algorithms for nonholonomic systems (wheeled mobile robots with trailers)"}
+  },
+  "career_path": [
+    {"org": "University of Michigan", "role": "Professor of Mechanical Engineering", "type": "academia", "country": "USA", "year_start": 1994, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "University of Michigan", "type": "academia", "country": "USA", "year": 1994},
+  "companies_founded": [],
+  "topics": ["control theory", "manufacturing systems control", "ground robotics reliability", "human-robot interaction", "logic control", "nonholonomic motion planning"],
+  "awards": [],
+  "external_events_mentioned": [
+    "Automotive Research Center at University of Michigan",
+    "U.S. Army Tank Automotive Command (TARDEC)",
+    "American Control Conference 2014",
+    "ICRA 2015 all-women organizing committee",
+    "University of Michigan Robotics PhD program 2014"
+  ]
+}

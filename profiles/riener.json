@@ -1,0 +1,29 @@
+{
+  "person": "riener",
+  "full_name": "Robert Riener",
+  "birth_year": null,
+  "birth_country": "Germany",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "TU München", "field": "Mechanical Engineering", "year": null, "country": "Germany"},
+    "ms": {"school": "TU München", "field": "Mechanical Engineering", "year": 1993, "country": "Germany"},
+    "phd": {"school": "TU München", "field": "Electrical Engineering", "year": 1997, "country": "Germany", "advisor": "Jochen Quintern", "thesis_topic": "Simulation and control of neuroprosthetics for standing, sitting and walking"}
+  },
+  "career_path": [
+    {"org": "TU München (Institute of Automatic Control Engineering)", "role": "PhD researcher and Habilitation in Biomechatronics", "type": "academia", "country": "Germany", "year_start": 1993, "year_end": 2003},
+    {"org": "Politecnico di Milano (Centro di Bioingegneria)", "role": "Postdoctoral Researcher", "type": "academia", "country": "Italy", "year_start": 1998, "year_end": 1999},
+    {"org": "ETH Zurich", "role": "Professor of Sensory-Motor Systems / Rehabilitation Engineering", "type": "academia", "country": "Switzerland", "year_start": 2003, "year_end": null},
+    {"org": "Balgrist University Hospital (Spinal Cord Injury Center)", "role": "Affiliated Researcher", "type": "academia", "country": "Switzerland", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Politecnico di Milano", "type": "academia", "country": "Italy", "year": 1998},
+  "companies_founded": [],
+  "topics": ["rehabilitation robotics", "neuroprosthetics", "exoskeletons", "haptic interfaces", "biomechanics", "virtual reality", "functional electrical stimulation"],
+  "awards": [
+    {"name": "humanTech Innovation Prize", "year": null},
+    {"name": "Swiss Technology Award", "year": null},
+    {"name": "euRobotics Technology Transfer Award", "year": 2011},
+    {"name": "euRobotics Technology Transfer Award", "year": 2012}
+  ],
+  "external_events_mentioned": ["Hocoma Lokomat commercialization", "Foxconn factory working conditions", "Birth simulator commercialization"]
+}

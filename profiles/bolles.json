@@ -1,0 +1,22 @@
+{
+  "person": "bolles",
+  "full_name": "Bob C. Bolles",
+  "birth_year": 1945,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "Yale University", "field": "Mathematics", "year": null, "country": "USA"},
+    "ms": {"school": "University of Pennsylvania", "field": "Electrical Engineering", "year": null, "country": "USA"},
+    "phd": {"school": "Stanford University", "field": "Computer Science", "year": 1977, "country": "USA", "advisor": "Jerome Feldman", "thesis_topic": "Verification vision"}
+  },
+  "career_path": [
+    {"org": "U.S. Navy / Naval Postgraduate School", "role": "Lieutenant, Computer Science Instructor", "type": "military", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "SRI International", "role": "Researcher; Program Director, AI Center", "type": "industry", "country": "USA", "year_start": 1976, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "SRI International", "type": "industry", "country": "USA", "year": 1976},
+  "companies_founded": [],
+  "topics": ["computer vision", "manipulation", "SLAM", "motion planning", "space robotics", "telerobotics"],
+  "awards": [],
+  "external_events_mentioned": ["Vietnam War draft", "Apollo era space race"]
+}

@@ -1,0 +1,33 @@
+{
+  "person": "kiesler",
+  "full_name": "Sara Kiesler",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "F",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "Simmons College", "field": "Psychology", "year": null, "country": "USA"},
+    "ms": {"school": "Stanford University", "field": "Psychology", "year": 1963, "country": "USA"},
+    "phd": {"school": "Ohio State University", "field": "Psychology", "year": 1965, "country": "USA", "advisor": "Timothy Brock", "thesis_topic": "Study of gratitude (social psychology)"}
+  },
+  "career_path": [
+    {"institution": "Carnegie Mellon University (Social Sciences, then Computer Science)", "country": "USA", "type": "academia", "role": "Professor", "start_year": null, "end_year": 1998},
+    {"institution": "Interval Research Corporation", "country": "USA", "type": "industry", "role": "Researcher", "start_year": 1998, "end_year": null},
+    {"institution": "Carnegie Mellon University (School of Computer Science / HCII)", "country": "USA", "type": "academia", "role": "Hillman Professor of Computer Science and Human-Computer Interaction", "start_year": null, "end_year": null}
+  ],
+  "first_job_after_phd": {"institution": "Carnegie Mellon University", "country": "USA", "type": "academia", "role": "Professor (Social Sciences Department)"},
+  "companies_founded": [],
+  "topics": ["human-robot interaction", "anthropomorphism", "social robotics", "computer-mediated communication", "human-computer interaction"],
+  "awards": [
+    {"name": "American Psychological Association Fellow", "year": null},
+    {"name": "CHI Academy", "year": 2002},
+    {"name": "Lifetime Achievement Award (CHI)", "year": 2009},
+    {"name": "Allen Newell Award for Research Excellence", "year": 2013},
+    {"name": "International Communication Association Williams Prize", "year": 2015}
+  ],
+  "external_events_mentioned": [
+    "Nursebot/Pearl project with Sebastian Thrun",
+    "HRI Conference founding",
+    "First Ro-Man Best Paper Award"
+  ]
+}

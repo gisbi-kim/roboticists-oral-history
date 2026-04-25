@@ -1,0 +1,25 @@
+{
+  "person": "dickmanns",
+  "full_name": "Ernst Dickmanns",
+  "birth_year": 1936,
+  "birth_country": "Germany",
+  "gender": "M",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "RWTH Aachen", "field": "Aerospace Engineering", "year": 1961, "country": "Germany"},
+    "ms": {"school": "Princeton University", "field": "Control Engineering", "year": 1965, "country": "USA"},
+    "phd": {"school": "RWTH Aachen", "field": "Aerospace Engineering", "year": 1969, "country": "Germany", "advisor": null, "thesis_topic": "Numerical methods for trajectory optimization of reentry vehicles"}
+  },
+  "career_path": [
+    {"org": "Dornier Aircraft Engineering", "role": "Practical training (pre-university)", "type": "industry", "country": "Germany", "year_start": 1956, "year_end": null},
+    {"org": "DFVLR (Deutsche Forschungs- und Versuchsanstalt) / DLR Oberpfaffenhofen", "role": "Aerospace researcher / Acting Head of research center (1975)", "type": "govlab", "country": "Germany", "year_start": 1961, "year_end": 1975},
+    {"org": "NASA Marshall Space Flight Center", "role": "Postdoctoral Research Associate", "type": "govlab", "country": "USA", "year_start": 1971, "year_end": 1972},
+    {"org": "Universität der Bundeswehr München", "role": "Professor of Control Engineering", "type": "military", "country": "Germany", "year_start": 1975, "year_end": 2001},
+    {"org": "California Institute of Technology", "role": "Visiting Professor", "type": "academia", "country": "USA", "year_start": 1998, "year_end": 1998}
+  ],
+  "first_job_after_phd": {"org": "DFVLR", "type": "govlab", "country": "Germany", "year": 1969},
+  "companies_founded": [],
+  "topics": ["computer vision", "autonomous vehicles", "dynamic vision", "Kalman filtering", "control engineering", "satellite docking", "4D approach"],
+  "awards": [],
+  "external_events_mentioned": ["European PROMETHEUS project (1987-1994)", "Paris Charles-de-Gaulle autonomous driving demo October 1994", "Cleopatra project Munich-Odense 1995-96", "Space Shuttle Columbia D2 grasping experiment 1993", "DARPA Grand/Urban Challenge", "NATO Advanced Study Institute Santa Cruz 1987", "Symphony satellite 1974-75"]
+}

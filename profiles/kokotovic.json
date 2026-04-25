@@ -1,0 +1,31 @@
+{
+  "person": "kokotovic",
+  "full_name": "Petar Kokotovic",
+  "birth_year": 1934,
+  "birth_country": "Other: Yugoslavia (Serbia)",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "University of Belgrade", "field": "Electrical Engineering", "year": null, "country": "Other: Yugoslavia"},
+    "ms": {"school": "University of Belgrade", "field": "Electrical Engineering", "year": null, "country": "Other: Yugoslavia"},
+    "phd": {"school": "Academy of Sciences Institute (Institute for Automation and Telemechanics)", "field": "Control Engineering", "year": null, "country": "Russia", "advisor": null, "thesis_topic": "Control theory (Soviet control science)"}
+  },
+  "career_path": [
+    {"institution": "Boris Pupin Institute (Nuclear Science Institute)", "country": "Other: Yugoslavia", "type": "govlab", "role": "Researcher (industrial control, Belgrade Arm project)", "start_year": null, "end_year": null},
+    {"institution": "University of Illinois at Urbana-Champaign", "country": "USA", "type": "academia", "role": "Professor (Electrical Engineering / Coordinated Science Lab)", "start_year": 1965, "end_year": 1990},
+    {"institution": "University of California, Santa Barbara", "country": "USA", "type": "academia", "role": "Professor and Director of Center for Control Engineering and Computation", "start_year": 1990, "end_year": null}
+  ],
+  "first_job_after_phd": {"institution": "University of Illinois at Urbana-Champaign", "country": "USA", "type": "academia", "role": "Professor"},
+  "companies_founded": [],
+  "topics": ["adaptive control", "singular perturbation", "nonlinear control", "control theory", "robotics control"],
+  "awards": [
+    {"name": "IEEE Control Systems Award", "year": null},
+    {"name": "IEEE Life Fellow", "year": null}
+  ],
+  "external_events_mentioned": [
+    "1960 IFAC Congress in Moscow",
+    "Belgrade Arm project (Rajko Tomovic)",
+    "Apollo-Soyuz follow-up meeting Yerevan ~1973-1974",
+    "Met Norbert Wiener at Opatija cybernetics conference ~1960"
+  ]
+}

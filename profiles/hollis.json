@@ -1,0 +1,25 @@
+{
+  "person": "hollis",
+  "full_name": "Ralph Hollis",
+  "birth_year": 1941,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "Kansas State University", "field": "Physics", "year": null, "country": "USA"},
+    "ms": {"school": "Kansas State University", "field": "Physics", "year": null, "country": "USA"},
+    "phd": {"school": "University of Colorado", "field": "Physics", "year": 1975, "country": "USA", "advisor": null, "thesis_topic": "optically accessible high-magnetic-field superconducting magnet system"}
+  },
+  "career_path": [
+    {"org": "North American Aviation (California)", "role": "Team Lead, Minuteman III spacecraft simulation", "type": "industry", "country": "USA", "year_start": 1965, "year_end": 1970},
+    {"org": "University of Paris", "role": "Exchange Scientist Fellow", "type": "academia", "country": "France", "year_start": 1976, "year_end": 1976},
+    {"org": "IBM Research (Yorktown Heights)", "role": "Researcher (Applied Physics, then Robotics; Manager, Advanced Robotics)", "type": "industry", "country": "USA", "year_start": 1976, "year_end": 1992},
+    {"org": "Carnegie Mellon University Robotics Institute", "role": "Faculty / Research Professor", "type": "academia", "country": "USA", "year_start": 1993, "year_end": null},
+    {"org": "Butterfly Haptics, LLC", "role": "Founder", "type": "industry", "country": "USA", "year_start": 2007, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "IBM Research (Yorktown Heights)", "type": "industry", "country": "USA", "year": 1976},
+  "companies_founded": [{"name": "Butterfly Haptics, LLC", "year": 2007, "role": "Founder", "status": "active"}],
+  "topics": ["haptics", "magnetic levitation", "precision assembly", "minifactory", "dynamically-stable mobile robots", "ballbot"],
+  "awards": [],
+  "external_events_mentioned": ["W. Grey Walter Scientific American articles 1951/1953", "Byte Magazine Newt cover", "WGBH NOVA The Mind Machines", "Wall Street Journal feature", "ISRR Santa Cruz 1987", "IBM Annual Report cover"]
+}

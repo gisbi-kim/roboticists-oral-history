@@ -1,0 +1,26 @@
+{
+  "person": "kawamura",
+  "full_name": "Sadao Kawamura",
+  "birth_year": null,
+  "birth_country": "Japan",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "Osaka University", "field": "Other: Biophysical Engineering", "year": 1981, "country": "Japan"},
+    "ms": {"school": "Osaka University", "field": "Mechanical Engineering", "year": 1983, "country": "Japan"},
+    "phd": {"school": "Osaka University", "field": "Mechanical Engineering", "year": 1986, "country": "Japan", "advisor": "Imoto", "thesis_topic": "Iterative learning control for bipedal locomotion robots"}
+  },
+  "career_path": [
+    {"institution": "Osaka University", "country": "Japan", "type": "academia", "role": "Assistant Professor", "start_year": 1986, "end_year": 1987},
+    {"institution": "Ritsumeikan University", "country": "Japan", "type": "academia", "role": "Associate Professor (Mechanical Engineering), then Professor (Robotics, from 1996)", "start_year": 1987, "end_year": null}
+  ],
+  "first_job_after_phd": {"institution": "Osaka University", "country": "Japan", "type": "academia", "role": "Assistant Professor"},
+  "companies_founded": [],
+  "topics": ["iterative learning control", "bipedal locomotion", "tendon-driven robots", "underwater robots", "wearable robotics", "pneumatic actuation"],
+  "awards": [],
+  "external_events_mentioned": [
+    "Established Ritsumeikan Department of Robotics 1996 (first undergraduate robotics department)",
+    "Robotics Society of Japan President 2011-2013",
+    "Ritsumeikan Robotics Research Center Director from 2011"
+  ]
+}

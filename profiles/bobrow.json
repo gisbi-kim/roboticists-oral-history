@@ -1,0 +1,23 @@
+{
+  "person": "bobrow",
+  "full_name": "Jim Bobrow",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "California State University, Long Beach", "field": "Mechanical Engineering", "year": 1977, "country": "USA"},
+    "ms": {"school": "University of California, Los Angeles", "field": "Mechanical Engineering", "year": 1979, "country": "USA"},
+    "phd": {"school": "University of California, Los Angeles", "field": "Mechanical Engineering", "year": 1982, "country": "USA", "advisor": "Steve Dubowsky and Steve Gibson (co-advisors)", "thesis_topic": "Time-optimal point-to-point motion planning for manipulators"}
+  },
+  "career_path": [
+    {"org": "Hughes Aircraft / TRW", "role": "Satellite engineer", "type": "industry", "country": "USA", "year_start": 1977, "year_end": 1979},
+    {"org": "McDonnell Douglas Automation (CAD/CAM division)", "role": "Engineer", "type": "industry", "country": "USA", "year_start": 1982, "year_end": 1984},
+    {"org": "University of California, Irvine", "role": "Professor of Mechanical and Aerospace Engineering", "type": "academia", "country": "USA", "year_start": 1984, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "McDonnell Douglas Automation", "type": "industry", "country": "USA", "year": 1982},
+  "companies_founded": [],
+  "topics": ["motion planning", "manipulation", "control", "optimization", "rehabilitation robotics", "pneumatic robots"],
+  "awards": [],
+  "external_events_mentioned": []
+}

@@ -1,0 +1,34 @@
+{
+  "person": "nagpal",
+  "full_name": "Radhika Nagpal",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "F",
+  "interview_year": 2015,
+  "education": {
+    "bs": {"school": "Massachusetts Institute of Technology", "field": "Electrical Engineering and Computer Science", "year": 1994, "country": "USA"},
+    "ms": {"school": "Massachusetts Institute of Technology", "field": "Electrical Engineering and Computer Science", "year": 1994, "country": "USA"},
+    "phd": {"school": "Massachusetts Institute of Technology", "field": "Electrical Engineering and Computer Science", "year": 2001, "country": "USA", "advisor": "Gerald Sussman and Hal Abelson", "thesis_topic": "Programmable Self-Assembly using Biologically-Inspired Local Interactions"}
+  },
+  "career_path": [
+    {"org": "AT&T Bell Labs", "role": "Student intern / Researcher", "type": "industry", "country": "USA", "year_start": 1992, "year_end": 1994},
+    {"org": "Massachusetts Institute of Technology", "role": "Lecturer", "type": "academia", "country": "USA", "year_start": 2001, "year_end": null},
+    {"org": "Harvard University (Department of Systems Biology)", "role": "Visiting Researcher (year)", "type": "academia", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Harvard University", "role": "Fred Kavli Professor of Computer Science, School of Engineering and Applied Sciences; Wyss Institute", "type": "academia", "country": "USA", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Massachusetts Institute of Technology", "type": "academia", "country": "USA", "year": 2001},
+  "companies_founded": [],
+  "topics": ["swarm robotics", "self-assembly", "bio-inspired robotics", "amorphous computing", "collective behavior", "programmable matter"],
+  "awards": [
+    {"name": "National Talent Search Scholarship Award (India)", "year": 1987},
+    {"name": "AT&T Bell Labs Graduate Fellowship for Women", "year": 1995},
+    {"name": "Microsoft New Faculty Fellowship", "year": 2005},
+    {"name": "NSF Career Award", "year": 2007},
+    {"name": "Anita Borg Early Career Award", "year": 2010},
+    {"name": "Radcliffe Institute Fellowship", "year": 2012},
+    {"name": "Science Top 10 Breakthroughs", "year": 2014},
+    {"name": "Nature 10 Award", "year": 2014},
+    {"name": "Harvard McDonald Award for Excellence in Mentoring and Advising", "year": 2015}
+  ],
+  "external_events_mentioned": ["Amorphous Computing project at MIT", "iGEM (International Genetically Engineered Machine) competition", "Dot-com bust collapse of corporate research labs (2001)", "Kilobot project", "TERMES robots"]
+}

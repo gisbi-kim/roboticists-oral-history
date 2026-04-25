@@ -1,0 +1,25 @@
+{
+  "person": "hirzinger",
+  "full_name": "Gerd Hirzinger",
+  "birth_year": 1945,
+  "birth_country": "Germany",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "Technical University of Munich", "field": "Electrical Engineering", "year": 1969, "country": "Germany"},
+    "ms": {"school": null, "field": null, "year": null, "country": null},
+    "phd": {"school": "Technical University of Munich", "field": "Electrical Engineering", "year": 1974, "country": "Germany", "advisor": null, "thesis_topic": "digital control"}
+  },
+  "career_path": [
+    {"org": "DLR (German Aerospace Center)", "role": "Researcher / Head of Automation Group (1976) / Director of Institute of Robotics and Mechatronics Center (RMC, 1992)", "type": "govlab", "country": "Germany", "year_start": 1969, "year_end": null},
+    {"org": "Technical University of Munich", "role": "Professor (joint appointment)", "type": "academia", "country": "Germany", "year_start": 1991, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "DLR (German Aerospace Center)", "type": "govlab", "country": "Germany", "year": 1974},
+  "companies_founded": [],
+  "topics": ["space robotics", "telerobotics", "lightweight robots", "force-torque sensing", "mechatronics", "medical robotics", "human-machine interfaces"],
+  "awards": [
+    {"name": "Leibniz Award", "year": 1993},
+    {"name": "IEEE Fellow", "year": 2010}
+  ],
+  "external_events_mentioned": ["Spacelab D2 ROTEX mission 1993", "ROKVISS ISS experiment", "Hannover Fair 1978", "ETS-VII Japan 1997", "IEEE St. Louis 1985", "ISRR Goviller France"]
+}

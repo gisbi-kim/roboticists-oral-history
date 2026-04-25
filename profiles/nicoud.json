@@ -1,0 +1,25 @@
+{
+  "person": "nicoud",
+  "full_name": "Jean-Daniel Nicoud",
+  "birth_year": 1938,
+  "birth_country": "Switzerland",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "École Polytechnique Fédérale de Lausanne (EPFL)", "field": "Physics", "year": 1963, "country": "Switzerland"},
+    "ms": null,
+    "phd": {"school": "École Polytechnique Fédérale de Lausanne (EPFL)", "field": "Other: Electrical Engineering", "year": 1969, "country": "Switzerland", "advisor": null, "thesis_topic": "Decimal-to-binary conversion algorithms and relay implementations"}
+  },
+  "career_path": [
+    {"org": "Local college (teaching)", "role": "Teacher", "type": "academia", "country": "Switzerland", "year_start": null, "year_end": null},
+    {"org": "EPFL", "role": "Assistant; Professor; Director of Microcomputer Laboratory", "type": "academia", "country": "Switzerland", "year_start": 1973, "year_end": 2000},
+    {"org": "DIDEL SA", "role": "Founder / Owner", "type": "industry", "country": "Switzerland", "year_start": 1971, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "EPFL", "type": "academia", "country": "Switzerland", "year": 1969},
+  "companies_founded": [
+    {"name": "DIDEL SA", "year": 1971, "role": "Founder", "status": "active"}
+  ],
+  "topics": ["microcomputers", "miniaturization", "mobile robotics", "educational robotics", "neural networks", "personal computers", "miniature flying robots"],
+  "awards": [],
+  "external_events_mentioned": ["Grey Walter's tortoise robots (Scientific American article)", "First International Conference on Microprocessors (1974)", "IEEE P896 committee", "Smaky personal computer line", "Logitech mouse origin", "Khepera robot development", "Trento mobile robotics conference (1991)"]
+}

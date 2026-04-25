@@ -1,0 +1,35 @@
+{
+  "person": "torras",
+  "full_name": "Carme Torras",
+  "birth_year": 1956,
+  "birth_country": "Spain",
+  "gender": "F",
+  "interview_year": 2015,
+  "education": {
+    "bs": {"school": "Universitat de Barcelona", "field": "Mathematics", "year": null, "country": "Spain"},
+    "ms": {"school": "University of Massachusetts Amherst", "field": "Computer Science", "year": null, "country": "USA"},
+    "phd": {"school": "Universitat Politècnica de Catalunya", "field": "Computer Science", "year": null, "country": "Spain", "advisor": null, "thesis_topic": "Temporal pattern learning in neural structures (crayfish neuro-modeling)"}
+  },
+  "career_path": [
+    {"org": "Industry (post-undergraduate)", "role": "Engineer", "type": "industry", "country": "Spain", "year_start": null, "year_end": null},
+    {"org": "University of Massachusetts Amherst", "role": "Fulbright Graduate Student in Brain Theory program (with Michael Arbib)", "type": "academia", "country": "USA", "year_start": 1979, "year_end": 1981},
+    {"org": "Institut de Robòtica i Informàtica Industrial (CSIC-UPC)", "role": "Researcher -> Research Professor", "type": "academia", "country": "Spain", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Institut de Robòtica i Informàtica Industrial (CSIC-UPC)", "type": "academia", "country": "Spain", "year": null},
+  "companies_founded": [],
+  "topics": ["cognitive robotics", "robot manipulation", "deformable object manipulation", "assistive robotics", "learning from demonstration", "neural networks"],
+  "awards": [
+    {"name": "Pedrolo Award", "year": null},
+    {"name": "Ictineu Award", "year": null}
+  ],
+  "external_events_mentioned": [
+    "B-LEARN European project",
+    "PROMotion European project (Jean-Paul Laumond)",
+    "CONNY space robot self-calibration project (Daimler-Benz Aerospace)",
+    "GARNICS plant phenotyping project (2010-2013)",
+    "IntellAct project (2011-2014)",
+    "EURON network",
+    "ICRA 2015 all-women organizing committee",
+    "ERC Advanced Grant CLOTHILDE"
+  ]
+}

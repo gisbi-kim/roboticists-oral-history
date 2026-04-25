@@ -1,0 +1,23 @@
+{
+  "person": "arbib",
+  "full_name": "Michael Arbib",
+  "birth_year": 1940,
+  "birth_country": "UK",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "University of Sydney", "field": "Mathematics", "year": 1960, "country": "Australia"},
+    "ms": null,
+    "phd": {"school": "Massachusetts Institute of Technology", "field": "Mathematics", "year": 1963, "country": "USA", "advisor": "Norbert Wiener (initial); later switched to a statistical mechanics mathematician", "thesis_topic": "Probability theory and stochastic processes"}
+  },
+  "career_path": [
+    {"org": "Stanford University", "role": "Postdoc (with Rudolf Kalman); Assistant Professor", "type": "academia", "country": "USA", "year_start": 1964, "year_end": 1970},
+    {"org": "University of Massachusetts Amherst", "role": "Founding Chairman of Department of Computer and Information Science", "type": "academia", "country": "USA", "year_start": 1970, "year_end": 1986},
+    {"org": "University of Southern California", "role": "Fletcher Jones Professor of Computer Science (joint appointments in Biological Sciences, Biomedical Engineering, Electrical Engineering, Neuroscience, Psychology)", "type": "academia", "country": "USA", "year_start": 1986, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Stanford University", "type": "academia", "country": "USA", "year": 1964},
+  "companies_founded": [],
+  "topics": ["computational neuroscience", "schema theory", "neural networks", "computer vision", "manipulation", "robot learning"],
+  "awards": [],
+  "external_events_mentioned": []
+}

@@ -1,0 +1,26 @@
+{
+  "person": "murray",
+  "full_name": "Richard Murray",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "California Institute of Technology", "field": "Electrical Engineering", "year": 1985, "country": "USA"},
+    "ms": {"school": "University of California, Berkeley", "field": "Electrical Engineering", "year": 1988, "country": "USA"},
+    "phd": {"school": "University of California, Berkeley", "field": "Electrical Engineering", "year": 1990, "country": "USA", "advisor": "S. Shankar Sastry", "thesis_topic": "Grasping/manipulation and non-holonomic motion planning"}
+  },
+  "career_path": [
+    {"org": "UC Berkeley", "role": "Instructor", "type": "academia", "country": "USA", "year_start": 1990, "year_end": 1991},
+    {"org": "California Institute of Technology", "role": "Associate Professor of Mechanical Engineering; Full Professor; Everhart Professor of Control and Dynamical Systems and Bioengineering", "type": "academia", "country": "USA", "year_start": 1991, "year_end": null},
+    {"org": "United Technologies Research Center", "role": "Director of Mechatronic Systems (sabbatical)", "type": "industry", "country": "USA", "year_start": 1998, "year_end": 2000}
+  ],
+  "first_job_after_phd": {"org": "UC Berkeley", "type": "academia", "country": "USA", "year": 1990},
+  "companies_founded": [],
+  "topics": ["control theory", "grasping", "non-holonomic motion planning", "uavs", "trajectory generation", "synthetic biology", "human-robot interaction"],
+  "awards": [
+    {"name": "NSF Early Faculty Development Award", "year": 1995},
+    {"name": "AACC Donald P. Eckman Award", "year": 1997}
+  ],
+  "external_events_mentioned": ["DARPA Grand Challenge (2004, 2005)", "DARPA Urban Challenge (2007)", "NSF Expeditions Molecular Programming Project", "iGEM competition"]
+}

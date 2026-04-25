@@ -1,0 +1,28 @@
+{
+  "person": "mason",
+  "full_name": "Matt Mason",
+  "birth_year": 1952,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "MIT", "field": "Computer Science", "year": 1976, "country": "USA"},
+    "ms": {"school": "MIT", "field": "Other: Artificial Intelligence", "year": 1978, "country": "USA"},
+    "phd": {"school": "MIT", "field": "Other: Artificial Intelligence", "year": 1982, "country": "USA", "advisor": "Berthold Horn", "thesis_topic": "Mechanics of pushing for robotic manipulation"}
+  },
+  "career_path": [
+    {"org": "IBM Thomas J. Watson Research Center", "role": "Research Visitor", "type": "industry", "country": "USA", "year_start": 1978, "year_end": 1978},
+    {"org": "Carnegie Mellon University", "role": "Professor / Chair of Robotics Doctoral Program / Director of Robotics Institute", "type": "academia", "country": "USA", "year_start": 1982, "year_end": null},
+    {"org": "Sandia National Labs", "role": "Research Visitor", "type": "govlab", "country": "USA", "year_start": 1994, "year_end": 1995}
+  ],
+  "first_job_after_phd": {"org": "Carnegie Mellon University", "type": "academia", "country": "USA", "year": 1982},
+  "companies_founded": [],
+  "topics": ["manipulation", "compliant motion", "force control", "fine motion planning", "pushing mechanics", "robotic hands", "machine learning"],
+  "awards": [
+    {"name": "Systems Development Foundation Prize", "year": 1983},
+    {"name": "IEEE Fellow", "year": 2000},
+    {"name": "IEEE Robotics and Automation Society Pioneer Award", "year": 2009},
+    {"name": "IEEE Robotics and Automation Award", "year": 2018}
+  ],
+  "external_events_mentioned": ["DARPA Urban Challenge", "Willow Garage PR2 program", "Project Listen"]
+}

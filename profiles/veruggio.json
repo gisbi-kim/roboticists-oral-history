@@ -1,0 +1,32 @@
+{
+  "person": "veruggio",
+  "full_name": "Gianmarco Veruggio",
+  "birth_year": 1953,
+  "birth_country": "Italy",
+  "gender": "M",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "University of Genoa", "field": "Electrical Engineering", "year": 1980, "country": "Italy"},
+    "ms": null,
+    "phd": null
+  },
+  "career_path": [
+    {"org": "Naval Automation Institute (CNR)", "role": "Researcher / CNR-IAN Robotlab Founder", "type": "govlab", "country": "Italy", "year_start": 1980, "year_end": null},
+    {"org": "Scuola di Robotica", "role": "Founder", "type": "nonprofit", "country": "Italy", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": null,
+  "companies_founded": [
+    {"name": "Scuola di Robotica", "year": null, "role": "Founder", "status": "active"}
+  ],
+  "topics": ["underwater robotics", "marine robotics", "internet robotics", "roboethics", "antarctic exploration", "robotics education"],
+  "awards": [
+    {"name": "Commander of the Order of Merit of the Italian Republic", "year": 2009}
+  ],
+  "external_events_mentioned": [
+    "Antarctic scientific expeditions",
+    "Arctic expeditions",
+    "First International Symposium on Roboethics (Sanremo, 2004)",
+    "IEEE Robot Ethics Technical Committee founding",
+    "Gulf of Mexico oil spill"
+  ]
+}

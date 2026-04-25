@@ -1,0 +1,30 @@
+{
+  "person": "koditschek",
+  "full_name": "Daniel Koditschek",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "Yale University", "field": "Other: Engineering and Applied Science", "year": 1981, "country": "USA"},
+    "ms": {"school": "Yale University", "field": "Electrical Engineering", "year": 1983, "country": "USA"},
+    "phd": {"school": "Yale University", "field": "Electrical Engineering", "year": 1983, "country": "USA", "advisor": "K. S. Narendra", "thesis_topic": "Adaptive control / nonlinear analysis"}
+  },
+  "career_path": [
+    {"institution": "Yale University", "country": "USA", "type": "academia", "role": "Faculty", "start_year": 1983, "end_year": 1991},
+    {"institution": "University of Michigan, Ann Arbor", "country": "USA", "type": "academia", "role": "Professor", "start_year": 1992, "end_year": 2005},
+    {"institution": "University of Pennsylvania", "country": "USA", "type": "academia", "role": "Chair of Electrical and Systems Engineering, Alfred Fitler Moore Professor", "start_year": 2005, "end_year": null}
+  ],
+  "first_job_after_phd": {"institution": "Yale University", "country": "USA", "type": "academia", "role": "Faculty"},
+  "companies_founded": [],
+  "topics": ["legged locomotion", "dynamical systems", "robot juggling", "neuromechanics", "bioinspired robotics", "control theory"],
+  "awards": [
+    {"name": "IEEE RAS Pioneer Award", "year": 2016},
+    {"name": "Penn Heilmeier Award for Excellence in Research", "year": 2017},
+    {"name": "IEEE Life Fellow", "year": null}
+  ],
+  "external_events_mentioned": [
+    "RHex robot 2001",
+    "Collaborations with Bob Full at UC Berkeley on neuromechanics"
+  ]
+}

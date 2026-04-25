@@ -1,0 +1,24 @@
+{
+  "person": "goldberg",
+  "full_name": "Ken Goldberg",
+  "birth_year": null,
+  "birth_country": "Nigeria",
+  "gender": "M",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "University of Pennsylvania", "field": "Electrical Engineering", "year": 1984, "country": "USA"},
+    "ms": {"school": null, "field": null, "year": null, "country": null},
+    "phd": {"school": "Carnegie Mellon University", "field": "Computer Science", "year": 1990, "country": "USA", "advisor": "Matt Mason / Marc Raibert", "thesis_topic": "Mechanics of manipulation: sensorless part orienting with parallel-jaw grippers"}
+  },
+  "career_path": [
+    {"org": "University of Southern California", "role": "Assistant/Associate Professor of Computer Science", "type": "academia", "country": "USA", "year_start": 1990, "year_end": 1995},
+    {"org": "University of California, Berkeley", "role": "Distinguished Professor of New Media / Director Center for New Media", "type": "academia", "country": "USA", "year_start": 1995, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "University of Southern California", "type": "academia", "country": "USA", "year": 1990},
+  "companies_founded": [],
+  "topics": ["telerobotics", "networked robots", "manipulation", "part feeding", "fixturing", "medical robotics", "robot art", "robot learning"],
+  "awards": [
+    {"name": "IEEE Fellow", "year": null}
+  ],
+  "external_events_mentioned": ["Mercury Project (first telerobot on the Web, 1994)", "Telegarden (1995-2004)", "IEEE RAS Technical Committee on Networked Robots founding", "IEEE Transactions on Automation Science and Engineering founding (2004)", "Tele-Actor project", "CONE bird observatory project (2003-2008)", "Whitney Biennial 2000 Ouija board", "telepistemology collaboration with Hubert Dreyfus"]
+}

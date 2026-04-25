@@ -1,0 +1,29 @@
+{
+  "person": "shirai",
+  "full_name": "Yoshiaki Shirai",
+  "birth_year": 1941,
+  "birth_country": "Japan",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "Nagoya University", "field": "Mechanical Engineering", "year": 1964, "country": "Japan"},
+    "ms": {"school": "Tokyo University", "field": "Mechanical Engineering", "year": 1966, "country": "Japan"},
+    "phd": {"school": "Tokyo University", "field": "Mechanical Engineering", "year": 1969, "country": "Japan", "advisor": "Masahiro Mori", "thesis_topic": "X-ray picture analysis for welding defect detection (operations research / pattern recognition)"}
+  },
+  "career_path": [
+    {"org": "Electrotechnical Laboratory (ETL), MITI", "role": "Researcher / Section Chief (Computer Vision, 1979) / Director of Control Division (1985)", "type": "govlab", "country": "Japan", "year_start": 1969, "year_end": 1988},
+    {"org": "MIT AI Lab", "role": "Visiting Researcher", "type": "academia", "country": "USA", "year_start": 1971, "year_end": 1972},
+    {"org": "Osaka University (Mechanical Engineering / Electric Control)", "role": "Professor", "type": "academia", "country": "Japan", "year_start": 1988, "year_end": 2005},
+    {"org": "Ritsumeikan University", "role": "Professor", "type": "academia", "country": "Japan", "year_start": 2005, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Electrotechnical Laboratory (ETL)", "type": "govlab", "country": "Japan", "year": 1969},
+  "companies_founded": [],
+  "topics": ["computer vision", "robot vision", "rangefinders", "object recognition", "stereo vision", "human tracking", "assistive robotics"],
+  "awards": [],
+  "external_events_mentioned": [
+    "Big Pattern Information Processing Project (MITI)",
+    "Tsukuba Expo 1985",
+    "ETL relocation from Tokyo to Tsukuba (1979)",
+    "Advanced Robot for Hazardous Environments project"
+  ]
+}

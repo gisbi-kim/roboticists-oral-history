@@ -1,0 +1,24 @@
+{
+  "person": "hutchinson",
+  "full_name": "Seth Hutchinson",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2013,
+  "education": {
+    "bs": {"school": "Purdue University", "field": "Electrical Engineering", "year": 1983, "country": "USA"},
+    "ms": {"school": "Purdue University", "field": "Electrical Engineering", "year": 1984, "country": "USA"},
+    "phd": {"school": "Purdue University", "field": "Electrical Engineering", "year": 1988, "country": "USA", "advisor": "Avi Kak", "thesis_topic": "planning under uncertainty (computer vision / viewpoint planning)"}
+  },
+  "career_path": [
+    {"org": "Purdue University", "role": "Visiting Professor", "type": "academia", "country": "USA", "year_start": 1988, "year_end": 1989},
+    {"org": "University of Illinois at Urbana-Champaign", "role": "Research Assistant Professor (Coordinated Science Lab/Beckman Institute, 1990); Assistant Professor of ECE; Research Associate Professor / Associate Professor (1996-2003); Research Professor / Professor", "type": "academia", "country": "USA", "year_start": 1990, "year_end": null},
+    {"org": "Ecole Nationale Superieure des Telecommunications, Paris", "role": "Sabbatical Visitor", "type": "academia", "country": "France", "year_start": 1997, "year_end": 1998},
+    {"org": "IRISA / INRIA Rennes", "role": "Sabbatical Visitor (with Francois Chaumette)", "type": "academia", "country": "France", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Purdue University", "type": "academia", "country": "USA", "year": 1988},
+  "companies_founded": [],
+  "topics": ["visual servo control", "motion planning", "planning under uncertainty", "pursuit-evasion", "localization and mapping", "computer vision"],
+  "awards": [],
+  "external_events_mentioned": ["ICRA San Francisco 1986", "Visual Servo Control tutorial 1996"]
+}

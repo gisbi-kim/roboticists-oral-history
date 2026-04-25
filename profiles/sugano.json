@@ -1,0 +1,32 @@
+{
+  "person": "sugano",
+  "full_name": "Shigeki Sugano",
+  "birth_year": 1958,
+  "birth_country": "Japan",
+  "gender": "M",
+  "interview_year": 2014,
+  "education": {
+    "bs": {"school": "Waseda University", "field": "Mechanical Engineering", "year": 1981, "country": "Japan"},
+    "ms": {"school": "Waseda University", "field": "Mechanical Engineering", "year": 1983, "country": "Japan"},
+    "phd": {"school": "Waseda University", "field": "Mechanical Engineering", "year": 1989, "country": "Japan", "advisor": "Ichiro Kato", "thesis_topic": "Piano playing robot (WABOT-2)"}
+  },
+  "career_path": [
+    {"org": "Waseda University", "role": "Research Associate -> Faculty of Mechanical Engineering -> Professor; Director of WABOT-HOUSE Lab (2001-2012); Associate Dean of School of Creative Science and Engineering (2011)", "type": "academia", "country": "Japan", "year_start": 1987, "year_end": null},
+    {"org": "Stanford University", "role": "Visiting Research Scholar (Mechanical Engineering)", "type": "academia", "country": "USA", "year_start": 1993, "year_end": 1994},
+    {"org": "Institute for Techno-Innovation at Chubu-Area Industries", "role": "Director", "type": "academia", "country": "Japan", "year_start": 2012, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Waseda University", "type": "academia", "country": "Japan", "year": 1991},
+  "companies_founded": [],
+  "topics": ["humanoid robotics", "human-robot interaction", "human-symbiotic robots", "manipulator design", "kokoro/affective robotics", "anthropomorphic design"],
+  "awards": [
+    {"name": "IEEE RAS Distinguished Service Award", "year": 2008},
+    {"name": "RSJ Distinguished Service Award", "year": 2012}
+  ],
+  "external_events_mentioned": [
+    "Tsukuba Exposition 1985 (WABOT-2 demonstration)",
+    "TWENDY-ONE press release 2007",
+    "Willow Garage visit",
+    "Fukushima Nuclear Power Plant accident",
+    "Aichi Expo"
+  ]
+}

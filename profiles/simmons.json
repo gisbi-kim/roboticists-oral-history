@@ -1,0 +1,31 @@
+{
+  "person": "simmons",
+  "full_name": "Reid Simmons",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "University of Buffalo", "field": "Computer Science", "year": null, "country": "USA"},
+    "ms": {"school": "MIT", "field": "Computer Science", "year": null, "country": "USA"},
+    "phd": {"school": "MIT", "field": "Computer Science", "year": null, "country": "USA", "advisor": "Randy Davis", "thesis_topic": "Combining causal reasoning and rule-based systems for geological interpretation"}
+  },
+  "career_path": [
+    {"org": "Computer design/graphics company (Ann Arbor)", "role": "Engineer", "type": "industry", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Carnegie Mellon University (Robotics Institute)", "role": "Postdoc / Research Faculty / Professor", "type": "academia", "country": "USA", "year_start": 1988, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Carnegie Mellon University", "type": "academia", "country": "USA", "year": 1988},
+  "companies_founded": [],
+  "topics": ["artificial intelligence", "robot architectures", "navigation planning", "human-robot interaction", "social robotics", "fault detection", "multi-robot coordination"],
+  "awards": [
+    {"name": "Newell Research Award", "year": 2004},
+    {"name": "NASA Software of the Year Award (Remote Agent team)", "year": 1999}
+  ],
+  "external_events_mentioned": [
+    "NASA Mars rover prototype project (1988)",
+    "Mars Spirit and Opportunity rovers (running CMU algorithms)",
+    "Deep Space 1 autonomous spacecraft mission",
+    "AAAI Mobile Robot Challenge with Grace 2002",
+    "Roboceptionist project with CMU School of Drama"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "person": "inoue",
+  "full_name": "Hirochika Inoue",
+  "birth_year": 1942,
+  "birth_country": "Japan",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "University of Tokyo", "field": "Mechanical Engineering", "year": 1965, "country": "Japan"},
+    "ms": {"school": "University of Tokyo", "field": "Mechanical Engineering", "year": 1967, "country": "Japan"},
+    "phd": {"school": "University of Tokyo", "field": "Mechanical Engineering", "year": 1970, "country": "Japan", "advisor": "Fuji", "thesis_topic": "mechanical hand"}
+  },
+  "career_path": [
+    {"org": "Electrotechnical Laboratory (ETL, MITI)", "role": "Researcher, Robotics Division", "type": "govlab", "country": "Japan", "year_start": 1970, "year_end": 1978},
+    {"org": "MIT Artificial Intelligence Laboratory", "role": "Visiting Scholar", "type": "academia", "country": "USA", "year_start": 1973, "year_end": 1974},
+    {"org": "University of Tokyo", "role": "Associate Professor / Professor (1984), Department of Mechanical Engineering / Mechano-Informatics", "type": "academia", "country": "Japan", "year_start": 1978, "year_end": 2004},
+    {"org": "Japan Society for the Promotion of Science (JSPS)", "role": "Inspector General", "type": "govlab", "country": "Japan", "year_start": 2004, "year_end": 2009},
+    {"org": "AIST Digital Human Engineering Research Center", "role": "Senior Research Advisor", "type": "govlab", "country": "Japan", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Electrotechnical Laboratory (ETL, MITI)", "type": "govlab", "country": "Japan", "year": 1970},
+  "companies_founded": [],
+  "topics": ["hand-eye systems", "manipulation", "humanoid robots", "compliant control", "system integration", "mechatronics"],
+  "awards": [
+    {"name": "JIRA Award", "year": 1994},
+    {"name": "Joseph Engelberger Robotics Award", "year": 1999},
+    {"name": "IEEE RAS Pioneer Award", "year": 2005},
+    {"name": "Emperor's Medal with Purple Ribbon", "year": 2008},
+    {"name": "IEEE Technical Field Award", "year": 2011},
+    {"name": "Japan Academy Prize", "year": 2016}
+  ],
+  "external_events_mentioned": ["University of Tokyo student protests 1968-1969", "METI HRP humanoid project", "Aichi Expo 2005", "ISRR (Flagstaff)"]
+}

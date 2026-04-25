@@ -1,0 +1,29 @@
+{
+  "person": "carlisle",
+  "full_name": "Brian Carlisle",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "Stanford University", "field": "Mechanical Engineering", "year": null, "country": "USA"},
+    "ms": {"school": "Stanford University", "field": "Electrical Engineering", "year": 1975, "country": "USA"},
+    "phd": {"school": null, "field": null, "year": null, "country": null, "advisor": null, "thesis_topic": null}
+  },
+  "career_path": [
+    {"org": "Vicarm", "role": "Engineer", "type": "industry", "country": "USA", "year_start": 1975, "year_end": 1977},
+    {"org": "Unimation", "role": "R&D group lead (after Vicarm acquisition)", "type": "industry", "country": "USA", "year_start": 1977, "year_end": 1983},
+    {"org": "Adept Technology", "role": "Co-founder and CEO", "type": "industry", "country": "USA", "year_start": 1983, "year_end": 2003},
+    {"org": "Precise Automation", "role": "Co-founder, President and CEO", "type": "industry", "country": "USA", "year_start": 2003, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Vicarm", "type": "industry", "country": "USA", "year": 1975},
+  "companies_founded": [
+    {"name": "Adept Technology", "year": 1983, "country": "USA"},
+    {"name": "Precise Automation", "year": 2003, "country": "USA"}
+  ],
+  "topics": ["manipulation", "computer vision", "control", "grasping", "mobile robots"],
+  "awards": [
+    {"name": "IEEE Fellow", "year": null}
+  ],
+  "external_events_mentioned": ["Y2K bubble burst", "Dot-com bust", "Robotics labor displacement debates"]
+}

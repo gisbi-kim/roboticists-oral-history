@@ -1,0 +1,32 @@
+{
+  "person": "sims",
+  "full_name": "Michael Sims",
+  "birth_year": 1949,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "Rutgers University", "field": "Physics", "year": null, "country": "USA"},
+    "ms": {"school": "Rutgers University", "field": "Mathematics", "year": null, "country": "USA"},
+    "phd": {"school": "Rutgers University", "field": "Mathematics", "year": 1990, "country": "USA", "advisor": "Saul Amarel", "thesis_topic": "Discovery in mathematics (system 'IL' for surreal numbers)"}
+  },
+  "career_path": [
+    {"org": "NASA Langley Research Center", "role": "Faculty Fellow (Robotics)", "type": "govlab", "country": "USA", "year_start": 1983, "year_end": 1984},
+    {"org": "NASA Ames Research Center", "role": "Principal Research Scientist", "type": "govlab", "country": "USA", "year_start": 1987, "year_end": 2013},
+    {"org": "NASA Jet Propulsion Laboratory (JPL)", "role": "Pathfinder/MER mission team", "type": "govlab", "country": "USA", "year_start": 1997, "year_end": 2015},
+    {"org": "Moon Express", "role": "VP for Software and Chief Robotics Officer", "type": "industry", "country": "USA", "year_start": 2013, "year_end": 2015},
+    {"org": "Mars Institute", "role": "Senior Research Scientist", "type": "nonprofit", "country": "USA", "year_start": 2015, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "NASA Ames Research Center", "type": "govlab", "country": "USA", "year": 1987},
+  "companies_founded": [],
+  "topics": ["space robotics", "planetary exploration", "human-robot interaction", "machine learning", "field robotics", "virtual reality interfaces", "telerobotics"],
+  "awards": [],
+  "external_events_mentioned": [
+    "Mars Pathfinder mission",
+    "Mars Exploration Rovers (MER) Spirit and Opportunity mission",
+    "Deep Space 1 autonomous spacecraft mission",
+    "Antarctic TROV (Telerobotic Undersea Vehicle) experiment",
+    "Smithsonian Air and Space Museum demonstration",
+    "Kamchatka field tests with Russian VNIITRANSMASH team"
+  ]
+}

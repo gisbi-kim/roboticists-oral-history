@@ -1,0 +1,25 @@
+{
+  "person": "mcghee",
+  "full_name": "Bob McGhee",
+  "birth_year": 1929,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "University of Michigan, Ann Arbor", "field": "Other: Engineering Physics", "year": 1952, "country": "USA"},
+    "ms": {"school": "University of Southern California", "field": "Electrical Engineering", "year": 1957, "country": "USA"},
+    "phd": {"school": "University of Southern California", "field": "Electrical Engineering", "year": 1963, "country": "USA", "advisor": null, "thesis_topic": null}
+  },
+  "career_path": [
+    {"org": "U.S. Army Ordnance Corps", "role": "Guided Missile Maintenance Officer", "type": "military", "country": "USA", "year_start": 1952, "year_end": 1955},
+    {"org": "Hughes Aircraft Company", "role": "Technical Staff", "type": "industry", "country": "USA", "year_start": 1955, "year_end": 1963},
+    {"org": "University of Southern California", "role": "Assistant Professor; Associate Professor of Electrical Engineering", "type": "academia", "country": "USA", "year_start": 1963, "year_end": 1968},
+    {"org": "Ohio State University", "role": "Professor of Electrical Engineering; Director of Digital Systems Laboratory", "type": "academia", "country": "USA", "year_start": 1968, "year_end": 1986},
+    {"org": "Naval Postgraduate School", "role": "Professor of Computer Science; Professor Emeritus", "type": "military", "country": "USA", "year_start": 1986, "year_end": 2006}
+  ],
+  "first_job_after_phd": {"org": "University of Southern California", "type": "academia", "country": "USA", "year": 1963},
+  "companies_founded": [],
+  "topics": ["walking robots", "legged locomotion", "unmanned submarines", "gait analysis", "prosthesis", "mission control"],
+  "awards": [],
+  "external_events_mentioned": ["DARPA Adaptive Suspension Vehicle program", "Senator Proxmire Golden Fleece Award (Bionic Bug)", "Japanese Fifth Generation Computer Project", "ROMANSY conference", "Soviet walking machine research"]
+}

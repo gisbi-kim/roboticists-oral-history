@@ -1,0 +1,30 @@
+{
+  "person": "yim",
+  "full_name": "Mark Yim",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2014,
+  "education": {
+    "bs": {"school": "Johns Hopkins University", "field": "Mechanical Engineering", "year": 1987, "country": "USA"},
+    "ms": {"school": "Stanford University", "field": "Mechanical Engineering", "year": 1989, "country": "USA"},
+    "phd": {"school": "Stanford University", "field": "Mechanical Engineering", "year": 1994, "country": "USA", "advisor": "Jean-Claude Latombe", "thesis_topic": "modular self-reconfigurable robots"}
+  },
+  "career_path": [
+    {"org": "Virtual Technologies", "role": "Engineer (haptic feedback)", "type": "industry", "country": "USA", "year_start": 1994, "year_end": null},
+    {"org": "Xerox PARC", "role": "Researcher / Manager", "type": "industry", "country": "USA", "year_start": null, "year_end": 2004},
+    {"org": "University of Pennsylvania", "role": "Gabel Family Associate Professor of Mechanical Engineering / GRASP Lab member", "type": "academia", "country": "USA", "year_start": 2004, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Virtual Technologies", "type": "industry", "country": "USA", "year": 1994},
+  "companies_founded": [
+    {"name": "UPenn UPstart spinoff (low-cost robot arm)", "year": 2014, "role": "Founder", "status": "active"}
+  ],
+  "topics": ["modular robotics", "self-reconfigurable robots", "flying robots", "mems", "mechatronics", "manipulation"],
+  "awards": [],
+  "external_events_mentioned": [
+    "DARPA Nano Air Vehicle program (Lockheed maple seed flyer)",
+    "Immersion vs. Microsoft/Sony patent lawsuit",
+    "Willow Garage advisory board",
+    "Opera Philadelphia robotic performance collaboration"
+  ]
+}

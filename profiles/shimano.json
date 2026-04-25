@@ -1,0 +1,34 @@
+{
+  "person": "shimano",
+  "full_name": "Bruce Shimano",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "Stanford University", "field": "Mechanical Engineering", "year": 1972, "country": "USA"},
+    "ms": {"school": "Stanford University", "field": "Mechanical Engineering", "year": 1972, "country": "USA"},
+    "phd": {"school": "Stanford University", "field": "Mechanical Engineering", "year": 1980, "country": "USA", "advisor": "Bernard Roth", "thesis_topic": "Robot programming languages and control (with Lou Paul at SAIL)"}
+  },
+  "career_path": [
+    {"org": "Stanford AI Lab (SAIL) - Hand-Eye Group", "role": "Research Assistant", "type": "academia", "country": "USA", "year_start": 1974, "year_end": 1979},
+    {"org": "Vicarm / Unimation (West Coast Division)", "role": "Director of Software Development", "type": "industry", "country": "USA", "year_start": 1976, "year_end": 1983},
+    {"org": "Adept Technology Inc.", "role": "Vice President of R&D and Secretary", "type": "industry", "country": "USA", "year_start": 1983, "year_end": 2003},
+    {"org": "Precise Automation LLC", "role": "COO and VP R&D", "type": "industry", "country": "USA", "year_start": 2004, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Unimation (West Coast Division)", "type": "industry", "country": "USA", "year": 1980},
+  "companies_founded": [
+    {"name": "Adept Technology Inc.", "year": 1983, "role": "Co-founder", "status": "exited"},
+    {"name": "Precise Automation LLC", "year": 2004, "role": "Co-founder", "status": "active"}
+  ],
+  "topics": ["industrial robotics", "robot programming languages", "assembly robots", "scara robots", "machine vision", "automation"],
+  "awards": [],
+  "external_events_mentioned": [
+    "VAL programming language development",
+    "PUMA robot development for GM",
+    "Adept 1 SCARA launch (1985)",
+    "Unimation acquisition by Westinghouse (1982)",
+    "Adept Technology IPO (1996)",
+    "9/11 and photonics market crash"
+  ]
+}

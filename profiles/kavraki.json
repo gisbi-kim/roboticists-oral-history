@@ -1,0 +1,32 @@
+{
+  "person": "kavraki",
+  "full_name": "Lydia Kavraki",
+  "birth_year": 1967,
+  "birth_country": "Greece",
+  "gender": "F",
+  "interview_year": 2015,
+  "education": {
+    "bs": {"school": "University of Crete", "field": "Computer Science", "year": null, "country": "Greece"},
+    "ms": null,
+    "phd": {"school": "Stanford University", "field": "Computer Science", "year": null, "country": "USA", "advisor": "Jean-Claude Latombe", "thesis_topic": "Probabilistic Roadmap Planner for motion planning"}
+  },
+  "career_path": [
+    {"institution": "Stanford University", "country": "USA", "type": "academia", "role": "Research Associate", "start_year": null, "end_year": null},
+    {"institution": "Rice University", "country": "USA", "type": "academia", "role": "Professor (Noah Harding Professor of Computer Science; also Bioengineering, ECE, Mechanical Engineering)", "start_year": null, "end_year": null}
+  ],
+  "first_job_after_phd": {"institution": "Stanford University", "country": "USA", "type": "academia", "role": "Research Associate"},
+  "companies_founded": [],
+  "topics": ["motion planning", "computational robotics", "computational biology", "drug design", "sampling-based planning", "manipulation"],
+  "awards": [
+    {"name": "ACM Grace Murray Hopper Award", "year": 2000},
+    {"name": "IEEE Robotics and Automation Society Early Academic Career Award", "year": 2001},
+    {"name": "IEEE Robotics and Automation Society Pioneer Award", "year": 2020},
+    {"name": "ACM-AAAI Allen Newell Award", "year": 2020}
+  ],
+  "external_events_mentioned": [
+    "RSS (Robotics: Science and Systems) founding ~2004",
+    "RSS 2014 chair (Berkeley)",
+    "Open Motion Planning Library development with Willow Garage",
+    "NASA Robonaut collaboration"
+  ]
+}

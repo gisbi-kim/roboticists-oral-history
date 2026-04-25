@@ -1,0 +1,33 @@
+{
+  "person": "kumar",
+  "full_name": "Vijay Kumar",
+  "birth_year": null,
+  "birth_country": "India",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "Indian Institute of Technology Kanpur", "field": "Mechanical Engineering", "year": null, "country": "India"},
+    "ms": {"school": "Ohio State University", "field": "Mechanical Engineering", "year": null, "country": "USA"},
+    "phd": {"school": "Ohio State University", "field": "Mechanical Engineering", "year": 1987, "country": "USA", "advisor": "Kenneth Waldron", "thesis_topic": "Legged vehicle gaits and load distribution for the Adaptive Suspension Vehicle"}
+  },
+  "career_path": [
+    {"org": "University of Pennsylvania", "role": "Professor / GRASP Lab Director / Dean of Penn Engineering", "type": "academia", "country": "USA", "year_start": 1987, "year_end": null},
+    {"org": "White House Office of Science and Technology Policy", "role": "Assistant Director of Robotics and Cyber-Physical Systems", "type": "govlab", "country": "USA", "year_start": 2012, "year_end": 2014}
+  ],
+  "first_job_after_phd": {"org": "University of Pennsylvania", "type": "academia", "country": "USA", "year": 1987},
+  "companies_founded": [
+    {"name": "Exyn Technologies", "year": null, "role": "Founder", "status": "active"}
+  ],
+  "topics": ["legged locomotion", "kinematics", "multi-robot cooperation", "aerial robotics", "manipulation", "swarm robotics", "biological inspiration"],
+  "awards": [
+    {"name": "NSF Presidential Young Investigator Award", "year": 1991},
+    {"name": "ASME Fellow", "year": 2003},
+    {"name": "World Technology Network Award", "year": 2012},
+    {"name": "National Academy of Engineering Member", "year": 2013},
+    {"name": "Popular Science Breakthrough Award", "year": 2013},
+    {"name": "Engelberger Robotics Award", "year": 2014},
+    {"name": "IEEE Robotics and Automation Society George Saridis Leadership Award", "year": 2017},
+    {"name": "ASME Robert E. Abbott Award", "year": 2017}
+  ],
+  "external_events_mentioned": ["Fukushima disaster", "DARPA Grand Challenge", "First Lego League"]
+}

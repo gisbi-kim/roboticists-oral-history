@@ -1,0 +1,29 @@
+{
+  "person": "dario",
+  "full_name": "Paolo Dario",
+  "birth_year": null,
+  "birth_country": "Italy",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "University of Pisa", "field": "Mechanical Engineering", "year": 1977, "country": "Italy"},
+    "ms": {"school": null, "field": null, "year": null, "country": null},
+    "phd": {"school": null, "field": null, "year": null, "country": null, "advisor": "Giancarlo Nardi", "thesis_topic": "Pulsatile artificial heart"}
+  },
+  "career_path": [
+    {"org": "University of Pisa / CNR Institute of Clinical Physiology", "role": "Researcher", "type": "academia", "country": "Italy", "year_start": null, "year_end": null},
+    {"org": "Brown University", "role": "Assistant Professor (Research)", "type": "academia", "country": "USA", "year_start": 1983, "year_end": 1987},
+    {"org": "University of Pisa", "role": "Assistant Professor (tenured)", "type": "academia", "country": "Italy", "year_start": 1983, "year_end": null},
+    {"org": "Scuola Superiore Sant'Anna", "role": "Associate Professor (1986) / Full Professor (2000) / Coordinator BioRobotics Institute", "type": "academia", "country": "Italy", "year_start": 1986, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "University of Pisa", "type": "academia", "country": "Italy", "year": null},
+  "companies_founded": [
+    {"name": "Scienzia Machinale (SM)", "year": 1991, "role": "Founder", "status": "active"}
+  ],
+  "topics": ["medical robotics", "tactile sensing", "biorobotics", "mechatronics", "micro/nano engineering", "rehabilitation robotics", "neurorobotics", "humanoid"],
+  "awards": [
+    {"name": "IEEE Fellow", "year": 2003},
+    {"name": "IEEE Life Fellow", "year": null}
+  ],
+  "external_events_mentioned": ["First ICRA (St. Louis 1985)", "NATO robotics workshops 1986/1989", "ICAR 1991 Pisa (501 participants)", "ARTS Lab founding 1989", "CRIM/MiTech lab 1991", "EURON / EUROP networks", "FET Flagship robot companions"]
+}

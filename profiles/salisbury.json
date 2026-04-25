@@ -1,0 +1,29 @@
+{
+  "person": "salisbury",
+  "full_name": "Kenneth Salisbury",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "Stanford University", "field": "Electrical Engineering", "year": 1975, "country": "USA"},
+    "ms": {"school": "Stanford University", "field": "Mechanical Engineering", "year": 1977, "country": "USA"},
+    "phd": {"school": "Stanford University", "field": "Mechanical Engineering", "year": 1982, "country": "USA", "advisor": "Bernard Roth", "thesis_topic": "Design and utilization of robot hands (Stanford/JPL Hand)"}
+  },
+  "career_path": [
+    {"org": "MIT (AI Lab / Mechanical Engineering)", "role": "Principal Research Scientist", "type": "academia", "country": "USA", "year_start": 1982, "year_end": 1999},
+    {"org": "Intuitive Surgical", "role": "Fellow and Scientific Advisor", "type": "industry", "country": "USA", "year_start": 1997, "year_end": null},
+    {"org": "Stanford University (Computer Science and Surgery)", "role": "Research Professor", "type": "academia", "country": "USA", "year_start": 1999, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "MIT (AI Lab)", "type": "academia", "country": "USA", "year": 1982},
+  "companies_founded": [
+    {"name": "SensAble Technologies", "year": null, "role": "Co-founder", "status": "active"}
+  ],
+  "topics": ["robot hands", "haptics", "force control", "medical robotics", "surgical simulation", "human-robot interaction"],
+  "awards": [],
+  "external_events_mentioned": [
+    "DARPA IED disposal hand program",
+    "Willow Garage founding",
+    "Intuitive Surgical da Vinci"
+  ]
+}

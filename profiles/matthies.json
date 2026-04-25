@@ -1,0 +1,26 @@
+{
+  "person": "matthies",
+  "full_name": "Larry Matthies",
+  "birth_year": null,
+  "birth_country": "Canada",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "University of Saskatchewan", "field": "Computer Science", "year": null, "country": "Canada"},
+    "ms": {"school": "University of Waterloo", "field": "Computer Science", "year": null, "country": "Canada"},
+    "phd": {"school": "Carnegie Mellon University", "field": "Computer Science", "year": 1989, "country": "USA", "advisor": "Takeo Kanade", "thesis_topic": "Stereo vision and visual odometry for autonomous navigation"}
+  },
+  "career_path": [
+    {"org": "Jet Propulsion Laboratory (NASA)", "role": "Senior Research Scientist; Computer Vision Group leader", "type": "govlab", "country": "USA", "year_start": 1989, "year_end": null},
+    {"org": "University of Southern California", "role": "Adjunct Professor of Computer Science", "type": "academia", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "California Institute of Technology", "role": "Lecturer in Computer Vision", "type": "academia", "country": "USA", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Jet Propulsion Laboratory (NASA)", "type": "govlab", "country": "USA", "year": 1989},
+  "companies_founded": [],
+  "topics": ["computer vision", "visual odometry", "stereo vision", "mars rovers", "autonomous navigation", "field robotics", "terrain classification"],
+  "awards": [
+    {"name": "IEEE Robotics and Automation Award", "year": 2008},
+    {"name": "IEEE Fellow", "year": null}
+  ],
+  "external_events_mentioned": ["Three Mile Island incident", "DARPA Autonomous Land Vehicle Program", "Mars Rover Sample Return program", "Mars Pathfinder", "Mars Exploration Rover mission", "DARPA Demo II", "DARPA Tactical Mobile Robotics", "DARPA PerceptOR", "Apollo 13", "Fukushima accident"]
+}

@@ -1,0 +1,23 @@
+{
+  "person": "chatila",
+  "full_name": "Raja Chatila",
+  "birth_year": 1952,
+  "birth_country": "Syria",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "École Nationale de l'Aviation Civile (Toulouse)", "field": "Electrical Engineering", "year": null, "country": "France"},
+    "ms": {"school": "École Nationale Supérieure de l'Aéronautique et de l'Espace / Université Paul Sabatier", "field": "Control Engineering", "year": null, "country": "France"},
+    "phd": {"school": "Université Paul Sabatier (Toulouse)", "field": "Control Engineering", "year": 1981, "country": "France", "advisor": "Georges Giralt", "thesis_topic": "Robot Navigation Space Modeling and Decisional Processes (HILARE mobile robot)"}
+  },
+  "career_path": [
+    {"org": "Stanford University AI Lab", "role": "Postdoctoral researcher (Tom Binford)", "type": "academia", "country": "USA", "year_start": 1982, "year_end": 1983},
+    {"org": "CNRS / LAAS (Toulouse)", "role": "Researcher → Senior researcher", "type": "govlab", "country": "France", "year_start": 1983, "year_end": null},
+    {"org": "Université Pierre et Marie Curie (Paris) / ISIR", "role": "Professor, Institute of Intelligent Systems and Robotics", "type": "academia", "country": "France", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Stanford University AI Lab", "type": "academia", "country": "USA", "year": 1982},
+  "companies_founded": [],
+  "topics": ["mobile robots", "SLAM", "motion planning", "space robotics", "human-robot interaction", "robot ethics", "developmental robotics"],
+  "awards": [],
+  "external_events_mentioned": ["French mandate / post-colonial Syria", "Collapse of the Soviet Union (1991)", "Chernobyl disaster (1986)", "European Union research integration"]
+}

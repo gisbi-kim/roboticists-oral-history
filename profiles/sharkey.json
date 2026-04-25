@@ -1,0 +1,39 @@
+{
+  "person": "sharkey",
+  "full_name": "Noel Sharkey",
+  "birth_year": 1948,
+  "birth_country": "UK",
+  "gender": "M",
+  "interview_year": 2013,
+  "education": {
+    "bs": {"school": "Exeter University", "field": "Psychology", "year": null, "country": "UK"},
+    "ms": {"school": null, "field": null, "year": null, "country": null},
+    "phd": {"school": "Exeter University", "field": "Psychology", "year": null, "country": "UK", "advisor": "Don Mitchell", "thesis_topic": "Models of word recognition (top-down recognition with scripts)"}
+  },
+  "career_path": [
+    {"org": "Psychiatric hospital (England)", "role": "Psychiatric Nurse", "type": "nonprofit", "country": "UK", "year_start": 1970, "year_end": 1972},
+    {"org": "Yale University (AI Lab)", "role": "Postdoctoral Researcher", "type": "academia", "country": "USA", "year_start": 1981, "year_end": null},
+    {"org": "Stanford University", "role": "Researcher (with Gordon Bower)", "type": "academia", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Essex University (Linguistics, then Computer Science)", "role": "Lecturer / Reader / Director of Centre for Cognitive Science", "type": "academia", "country": "UK", "year_start": null, "year_end": null},
+    {"org": "University of Sheffield (Computer Science)", "role": "Professor of AI and Robotics / Director of Centre for Connection Science", "type": "academia", "country": "UK", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Yale University (AI Lab)", "type": "academia", "country": "USA", "year": 1981},
+  "companies_founded": [],
+  "topics": ["artificial intelligence", "neural networks", "machine learning", "robot ethics", "military robotics", "human-robot interaction", "autonomous weapons"],
+  "awards": [
+    {"name": "Honorary Doctorate of Informatics, University of Skövde", "year": null},
+    {"name": "Fellow of the IET", "year": null},
+    {"name": "Fellow of the British Computer Society", "year": null},
+    {"name": "Fellow of the Royal Institute of Navigation", "year": null},
+    {"name": "Fellow of the Royal Society of Arts", "year": null}
+  ],
+  "external_events_mentioned": [
+    "BBC Robot Wars (16 series)",
+    "BBC Techno Games",
+    "BBC Bright Sparks",
+    "Magna Science Adventure Centre predator-prey exhibit",
+    "EPSRC Senior Media Fellowship",
+    "International Committee for Robot Arms Control (ICRAC) co-founding 2009",
+    "Guardian article 'Robot Wars are a Reality' 2007"
+  ]
+}

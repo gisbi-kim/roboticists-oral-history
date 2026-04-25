@@ -1,0 +1,27 @@
+{
+  "person": "forlizzi",
+  "full_name": "Jodi Forlizzi",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "F",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "Philadelphia College of Art (University of the Arts)", "field": "Other: Illustration (BFA)", "year": null, "country": "USA"},
+    "ms": {"school": "Carnegie Mellon University", "field": "Other: Interaction Design", "year": 1997, "country": "USA"},
+    "phd": {"school": "Carnegie Mellon University", "field": "Other: Design and Human-Computer Interaction (self-defined)", "year": 2007, "country": "USA", "advisor": null, "thesis_topic": "Design and HCI"}
+  },
+  "career_path": [
+    {"org": "University of Pennsylvania School of Engineering", "role": "Information Designer", "type": "academia", "country": "USA", "year_start": 1985, "year_end": 1995},
+    {"org": "Inks Creative Services", "role": "Founder", "type": "industry", "country": "USA", "year_start": 1986, "year_end": 1996},
+    {"org": "Carnegie Mellon University Novum Design Center", "role": "Design Researcher", "type": "academia", "country": "USA", "year_start": null, "year_end": 1997},
+    {"org": "E-Lab LLC", "role": "Innovator / Project Manager", "type": "industry", "country": "USA", "year_start": 1998, "year_end": 1999},
+    {"org": "Carnegie Mellon University (HCI Institute / School of Design)", "role": "Assistant Professor → Full Professor (2014)", "type": "academia", "country": "USA", "year_start": 2000, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Carnegie Mellon University", "type": "academia", "country": "USA", "year": 2007},
+  "companies_founded": [
+    {"name": "Inks Creative Services", "year": 1986, "role": "Founder", "status": "inactive"}
+  ],
+  "topics": ["human-robot interaction", "interaction design", "social robots", "assistive technology", "service design", "user research", "elderly care robots"],
+  "awards": [],
+  "external_events_mentioned": ["Nursebot project (CMU)", "ACM HRI Conference founding", "HRI young researchers workshop", "Quality of Life Technology Center (QoLT)", "Snackbot project", "HERB robot (Sidd Srinivasa)", "Aethon TUG hospital robot study"]
+}

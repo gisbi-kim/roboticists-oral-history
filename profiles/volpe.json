@@ -1,0 +1,27 @@
+{
+  "person": "volpe",
+  "full_name": "Richard Volpe",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "Loyola College in Baltimore", "field": "Physics", "year": 1984, "country": "USA"},
+    "ms": {"school": "Carnegie Mellon University", "field": "Physics", "year": 1986, "country": "USA"},
+    "phd": {"school": "Carnegie Mellon University", "field": "Other: Applied Physics", "year": 1990, "country": "USA", "advisor": "Pradeep Khosla", "thesis_topic": "force control and impedance control unification for manipulation"}
+  },
+  "career_path": [
+    {"org": "NASA Jet Propulsion Laboratory (JPL)", "role": "Researcher / Section Manager", "type": "govlab", "country": "USA", "year_start": 1991, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "NASA Jet Propulsion Laboratory (JPL)", "type": "govlab", "country": "USA", "year": 1991},
+  "companies_founded": [],
+  "topics": ["mars rovers", "manipulation", "mobile robots", "path planning", "software architecture", "space robotics"],
+  "awards": [],
+  "external_events_mentioned": [
+    "Sojourner Mars landing (1997)",
+    "Mars Exploration Rovers (MER)",
+    "Phoenix Mars Lander mission (2008)",
+    "Mars Science Laboratory (MSL)",
+    "Constellation Program / ESMD"
+  ]
+}

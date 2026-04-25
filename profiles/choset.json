@@ -1,0 +1,25 @@
+{
+  "person": "choset",
+  "full_name": "Howie Choset",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2014,
+  "education": {
+    "bs": {"school": "University of Pennsylvania", "field": "Computer Science", "year": 1990, "country": "USA"},
+    "ms": {"school": "California Institute of Technology", "field": "Mechanical Engineering", "year": 1991, "country": "USA"},
+    "phd": {"school": "California Institute of Technology", "field": "Mechanical Engineering", "year": 1996, "country": "USA", "advisor": "Joel Burdick", "thesis_topic": "Hierarchical Generalized Voronoi Graph (sensor-based exploration of 3D space)"}
+  },
+  "career_path": [
+    {"org": "Nomadic Technologies", "role": "Researcher (coverage algorithms for mobile robots)", "type": "industry", "country": "USA", "year_start": 1996, "year_end": 1996},
+    {"org": "Carnegie Mellon University", "role": "Faculty (Robotics Institute) → Professor of Robotics; director of undergraduate robotics minor", "type": "academia", "country": "USA", "year_start": 1996, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Nomadic Technologies / Carnegie Mellon University", "type": "academia", "country": "USA", "year": 1996},
+  "companies_founded": [
+    {"name": "Medrobotics", "year": 2004, "country": "USA"},
+    {"name": "HEBI Robotics (modular actuator company)", "year": null, "country": "USA"}
+  ],
+  "topics": ["snake robots", "surgical robotics", "motion planning", "multirobot", "SLAM", "modular robots"],
+  "awards": [],
+  "external_events_mentioned": ["DARPA / National Robotics Initiative funding"]
+}

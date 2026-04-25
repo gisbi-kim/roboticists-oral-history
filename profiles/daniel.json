@@ -1,0 +1,24 @@
+{
+  "person": "daniel",
+  "full_name": "Ron Daniel",
+  "birth_year": null,
+  "birth_country": "UK",
+  "gender": "M",
+  "interview_year": 2013,
+  "education": {
+    "bs": {"school": "Brunel University", "field": "Electrical Engineering", "year": null, "country": "UK"},
+    "ms": {"school": null, "field": null, "year": null, "country": null},
+    "phd": {"school": "University of Cambridge (King's College)", "field": "Control Engineering", "year": null, "country": "UK", "advisor": "Alistair McFarlane", "thesis_topic": "Designer-involved control system design (H-infinity era)"}
+  },
+  "career_path": [
+    {"org": "University of Oxford (St Edmund Hall, Department of Engineering Science)", "role": "Research Fellow / University Lecturer / Brasenose College Fellow", "type": "academia", "country": "UK", "year_start": 1982, "year_end": null},
+    {"org": "Eykona Technologies / Fuel3D Technologies", "role": "Co-founder / Technical Advisor", "type": "industry", "country": "UK", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "University of Oxford", "type": "academia", "country": "UK", "year": 1982},
+  "companies_founded": [
+    {"name": "Eykona Technologies (later Fuel3D Technologies)", "year": null, "role": "Co-founder", "status": "active"}
+  ],
+  "topics": ["telerobotics", "haptics", "force control", "remote manipulation", "compliant manipulators", "computer vision", "stereo vision", "hardware-in-the-loop"],
+  "awards": [],
+  "external_events_mentioned": ["UK CEGB Marchwood remote nuclear maintenance", "Joint European Torus (JET)", "UK Atomic Energy Authority Harwell", "Oxford Robotics Research Group founding", "UK Robotics Initiative / EPSRC"]
+}

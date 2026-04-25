@@ -1,0 +1,26 @@
+{
+  "person": "okamura",
+  "full_name": "Allison Okamura",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "F",
+  "interview_year": 2014,
+  "education": {
+    "bs": {"school": "University of California, Berkeley", "field": "Mechanical Engineering", "year": 1994, "country": "USA"},
+    "ms": {"school": "Stanford University", "field": "Mechanical Engineering", "year": 1996, "country": "USA"},
+    "phd": {"school": "Stanford University", "field": "Mechanical Engineering", "year": 2000, "country": "USA", "advisor": "Mark Cutkosky", "thesis_topic": "Dexterous manipulation with robot fingers and surface mapping"}
+  },
+  "career_path": [
+    {"org": "Johns Hopkins University", "role": "Assistant Professor to Professor and Vice Chair, Mechanical Engineering", "type": "academia", "country": "USA", "year_start": 2000, "year_end": 2011},
+    {"org": "Stanford University", "role": "Professor of Mechanical Engineering", "type": "academia", "country": "USA", "year_start": 2011, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Johns Hopkins University", "type": "academia", "country": "USA", "year": 2000},
+  "companies_founded": [],
+  "topics": ["haptics", "teleoperation", "medical robotics", "needle steering", "virtual fixtures", "rehabilitation robotics", "prosthetics"],
+  "awards": [
+    {"name": "NSF CAREER Award", "year": 2004},
+    {"name": "IEEE Robotics and Automation Society Early Career Award", "year": 2005},
+    {"name": "IEEE Technical Committee on Haptics Early Career Award", "year": 2009}
+  ],
+  "external_events_mentioned": ["Da Vinci Surgical System commercialization", "Phantom haptic device release", "National Robotics Initiative"]
+}

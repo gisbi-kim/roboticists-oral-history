@@ -1,0 +1,29 @@
+{
+  "person": "mccarthy",
+  "full_name": "John McCarthy",
+  "birth_year": 1927,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "California Institute of Technology", "field": "Mathematics", "year": 1947, "country": "USA"},
+    "ms": null,
+    "phd": {"school": "Princeton University", "field": "Mathematics", "year": 1951, "country": "USA", "advisor": null, "thesis_topic": "Solving differential equations by projecting between a space of gradients and a space of vector fields"}
+  },
+  "career_path": [
+    {"org": "Princeton University", "role": "Instructor", "type": "academia", "country": "USA", "year_start": 1951, "year_end": 1953},
+    {"org": "Stanford University", "role": "Acting Assistant Professor", "type": "academia", "country": "USA", "year_start": 1953, "year_end": 1954},
+    {"org": "Dartmouth College", "role": "Faculty", "type": "academia", "country": "USA", "year_start": 1954, "year_end": 1958},
+    {"org": "Massachusetts Institute of Technology", "role": "Assistant Professor; Associate Professor", "type": "academia", "country": "USA", "year_start": 1958, "year_end": 1962},
+    {"org": "Stanford University", "role": "Full Professor; founder of Stanford AI Lab", "type": "academia", "country": "USA", "year_start": 1962, "year_end": 2000}
+  ],
+  "first_job_after_phd": {"org": "Princeton University", "type": "academia", "country": "USA", "year": 1951},
+  "companies_founded": [],
+  "topics": ["artificial intelligence", "lisp", "logical ai", "timesharing", "computer vision", "robot arms"],
+  "awards": [
+    {"name": "Turing Award", "year": 1971},
+    {"name": "Kyoto Prize", "year": null},
+    {"name": "National Medal of Science", "year": 1991}
+  ],
+  "external_events_mentioned": ["Hixon Symposium on Cerebral Mechanisms and Behavior (1948)", "Dartmouth Summer Research Project on AI (1956)", "MIT AI Lab founding", "Stanford AI Lab founding", "DARPA funding cuts in late 1980s"]
+}

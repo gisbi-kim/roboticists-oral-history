@@ -1,0 +1,29 @@
+{
+  "person": "caplan",
+  "full_name": "Norm Caplan",
+  "birth_year": 1925,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2012,
+  "education": {
+    "bs": {"school": "New York University", "field": "Electrical Engineering", "year": 1951, "country": "USA"},
+    "ms": {"school": "New York University", "field": "Electrical Engineering", "year": 1954, "country": "USA"},
+    "phd": {"school": null, "field": null, "year": null, "country": null, "advisor": null, "thesis_topic": null}
+  },
+  "career_path": [
+    {"org": "U.S. Navy", "role": "Electronic technician (radar)", "type": "military", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "New York University Research Division", "role": "Researcher; Adjunct Associate Professor of Electrical Engineering", "type": "academia", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Burroughs", "role": "Engineer (electronic countermeasures)", "type": "industry", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "RCA", "role": "Engineer (Polaris submarine communications)", "type": "industry", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Tracor", "role": "Chief Engineer / VP, Systems and Sciences Division", "type": "industry", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "National Science Foundation (NSF)", "role": "Program Director, Control and Automation; Division Director", "type": "govlab", "country": "USA", "year_start": 1973, "year_end": 2000},
+    {"org": "Johns Hopkins University", "role": "Surgical robotics ERC collaborator", "type": "academia", "country": "USA", "year_start": 2000, "year_end": 2002}
+  ],
+  "first_job_after_phd": {"org": "New York University Research Division", "type": "academia", "country": "USA", "year": null},
+  "companies_founded": [],
+  "topics": ["robot ethics", "surgical robotics", "control", "haptics", "mobile robots"],
+  "awards": [
+    {"name": "IEEE RAS Distinguished Service Award", "year": 2005}
+  ],
+  "external_events_mentioned": ["G7 robotics initiative", "Cold War", "Collapse of NYU School of Engineering 1973"]
+}

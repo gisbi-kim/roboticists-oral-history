@@ -1,0 +1,26 @@
+{
+  "person": "roth",
+  "full_name": "Bernard Roth",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "City College of New York", "field": "Mechanical Engineering", "year": null, "country": "USA"},
+    "ms": {"school": "Columbia University", "field": "Mechanical Engineering", "year": 1958, "country": "USA"},
+    "phd": {"school": "Columbia University", "field": "Mechanical Engineering", "year": 1962, "country": "USA", "advisor": null, "thesis_topic": "Kinematics: synthesis of mechanisms and continuation method for nonlinear equations"}
+  },
+  "career_path": [
+    {"org": "City College of New York", "role": "Lecturer in Mechanical Engineering", "type": "academia", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Hunter College", "role": "Lecturer in Art (drafting)", "type": "academia", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Stanford University", "role": "Assistant Professor to Rodney H. Adams Professor of Engineering, Academic Director of d.school", "type": "academia", "country": "USA", "year_start": 1962, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Stanford University", "type": "academia", "country": "USA", "year": 1962},
+  "companies_founded": [],
+  "topics": ["kinematics", "robotic manipulators", "design education", "mechanism synthesis", "robot hands", "force control", "creativity"],
+  "awards": [
+    {"name": "ASME Outstanding Design Educator Award", "year": 2000},
+    {"name": "Honorary PhD, University of Paris", "year": 2007}
+  ],
+  "external_events_mentioned": ["Founding of IFTOMM 1969", "Founding of Romansy series 1973", "Stanford AI Lab founding", "Unimation acquisition by Westinghouse", "Founding of Hasso Plattner Institute of Design (d.school)"]
+}

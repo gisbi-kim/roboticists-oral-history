@@ -1,0 +1,30 @@
+{
+  "person": "laumond",
+  "full_name": "Jean-Paul Laumond",
+  "birth_year": 1953,
+  "birth_country": "France",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "Université Paul Sabatier (Toulouse)", "field": "Mathematics", "year": null, "country": "France"},
+    "ms": {"school": "Université Paul Sabatier (Toulouse)", "field": "Mathematics", "year": 1976, "country": "France"},
+    "phd": {"school": "Université Paul Sabatier (Toulouse)", "field": "Robotics", "year": 1984, "country": "France", "advisor": "Georges Giralt", "thesis_topic": "Graph theory for mobile robot environment understanding"}
+  },
+  "career_path": [
+    {"org": "French high schools", "role": "Mathematics Teacher", "type": "academia", "country": "France", "year_start": 1976, "year_end": 1981},
+    {"org": "LAAS-CNRS", "role": "Research Fellow / Research Director (Gepetto group)", "type": "govlab", "country": "France", "year_start": 1985, "year_end": null},
+    {"org": "Stanford University", "role": "Senior Scientist (visiting)", "type": "academia", "country": "USA", "year_start": 1990, "year_end": 1990},
+    {"org": "French Comité National de la Recherche Scientifique", "role": "Member", "type": "govlab", "country": "France", "year_start": 1991, "year_end": 1995},
+    {"org": "French-Japanese Lab (JRL)", "role": "Co-Director", "type": "govlab", "country": "France", "year_start": 2005, "year_end": 2008},
+    {"org": "Ecole Normale Supérieure (Paris)", "role": "Lecturer in Robotics", "type": "academia", "country": "France", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "LAAS-CNRS", "type": "govlab", "country": "France", "year": 1985},
+  "companies_founded": [
+    {"name": "Kineo CAM", "year": 2001, "role": "Founder", "status": "active"}
+  ],
+  "topics": ["motion planning", "nonholonomic systems", "anthropomorphic motion", "humanoid robotics", "computational geometry", "human locomotion"],
+  "awards": [
+    {"name": "Chaire Innovation technologique Liliane Bettencourt at Collège de France", "year": 2011}
+  ],
+  "external_events_mentioned": ["EU PROMotion project", "EU MOLOG project", "Tohoku tsunami 2011", "HILARE project"]
+}

@@ -1,0 +1,28 @@
+{
+  "person": "nourbakhsh",
+  "full_name": "Illah Nourbakhsh",
+  "birth_year": null,
+  "birth_country": "Iran",
+  "gender": "M",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "Stanford University", "field": "Computer Science", "year": 1992, "country": "USA"},
+    "ms": {"school": "Stanford University", "field": "Computer Science", "year": 1994, "country": "USA"},
+    "phd": {"school": "Stanford University", "field": "Computer Science", "year": 1996, "country": "USA", "advisor": "Michael Genesereth", "thesis_topic": "Planning with incomplete information (assumptive and property-based planning)"}
+  },
+  "career_path": [
+    {"org": "Carnegie Mellon University (Robotics Institute)", "role": "Assistant Professor to Professor of Robotics", "type": "academia", "country": "USA", "year_start": 1997, "year_end": null},
+    {"org": "Blue Pumpkin Software, Inc.", "role": "Founder and Chief Scientist", "type": "industry", "country": "USA", "year_start": 1997, "year_end": 2005},
+    {"org": "NASA Ames Research Center", "role": "Robotics Group Lead (Intelligent Robotics Group)", "type": "govlab", "country": "USA", "year_start": 2004, "year_end": 2005}
+  ],
+  "first_job_after_phd": {"org": "Carnegie Mellon University", "type": "academia", "country": "USA", "year": 1997},
+  "companies_founded": [
+    {"name": "Blue Pumpkin Software", "year": 1996, "role": "Founder and Chief Scientist", "status": "exited"}
+  ],
+  "topics": ["human-robot interaction", "educational robotics", "social robotics", "planning under uncertainty", "museum robots", "community robotics", "open-source hardware"],
+  "awards": [
+    {"name": "Kavli Fellow", "year": 2009},
+    {"name": "Junes Harless West Virginia Hall of Fame", "year": 2013}
+  ],
+  "external_events_mentioned": ["Star Wars film release", "Mars Rover landings", "AAAI Robot Competitions", "Bell Labs collapse"]
+}

@@ -1,0 +1,31 @@
+{
+  "person": "siegwart",
+  "full_name": "Roland Siegwart",
+  "birth_year": 1959,
+  "birth_country": "Switzerland",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "ETH Zurich", "field": "Mechanical Engineering", "year": 1983, "country": "Switzerland"},
+    "ms": {"school": "ETH Zurich", "field": "Mechanical Engineering", "year": 1983, "country": "Switzerland"},
+    "phd": {"school": "ETH Zurich", "field": "Mechanical Engineering", "year": 1989, "country": "Switzerland", "advisor": "Gerhard Schweitzer", "thesis_topic": "Magnetic bearings / mechatronics (rotor dynamics with magnetic levitation)"}
+  },
+  "career_path": [
+    {"org": "Stanford University", "role": "Postdoctoral Fellow", "type": "academia", "country": "USA", "year_start": 1989, "year_end": 1990},
+    {"org": "MECOS Traxler AG", "role": "R&D Director (part-time)", "type": "industry", "country": "Switzerland", "year_start": 1991, "year_end": 1996},
+    {"org": "ETH Zurich (Institute of Robotics)", "role": "Lecturer / Deputy Head", "type": "academia", "country": "Switzerland", "year_start": 1991, "year_end": 1996},
+    {"org": "EPFL (École Polytechnique Fédérale de Lausanne)", "role": "Professor of Autonomous Microsystems / School of Engineering Director (2002-2006)", "type": "academia", "country": "Switzerland", "year_start": 1996, "year_end": 2006},
+    {"org": "ETH Zurich", "role": "Professor of Autonomous Systems / VP Research and Corporate Relations (2010-2014)", "type": "academia", "country": "Switzerland", "year_start": 2006, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Stanford University", "type": "academia", "country": "USA", "year": 1989},
+  "companies_founded": [],
+  "topics": ["mobile robotics", "autonomous systems", "micro-robotics", "flying robots", "walking robots", "service robotics", "bio-inspired robotics"],
+  "awards": [],
+  "external_events_mentioned": [
+    "IROS 2002 Lausanne (organized)",
+    "Expo.02 Switzerland (11 tour-guide robots)",
+    "Swiss National Centre of Competence in Robotics (NCCR)",
+    "IEEE RAS Vice President for Technical Activities (2004-2005)",
+    "IEEE RAS Distinguished Lecturer (2006-2007)"
+  ]
+}

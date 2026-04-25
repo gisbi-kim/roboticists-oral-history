@@ -1,0 +1,29 @@
+{
+  "person": "bradski",
+  "full_name": "Gary Bradski",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "University of California, Berkeley", "field": "Electrical Engineering", "year": null, "country": "USA"},
+    "ms": {"school": "Boston University", "field": "Cognitive Science", "year": null, "country": "USA"},
+    "phd": {"school": "Boston University", "field": "Cognitive Science", "year": null, "country": "USA", "advisor": "Stephen Grossberg", "thesis_topic": "Biological modeling of human perception"}
+  },
+  "career_path": [
+    {"org": "Wall Street (quantitative finance)", "role": "Quant", "type": "industry", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Intel Research", "role": "Researcher (image processing library, then research group)", "type": "industry", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Stanford University (Sebastian Thrun's lab)", "role": "Sabbatical visitor; Stanley DARPA Grand Challenge vision lead", "type": "academia", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "VideoSurf", "role": "Startup employee", "type": "industry", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Willow Garage", "role": "Senior Scientist (perception, OpenCV)", "type": "industry", "country": "USA", "year_start": 2008, "year_end": null},
+    {"org": "Stanford University", "role": "Consulting Professor", "type": "academia", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Industrial Perception", "role": "Co-founder", "type": "industry", "country": "USA", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Wall Street (quant)", "type": "industry", "country": "USA", "year": null},
+  "companies_founded": [
+    {"name": "Industrial Perception", "year": null, "country": "USA"}
+  ],
+  "topics": ["computer vision", "robot learning", "autonomous vehicles", "manipulation", "grasping"],
+  "awards": [],
+  "external_events_mentioned": ["Dot-com bust", "DARPA Grand Challenge"]
+}

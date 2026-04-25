@@ -1,0 +1,23 @@
+{
+  "person": "mintz",
+  "full_name": "Max Mintz",
+  "birth_year": 1942,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "Cornell University", "field": "Electrical Engineering", "year": null, "country": "USA"},
+    "ms": {"school": "Cornell University", "field": "Electrical Engineering", "year": null, "country": "USA"},
+    "phd": {"school": "Cornell University", "field": "Other: Systems Theory", "year": 1968, "country": "USA", "advisor": "James Thorp", "thesis_topic": "Stochastic control theory"}
+  },
+  "career_path": [
+    {"org": "Yale University", "role": "Postdoc; Assistant Professor in Control Theory and Electrical Engineering", "type": "academia", "country": "USA", "year_start": 1968, "year_end": 1972},
+    {"org": "University of Illinois", "role": "Faculty (CSL group, Electrical Engineering)", "type": "academia", "country": "USA", "year_start": 1972, "year_end": 1974},
+    {"org": "University of Pennsylvania", "role": "Professor of Systems Engineering; later Computer and Information Science", "type": "academia", "country": "USA", "year_start": 1974, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Yale University", "type": "academia", "country": "USA", "year": 1968},
+  "companies_founded": [],
+  "topics": ["decision making under uncertainty", "stochastic control", "machine perception", "sensor fusion", "game theory", "multi-agent systems", "quantum computation"],
+  "awards": [],
+  "external_events_mentioned": ["Northeast power blackout (1965)", "Vietnam War air combat research", "GRASP Lab founding by Ruzena Bajcsy", "Air France 447 crash", "2003 Northeast blackout"]
+}

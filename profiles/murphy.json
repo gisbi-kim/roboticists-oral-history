@@ -1,0 +1,28 @@
+{
+  "person": "murphy",
+  "full_name": "Robin Murphy",
+  "birth_year": 1957,
+  "birth_country": "USA",
+  "gender": "F",
+  "interview_year": 2015,
+  "education": {
+    "bs": {"school": "Georgia Institute of Technology", "field": "Mechanical Engineering", "year": null, "country": "USA"},
+    "ms": {"school": "Georgia Institute of Technology", "field": "Computer Science", "year": 1988, "country": "USA"},
+    "phd": {"school": "Georgia Institute of Technology", "field": "Robotics", "year": 1992, "country": "USA", "advisor": "Ron Arkin", "thesis_topic": "Sensor fusion drawing on cognitive and neurophysiological foundations"}
+  },
+  "career_path": [
+    {"org": "Dow Chemical", "role": "Mechanical Engineer (process control)", "type": "industry", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Turbitrol (now Johnson Controls)", "role": "Engineer", "type": "industry", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Colorado School of Mines", "role": "Associate Professor", "type": "academia", "country": "USA", "year_start": 1992, "year_end": 1998},
+    {"org": "University of South Florida", "role": "Associate Professor; Full Professor (2003)", "type": "academia", "country": "USA", "year_start": 1998, "year_end": 2008},
+    {"org": "Texas A&M University", "role": "Professor; Director of disaster robotics center", "type": "academia", "country": "USA", "year_start": 2008, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Colorado School of Mines", "type": "academia", "country": "USA", "year": 1992},
+  "companies_founded": [],
+  "topics": ["disaster robotics", "search and rescue", "human-robot interaction", "sensor fusion", "field robotics", "uavs"],
+  "awards": [
+    {"name": "U.S. Air Force Exemplary Civilian Service Award", "year": 2005},
+    {"name": "ACM Eugene L. Lawler Award for Humanitarian Contributions", "year": 2014}
+  ],
+  "external_events_mentioned": ["Oklahoma City bombing (1995)", "Kobe earthquake (1995)", "9/11 World Trade Center attacks (2001)", "Hurricane Charley (2004)", "Hurricane Katrina (2005)", "Tohoku earthquake and Fukushima Daiichi nuclear accident (2011)", "Crandall Canyon mine disaster", "Syrian boat refugee crisis (2016)", "Hurricane Harvey (2017)", "Defense Science Study Group (1997-1998)", "Sundance Film Festival 'Living With Robots' (2010)"]
+}

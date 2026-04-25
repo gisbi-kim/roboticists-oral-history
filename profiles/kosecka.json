@@ -1,0 +1,29 @@
+{
+  "person": "kosecka",
+  "full_name": "Jana Kosecka",
+  "birth_year": null,
+  "birth_country": "Slovakia",
+  "gender": "F",
+  "interview_year": 2015,
+  "education": {
+    "bs": {"school": "Slovak Technical University in Bratislava", "field": "Electrical Engineering", "year": null, "country": "Slovakia"},
+    "ms": {"school": "Slovak Technical University in Bratislava", "field": "Electrical Engineering", "year": null, "country": "Slovakia"},
+    "phd": {"school": "University of Pennsylvania", "field": "Computer Science", "year": 1996, "country": "USA", "advisor": "Ruzena Bajcsy", "thesis_topic": "Formal framework for modeling and verifying autonomous mobile agents (hybrid systems)"}
+  },
+  "career_path": [
+    {"org": "Slovak Technical University in Bratislava", "role": "Research Associate", "type": "academia", "country": "Slovakia", "year_start": null, "year_end": null},
+    {"org": "University of California, Berkeley", "role": "Postdoctoral Researcher", "type": "academia", "country": "USA", "year_start": 1996, "year_end": 1999},
+    {"org": "George Mason University", "role": "Professor", "type": "academia", "country": "USA", "year_start": 1999, "year_end": null},
+    {"org": "Google", "role": "Visiting Faculty", "type": "industry", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Nokia Research Lab", "role": "Consultant", "type": "industry", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Stanford University", "role": "Visiting Faculty", "type": "academia", "country": "USA", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "University of California, Berkeley", "type": "academia", "country": "USA", "year": 1996},
+  "companies_founded": [],
+  "topics": ["computer vision", "robot perception", "3d reconstruction", "structure from motion", "visual navigation", "semantic segmentation", "localization"],
+  "awards": [
+    {"name": "David Marr Prize", "year": null},
+    {"name": "NSF CAREER Award", "year": null}
+  ],
+  "external_events_mentioned": ["Rodney Brooks behavior-based robotics", "automated highways federal project", "Slovak flying car project"]
+}

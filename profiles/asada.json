@@ -1,0 +1,25 @@
+{
+  "person": "asada",
+  "full_name": "Minoru Asada",
+  "birth_year": 1953,
+  "birth_country": "Japan",
+  "gender": "M",
+  "interview_year": 2012,
+  "education": {
+    "bs": {"school": "Osaka University", "field": "Control Engineering", "year": null, "country": "Japan"},
+    "ms": {"school": "Osaka University", "field": "Control Engineering", "year": null, "country": "Japan"},
+    "phd": {"school": "Osaka University", "field": "Control Engineering", "year": 1982, "country": "Japan", "advisor": "Saburo Tsuji", "thesis_topic": "3D structure reconstruction from image sequences (computer vision / structure from motion)"}
+  },
+  "career_path": [
+    {"org": "Osaka University", "role": "Research Assistant (computer vision lab)", "type": "academia", "country": "Japan", "year_start": 1982, "year_end": 1986},
+    {"org": "University of Maryland, Center for Automation Research", "role": "Visiting researcher", "type": "academia", "country": "USA", "year_start": 1986, "year_end": 1987},
+    {"org": "Osaka University", "role": "Lecturer; Associate Professor; Full Professor of Adaptive Machine Systems (1997-)", "type": "academia", "country": "Japan", "year_start": 1987, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Osaka University", "type": "academia", "country": "Japan", "year": 1982},
+  "companies_founded": [],
+  "topics": ["computer vision", "reinforcement learning", "RoboCup", "humanoid", "developmental robotics", "cognitive robotics"],
+  "awards": [
+    {"name": "IEEE Life Fellow", "year": null}
+  ],
+  "external_events_mentioned": ["1969 University of Tokyo entrance exam cancellation due to student movement"]
+}

@@ -4,6 +4,7 @@ import os
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(BASE, 'viz_data.json')
+EDA_PATH = os.path.join(BASE, 'eda_data.json')
 OUT_PATH = os.path.join(BASE, 'visualization.html')
 
 REPO = 'https://github.com/gisbi-kim/roboticists-oral-history'
@@ -13,6 +14,7 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <title>Roboticists Oral History — Career Timeline</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
 :root {
   --bg: #fafafa;
@@ -37,6 +39,43 @@ header { padding: 12px 18px; border-bottom: 1px solid var(--border); background:
                      cursor: pointer; font-weight: 500; color: var(--muted); }
 .lang-toggle button.active { background: #222; color: #fff; }
 .lang-toggle button:not(.active):hover { background: #f0f0f0; }
+
+/* 탭 */
+.tabs { display: flex; gap: 0; border-bottom: 1px solid var(--border); background: #fff;
+        padding: 0 18px; }
+.tab-btn { border: 0; background: transparent; padding: 10px 16px; font-size: 13px;
+           cursor: pointer; color: var(--muted); border-bottom: 2px solid transparent;
+           font-weight: 500; }
+.tab-btn.active { color: var(--fg); border-bottom-color: #222; }
+.tab-btn:hover:not(.active) { color: var(--fg); }
+.tab-pane { display: none; }
+.tab-pane.active { display: block; }
+
+/* EDA */
+.eda { padding: 20px 24px; max-width: 1500px; margin: 0 auto; }
+.eda h2 { font-size: 15px; margin: 24px 0 8px; padding-bottom: 4px;
+          border-bottom: 1px solid var(--border); }
+.eda h2:first-child { margin-top: 0; }
+.eda h2 .en { color: var(--muted); font-weight: normal; font-size: 13px; margin-left: 6px; }
+.eda-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 16px; margin-bottom: 8px; }
+.eda-card { background: #fff; border: 1px solid var(--border); border-radius: 6px;
+            padding: 12px 14px; }
+.eda-card.wide { grid-column: 1 / -1; }
+.eda-card h3 { margin: 0 0 8px; font-size: 13px; color: var(--fg); }
+.eda-card .chart-wrap { position: relative; height: 240px; }
+.eda-card .chart-wrap.tall { height: 380px; }
+.eda-card.wide .chart-wrap { height: 320px; }
+.eda-card ul { padding-left: 18px; margin: 0; font-size: 12px; line-height: 1.7; }
+.eda-card table { width: 100%; font-size: 12px; border-collapse: collapse; }
+.eda-card th, .eda-card td { padding: 4px 6px; border-bottom: 1px solid #f0f0f0;
+                              text-align: left; }
+.eda-card th { background: #f8f8f8; font-weight: 600; }
+.matrix { font-size: 11px; }
+.matrix td { text-align: center; padding: 4px; border: 1px solid #eee;
+             font-variant-numeric: tabular-nums; }
+.matrix th { background: #fafafa; padding: 4px; }
+.muted-note { color: var(--muted); font-size: 11px; padding: 4px 0; }
 
 .controls { padding: 10px 18px; border-bottom: 1px solid var(--border); background: #fff;
             display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
@@ -120,6 +159,13 @@ footer a { color: var(--muted); }
   </div>
 </header>
 
+<nav class="tabs">
+  <button class="tab-btn active" id="tab_btn_timeline" data-tab="timeline"></button>
+  <button class="tab-btn" id="tab_btn_eda" data-tab="eda"></button>
+</nav>
+
+<div class="tab-pane active" id="tab_timeline">
+
 <div class="controls">
   <label><span id="lbl_sort"></span>
     <select id="sort">
@@ -160,12 +206,19 @@ footer a { color: var(--muted); }
 
 <div class="tooltip" id="tooltip"></div>
 
+</div><!-- /tab_timeline -->
+
+<div class="tab-pane" id="tab_eda">
+  <div class="eda" id="eda_container"></div>
+</div>
+
 <footer>
   <span id="footer_text"></span>
 </footer>
 
 <script>
 const VIZ_DATA = __DATA__;
+const EDA_DATA = __EDA__;
 const REPO = "__REPO__";
 
 // 네트워크: 인디고로 재배치 (회색=개인사, 빨강=실패와 모두 시각적으로 멀게).
@@ -226,6 +279,8 @@ const I18N = {
     footer: `데이터: <a href="${REPO}" target="_blank">${REPO}</a>`,
     link_timeline: '[타임라인]',
     link_interview: '[인터뷰전문]',
+    tab_timeline: '커리어 시각화',
+    tab_eda: 'EDA',
   },
   en: {
     title: 'Roboticists Oral History — Career Timeline',
@@ -244,6 +299,8 @@ const I18N = {
     footer: `Data: <a href="${REPO}" target="_blank">${REPO}</a>`,
     link_timeline: '[Timeline]',
     link_interview: '[Interview]',
+    tab_timeline: 'Career Timeline',
+    tab_eda: 'EDA',
   },
 };
 
@@ -285,6 +342,8 @@ function applyLang() {
   document.getElementById('btn_reset').textContent = t.reset;
   document.getElementById('search').placeholder = t.search_ph;
   document.getElementById('footer_text').innerHTML = t.footer;
+  document.getElementById('tab_btn_timeline').textContent = t.tab_timeline;
+  document.getElementById('tab_btn_eda').textContent = t.tab_eda;
 
   const sortSel = document.getElementById('sort');
   sortSel.options[0].textContent = t.sort_birth;
@@ -297,6 +356,14 @@ function applyLang() {
 
   buildLegend();
   render();
+  if (edaBuilt) {
+    Object.keys(chartInstances).forEach(k => destroyChart(k));
+    edaBuilt = false;
+    if (document.getElementById('tab_eda').classList.contains('active')) {
+      buildEDA();
+      edaBuilt = true;
+    }
+  }
 }
 
 function buildLegend() {
@@ -695,6 +762,448 @@ function applySelectionFromUrl() {
   }
 }
 
+// ---- 탭 전환 ----
+let edaBuilt = false;
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.tab === name);
+  });
+  document.querySelectorAll('.tab-pane').forEach(p => {
+    p.classList.toggle('active', p.id === 'tab_' + name);
+  });
+  if (name === 'eda' && !edaBuilt) {
+    buildEDA();
+    edaBuilt = true;
+  }
+}
+document.getElementById('tab_btn_timeline').addEventListener('click',
+  () => switchTab('timeline'));
+document.getElementById('tab_btn_eda').addEventListener('click',
+  () => switchTab('eda'));
+
+// ---- EDA 라벨 i18n ----
+const EDA_LABELS = {
+  ko: {
+    A: 'A. 인구학', A_birth: '출생 연도 (10년 단위)',
+    A_country: '출생 국가 Top 25', A_gender: '성별', A_iv: '인터뷰 연도',
+    B: 'B. 학력',
+    B_bs_field: '학사 전공 분포', B_phd_field: '박사 전공 분포',
+    B_bs_school: '학사 출신 대학 Top 20', B_phd_school: '박사 출신 대학 Top 20',
+    B_same: '학사·박사 동일 대학', B_bs_phd_yrs: '학사→박사 소요 연수',
+    B_edu_country: '교육받은 국가', B_advisor: '박사 지도교수 (다중 등장)',
+    C: 'C. 커리어',
+    C_per_type: '타입별 이벤트 수', C_per_phase: '페이즈별 이벤트 수',
+    C_matrix: '타입 × 페이즈 매트릭스',
+    C_by_year: '연도별 전체 이벤트', C_by_year_type: '연도별 타입 추이',
+    D: 'D. 직업 이력',
+    D_first: '박사 후 첫 직장 유형', D_orgs: '소속 기관 Top 25',
+    D_moves: '이직 횟수 분포', D_intl: '박사 국가 ≠ 첫 직장 국가',
+    E: 'E. 연구·주제',
+    E_topics: '연구 주제 Top 30', E_topics_per: '인물당 주제 수',
+    E_breakthrough: '돌파 시점 (박사 후 N년)',
+    F: 'F. 학회·커뮤니티',
+    F_admin: '보직 누적 Top 20', F_confs: '학회·저널 창설',
+    G: 'G. 수상·명예',
+    G_types: '상 종류 Top', G_count: '인물별 수상 수 Top',
+    G_fellow: 'IEEE Fellow 추대 시점 (박사 후 N년)',
+    H: 'H. 창업·산업',
+    H_pct: '창업 경험 비율', H_serial: '시리얼 창업가',
+    I: 'I. 실패·전환',
+    I_subtypes: '실패·전환 세부 유형', I_with: '한 번 이상 실패·전환 경험',
+    I_pivot: '분야 전환(pivot) Top',
+    J: 'J. 외부 영향',
+    J_events: '인생 영향 외부 사건',
+    L: 'L. 한국·아시아 서브셋',
+    L_korean: '한국 출신', L_asia: '아시아 국가 인물 수',
+    M: 'M. 스토리 발굴',
+    M_tenure: '한 곳 20년 이상 재직 Top', M_diverse: '커리어 다양성 Top',
+    M_late: '늦게 박사 받은 Top', M_young: '어린 나이에 박사 받은 Top',
+    M_doc: '인터뷰 이벤트 풍부도 Top',
+    persons: '인물 수', events: '이벤트 수', count: '수', years: '년',
+  },
+  en: {
+    A: 'A. Demographics', A_birth: 'Birth year (decades)',
+    A_country: 'Birth country Top 25', A_gender: 'Gender', A_iv: 'Interview year',
+    B: 'B. Education',
+    B_bs_field: 'Bachelor field', B_phd_field: 'PhD field',
+    B_bs_school: 'Bachelor school Top 20', B_phd_school: 'PhD school Top 20',
+    B_same: 'Same school BS = PhD', B_bs_phd_yrs: 'Years from BS to PhD',
+    B_edu_country: 'Country of education', B_advisor: 'PhD advisors (top mentions)',
+    C: 'C. Career',
+    C_per_type: 'Events per type', C_per_phase: 'Events per phase',
+    C_matrix: 'Type × Phase matrix',
+    C_by_year: 'All events by year', C_by_year_type: 'Type trend over time',
+    D: 'D. Career history',
+    D_first: 'First job after PhD', D_orgs: 'Top organizations',
+    D_moves: 'Number of moves per person', D_intl: 'PhD country ≠ first-job country',
+    E: 'E. Research / Topics',
+    E_topics: 'Topics Top 30', E_topics_per: 'Topics per person',
+    E_breakthrough: 'Breakthrough timing (years post-PhD)',
+    F: 'F. Community',
+    F_admin: 'Admin role count Top 20', F_confs: 'Conferences / journals founded',
+    G: 'G. Honors',
+    G_types: 'Award types', G_count: 'Awards per person Top',
+    G_fellow: 'Years from PhD to IEEE Fellow',
+    H: 'H. Industry / Founding',
+    H_pct: '% who founded a company', H_serial: 'Serial founders',
+    I: 'I. Setback / Pivot',
+    I_subtypes: 'Setback subtypes', I_with: 'Has at least one setback',
+    I_pivot: 'Field pivots Top',
+    J: 'J. External Events',
+    J_events: 'External events affecting careers',
+    L: 'L. Korea / Asia subset',
+    L_korean: 'From South Korea', L_asia: 'People by Asian country',
+    M: 'M. Stories',
+    M_tenure: 'Tenure ≥ 20 years at one org Top', M_diverse: 'Most diverse careers Top',
+    M_late: 'Latest PhD age Top', M_young: 'Youngest PhD age Top',
+    M_doc: 'Most documented lives Top',
+    persons: 'People', events: 'Events', count: 'Count', years: 'Years',
+  },
+};
+
+// ---- Chart.js 헬퍼 ----
+const chartInstances = {};
+function destroyChart(id) {
+  if (chartInstances[id]) { chartInstances[id].destroy(); delete chartInstances[id]; }
+}
+function chartBar(id, labels, values, label, opts) {
+  destroyChart(id);
+  const ctx = document.getElementById(id);
+  if (!ctx) return;
+  chartInstances[id] = new Chart(ctx, {
+    type: 'bar',
+    data: { labels, datasets: [{ label, data: values, backgroundColor: '#3498DB' }] },
+    options: Object.assign({
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { y: { beginAtZero: true } }
+    }, opts || {})
+  });
+}
+function chartHBar(id, labels, values, label) {
+  destroyChart(id);
+  const ctx = document.getElementById(id);
+  if (!ctx) return;
+  chartInstances[id] = new Chart(ctx, {
+    type: 'bar',
+    data: { labels, datasets: [{ label, data: values, backgroundColor: '#16A085' }] },
+    options: {
+      indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { x: { beginAtZero: true }, y: { ticks: { font: { size: 10 } } } }
+    }
+  });
+}
+function chartPie(id, labels, values, colors) {
+  destroyChart(id);
+  const ctx = document.getElementById(id);
+  if (!ctx) return;
+  chartInstances[id] = new Chart(ctx, {
+    type: 'doughnut',
+    data: { labels, datasets: [{ data: values, backgroundColor: colors ||
+      ['#3498DB', '#E67E22', '#2ECC71', '#9B59B6', '#F1C40F', '#E74C3C', '#16A085',
+       '#5C6BC0', '#95A5A6', '#5D4037'] }] },
+    options: { responsive: true, maintainAspectRatio: false,
+               plugins: { legend: { position: 'right', labels: { font: { size: 10 } } } } }
+  });
+}
+function chartLine(id, labels, datasets) {
+  destroyChart(id);
+  const ctx = document.getElementById(id);
+  if (!ctx) return;
+  chartInstances[id] = new Chart(ctx, {
+    type: 'line',
+    data: { labels, datasets },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: datasets.length > 1, position: 'right', labels: { font: { size: 10 } } } },
+      elements: { point: { radius: 0 }, line: { tension: 0.2 } },
+      scales: { y: { beginAtZero: true, stacked: false } }
+    }
+  });
+}
+
+function histBins(values, binSize) {
+  if (!values.length) return { labels: [], counts: [] };
+  const lo = Math.floor(Math.min(...values) / binSize) * binSize;
+  const hi = Math.ceil(Math.max(...values) / binSize) * binSize;
+  const bins = {};
+  for (let b = lo; b <= hi; b += binSize) bins[b] = 0;
+  for (const v of values) {
+    const b = Math.floor(v / binSize) * binSize;
+    bins[b] = (bins[b] || 0) + 1;
+  }
+  const keys = Object.keys(bins).map(Number).sort((a, b) => a - b);
+  return { labels: keys.map(k => `${k}–${k + binSize - 1}`), counts: keys.map(k => bins[k]) };
+}
+
+// ---- EDA 빌드 ----
+function buildEDA() {
+  const L = EDA_LABELS[lang];
+  const D = EDA_DATA;
+  const c = document.getElementById('eda_container');
+  c.innerHTML = '';
+
+  const T = (ko, en) => lang === 'ko' ? ko : en;
+
+  function section(id, title) {
+    const s = document.createElement('section');
+    s.className = 'eda-cat';
+    s.innerHTML = `<h2>${title}</h2><div class="eda-grid" id="grid_${id}"></div>`;
+    c.appendChild(s);
+    return s.querySelector('.eda-grid');
+  }
+  function card(grid, title, body, wide, tall) {
+    const d = document.createElement('div');
+    d.className = 'eda-card' + (wide ? ' wide' : '');
+    d.innerHTML = `<h3>${title}</h3>${body}`;
+    grid.appendChild(d);
+    return d;
+  }
+  function chartCard(grid, title, canvasId, wide, tall) {
+    return card(grid,
+      title,
+      `<div class="chart-wrap${tall ? ' tall' : ''}"><canvas id="${canvasId}"></canvas></div>`,
+      wide, tall);
+  }
+  function listCard(grid, title, items) {
+    const lis = items.map(s => `<li>${s}</li>`).join('');
+    return card(grid, title, `<ul>${lis}</ul>`);
+  }
+  function tableCard(grid, title, headers, rows, wide) {
+    const head = headers.map(h => `<th>${h}</th>`).join('');
+    const body = rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join('')}</tr>`).join('');
+    return card(grid, title, `<table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>`, wide);
+  }
+
+  // --- A. 인구학 ---
+  let g = section('A', L.A);
+  chartCard(g, L.A_birth, 'ch_A_birth');
+  chartCard(g, L.A_gender, 'ch_A_gender');
+  chartCard(g, L.A_country, 'ch_A_country', false, true);
+  chartCard(g, L.A_iv, 'ch_A_iv');
+
+  // --- B. 학력 ---
+  g = section('B', L.B);
+  chartCard(g, L.B_bs_field, 'ch_B_bs_field', false, true);
+  chartCard(g, L.B_phd_field, 'ch_B_phd_field', false, true);
+  chartCard(g, L.B_bs_school, 'ch_B_bs_school', false, true);
+  chartCard(g, L.B_phd_school, 'ch_B_phd_school', false, true);
+  chartCard(g, L.B_same, 'ch_B_same');
+  chartCard(g, L.B_bs_phd_yrs, 'ch_B_bs_phd_yrs');
+  chartCard(g, L.B_edu_country, 'ch_B_edu_country', false, true);
+  chartCard(g, L.B_advisor, 'ch_B_advisor', false, true);
+
+  // --- C. 커리어 ---
+  g = section('C', L.C);
+  chartCard(g, L.C_per_type, 'ch_C_type');
+  chartCard(g, L.C_per_phase, 'ch_C_phase');
+  // Type × Phase matrix (rendered as HTML table)
+  const m = D.C_type_phase_matrix;
+  if (m && m.rows) {
+    const head = '<th></th>' + m.phases.map(p => `<th>${p}</th>`).join('');
+    const body = m.rows.map(r => {
+      const max = Math.max(...m.phases.map(p => r[p]));
+      return `<tr><td style="text-align:left">${r.type}</td>` +
+        m.phases.map(p => {
+          const v = r[p];
+          const a = max ? Math.min(0.95, v / max * 0.85 + 0.05) : 0;
+          return `<td style="background:rgba(52,152,219,${a})">${v || ''}</td>`;
+        }).join('') + '</tr>';
+    }).join('');
+    card(g, L.C_matrix, `<table class="matrix"><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>`, true);
+  }
+  chartCard(g, L.C_by_year, 'ch_C_year', true, false);
+  chartCard(g, L.C_by_year_type, 'ch_C_year_type', true, true);
+
+  // --- D. 직업 이력 ---
+  g = section('D', L.D);
+  chartCard(g, L.D_first, 'ch_D_first');
+  chartCard(g, L.D_intl, 'ch_D_intl');
+  chartCard(g, L.D_orgs, 'ch_D_orgs', false, true);
+  chartCard(g, L.D_moves, 'ch_D_moves');
+
+  // --- E. 연구 ---
+  g = section('E', L.E);
+  chartCard(g, L.E_topics, 'ch_E_topics', true, true);
+  chartCard(g, L.E_topics_per, 'ch_E_per');
+  chartCard(g, L.E_breakthrough, 'ch_E_bk');
+
+  // --- F. 학회 ---
+  g = section('F', L.F);
+  chartCard(g, L.F_admin, 'ch_F_admin', false, true);
+  const confs = (D.F_conferences_created || [])
+    .slice(0, 30)
+    .map(c => `${c.year_raw || '—'}: <b>${escapeHtml(c.person)}</b> · ${escapeHtml(c.event)}`);
+  if (confs.length) listCard(g, L.F_confs, confs);
+
+  // --- G. 수상 ---
+  g = section('G', L.G);
+  chartCard(g, L.G_types, 'ch_G_types', false, true);
+  chartCard(g, L.G_count, 'ch_G_count', false, true);
+  chartCard(g, L.G_fellow, 'ch_G_fellow');
+
+  // --- H. 창업 ---
+  g = section('H', L.H);
+  chartCard(g, L.H_pct, 'ch_H_pct');
+  const sf = (D.H_serial_founders || [])
+    .map(s => `<b>${escapeHtml(s.full_name || s.person)}</b> (${s.count}): ${(s.companies || []).map(escapeHtml).join(', ')}`);
+  if (sf.length) listCard(g, L.H_serial, sf);
+
+  // --- I. 실패 ---
+  g = section('I', L.I);
+  chartCard(g, L.I_subtypes, 'ch_I_sub');
+  chartCard(g, L.I_with, 'ch_I_with');
+  const piv = (D.I_pivot_top || []).map(x => `<b>${escapeHtml(x.person)}</b>: ${x.count}`);
+  if (piv.length) listCard(g, L.I_pivot, piv);
+
+  // --- J. 외부 ---
+  g = section('J', L.J);
+  chartCard(g, L.J_events, 'ch_J', true, true);
+
+  // --- L. 한국/아시아 ---
+  g = section('L', L.L);
+  const kor = (D.L_korean_pioneers || []).map(p =>
+    `<b>${escapeHtml(p.full_name || p.person)}</b>` +
+    (p.birth_year ? ` (${p.birth_year})` : '') +
+    (p.phd ? ` — PhD: ${escapeHtml(p.phd)}` : '') +
+    ` · ${(p.topics || []).map(escapeHtml).join(', ')}`);
+  if (kor.length) listCard(g, L.L_korean, kor);
+  chartCard(g, L.L_asia, 'ch_L_asia');
+
+  // --- M. 스토리 ---
+  g = section('M', L.M);
+  const tenure = (D.M_longest_tenure_top || []).slice(0, 15).map(x =>
+    `<b>${escapeHtml(x.full_name || x.person)}</b> @ ${escapeHtml(x.org)} — ${x.years}${L.years} (${x.period})`);
+  if (tenure.length) listCard(g, L.M_tenure, tenure);
+
+  const div = (D.M_most_diverse_career_top || []).map(x =>
+    `<b>${escapeHtml(x.full_name || x.person)}</b> · entropy=${x.entropy} · ${x.type_count} types · ${x.total_events} events`);
+  if (div.length) listCard(g, L.M_diverse, div);
+
+  const late = (D.M_latest_phd_age_top || []).map(x =>
+    `<b>${escapeHtml(x.full_name || x.person)}</b>: ${x.age}세 (born ${x.birth_year}, PhD ${x.phd_year})`);
+  if (late.length) listCard(g, L.M_late, late);
+
+  const young = (D.M_youngest_phd_age_top || []).map(x =>
+    `<b>${escapeHtml(x.full_name || x.person)}</b>: ${x.age}세 (born ${x.birth_year}, PhD ${x.phd_year})`);
+  if (young.length) listCard(g, L.M_young, young);
+
+  const docTop = (D.M_most_documented_lives || []).map(x =>
+    `<b>${escapeHtml(x.full_name || x.person)}</b>: ${x.count}`);
+  if (docTop.length) listCard(g, L.M_doc, docTop);
+
+  // ----- 차트 채우기 -----
+  // A
+  chartBar('ch_A_birth',
+    D.A_birth_year_decades.map(d => d.decade + 's'),
+    D.A_birth_year_decades.map(d => d.count), L.persons);
+  chartPie('ch_A_gender',
+    D.A_gender.map(d => d.gender),
+    D.A_gender.map(d => d.count));
+  chartHBar('ch_A_country',
+    D.A_birth_country_top.map(d => d.country),
+    D.A_birth_country_top.map(d => d.count), L.persons);
+  chartBar('ch_A_iv',
+    D.A_interview_year.map(d => d.year),
+    D.A_interview_year.map(d => d.count), L.persons);
+
+  // B
+  chartHBar('ch_B_bs_field',
+    D.B_bs_field.map(d => d.field), D.B_bs_field.map(d => d.count), L.persons);
+  chartHBar('ch_B_phd_field',
+    D.B_phd_field.map(d => d.field), D.B_phd_field.map(d => d.count), L.persons);
+  chartHBar('ch_B_bs_school',
+    D.B_bs_school_top20.map(d => d.school), D.B_bs_school_top20.map(d => d.count), L.persons);
+  chartHBar('ch_B_phd_school',
+    D.B_phd_school_top20.map(d => d.school), D.B_phd_school_top20.map(d => d.count), L.persons);
+  chartPie('ch_B_same',
+    [T('동일', 'Same'), T('다름', 'Different'), T('미상', 'Unknown')],
+    [D.B_same_school_bs_phd.same, D.B_same_school_bs_phd.different, D.B_same_school_bs_phd.unknown]);
+  const bs2phd = histBins(D.B_bs_to_phd_years, 2);
+  chartBar('ch_B_bs_phd_yrs', bs2phd.labels, bs2phd.counts, L.persons);
+  chartHBar('ch_B_edu_country',
+    D.B_education_countries.map(d => d.country),
+    D.B_education_countries.map(d => d.count), L.persons);
+  chartHBar('ch_B_advisor',
+    D.B_phd_advisors_top.map(d => d.advisor),
+    D.B_phd_advisors_top.map(d => d.count), L.persons);
+
+  // C
+  chartBar('ch_C_type',
+    D.C_events_per_type.map(d => d.type), D.C_events_per_type.map(d => d.count), L.events);
+  chartBar('ch_C_phase',
+    D.C_events_per_phase.map(d => d.phase), D.C_events_per_phase.map(d => d.count), L.events);
+  chartLine('ch_C_year',
+    D.C_events_by_year.map(d => d.year),
+    [{ label: L.events, data: D.C_events_by_year.map(d => d.count),
+       borderColor: '#3498DB', backgroundColor: 'rgba(52,152,219,0.1)', fill: true }]);
+  const yt = D.C_events_by_year_type;
+  if (yt) {
+    const COL = {'개인사':'#95A5A6','교육':'#3498DB','직업 이력':'#229954','연구·프로젝트':'#E67E22','창업·산업':'#8E44AD','학회·커뮤니티':'#16A085','수상·명예':'#F1C40F','네트워크':'#5C6BC0','실패·전환':'#C0392B','외부 영향':'#5D4037'};
+    chartLine('ch_C_year_type', yt.years,
+      yt.types.map(t => ({ label: t, data: yt.series[t], borderColor: COL[t] || '#666', backgroundColor: 'transparent', borderWidth: 1.5 })));
+  }
+
+  // D
+  chartPie('ch_D_first',
+    D.D_first_job_type.map(d => d.type),
+    D.D_first_job_type.map(d => d.count));
+  chartPie('ch_D_intl',
+    [T('같음', 'Same'), T('다름', 'Different'), T('미상', 'Unknown')],
+    [D.D_intl_migration_phd_to_first_job.same,
+     D.D_intl_migration_phd_to_first_job.different,
+     D.D_intl_migration_phd_to_first_job.unknown]);
+  chartHBar('ch_D_orgs',
+    D.D_top_orgs.map(d => d.org), D.D_top_orgs.map(d => d.count), L.persons);
+  const moves = histBins(D.D_moves_per_person, 1);
+  chartBar('ch_D_moves', moves.labels, moves.counts, L.persons);
+
+  // E
+  chartHBar('ch_E_topics',
+    D.E_topics_top30.map(d => d.topic), D.E_topics_top30.map(d => d.count), L.persons);
+  const tpp = histBins(D.E_topics_per_person, 1);
+  chartBar('ch_E_per', tpp.labels, tpp.counts, L.persons);
+  const bk = histBins(D.E_breakthrough_years_post_phd, 5);
+  chartBar('ch_E_bk', bk.labels, bk.counts, L.events);
+
+  // F
+  chartHBar('ch_F_admin',
+    D.F_admin_role_count_top.map(d => d.person),
+    D.F_admin_role_count_top.map(d => d.count), L.events);
+
+  // G
+  chartHBar('ch_G_types',
+    D.G_award_types_top.map(d => d.name), D.G_award_types_top.map(d => d.count), L.events);
+  chartHBar('ch_G_count',
+    D.G_award_count_top.map(d => d.person), D.G_award_count_top.map(d => d.count), L.events);
+  const fellow = histBins(D.G_ieee_fellow_years_post_phd, 5);
+  chartBar('ch_G_fellow', fellow.labels, fellow.counts, L.persons);
+
+  // H
+  chartPie('ch_H_pct',
+    [T('창업 경험 있음', 'Founded'), T('없음', 'Did not')],
+    [D.H_founded_pct.founded, D.H_founded_pct.not]);
+
+  // I
+  chartBar('ch_I_sub',
+    D.I_setback_subtypes.map(d => d.subtype),
+    D.I_setback_subtypes.map(d => d.count), L.events);
+  chartPie('ch_I_with',
+    [T('경험 있음', 'With'), T('없음', 'Without')],
+    [D.I_persons_with_setback['with'], D.I_persons_with_setback['without']]);
+
+  // J
+  chartHBar('ch_J',
+    D.J_external_events.map(d => d.event),
+    D.J_external_events.map(d => d.count), L.events);
+
+  // L
+  chartBar('ch_L_asia',
+    Object.keys(D.L_country_subset_counts),
+    Object.values(D.L_country_subset_counts), L.persons);
+}
+
 // 키보드: ←/→ 같은 인물의 이전/다음 셀, Esc 해제
 document.addEventListener('keydown', (ev) => {
   if (!selectedDiv) return;
@@ -742,7 +1251,14 @@ applySelectionFromUrl();
 def main():
     with open(DATA_PATH, 'r', encoding='utf-8') as f:
         data_str = f.read()
-    html = HTML_TEMPLATE.replace('__DATA__', data_str).replace('__REPO__', REPO)
+    eda_str = '{}'
+    if os.path.exists(EDA_PATH):
+        with open(EDA_PATH, 'r', encoding='utf-8') as f:
+            eda_str = f.read()
+    html = (HTML_TEMPLATE
+            .replace('__DATA__', data_str)
+            .replace('__EDA__', eda_str)
+            .replace('__REPO__', REPO))
     with open(OUT_PATH, 'w', encoding='utf-8') as f:
         f.write(html)
     print(f'출력: {OUT_PATH} ({os.path.getsize(OUT_PATH)/1024:.1f} KB)')

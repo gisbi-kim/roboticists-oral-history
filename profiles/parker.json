@@ -1,0 +1,27 @@
+{
+  "person": "parker",
+  "full_name": "Lynne E. Parker",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "F",
+  "interview_year": 2017,
+  "education": {
+    "bs": {"school": "Tennessee Tech University", "field": "Computer Science", "year": null, "country": "USA"},
+    "ms": {"school": "University of Tennessee, Knoxville", "field": "Computer Science", "year": null, "country": "USA"},
+    "phd": {"school": "Massachusetts Institute of Technology", "field": "Computer Science", "year": 1994, "country": "USA", "advisor": "Rodney Brooks", "thesis_topic": "ALLIANCE: distributed architecture for heterogeneous multi-robot cooperation"}
+  },
+  "career_path": [
+    {"org": "Oak Ridge National Laboratory (CESAR)", "role": "Researcher to Distinguished R&D Staff Member", "type": "govlab", "country": "USA", "year_start": null, "year_end": 2002},
+    {"org": "University of Tennessee, Knoxville", "role": "Professor of EECS, Interim Dean of Tickle College of Engineering", "type": "academia", "country": "USA", "year_start": 2002, "year_end": null},
+    {"org": "National Science Foundation", "role": "Division Director, Information and Intelligent Systems", "type": "govlab", "country": "USA", "year_start": 2017, "year_end": null},
+    {"org": "White House Office of Science and Technology Policy", "role": "Deputy Chief Technology Officer and Assistant Director of AI", "type": "govlab", "country": "USA", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Oak Ridge National Laboratory", "type": "govlab", "country": "USA", "year": 1994},
+  "companies_founded": [],
+  "topics": ["multi-robot systems", "task allocation", "heterogeneous robot teams", "human-robot interaction", "machine learning", "sensor networks", "peer-to-peer collaboration"],
+  "awards": [
+    {"name": "PECASE (U.S. Presidential Early Career Award for Scientists and Engineers)", "year": null},
+    {"name": "IEEE RAS Distinguished Service Award", "year": null}
+  ],
+  "external_events_mentioned": ["National Robotics Initiative launch", "ICRA 2015 with all-female organizing committee", "Deepwater Horizon oil spill"]
+}

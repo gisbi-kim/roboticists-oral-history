@@ -1,0 +1,29 @@
+{
+  "person": "xiao",
+  "full_name": "Jing Xiao",
+  "birth_year": null,
+  "birth_country": "China",
+  "gender": "F",
+  "interview_year": 2015,
+  "education": {
+    "bs": {"school": "Beijing Normal University", "field": "Physics", "year": null, "country": "China"},
+    "ms": {"school": "University of Michigan", "field": "Other: Computer, Information and Control Engineering", "year": null, "country": "USA"},
+    "phd": {"school": "University of Michigan", "field": "Other: Computer, Information and Control Engineering", "year": null, "country": "USA", "advisor": "Dick Volz", "thesis_topic": "uncertainty in fine motion planning (peg-in-hole assembly)"}
+  },
+  "career_path": [
+    {"org": "University of North Carolina at Charlotte", "role": "Professor of Computer Science", "type": "academia", "country": "USA", "year_start": 1990, "year_end": null},
+    {"org": "Ford Research Lab", "role": "Sabbatical Researcher", "type": "industry", "country": "USA", "year_start": 1997, "year_end": 1998},
+    {"org": "Stanford University", "role": "Visiting Researcher", "type": "academia", "country": "USA", "year_start": 1998, "year_end": 1998},
+    {"org": "National Science Foundation", "role": "Program Director (Robotics and Human Augmentation)", "type": "govlab", "country": "USA", "year_start": 1998, "year_end": 2001}
+  ],
+  "first_job_after_phd": {"org": "University of North Carolina at Charlotte", "type": "academia", "country": "USA", "year": 1990},
+  "companies_founded": [],
+  "topics": ["motion planning", "manipulation", "haptics", "continuum manipulators", "assembly", "uncertainty handling"],
+  "awards": [],
+  "external_events_mentioned": [
+    "IEEE RAS AdCom membership (1999)",
+    "Personal Robotics initiative at NSF",
+    "KU Leuven collaboration",
+    "Clemson elephant trunk robot collaboration"
+  ]
+}

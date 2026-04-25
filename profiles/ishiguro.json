@@ -1,0 +1,28 @@
+{
+  "person": "ishiguro",
+  "full_name": "Hiroshi Ishiguro",
+  "birth_year": null,
+  "birth_country": "Japan",
+  "gender": "M",
+  "interview_year": 2012,
+  "education": {
+    "bs": {"school": "University of Yamanashi", "field": "Computer Science", "year": null, "country": "Japan"},
+    "ms": {"school": "Osaka University", "field": "Systems Engineering", "year": null, "country": "Japan"},
+    "phd": {"school": "Osaka University", "field": "Systems Engineering", "year": 1991, "country": "Japan", "advisor": "Saburo Tsuji", "thesis_topic": "active vision and omni-directional vision"}
+  },
+  "career_path": [
+    {"org": "Yamanashi University", "role": "Research Assistant, Department of Electrical Engineering and Computer Science", "type": "academia", "country": "Japan", "year_start": 1991, "year_end": 1992},
+    {"org": "Osaka University", "role": "Researcher, Department of Systems Engineering", "type": "academia", "country": "Japan", "year_start": 1992, "year_end": 1994},
+    {"org": "Kyoto University", "role": "Associate Professor, Department of Information Science", "type": "academia", "country": "Japan", "year_start": 1994, "year_end": 2000},
+    {"org": "UC San Diego", "role": "Visiting Scholar, Department of Electrical and Computer Engineering", "type": "academia", "country": "USA", "year_start": 1998, "year_end": 1999},
+    {"org": "ATR Media Information Science Laboratories", "role": "Visiting Researcher", "type": "nonprofit", "country": "Japan", "year_start": 1999, "year_end": null},
+    {"org": "Wakayama University", "role": "Associate Professor (2000) / Professor (2001), Department of Computer and Communication Sciences", "type": "academia", "country": "Japan", "year_start": 2000, "year_end": null},
+    {"org": "Osaka University", "role": "Professor, Department of Systems Innovation, Graduate School of Engineering Science", "type": "academia", "country": "Japan", "year_start": 2009, "year_end": null},
+    {"org": "ATR Intelligent Robotics and Communication Laboratories (Hiroshi Ishiguro Lab)", "role": "Group Leader / ATR Fellow", "type": "nonprofit", "country": "Japan", "year_start": 2011, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Yamanashi University", "type": "academia", "country": "Japan", "year": 1991},
+  "companies_founded": [],
+  "topics": ["android robots", "humanoid robots", "human-robot interaction", "omnidirectional vision", "android science", "telepresence"],
+  "awards": [],
+  "external_events_mentioned": ["Aichi Expo 2004", "Seinendan theater (Oriza Hirata) android plays", "Robovie in elementary schools"]
+}

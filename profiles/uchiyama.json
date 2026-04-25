@@ -1,0 +1,31 @@
+{
+  "person": "uchiyama",
+  "full_name": "Masaru Uchiyama",
+  "birth_year": 1949,
+  "birth_country": "Japan",
+  "gender": "M",
+  "interview_year": 2013,
+  "education": {
+    "bs": {"school": "University of Tokyo", "field": "Mechanical Engineering", "year": 1972, "country": "Japan"},
+    "ms": {"school": "University of Tokyo", "field": "Mechanical Engineering", "year": 1974, "country": "Japan"},
+    "phd": {"school": "University of Tokyo", "field": "Mechanical Engineering", "year": 1977, "country": "Japan", "advisor": "Sumiji Fujii", "thesis_topic": "Dynamic control and kinematic singularity analysis of mechanical arms"}
+  },
+  "career_path": [
+    {"org": "Tohoku University", "role": "Research Associate (Precision Engineering) -> Associate Professor (1980) -> Professor of Space Machines Laboratory in Department of Aerospace Engineering (1992)", "type": "academia", "country": "Japan", "year_start": 1977, "year_end": null},
+    {"org": "UC Santa Barbara Research Institute", "role": "Visiting Researcher", "type": "academia", "country": "USA", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Tohoku University", "type": "academia", "country": "Japan", "year": 1977},
+  "companies_founded": [],
+  "topics": ["manipulator dynamics", "force control", "flexible robots", "space robotics", "teleoperation", "humanoid robots"],
+  "awards": [
+    {"name": "IEEE Fellow", "year": 2011},
+    {"name": "IEEE Life Fellow", "year": 2015}
+  ],
+  "external_events_mentioned": [
+    "ETS-7 satellite teleoperation experiment",
+    "Aichi Expo 2005 (HRP2 drum-playing humanoid)",
+    "NASDA space robotics committee",
+    "Emergence of MEMS sensors",
+    "Microchip mechatronics revolution"
+  ]
+}

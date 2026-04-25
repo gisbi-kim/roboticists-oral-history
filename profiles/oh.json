@@ -1,0 +1,24 @@
+{
+  "person": "oh",
+  "full_name": "Jun Ho Oh",
+  "birth_year": 1954,
+  "birth_country": "South Korea",
+  "gender": "M",
+  "interview_year": 2012,
+  "education": {
+    "bs": {"school": "Yonsei University", "field": "Mechanical Engineering", "year": 1977, "country": "South Korea"},
+    "ms": {"school": "Yonsei University", "field": "Mechanical Engineering", "year": 1979, "country": "South Korea"},
+    "phd": {"school": "University of California, Berkeley", "field": "Mechanical Engineering", "year": 1985, "country": "USA", "advisor": "Masayoshi Tomizuka", "thesis_topic": "Adaptive control of milling machine"}
+  },
+  "career_path": [
+    {"org": "Korea Energy Research Institute", "role": "Researcher", "type": "govlab", "country": "South Korea", "year_start": 1979, "year_end": 1981},
+    {"org": "KAIST (Korea Advanced Institute of Science and Technology)", "role": "Professor and Director, Humanoid Robot Research Center", "type": "academia", "country": "South Korea", "year_start": 1985, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "KAIST", "type": "academia", "country": "South Korea", "year": 1985},
+  "companies_founded": [
+    {"name": "Rainbow Co.", "year": null, "role": "Founder", "status": "active"}
+  ],
+  "topics": ["humanoid robotics", "mechatronics", "real-time control", "bipedal walking", "servo control", "robot platforms", "adaptive control"],
+  "awards": [],
+  "external_events_mentioned": ["DARPA Robotics Challenge 2015", "Korean industrialization in 1970s-80s", "Korea Robot Ethics Charter discussion", "Samsung Techwin DMZ machine gun robot"]
+}

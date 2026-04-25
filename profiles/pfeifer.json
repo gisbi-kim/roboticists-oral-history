@@ -1,0 +1,25 @@
+{
+  "person": "pfeifer",
+  "full_name": "Rolf Pfeifer",
+  "birth_year": null,
+  "birth_country": "Switzerland",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": null,
+    "ms": {"school": "ETH Zurich", "field": "Physics", "year": null, "country": "Switzerland"},
+    "phd": {"school": "ETH Zurich", "field": "Computer Science", "year": null, "country": "Switzerland", "advisor": null, "thesis_topic": "Simulation of cognitive processes (interdisciplinary CS and psychology)"}
+  },
+  "career_path": [
+    {"org": "Carnegie Mellon University", "role": "Postdoctoral Fellow (with Herbert Simon)", "type": "academia", "country": "USA", "year_start": 1982, "year_end": 1984},
+    {"org": "Yale University", "role": "Postdoctoral Researcher (with Robert Abelson and Roger Schank)", "type": "academia", "country": "USA", "year_start": 1984, "year_end": null},
+    {"org": "University of Zurich (Department of Informatics)", "role": "Professor and Director of AI Laboratory", "type": "academia", "country": "Switzerland", "year_start": 1987, "year_end": 2014},
+    {"org": "Osaka University", "role": "Professor", "type": "academia", "country": "Japan", "year_start": 2014, "year_end": null},
+    {"org": "Shanghai Jiao Tong University", "role": "Visiting Professor", "type": "academia", "country": "China", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Carnegie Mellon University", "type": "academia", "country": "USA", "year": 1982},
+  "companies_founded": [],
+  "topics": ["bio-inspired robotics", "soft robotics", "embodied intelligence", "autonomous agents", "morphological computation", "artificial evolution", "modular robotics"],
+  "awards": [],
+  "external_events_mentioned": ["Corsendonk workshop 1991", "Monte Verita conference 1995", "European FET Flagship Robot Companion project", "ICRA Shanghai", "IROS 2010 Taipei"]
+}

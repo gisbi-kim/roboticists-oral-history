@@ -1,0 +1,33 @@
+{
+  "person": "taylor",
+  "full_name": "Russell H. Taylor",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2014,
+  "education": {
+    "bs": {"school": "Johns Hopkins University", "field": "Other: Interdepartmental Engineering (Electrical Engineering and Operations Research)", "year": 1970, "country": "USA"},
+    "ms": {"school": null, "field": null, "year": null, "country": null},
+    "phd": {"school": "Stanford University", "field": "Computer Science", "year": 1976, "country": "USA", "advisor": "Jerry Feldman", "thesis_topic": "The Synthesis of Manipulator Control Programs from Task Level Specifications"}
+  },
+  "career_path": [
+    {"org": "IBM Research (Yorktown Heights)", "role": "Research Staff Member -> Manager Robot Systems and Technology -> Second-line Manager Automation Technology; led Computer-Assisted Surgery group", "type": "industry", "country": "USA", "year_start": 1976, "year_end": 1995},
+    {"org": "IBM Boca Raton", "role": "Product Architect for IBM 7565 industrial robot", "type": "industry", "country": "USA", "year_start": 1978, "year_end": 1979},
+    {"org": "Johns Hopkins University", "role": "John C. Malone Professor of Computer Science (joint appointments in Radiology, Mechanical Engineering and Surgery); Director of NSF Engineering Research Center for Computer-Integrated Surgical Systems and Technology", "type": "academia", "country": "USA", "year_start": 1995, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "IBM Research", "type": "industry", "country": "USA", "year": 1976},
+  "companies_founded": [
+    {"name": "Integrated Surgical Systems", "year": null, "role": "Founder (commercialized ROBODoc from IBM)", "status": "exited"}
+  ],
+  "topics": ["medical robotics", "surgical robotics", "robot programming languages", "image-guided surgery", "computer-integrated surgery", "manipulator control"],
+  "awards": [
+    {"name": "IEEE Fellow", "year": 1994}
+  ],
+  "external_events_mentioned": [
+    "ROBODoc development",
+    "LARS (laparoscopic) robot at Johns Hopkins",
+    "NSF Engineering Research Center grant 1997",
+    "Intuitive Surgical da Vinci robot",
+    "Three-Mile Island"
+  ]
+}

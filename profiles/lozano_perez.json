@@ -1,0 +1,26 @@
+{
+  "person": "lozano_perez",
+  "full_name": "Tomas Lozano-Perez",
+  "birth_year": 1952,
+  "birth_country": "Cuba",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "MIT", "field": "Electrical Engineering", "year": 1973, "country": "USA"},
+    "ms": {"school": "MIT", "field": "Electrical Engineering", "year": 1976, "country": "USA"},
+    "phd": {"school": "MIT", "field": "Electrical Engineering", "year": 1980, "country": "USA", "advisor": "Berthold Horn", "thesis_topic": "Configuration space approach to motion planning"}
+  },
+  "career_path": [
+    {"org": "MIT AI Lab", "role": "Research Staff", "type": "academia", "country": "USA", "year_start": 1973, "year_end": 1974},
+    {"org": "IBM T.J. Watson Research Center", "role": "Research Staff", "type": "industry", "country": "USA", "year_start": 1976, "year_end": 1977},
+    {"org": "MIT", "role": "Faculty / Associate Director of AI Lab / Associate Head of EECS / School of Engineering Professor for Teaching Excellence", "type": "academia", "country": "USA", "year_start": 1981, "year_end": null},
+    {"org": "Arris Pharmaceuticals", "role": "Senior Staff Fellow", "type": "industry", "country": "USA", "year_start": 1990, "year_end": 1994}
+  ],
+  "first_job_after_phd": {"org": "MIT", "type": "academia", "country": "USA", "year": 1981},
+  "companies_founded": [],
+  "topics": ["motion planning", "configuration space", "manipulation", "grasping", "machine learning", "computer vision", "computational chemistry"],
+  "awards": [
+    {"name": "IEEE Robotics and Automation Society Pioneer Award", "year": 2011}
+  ],
+  "external_events_mentioned": ["Willow Garage PR2 program", "ICRA founding"]
+}

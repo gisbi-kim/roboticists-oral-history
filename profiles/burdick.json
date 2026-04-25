@@ -1,0 +1,22 @@
+{
+  "person": "burdick",
+  "full_name": "Joel Burdick",
+  "birth_year": 1959,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "Duke University", "field": "Mechanical Engineering", "year": null, "country": "USA"},
+    "ms": {"school": "Stanford University", "field": "Mechanical Engineering", "year": null, "country": "USA"},
+    "phd": {"school": "Stanford University", "field": "Mechanical Engineering", "year": 1988, "country": "USA", "advisor": "Bernard Roth", "thesis_topic": "Redundant manipulator kinematics"}
+  },
+  "career_path": [
+    {"org": "California Institute of Technology (Caltech)", "role": "Assistant Professor → Professor of Mechanical Engineering and Bioengineering (Hayman Professor)", "type": "academia", "country": "USA", "year_start": 1988, "year_end": null},
+    {"org": "Jet Propulsion Laboratory (JPL)", "role": "Research Scientist (joint)", "type": "govlab", "country": "USA", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "California Institute of Technology", "type": "academia", "country": "USA", "year": 1988},
+  "companies_founded": [],
+  "topics": ["snake robots", "motion planning", "grasping", "space robotics", "surgical robotics", "manipulation"],
+  "awards": [],
+  "external_events_mentioned": ["Early-1990s robotics funding downturn"]
+}

@@ -1,0 +1,34 @@
+{
+  "person": "steels",
+  "full_name": "Luc Steels",
+  "birth_year": 1952,
+  "birth_country": "Belgium",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "University of Antwerp", "field": "Linguistics", "year": null, "country": "Belgium"},
+    "ms": {"school": "Massachusetts Institute of Technology", "field": "Computer Science", "year": 1979, "country": "USA"},
+    "phd": {"school": "University of Antwerp", "field": "Linguistics", "year": 1977, "country": "Belgium", "advisor": "Marvin Minsky", "thesis_topic": "Distributed problem solving / agent-based representation (Society of Mind framework)"}
+  },
+  "career_path": [
+    {"org": "MIT Artificial Intelligence Laboratory", "role": "ITT Fellow", "type": "academia", "country": "USA", "year_start": 1977, "year_end": 1979},
+    {"org": "Schlumberger-Doll Research", "role": "Researcher / Program Leader for geological expert systems", "type": "industry", "country": "USA", "year_start": 1980, "year_end": 1983},
+    {"org": "Vrije Universiteit Brussel (VUB)", "role": "Full Professor of Computer Science; Founder of AI Laboratory; Chair of Computer Science Department (1989-1995)", "type": "academia", "country": "Belgium", "year_start": 1983, "year_end": null},
+    {"org": "Sony Computer Science Laboratory Paris", "role": "Co-founder and Acting Director", "type": "industry", "country": "France", "year_start": 1996, "year_end": null},
+    {"org": "Institute for Evolutionary Biology (CSIC, UPF)", "role": "ICREA Research Professor", "type": "academia", "country": "Spain", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "MIT Artificial Intelligence Laboratory", "type": "academia", "country": "USA", "year": 1977},
+  "companies_founded": [
+    {"name": "Sony Computer Science Laboratory Paris", "year": 1996, "role": "Co-founder", "status": "active"}
+  ],
+  "topics": ["artificial intelligence", "behavior-based robotics", "evolutionary linguistics", "language emergence", "agent-based systems", "embodied cognition"],
+  "awards": [],
+  "external_events_mentioned": [
+    "Sony AIBO development",
+    "Sony QRIO humanoid robot",
+    "RoboCup",
+    "IJCAI 2011 Barcelona",
+    "Henry Markram Blue Brain Project",
+    "Fukushima nuclear accident"
+  ]
+}

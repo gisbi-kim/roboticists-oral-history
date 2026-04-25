@@ -1,0 +1,27 @@
+{
+  "person": "casals",
+  "full_name": "Alicia Casals",
+  "birth_year": null,
+  "birth_country": "Spain",
+  "gender": "F",
+  "interview_year": 2015,
+  "education": {
+    "bs": {"school": "Universitat Politècnica de Catalunya", "field": "Industrial Engineering", "year": null, "country": "Spain"},
+    "ms": {"school": null, "field": null, "year": null, "country": null},
+    "phd": {"school": "Universitat Politècnica de Catalunya", "field": "Industrial Engineering", "year": null, "country": "Spain", "advisor": "Josep Amat", "thesis_topic": "Robotic object recognition through curvature of contours"}
+  },
+  "career_path": [
+    {"org": "Universitat Politècnica de Catalunya", "role": "Lecturer → Professor", "type": "academia", "country": "Spain", "year_start": null, "year_end": null},
+    {"org": "ROVISEC (robot+vision startup)", "role": "Co-founder (later sold)", "type": "industry", "country": "Spain", "year_start": null, "year_end": null},
+    {"org": "Surgical robotics spinoff", "role": "Co-founder", "type": "industry", "country": "Spain", "year_start": 2012, "year_end": null},
+    {"org": "Institute for Bioengineering of Catalonia", "role": "Affiliated researcher", "type": "academia", "country": "Spain", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Universitat Politècnica de Catalunya", "type": "academia", "country": "Spain", "year": null},
+  "companies_founded": [
+    {"name": "ROVISEC", "year": null, "country": "Spain"},
+    {"name": "Surgical robotics spinoff (UPC)", "year": 2012, "country": "Spain"}
+  ],
+  "topics": ["computer vision", "surgical robotics", "mobile robots", "human-robot interaction", "telerobotics", "soft robotics"],
+  "awards": [],
+  "external_events_mentioned": ["Spain joining European Community (1986)"]
+}

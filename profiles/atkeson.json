@@ -1,0 +1,23 @@
+{
+  "person": "atkeson",
+  "full_name": "Chris Atkeson",
+  "birth_year": 1959,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "Harvard University", "field": "Other: Biochemistry", "year": null, "country": "USA"},
+    "ms": {"school": "Harvard University", "field": "Applied Mathematics", "year": null, "country": "USA"},
+    "phd": {"school": "Massachusetts Institute of Technology", "field": "Other: Brain and Cognitive Sciences (originally Psychology)", "year": null, "country": "USA", "advisor": "Emilio Bizzi", "thesis_topic": "How humans estimate weight/inertia of held objects (motor control)"}
+  },
+  "career_path": [
+    {"org": "Massachusetts Institute of Technology", "role": "Assistant Professor, Brain and Cognitive Sciences and AI Lab", "type": "academia", "country": "USA", "year_start": null, "year_end": 1994},
+    {"org": "Georgia Institute of Technology", "role": "Professor", "type": "academia", "country": "USA", "year_start": 1994, "year_end": 2000},
+    {"org": "Carnegie Mellon University", "role": "Professor at Robotics Institute and Human-Computer Interaction Institute", "type": "academia", "country": "USA", "year_start": 2000, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Massachusetts Institute of Technology", "type": "academia", "country": "USA", "year": null},
+  "companies_founded": [],
+  "topics": ["humanoid", "robot learning", "motor control", "manipulation", "memory-based learning", "human-robot interaction"],
+  "awards": [],
+  "external_events_mentioned": ["Sputnik launch (1957, mentioned as birth-year reference)"]
+}

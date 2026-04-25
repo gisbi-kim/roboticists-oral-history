@@ -1,0 +1,29 @@
+{
+  "person": "bajcsy",
+  "full_name": "Ruzena Bajcsy",
+  "birth_year": 1933,
+  "birth_country": "Czech Republic",
+  "gender": "F",
+  "interview_year": 2002,
+  "education": {
+    "bs": null,
+    "ms": {"school": "Slovak Technical University", "field": "Electrical Engineering", "year": 1957, "country": "Slovakia"},
+    "phd": {"school": "Slovak Technical University", "field": "Electrical Engineering", "year": 1967, "country": "Slovakia", "advisor": null, "thesis_topic": "Learning machines and Markov processes"}
+  },
+  "career_path": [
+    {"org": "Electronics factory (Czechoslovakia)", "role": "Engineer (forced placement)", "type": "industry", "country": "Czech Republic", "year_start": 1957, "year_end": 1962},
+    {"org": "Slovak Technical University", "role": "Computer maintenance engineer (Ural II)", "type": "academia", "country": "Slovakia", "year_start": 1962, "year_end": 1967},
+    {"org": "Stanford University", "role": "PhD student in Computer Science (invited by John McCarthy); second PhD 1972", "type": "academia", "country": "USA", "year_start": 1967, "year_end": 1972},
+    {"org": "University of Pennsylvania", "role": "Assistant Professor; Professor; Chair of Computer Science and Engineering; Founder/Director of GRASP Lab", "type": "academia", "country": "USA", "year_start": 1972, "year_end": 1998},
+    {"org": "National Science Foundation (CISE Directorate)", "role": "Head of Computer and Information Science and Engineering Directorate", "type": "govlab", "country": "USA", "year_start": 1998, "year_end": 2001},
+    {"org": "University of California, Berkeley", "role": "Professor of EECS; Director of CITRIS", "type": "academia", "country": "USA", "year_start": 2002, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "University of Pennsylvania", "type": "academia", "country": "USA", "year": 1972},
+  "companies_founded": [],
+  "topics": ["computer vision", "active perception", "manipulation", "medical imaging", "human-robot interaction"],
+  "awards": [
+    {"name": "IEEE Life Fellow", "year": null},
+    {"name": "Benjamin Franklin Medal in Computer and Cognitive Science", "year": 2009}
+  ],
+  "external_events_mentioned": ["Hitler's rise to power (1933)", "Slovak National Uprising (1944)", "Nazi suppression of uprising; murder of her parents (1944)", "Soviet liberation (1945)", "Stalin closing borders (1948)", "Soviet invasion of Prague (1968)"]
+}

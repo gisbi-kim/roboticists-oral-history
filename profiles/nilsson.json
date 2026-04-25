@@ -1,0 +1,25 @@
+{
+  "person": "nilsson",
+  "full_name": "Nils Nilsson",
+  "birth_year": 1933,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": null,
+    "ms": {"school": "Stanford University", "field": "Electrical Engineering", "year": null, "country": "USA"},
+    "phd": {"school": "Stanford University", "field": "Electrical Engineering", "year": 1958, "country": "USA", "advisor": "Willis Harmon", "thesis_topic": "Statistical detection theory and game theory applied to radar reception"}
+  },
+  "career_path": [
+    {"org": "U.S. Air Force (Rome Air Development Center)", "role": "Lieutenant", "type": "military", "country": "USA", "year_start": 1958, "year_end": 1961},
+    {"org": "SRI International", "role": "Researcher to AI Center Director", "type": "govlab", "country": "USA", "year_start": 1961, "year_end": 1985},
+    {"org": "Stanford University", "role": "Professor and Chair of Computer Science", "type": "academia", "country": "USA", "year_start": 1985, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "U.S. Air Force (Rome Air Development Center)", "type": "military", "country": "USA", "year": 1958},
+  "companies_founded": [],
+  "topics": ["artificial intelligence", "pattern recognition", "neural networks", "mobile robots", "automated planning", "expert systems", "search algorithms"],
+  "awards": [
+    {"name": "IEEE Intelligent Systems AI Hall of Fame", "year": 2011}
+  ],
+  "external_events_mentioned": ["Korean War", "Shannon's information theory", "ARPA funding cuts for robotics", "Founding of IFTOMM"]
+}

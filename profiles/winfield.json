@@ -1,0 +1,30 @@
+{
+  "person": "winfield",
+  "full_name": "Alan Winfield",
+  "birth_year": 1956,
+  "birth_country": "UK",
+  "gender": "M",
+  "interview_year": 2013,
+  "education": {
+    "bs": {"school": "University of Hull", "field": "Electrical Engineering", "year": null, "country": "UK"},
+    "ms": null,
+    "phd": {"school": "University of Hull", "field": "Electrical Engineering", "year": null, "country": "UK", "advisor": "Rod Goodman", "thesis_topic": "digital communications, information theory and error correcting codes"}
+  },
+  "career_path": [
+    {"org": "MetaForth Computer Systems (later APD Communications)", "role": "Co-founder / Managing Director / Technical Director", "type": "industry", "country": "UK", "year_start": 1984, "year_end": 1992},
+    {"org": "University of the West of England, Bristol (UWE)", "role": "Associate Dean (Research) / Hewlett-Packard Professor of Electronic Engineering", "type": "academia", "country": "UK", "year_start": 1992, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "MetaForth Computer Systems", "type": "industry", "country": "UK", "year": 1984},
+  "companies_founded": [
+    {"name": "MetaForth Computer Systems (later APD Communications Ltd)", "year": 1984, "role": "Co-founder", "status": "active"}
+  ],
+  "topics": ["swarm robotics", "evolutionary robotics", "social robotics", "robot ethics", "artificial life", "mathematical modeling"],
+  "awards": [],
+  "external_events_mentioned": [
+    "Bristol Robotics Laboratory founding (1993)",
+    "DARPA dog's nose project (1999-2000)",
+    "Symbrion EU FET project",
+    "Restoration of Grey Walter's tortoise robots",
+    "Millennium Dome exhibition"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "person": "mondada",
+  "full_name": "Francesco Mondada",
+  "birth_year": 1967,
+  "birth_country": "Switzerland",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": null,
+    "ms": {"school": "École Polytechnique Fédérale de Lausanne (EPFL)", "field": "Other: Microengineering", "year": 1991, "country": "Switzerland"},
+    "phd": {"school": "École Polytechnique Fédérale de Lausanne (EPFL)", "field": "Robotics", "year": 1997, "country": "Switzerland", "advisor": "Jean-Daniel Nicoud", "thesis_topic": "Bio-inspired and neural network approaches to mobile robotics centered on the Khepera robot"}
+  },
+  "career_path": [
+    {"org": "EPFL (Nicoud's lab)", "role": "Research assistant; PhD student; postdoc", "type": "academia", "country": "Switzerland", "year_start": 1991, "year_end": 1999},
+    {"org": "K-Team", "role": "Co-founder; President and CEO", "type": "industry", "country": "Switzerland", "year_start": 1995, "year_end": 2000},
+    {"org": "EPFL", "role": "Senior Scientist; Adjunct Professor of Robotics", "type": "academia", "country": "Switzerland", "year_start": 2000, "year_end": null},
+    {"org": "Mobsya (non-profit)", "role": "Founder", "type": "nonprofit", "country": "Switzerland", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "EPFL / K-Team", "type": "academia", "country": "Switzerland", "year": 1997},
+  "companies_founded": [
+    {"name": "K-Team", "year": 1995, "role": "Co-founder", "status": "active"},
+    {"name": "Mobsya", "year": null, "role": "Founder", "status": "active"}
+  ],
+  "topics": ["mobile robotics", "swarm robotics", "bio-inspired robotics", "self-assembly", "educational robotics", "mechatronics", "animal-robot interaction"],
+  "awards": [],
+  "external_events_mentioned": ["Khepera robot commercialization", "E-puck educational robot release", "Swarm-bots / Swarmanoid EU project", "EPFL Robotics Festival"]
+}

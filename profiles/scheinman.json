@@ -1,0 +1,39 @@
+{
+  "person": "scheinman",
+  "full_name": "Victor Scheinman",
+  "birth_year": 1942,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "MIT", "field": "Aerospace Engineering", "year": 1963, "country": "USA"},
+    "ms": {"school": "Stanford University", "field": "Mechanical Engineering", "year": null, "country": "USA"},
+    "phd": {"school": "Stanford University", "field": "Mechanical Engineering", "year": null, "country": "USA", "advisor": "Bernard Roth", "thesis_topic": "Stanford Arm design (Engineer's degree, did not complete PhD)"}
+  },
+  "career_path": [
+    {"org": "Boeing", "role": "Engineer (Mahogany Row, Advanced Ballistic Missile Systems)", "type": "industry", "country": "USA", "year_start": 1963, "year_end": 1964},
+    {"org": "Raychem", "role": "Automation Engineer", "type": "industry", "country": "USA", "year_start": 1969, "year_end": 1970},
+    {"org": "Stanford AI Lab", "role": "Research Engineer / Stanford Arm developer", "type": "academia", "country": "USA", "year_start": 1970, "year_end": 1977},
+    {"org": "Vicarm Inc.", "role": "Founder", "type": "industry", "country": "USA", "year_start": 1973, "year_end": 1977},
+    {"org": "Unimation (West Coast Division)", "role": "Director (West Coast)", "type": "industry", "country": "USA", "year_start": 1977, "year_end": 1980},
+    {"org": "Automatix", "role": "Co-founder", "type": "industry", "country": "USA", "year_start": 1980, "year_end": null},
+    {"org": "Yaskawa", "role": "Consultant", "type": "industry", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Stanford University (Mechanical Engineering)", "role": "Consulting Professor", "type": "academia", "country": "USA", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Raychem", "type": "industry", "country": "USA", "year": 1969},
+  "companies_founded": [
+    {"name": "Vicarm Inc.", "year": 1973, "role": "Founder", "status": "exited"},
+    {"name": "Automatix", "year": 1980, "role": "Co-founder", "status": "closed"}
+  ],
+  "topics": ["robot arms", "industrial robotics", "manipulator design", "assembly robots", "machine vision", "puma robot"],
+  "awards": [
+    {"name": "Louie de Flores Award (MIT)", "year": 1963},
+    {"name": "Engelberger Robotics Award", "year": null}
+  ],
+  "external_events_mentioned": [
+    "Apollo program (Saturn rocket, lunar lander)",
+    "Robots-1 conference (Chicago)",
+    "PUMA robot induction into Smithsonian",
+    "Vietnam War draft"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "person": "kosuge",
+  "full_name": "Kazuhiro Kosuge",
+  "birth_year": 1955,
+  "birth_country": "Japan",
+  "gender": "M",
+  "interview_year": 2012,
+  "education": {
+    "bs": {"school": "Tokyo Institute of Technology", "field": "Control Engineering", "year": null, "country": "Japan"},
+    "ms": {"school": "Tokyo Institute of Technology", "field": "Control Engineering", "year": null, "country": "Japan"},
+    "phd": {"school": "Tokyo Institute of Technology", "field": "Control Engineering", "year": 1988, "country": "Japan", "advisor": "Katsuhisa Furuta", "thesis_topic": "Linearization for nonlinear systems and model-following control for manipulators"}
+  },
+  "career_path": [
+    {"org": "Nippon Denso (DENSO)", "role": "Engineer", "type": "industry", "country": "Japan", "year_start": null, "year_end": null},
+    {"org": "Tokyo Institute of Technology", "role": "Research Associate", "type": "academia", "country": "Japan", "year_start": null, "year_end": 1989},
+    {"org": "MIT", "role": "Visiting Researcher", "type": "academia", "country": "USA", "year_start": 1989, "year_end": 1990},
+    {"org": "Nagoya University", "role": "Associate Professor", "type": "academia", "country": "Japan", "year_start": 1990, "year_end": 1995},
+    {"org": "Tohoku University", "role": "Professor", "type": "academia", "country": "Japan", "year_start": 1995, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Tokyo Institute of Technology", "type": "academia", "country": "Japan", "year": 1988},
+  "companies_founded": [],
+  "topics": ["manipulator control", "human-robot interaction", "dual-arm coordination", "force control", "impedance control", "power augmentation"],
+  "awards": [],
+  "external_events_mentioned": ["Aichi Expo 2005", "International Robot Exhibition (IREX)", "DARPA Grand Challenge"]
+}

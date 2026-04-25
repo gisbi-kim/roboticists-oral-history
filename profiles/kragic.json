@@ -1,0 +1,30 @@
+{
+  "person": "kragic",
+  "full_name": "Danica Kragic",
+  "birth_year": null,
+  "birth_country": "Croatia",
+  "gender": "F",
+  "interview_year": 2015,
+  "education": {
+    "bs": {"school": "Technical University of Rijeka", "field": "Mechanical Engineering", "year": 1995, "country": "Croatia"},
+    "ms": {"school": null, "field": null, "year": null, "country": null},
+    "phd": {"school": "Royal Institute of Technology (KTH)", "field": "Computer Science", "year": 2001, "country": "Sweden", "advisor": "Henrik Christensen", "thesis_topic": "Robotic visual capabilities for object detection, recognition, and grasping"}
+  },
+  "career_path": [
+    {"org": "Royal Institute of Technology (KTH)", "role": "PhD Student", "type": "academia", "country": "Sweden", "year_start": 1997, "year_end": 2001},
+    {"org": "Columbia University", "role": "Visiting Researcher", "type": "academia", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Royal Institute of Technology (KTH)", "role": "Postdoc/Assistant Professor/Professor/Director of Centre for Autonomous Systems", "type": "academia", "country": "Sweden", "year_start": 2001, "year_end": null},
+    {"org": "Johns Hopkins University", "role": "Visiting Researcher", "type": "academia", "country": "USA", "year_start": 2003, "year_end": null},
+    {"org": "INRIA Rennes", "role": "Visiting Researcher", "type": "govlab", "country": "France", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Royal Institute of Technology (KTH)", "type": "academia", "country": "Sweden", "year": 2001},
+  "companies_founded": [],
+  "topics": ["robotic vision", "grasping", "manipulation", "human-machine collaboration", "haptics", "multi-sensor integration", "service robotics"],
+  "awards": [
+    {"name": "IEEE Robotics and Automation Society Early Academic Career Award", "year": 2007},
+    {"name": "ERC Starting Grant", "year": 2012},
+    {"name": "Swedish Research Council Distinguished Professor Grant", "year": 2019},
+    {"name": "Honorary Doctorate from Lappeenranta University of Technology", "year": null}
+  ],
+  "external_events_mentioned": ["EU GRASP project", "TOMSY project", "CENTAURO project"]
+}

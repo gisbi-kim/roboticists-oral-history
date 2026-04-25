@@ -1,0 +1,33 @@
+{
+  "person": "lin",
+  "full_name": "Ming Lin",
+  "birth_year": null,
+  "birth_country": "Taiwan",
+  "gender": "F",
+  "interview_year": 2015,
+  "education": {
+    "bs": {"school": "University of California, Berkeley", "field": "Electrical Engineering", "year": null, "country": "USA"},
+    "ms": {"school": "University of California, Berkeley", "field": "Electrical Engineering", "year": null, "country": "USA"},
+    "phd": {"school": "University of California, Berkeley", "field": "Electrical Engineering", "year": 1993, "country": "USA", "advisor": "John Canny", "thesis_topic": "Collision detection and distance computation algorithms (Lin-Canny algorithm)"}
+  },
+  "career_path": [
+    {"org": "Naval Postgraduate School", "role": "Faculty", "type": "military", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "North Carolina A&T State University (NCNT)", "role": "Visiting / Tenure-track Faculty", "type": "academia", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "US Army Research Office (ARO)", "role": "Founding Program Manager in Computer Science", "type": "military", "country": "USA", "year_start": null, "year_end": 1997},
+    {"org": "University of North Carolina at Chapel Hill", "role": "John R. & Louise S. Parker Distinguished Professor of Computer Science", "type": "academia", "country": "USA", "year_start": 1997, "year_end": null},
+    {"org": "University of Maryland, College Park", "role": "Elizabeth Stevinson Iribe Chair of Computer Science", "type": "academia", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Tsinghua University", "role": "Honorary/Courtesy Appointment", "type": "academia", "country": "China", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Naval Postgraduate School", "type": "military", "country": "USA", "year": 1993},
+  "companies_founded": [],
+  "topics": ["collision detection", "motion planning", "haptics", "physically based simulation", "computer graphics", "virtual reality", "crowd simulation"],
+  "awards": [
+    {"name": "NSF Young Faculty Career Award", "year": 1995},
+    {"name": "Honda Research Initiation Award", "year": 1997},
+    {"name": "IEEE VGTC VR Technical Achievement Award", "year": 2010},
+    {"name": "IEEE Fellow", "year": 2012},
+    {"name": "ACM Fellow", "year": null},
+    {"name": "Eurographics Fellow", "year": null}
+  ],
+  "external_events_mentioned": ["Oculus acquisition by Facebook", "DEC SRC closure"]
+}

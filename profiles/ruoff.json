@@ -1,0 +1,32 @@
+{
+  "person": "ruoff",
+  "full_name": "Carl Ruoff",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "California State University, Long Beach", "field": "Mathematics", "year": 1967, "country": "USA"},
+    "ms": {"school": "University of California, Los Angeles", "field": "Physics", "year": 1971, "country": "USA"},
+    "phd": {"school": "California Institute of Technology", "field": "Mechanical Engineering", "year": 1993, "country": "USA", "advisor": "Fred Culick", "thesis_topic": "Neural network-based hand-eye coordination and catching"}
+  },
+  "career_path": [
+    {"org": "Arrowhead Metal Products / Philco-Ford / TRW / Purex", "role": "Mechanical Designer", "type": "industry", "country": "USA", "year_start": 1961, "year_end": 1967},
+    {"org": "McDonnell-Douglas Aircraft Company", "role": "Scientific Programmer", "type": "industry", "country": "USA", "year_start": 1967, "year_end": 1970},
+    {"org": "UCLA Department of Physics", "role": "Teaching Assistant / Lecturer", "type": "academia", "country": "USA", "year_start": 1968, "year_end": 1971},
+    {"org": "Information International", "role": "Systems Programmer", "type": "industry", "country": "USA", "year_start": 1971, "year_end": 1971},
+    {"org": "Bendix Corporation", "role": "Staff Engineer (PACS robot project, control system manager)", "type": "industry", "country": "USA", "year_start": 1972, "year_end": 1974},
+    {"org": "General Electric R&D Center", "role": "Technical Staff", "type": "industry", "country": "USA", "year_start": 1977, "year_end": 1978},
+    {"org": "Jet Propulsion Laboratory", "role": "Technical Staff to Robotics Section Manager to Division Technologist", "type": "govlab", "country": "USA", "year_start": 1978, "year_end": null},
+    {"org": "UCLA (Mechanical and Aerospace Engineering)", "role": "Lecturer", "type": "academia", "country": "USA", "year_start": 1995, "year_end": null},
+    {"org": "California Institute of Technology", "role": "Visiting Associate in Mechanical Engineering", "type": "academia", "country": "USA", "year_start": 1996, "year_end": 2000}
+  ],
+  "first_job_after_phd": {"org": "Jet Propulsion Laboratory", "type": "govlab", "country": "USA", "year": 1993},
+  "companies_founded": [],
+  "topics": ["space robotics", "planetary rovers", "telerobotics", "autonomous mobility", "computer vision", "intelligent systems", "neural networks"],
+  "awards": [
+    {"name": "JPL Outstanding Mentor Award", "year": 1996},
+    {"name": "NASA Exceptional Service Medal", "year": 2008}
+  ],
+  "external_events_mentioned": ["Sojourner Mars rover landing 1997", "Mars 1984 rover project cancellation", "Mars Exploration Rover (MER) mission", "1974 Machine Tool Show"]
+}

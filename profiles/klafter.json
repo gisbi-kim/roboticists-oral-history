@@ -1,0 +1,31 @@
+{
+  "person": "klafter",
+  "full_name": "Richard D. Klafter",
+  "birth_year": 1936,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2012,
+  "education": {
+    "bs": {"school": "MIT", "field": "Electrical Engineering", "year": null, "country": "USA"},
+    "ms": {"school": "Columbia University", "field": "Electrical Engineering", "year": null, "country": "USA"},
+    "phd": {"school": "City University of New York", "field": "Electrical Engineering", "year": 1969, "country": "USA", "advisor": "George Krantz", "thesis_topic": "Optimal control via functional analysis"}
+  },
+  "career_path": [
+    {"institution": "City University of New York (City College)", "country": "USA", "type": "academia", "role": "Instructor/Faculty", "start_year": null, "end_year": null},
+    {"institution": "Drexel University", "country": "USA", "type": "academia", "role": "Faculty (17 years)", "start_year": null, "end_year": null},
+    {"institution": "Temple University", "country": "USA", "type": "academia", "role": "Faculty / Director of Graduate Studies, College of Engineering (17.5 years)", "start_year": 1984, "end_year": null}
+  ],
+  "first_job_after_phd": {"institution": "Drexel University", "country": "USA", "type": "academia", "role": "Faculty"},
+  "companies_founded": [],
+  "topics": ["automatic control", "industrial robotics", "mobile robots", "robotics education", "biomedical engineering"],
+  "awards": [
+    {"name": "IEEE Fellow", "year": 1986},
+    {"name": "IEEE Life Fellow", "year": 1996}
+  ],
+  "external_events_mentioned": [
+    "Founding member of IEEE Robotics and Automation Council (later Society)",
+    "IEEE RAS President 1994-1995",
+    "IEEE Robotics and Automation Magazine launch 1994",
+    "Co-authored 'Robotic Engineering: An Integrated Approach' (1989)"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "person": "sukhatme",
+  "full_name": "Gaurav Sukhatme",
+  "birth_year": null,
+  "birth_country": "India",
+  "gender": "M",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "Indian Institute of Technology Bombay", "field": "Computer Science", "year": 1991, "country": "India"},
+    "ms": {"school": "University of Southern California", "field": "Computer Science", "year": 1993, "country": "USA"},
+    "phd": {"school": "University of Southern California", "field": "Computer Science", "year": 1997, "country": "USA", "advisor": "George Bekey", "thesis_topic": "Benchmarking mobile robots for navigation and exploration tasks (NASA/JPL inspired)"}
+  },
+  "career_path": [
+    {"org": "University of Southern California", "role": "Research Associate -> Research Assistant Professor (1997) -> Assistant Professor (2000) -> Associate Professor (2005) -> Professor (2009); Founder/Director Robotic Embedded Systems Lab; Co-Director USC Robotics Research Lab; Director of Research, CS Department", "type": "academia", "country": "USA", "year_start": 1997, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "University of Southern California", "type": "academia", "country": "USA", "year": 1997},
+  "companies_founded": [],
+  "topics": ["multi-robot systems", "estimation and data fusion", "marine robotics", "sensor networks", "mobile robots", "network robots"],
+  "awards": [
+    {"name": "NSF CAREER Award", "year": 2002},
+    {"name": "Okawa Foundation Research Award", "year": 2006}
+  ],
+  "external_events_mentioned": [
+    "Center for Embedded Networked Sensing (CENS) at UCLA",
+    "RoboCup",
+    "Genomic revolution",
+    "Grey Walter tortoise robots",
+    "SRI Shakey robot"
+  ]
+}

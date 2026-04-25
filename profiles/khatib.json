@@ -1,0 +1,34 @@
+{
+  "person": "khatib",
+  "full_name": "Oussama Khatib",
+  "birth_year": null,
+  "birth_country": "Syria",
+  "gender": "M",
+  "interview_year": 2013,
+  "education": {
+    "bs": {"school": "University of Montpellier", "field": "Electrical Engineering", "year": 1971, "country": "France"},
+    "ms": {"school": "University of Montpellier", "field": "Electrical Engineering", "year": 1974, "country": "France"},
+    "phd": {"school": "Ecole Nationale Superieure de l'Aeronautique et de l'Espace (SUPAERO)", "field": "Control Engineering", "year": 1980, "country": "France", "advisor": null, "thesis_topic": "Operational space control / artificial potential field"}
+  },
+  "career_path": [
+    {"institution": "Stanford University", "country": "USA", "type": "academia", "role": "Senior/Research Associate (CS Department)", "start_year": 1981, "end_year": 1989},
+    {"institution": "Stanford University", "country": "USA", "type": "academia", "role": "Associate Professor of Computer Science (with courtesy in Mechanical Engineering)", "start_year": 1990, "end_year": 1999},
+    {"institution": "Stanford University", "country": "USA", "type": "academia", "role": "Full Professor", "start_year": 2000, "end_year": null}
+  ],
+  "first_job_after_phd": {"institution": "Stanford University", "country": "USA", "type": "academia", "role": "Senior/Research Associate"},
+  "companies_founded": [],
+  "topics": ["manipulation", "force control", "humanoid robotics", "haptics", "motion planning", "human-centered robotics"],
+  "awards": [
+    {"name": "Japan Robot Association (JARA) Award in Research and Development", "year": 1996},
+    {"name": "IEEE Fellow", "year": 2003},
+    {"name": "IEEE RAS Pioneer Award in Robotics and Automation", "year": 2010},
+    {"name": "IEEE RAS Distinguished Service Award", "year": 2013}
+  ],
+  "external_events_mentioned": [
+    "ISER (International Symposium of Experimental Robotics) co-founded 1989 with Vincent Hayward",
+    "ICRA San Francisco 2000 chair",
+    "IROS San Francisco 2011",
+    "Springer Handbook of Robotics co-edited with Bruno Siciliano",
+    "IFRR President"
+  ]
+}

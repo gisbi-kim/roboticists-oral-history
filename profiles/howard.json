@@ -1,0 +1,23 @@
+{
+  "person": "howard",
+  "full_name": "Ayanna Howard",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "F",
+  "interview_year": 2015,
+  "education": {
+    "bs": {"school": "Brown University", "field": "Computer Engineering", "year": null, "country": "USA"},
+    "ms": {"school": null, "field": null, "year": null, "country": null},
+    "phd": {"school": "University of Southern California", "field": "Other: Engineering", "year": null, "country": "USA", "advisor": "George Bekey (with Homayoun Seraji at JPL; initially Ken Goldberg)", "thesis_topic": "robot manipulator for sorting medical waste in hospitals"}
+  },
+  "career_path": [
+    {"org": "NASA Jet Propulsion Laboratory (JPL)", "role": "Intern (1994); Senior Robotics Researcher and Deputy Manager, Office of the Chief Scientist (full-time from 1999)", "type": "govlab", "country": "USA", "year_start": 1994, "year_end": 2005},
+    {"org": "Georgia Institute of Technology", "role": "Faculty (School of Electrical and Computer Engineering); later Associate Director of Research, Institute for Robotics and Intelligent Machines; Chair of Robotics PhD program", "type": "academia", "country": "USA", "year_start": 2005, "year_end": null},
+    {"org": "Zyrobotics", "role": "Founder", "type": "industry", "country": "USA", "year_start": 2013, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "NASA Jet Propulsion Laboratory (JPL)", "type": "govlab", "country": "USA", "year": 1999},
+  "companies_founded": [{"name": "Zyrobotics", "year": 2013, "role": "Founder", "status": "active"}],
+  "topics": ["mars rovers", "terrain assessment", "human-robot interaction", "assistive robotics", "children with disabilities", "fuzzy logic", "machine learning"],
+  "awards": [],
+  "external_events_mentioned": ["Bionic Woman TV series", "Space Shuttle Columbia accident", "NSF I-Corps program"]
+}

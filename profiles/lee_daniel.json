@@ -1,0 +1,27 @@
+{
+  "person": "lee_daniel",
+  "full_name": "Daniel Lee",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2014,
+  "education": {
+    "bs": {"school": "Harvard University", "field": "Physics", "year": 1990, "country": "USA"},
+    "ms": {"school": null, "field": null, "year": null, "country": null},
+    "phd": {"school": "MIT", "field": "Physics", "year": 1995, "country": "USA", "advisor": null, "thesis_topic": "Condensed matter physics: x-ray and neutron scattering of micro-emulsion systems"}
+  },
+  "career_path": [
+    {"org": "AT&T Bell Labs", "role": "Postdoc / Researcher (Theoretical Physics & Biological Computation)", "type": "industry", "country": "USA", "year_start": 1995, "year_end": 2001},
+    {"org": "University of Pennsylvania", "role": "UPS Foundation Professor of Transportation / GRASP Lab Director", "type": "academia", "country": "USA", "year_start": 2001, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "AT&T Bell Labs", "type": "industry", "country": "USA", "year": 1995},
+  "companies_founded": [],
+  "topics": ["machine learning", "computational neuroscience", "robot perception", "humanoid robotics", "autonomous driving", "sensorimotor systems"],
+  "awards": [
+    {"name": "NSF Presidential Early Career Award", "year": 2004},
+    {"name": "Lindback Award for Distinguished Teaching", "year": 2006},
+    {"name": "Evan C. Thompson Term Professor for Distinguished Teaching", "year": 2008},
+    {"name": "IEEE Fellow", "year": null}
+  ],
+  "external_events_mentioned": ["DARPA Urban Challenge 2007", "RoboCup", "DARPA Robotics Challenge", "Sony AIBO release"]
+}

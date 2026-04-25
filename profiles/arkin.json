@@ -1,0 +1,27 @@
+{
+  "person": "arkin",
+  "full_name": "Ronald Arkin",
+  "birth_year": 1949,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2014,
+  "education": {
+    "bs": {"school": "University of Michigan", "field": "Other: Chemistry (dual major in Applied Mathematics)", "year": null, "country": "USA"},
+    "ms": {"school": "Stevens Institute of Technology", "field": "Other: Organic Chemistry", "year": null, "country": "USA"},
+    "phd": {"school": "University of Massachusetts Amherst", "field": "Computer Science", "year": 1987, "country": "USA", "advisor": "Ed Riseman", "thesis_topic": "Towards Cosmopolitan Robots: Intelligent Navigation in Extended Manmade Environments (hybrid deliberative-reactive architecture, schema theory)"}
+  },
+  "career_path": [
+    {"org": "Dyestuff company", "role": "Chemist (R&D)", "type": "industry", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Pharmaceutical company", "role": "R&D chemist", "type": "industry", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Hawthorne College (later acquired by Florida Institute of Technology)", "role": "Chemistry instructor; later Computer Science Department Chair", "type": "academia", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Georgia Institute of Technology", "role": "Professor; Regents' Professor; Director of Mobile Robot Laboratory; Associate Dean for Research and Space Planning", "type": "academia", "country": "USA", "year_start": 1987, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Georgia Institute of Technology", "type": "academia", "country": "USA", "year": 1987},
+  "companies_founded": [],
+  "topics": ["behavior-based robotics", "motion planning", "multirobot", "robot ethics", "human-robot interaction", "robot deception"],
+  "awards": [
+    {"name": "IEEE Fellow", "year": 2003},
+    {"name": "Time Magazine Top 50 Inventions of 2010 (squirrel-deception robot work)", "year": 2010}
+  ],
+  "external_events_mentioned": []
+}

@@ -1,0 +1,24 @@
+{
+  "person": "mataric",
+  "full_name": "Maja Mataric",
+  "birth_year": null,
+  "birth_country": "Serbia",
+  "gender": "F",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "University of Kansas", "field": "Computer Science", "year": null, "country": "USA"},
+    "ms": {"school": "MIT", "field": "Computer Science", "year": null, "country": "USA"},
+    "phd": {"school": "MIT", "field": "Computer Science", "year": 1994, "country": "USA", "advisor": "Rodney Brooks", "thesis_topic": "Distributed multi-robot control (Nerd Herd)"}
+  },
+  "career_path": [
+    {"org": "University of Southern California", "role": "Chan Soon-Shiong Distinguished Professor of Computer Science, Neuroscience, and Pediatrics", "type": "academia", "country": "USA", "year_start": 1997, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "University of Southern California", "type": "academia", "country": "USA", "year": 1997},
+  "companies_founded": [],
+  "topics": ["human-robot interaction", "socially assistive robotics", "multi-robot systems", "behavior-based robotics", "navigation", "autism therapy", "rehabilitation robotics"],
+  "awards": [
+    {"name": "Presidential Award for Excellence in Science, Mathematics, and Engineering Mentoring", "year": 2009},
+    {"name": "IEEE Fellow", "year": null}
+  ],
+  "external_events_mentioned": ["Willow Garage PR2 program", "ROS / Player open source robotics", "RoboCup"]
+}

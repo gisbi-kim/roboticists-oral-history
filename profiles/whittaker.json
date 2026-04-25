@@ -1,0 +1,32 @@
+{
+  "person": "whittaker",
+  "full_name": "Red Whittaker",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "Princeton University", "field": "Other: Civil Engineering", "year": 1973, "country": "USA"},
+    "ms": {"school": "Carnegie Mellon University", "field": "Other: Civil Engineering", "year": 1975, "country": "USA"},
+    "phd": {"school": "Carnegie Mellon University", "field": "Other: Civil Engineering", "year": 1979, "country": "USA", "advisor": "Paul Christiano", "thesis_topic": "dynamic analysis of plates on elastic media"}
+  },
+  "career_path": [
+    {"org": "Carnegie Mellon University", "role": "Professor / Fredkin Research Professor / Director of Field Robotics Center / Chief Scientist of Robotics Engineering Consortium", "type": "academia", "country": "USA", "year_start": 1979, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Carnegie Mellon University", "type": "academia", "country": "USA", "year": 1979},
+  "companies_founded": [
+    {"name": "RedZone Robotics", "year": 1987, "role": "Founder", "status": "active"}
+  ],
+  "topics": ["field robotics", "autonomous vehicles", "mobile robots", "planetary exploration", "hazardous environment robotics", "outdoor navigation", "legged robots"],
+  "awards": [
+    {"name": "Teare Award for Teaching Excellence", "year": null}
+  ],
+  "external_events_mentioned": [
+    "Three Mile Island nuclear disaster cleanup (1984)",
+    "DARPA Grand Challenge 1 (2004)",
+    "DARPA Grand Challenge 2 (2005)",
+    "DARPA Urban Challenge (2007)",
+    "Google Lunar X Prize",
+    "CMU Robotics Institute founding (1979)"
+  ]
+}

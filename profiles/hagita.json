@@ -1,0 +1,26 @@
+{
+  "person": "hagita",
+  "full_name": "Norihiro Hagita",
+  "birth_year": 1954,
+  "birth_country": "Japan",
+  "gender": "M",
+  "interview_year": 2013,
+  "education": {
+    "bs": {"school": "Keio University", "field": "Electrical Engineering", "year": 1976, "country": "Japan"},
+    "ms": {"school": "Keio University", "field": "Electrical Engineering", "year": 1978, "country": "Japan"},
+    "phd": {"school": "Keio University", "field": "Electrical Engineering", "year": 1986, "country": "Japan", "advisor": null, "thesis_topic": "pattern recognition (handwritten Chinese character recognition)"}
+  },
+  "career_path": [
+    {"org": "Nippon Telegraph and Telephone (NTT)", "role": "Researcher / Executive Manager (Communication Science Labs 1996-2001)", "type": "industry", "country": "Japan", "year_start": 1978, "year_end": 2001},
+    {"org": "UC Berkeley, Department of Psychology (Steve Palmer Lab)", "role": "Visiting Researcher", "type": "academia", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "Advanced Telecommunications Research Institute International (ATR)", "role": "Director, Media Information Science Lab and Intelligent Robotics and Communication Lab; Board Director; ATR Fellow; Chair of ATR Creative", "type": "nonprofit", "country": "Japan", "year_start": 2001, "year_end": null},
+    {"org": "Nara Institute of Science and Technology", "role": "Visiting Professor", "type": "academia", "country": "Japan", "year_start": null, "year_end": null},
+    {"org": "Osaka University", "role": "Visiting/Adjunct Professor", "type": "academia", "country": "Japan", "year_start": null, "year_end": null},
+    {"org": "Kobe University", "role": "Visiting/Adjunct Professor", "type": "academia", "country": "Japan", "year_start": null, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Nippon Telegraph and Telephone (NTT)", "type": "industry", "country": "Japan", "year": 1986},
+  "companies_founded": [],
+  "topics": ["human-robot interaction", "networked robotics", "pattern recognition", "agent systems", "ambient intelligence", "ubiquitous computing"],
+  "awards": [],
+  "external_events_mentioned": ["IROS 2002 (EPFL)", "Aichi Expo", "ITU-T standardization"]
+}

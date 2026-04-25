@@ -1,0 +1,27 @@
+{
+  "person": "fong",
+  "full_name": "Terry Fong",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "Massachusetts Institute of Technology", "field": "Aerospace Engineering", "year": 1988, "country": "USA"},
+    "ms": {"school": "Massachusetts Institute of Technology", "field": "Aerospace Engineering", "year": 1990, "country": "USA"},
+    "phd": {"school": "Carnegie Mellon University", "field": "Robotics", "year": 2001, "country": "USA", "advisor": "Chuck Thorpe (CMU) / Charles Baur (EPFL co-advisor)", "thesis_topic": "Collaborative control: human-robot interaction"}
+  },
+  "career_path": [
+    {"org": "NASA Ames Research Center", "role": "Researcher", "type": "govlab", "country": "USA", "year_start": 1990, "year_end": 1994},
+    {"org": "Carnegie Mellon University", "role": "PhD student", "type": "academia", "country": "USA", "year_start": 1994, "year_end": 2001},
+    {"org": "Fourth Planet, Inc.", "role": "Co-founder / Vice President", "type": "industry", "country": "USA", "year_start": 1996, "year_end": 2000},
+    {"org": "Swiss Federal Institute of Technology Lausanne (EPFL) – Virtual Reality and Active Interfaces Group", "role": "Postdoctoral Fellow / Deputy Leader", "type": "academia", "country": "Switzerland", "year_start": 2002, "year_end": 2004},
+    {"org": "NASA Ames Research Center – Intelligent Robotics Group", "role": "Director (2004-2017) / Senior Scientist for Autonomous Systems (2017-) / Chief Roboticist", "type": "govlab", "country": "USA", "year_start": 2004, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Swiss Federal Institute of Technology Lausanne (EPFL)", "type": "academia", "country": "Switzerland", "year": 2002},
+  "companies_founded": [
+    {"name": "Fourth Planet, Inc.", "year": 1996, "role": "Co-founder / Vice President", "status": "inactive"}
+  ],
+  "topics": ["space robotics", "human-robot interaction", "telerobotics", "virtual reality interfaces", "planetary mapping", "field robotics", "collaborative control"],
+  "awards": [],
+  "external_events_mentioned": ["Dante II Mount Spurr volcano 1994", "McMurdo Sound Antarctic ROV", "Navlab project at CMU", "Peer-to-Peer Human Robot Interaction project", "Google Earth Moon/Mars collaboration", "GigaPan", "NASA Human Exploration Telerobotics on ISS"]
+}

@@ -1,0 +1,24 @@
+{
+  "person": "corke",
+  "full_name": "Peter Corke",
+  "birth_year": 1959,
+  "birth_country": "Australia",
+  "gender": "M",
+  "interview_year": 2013,
+  "education": {
+    "bs": {"school": "University of Melbourne", "field": "Electrical Engineering", "year": 1980, "country": "Australia"},
+    "ms": {"school": "University of Melbourne", "field": "Electrical Engineering", "year": 1986, "country": "Australia"},
+    "phd": {"school": "University of Melbourne", "field": "Electrical Engineering", "year": null, "country": "Australia", "advisor": "Malcolm Good", "thesis_topic": "Vision-based control (visual servoing)"}
+  },
+  "career_path": [
+    {"org": "University of Melbourne", "role": "Research assistant and lecturer (digital systems, control theory)", "type": "academia", "country": "Australia", "year_start": null, "year_end": 1984},
+    {"org": "CSIRO (Commonwealth Scientific and Industrial Research Organisation)", "role": "Researcher → Lab leader, mining/field robotics (Brisbane)", "type": "govlab", "country": "Australia", "year_start": 1984, "year_end": 2008},
+    {"org": "University of Pennsylvania, GRASP Lab", "role": "Visiting fellow (Lou Paul)", "type": "academia", "country": "USA", "year_start": 1988, "year_end": 1989},
+    {"org": "Queensland University of Technology", "role": "Professor of Robotics and Control", "type": "academia", "country": "Australia", "year_start": 2010, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "CSIRO", "type": "govlab", "country": "Australia", "year": null},
+  "companies_founded": [],
+  "topics": ["computer vision", "control", "mobile robots", "autonomous vehicles", "SLAM", "swarm"],
+  "awards": [],
+  "external_events_mentioned": ["Decline of Australian manufacturing", "Australian mining boom-bust cycles"]
+}

@@ -1,0 +1,23 @@
+{
+  "person": "alami",
+  "full_name": "Rachid Alami",
+  "birth_year": 1954,
+  "birth_country": "Morocco",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "ENSEEIHT, University of Toulouse", "field": "Other: Computer Engineering", "year": 1978, "country": "France"},
+    "ms": null,
+    "phd": {"school": "Paul Sabatier University", "field": "Robotics", "year": 1983, "country": "France", "advisor": null, "thesis_topic": "NNS (No Name System) high-level programming and control system for flexible assembly cell"}
+  },
+  "career_path": [
+    {"org": "Ministry of Equipment and Dams (Morocco)", "role": "Computer Engineer", "type": "govlab", "country": "Morocco", "year_start": 1978, "year_end": 1980},
+    {"org": "LAAS-CNRS, University of Toulouse", "role": "PhD researcher", "type": "academia", "country": "France", "year_start": 1980, "year_end": 1984},
+    {"org": "LAAS-CNRS", "role": "Researcher; later Director of Robotics and A.I. research", "type": "govlab", "country": "France", "year_start": 1984, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "LAAS-CNRS", "type": "govlab", "country": "France", "year": 1984},
+  "companies_founded": [],
+  "topics": ["motion planning", "task-level programming", "multirobot", "human-robot interaction", "space robotics", "manipulation"],
+  "awards": [],
+  "external_events_mentioned": ["French national robotics program (ARA)", "European Mars rover program funding constraints"]
+}

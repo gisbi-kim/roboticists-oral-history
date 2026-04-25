@@ -1,0 +1,25 @@
+{
+  "person": "bekey",
+  "full_name": "George Bekey",
+  "birth_year": null,
+  "birth_country": "Slovakia",
+  "gender": "M",
+  "interview_year": 2010,
+  "education": {
+    "bs": {"school": "University of California, Berkeley", "field": "Electrical Engineering", "year": 1950, "country": "USA"},
+    "ms": {"school": "University of California, Los Angeles", "field": "Electrical Engineering", "year": 1952, "country": "USA"},
+    "phd": {"school": "University of California, Los Angeles", "field": "Electrical Engineering", "year": 1962, "country": "USA", "advisor": "John Lyman", "thesis_topic": "Modeling the human operator"}
+  },
+  "career_path": [
+    {"org": "TRW", "role": "Engineer (hybrid analog/digital simulators for ICBMs)", "type": "industry", "country": "USA", "year_start": null, "year_end": null},
+    {"org": "University of Southern California", "role": "Faculty (40 years), founded biomedical engineering and robotics lab", "type": "academia", "country": "USA", "year_start": 1962, "year_end": 2002},
+    {"org": "California Polytechnic State University, San Luis Obispo", "role": "Faculty position", "type": "academia", "country": "USA", "year_start": 2002, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "University of Southern California", "type": "academia", "country": "USA", "year": 1962},
+  "companies_founded": [],
+  "topics": ["mobile robots", "legged robots", "humanoid hands", "robot ethics", "human-robot interaction", "biomedical robotics", "autonomous vehicles"],
+  "awards": [
+    {"name": "IEEE Life Fellow", "year": null}
+  ],
+  "external_events_mentioned": ["World War II (family fled Slovakia)", "US national-origin immigration quotas (forced 5-year wait in Bolivia)"]
+}

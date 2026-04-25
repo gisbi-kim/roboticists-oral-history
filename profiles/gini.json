@@ -1,0 +1,24 @@
+{
+  "person": "gini",
+  "full_name": "Maria Gini",
+  "birth_year": null,
+  "birth_country": "Italy",
+  "gender": "F",
+  "interview_year": 2015,
+  "education": {
+    "bs": {"school": "University of Milan (implied Italian university)", "field": "Physics", "year": null, "country": "Italy"},
+    "ms": {"school": null, "field": null, "year": null, "country": null},
+    "phd": {"school": null, "field": "Physics", "year": null, "country": "Italy", "advisor": "Marco Somalvico (mentor at Politecnico di Milano)", "thesis_topic": null}
+  },
+  "career_path": [
+    {"org": "Politecnico di Milano", "role": "Research Associate", "type": "academia", "country": "Italy", "year_start": null, "year_end": null},
+    {"org": "Stanford University AI Lab", "role": "Visiting Research Associate / Postdoc Fellow", "type": "academia", "country": "USA", "year_start": 1976, "year_end": 1977},
+    {"org": "Politecnico di Milano", "role": "Research Associate", "type": "academia", "country": "Italy", "year_start": 1977, "year_end": 1982},
+    {"org": "University of Minnesota – Department of Computer Science and Engineering", "role": "Professor", "type": "academia", "country": "USA", "year_start": 1982, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Politecnico di Milano", "type": "academia", "country": "Italy", "year": null},
+  "companies_founded": [],
+  "topics": ["multi-agent systems", "robot navigation", "motion planning", "task allocation", "mobile robots", "AI", "RoboCup Rescue", "robot programming languages"],
+  "awards": [],
+  "external_events_mentioned": ["Stanford POINTY interactive robot programming system", "Distributed Autonomous Robotics Systems Conference 2006 chair", "Trading Agent Competition", "Scout small exploration robot (DARPA-funded)", "ACM SIGART chair", "AAAI Executive Council"]
+}

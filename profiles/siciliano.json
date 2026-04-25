@@ -1,0 +1,37 @@
+{
+  "person": "siciliano",
+  "full_name": "Bruno Siciliano",
+  "birth_year": 1959,
+  "birth_country": "Italy",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "University of Naples Federico II", "field": "Electrical Engineering", "year": 1982, "country": "Italy"},
+    "ms": {"school": "University of Naples Federico II", "field": "Electrical Engineering", "year": 1982, "country": "Italy"},
+    "phd": {"school": "University of Naples Federico II", "field": "Electrical Engineering", "year": 1987, "country": "Italy", "advisor": "Lorenzo Sciavicco", "thesis_topic": "Robotics"}
+  },
+  "career_path": [
+    {"org": "Georgia Institute of Technology (Mechanical Engineering)", "role": "Visiting Scholar (Wayne Book group, RALF flexible arm)", "type": "academia", "country": "USA", "year_start": 1985, "year_end": 1986},
+    {"org": "CRIAI", "role": "Scientific Collaborator", "type": "academia", "country": "Italy", "year_start": 1987, "year_end": 1989},
+    {"org": "University of Naples Federico II", "role": "Assistant Professor / Associate Professor (1991) / Full Professor (1999)", "type": "academia", "country": "Italy", "year_start": 1989, "year_end": 2000},
+    {"org": "University of Salerno", "role": "Full Professor of Automatic Control", "type": "academia", "country": "Italy", "year_start": 2000, "year_end": 2003},
+    {"org": "University of Naples Federico II (Control & Robotics, PRISMA Lab Director, ICAROS Director)", "role": "Full Professor", "type": "academia", "country": "Italy", "year_start": 2003, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "CRIAI", "type": "academia", "country": "Italy", "year": 1987},
+  "companies_founded": [],
+  "topics": ["manipulation", "robot control", "force control", "aerial manipulation", "surgical robotics", "dual-arm manipulation"],
+  "awards": [
+    {"name": "IEEE Fellow", "year": 2000},
+    {"name": "AAP PROSE Award (Handbook of Robotics)", "year": 2008},
+    {"name": "IEEE RAS George Saridis Leadership Award", "year": 2015}
+  ],
+  "external_events_mentioned": [
+    "RoManSy conference (early career)",
+    "ISIR Chicago 1983 (first industrial robotics conference)",
+    "Springer Handbook of Robotics publication 2008",
+    "IEEE RAS President 2008-2009",
+    "DEXMART EU project",
+    "AIRobots EU project",
+    "Accademia dei Lincei robotics symposium 2008"
+  ]
+}

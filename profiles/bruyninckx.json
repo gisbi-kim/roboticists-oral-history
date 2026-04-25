@@ -1,0 +1,23 @@
+{
+  "person": "bruyninckx",
+  "full_name": "Herman Bruyninckx",
+  "birth_year": 1962,
+  "birth_country": "Belgium",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "Katholieke Universiteit Leuven", "field": "Mathematics", "year": null, "country": "Belgium"},
+    "ms": {"school": "Katholieke Universiteit Leuven", "field": "Mathematics", "year": 1984, "country": "Belgium"},
+    "phd": {"school": "Katholieke Universiteit Leuven", "field": "Mechanical Engineering", "year": 1995, "country": "Belgium", "advisor": "Joris De Schutter", "thesis_topic": "Robotics (force control / mechatronics software)"}
+  },
+  "career_path": [
+    {"org": "Belgian Army", "role": "Military service", "type": "military", "country": "Belgium", "year_start": 1988, "year_end": 1989},
+    {"org": "Katholieke Universiteit Leuven (Mechanical Engineering)", "role": "Research Assistant; Assistant Professor (1998); Associate Professor (2003); Professor (2008); Full Professor (2013)", "type": "academia", "country": "Belgium", "year_start": 1989, "year_end": null},
+    {"org": "Eindhoven University of Technology", "role": "Part-time Full Professor", "type": "academia", "country": "Netherlands", "year_start": 2014, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Katholieke Universiteit Leuven", "type": "academia", "country": "Belgium", "year": 1995},
+  "companies_founded": [],
+  "topics": ["control", "force control", "motion planning", "robot ethics", "manipulation"],
+  "awards": [],
+  "external_events_mentioned": ["European Union research integration"]
+}

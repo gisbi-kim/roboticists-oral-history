@@ -1,0 +1,31 @@
+{
+  "person": "waldron",
+  "full_name": "Ken Waldron",
+  "birth_year": null,
+  "birth_country": "Australia",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "University of Sydney", "field": "Mechanical Engineering", "year": 1964, "country": "Australia"},
+    "ms": {"school": "University of Sydney", "field": "Mechanical Engineering", "year": 1965, "country": "Australia"},
+    "phd": {"school": "Stanford University", "field": "Mechanical Engineering", "year": 1969, "country": "USA", "advisor": "Bernie Roth", "thesis_topic": "mobility of linkages"}
+  },
+  "career_path": [
+    {"org": "University of New South Wales", "role": "Faculty", "type": "academia", "country": "Australia", "year_start": 1969, "year_end": null},
+    {"org": "University of Houston", "role": "Faculty", "type": "academia", "country": "USA", "year_start": null, "year_end": 1979},
+    {"org": "Ohio State University", "role": "Professor / Department Chairman of Mechanical Engineering (1993-2000)", "type": "academia", "country": "USA", "year_start": 1979, "year_end": 2000},
+    {"org": "Stanford University", "role": "Professor (Research)", "type": "academia", "country": "USA", "year_start": 2000, "year_end": 2011}
+  ],
+  "first_job_after_phd": {"org": "University of New South Wales", "type": "academia", "country": "Australia", "year": 1969},
+  "companies_founded": [],
+  "topics": ["legged locomotion", "machine design", "kinematics", "mechanism theory", "mobile robots", "parallel robots"],
+  "awards": [
+    {"name": "Machine Design Award", "year": 1994},
+    {"name": "Joseph F. Engelberger Award", "year": 1997},
+    {"name": "Doctor of Engineering, University of Sydney", "year": 1999}
+  ],
+  "external_events_mentioned": [
+    "DARPA Adaptive Suspension Vehicle (ASV) project (1981-1990)",
+    "IFToMM presidency"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "person": "pappas",
+  "full_name": "George Pappas",
+  "birth_year": null,
+  "birth_country": "USA",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "Rensselaer Polytechnic Institute", "field": "Other: Computer and Systems Engineering", "year": 1991, "country": "USA"},
+    "ms": {"school": "Rensselaer Polytechnic Institute", "field": "Other: Computer and Systems Engineering", "year": 1992, "country": "USA"},
+    "phd": {"school": "University of California, Berkeley", "field": "Electrical Engineering", "year": 1998, "country": "USA", "advisor": "Shankar Sastry", "thesis_topic": "Hybrid systems and air traffic management"}
+  },
+  "career_path": [
+    {"org": "University of Pennsylvania", "role": "Assistant Professor to Joseph Moore Professor and Chair of Electrical and Systems Engineering", "type": "academia", "country": "USA", "year_start": 1998, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "University of Pennsylvania", "type": "academia", "country": "USA", "year": 1998},
+  "companies_founded": [],
+  "topics": ["control theory", "hybrid systems", "multi-robot systems", "air traffic management", "biologically inspired robotics", "human-robot interaction", "distributed robotics"],
+  "awards": [
+    {"name": "Antonio Ruberti Young Researcher Prize", "year": null},
+    {"name": "George S. Axelby Award", "year": null},
+    {"name": "NSF PECASE", "year": null}
+  ],
+  "external_events_mentioned": ["DARPA Urban Challenge", "PATH Project Highway 5 platoon demonstration 1996", "Obama NextGen air traffic initiative", "Volvo adaptive cruise control rollout"]
+}

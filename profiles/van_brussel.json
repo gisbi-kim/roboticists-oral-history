@@ -1,0 +1,32 @@
+{
+  "person": "van_brussel",
+  "full_name": "Hendrik Van Brussel",
+  "birth_year": 1944,
+  "birth_country": "Belgium",
+  "gender": "M",
+  "interview_year": 2011,
+  "education": {
+    "bs": {"school": "Hoger Technisch Instituut (Ostend)", "field": "Mechanical Engineering", "year": 1965, "country": "Belgium"},
+    "ms": {"school": "Katholieke Universiteit Leuven", "field": "Electrical Engineering", "year": 1968, "country": "Belgium"},
+    "phd": {"school": "Katholieke Universiteit Leuven", "field": "Mechanical Engineering", "year": 1971, "country": "Belgium", "advisor": null, "thesis_topic": "Dynamic analysis of the metal cutting process"}
+  },
+  "career_path": [
+    {"org": "Metal Industries Development Center, Bandung / Institut Teknologi Bandung", "role": "Founder of Metal Industries Development Center; Associate Professor", "type": "academia", "country": "Indonesia", "year_start": 1971, "year_end": 1973},
+    {"org": "Katholieke Universiteit Leuven", "role": "Assistant Professor -> Full Professor in Mechatronics and Automation (1980); Head of Division PMA (1980-1993, 2001-2003); Chairman of Department of Mechanical Engineering (1993-2001); Department Chairman (2003-2010)", "type": "academia", "country": "Belgium", "year_start": 1973, "year_end": null}
+  ],
+  "first_job_after_phd": {"org": "Metal Industries Development Center, Bandung", "type": "academia", "country": "Indonesia", "year": 1971},
+  "companies_founded": [],
+  "topics": ["mechatronics", "force control", "medical robotics", "holonic manufacturing systems", "mobile robotics", "impedance control"],
+  "awards": [
+    {"name": "SME F. W. Taylor Research Medal", "year": 1976},
+    {"name": "Joseph Engelberger Award", "year": 2008}
+  ],
+  "external_events_mentioned": [
+    "Cincinnati Milacron robot acquisition 1980",
+    "ISIR Conference Washington 1979",
+    "Esprit SACODY project 1986",
+    "Intelligent Manufacturing Systems (IMS) program 1990",
+    "PROSA architecture",
+    "EURON network"
+  ]
+}
