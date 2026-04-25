@@ -60,7 +60,7 @@ header { padding: 12px 18px; border-bottom: 1px solid var(--border); background:
                      transform: translateX(-50%); }
 .year-header .tick.major { font-weight: 600; color: var(--fg); }
 
-.rows { position: relative; }
+.rows { position: relative; background-repeat: repeat-y; }
 .row { position: relative; height: var(--row-h); border-bottom: 1px solid rgba(0,0,0,0.03);
        transition: background 0.08s; }
 .row:nth-child(even) { background: rgba(0,0,0,0.015); }
@@ -197,7 +197,7 @@ const PHASE_LABELS = {
 
 const I18N = {
   ko: {
-    title: 'Roboticists Oral History — 행적 시각화',
+    title: 'Roboticists Oral History — 커리어 시각화',
     sub: '110명의 거장 / 2778개 이벤트 (반투명 셀 = 원문에 연도 미상, 앞뒤 컨텍스트로 추론)',
     sort: '정렬:',
     sort_birth: '출생/최초연도순',
@@ -297,6 +297,14 @@ function buildYearHeader() {
       hdr.appendChild(t);
     }
   }
+  // 십년 단위 세로 그리드 (.rows 배경)
+  const rows = document.getElementById('rows');
+  const decadeStart = Math.ceil(Y_MIN / 10) * 10;
+  const offsetX = (decadeStart - Y_MIN) * COL_W + COL_W / 2;
+  rows.style.backgroundImage =
+    'linear-gradient(to right, rgba(0,0,0,0.08) 1px, transparent 1px)';
+  rows.style.backgroundSize = (10 * COL_W) + 'px 100%';
+  rows.style.backgroundPosition = offsetX + 'px 0';
 }
 
 function getPersonOrder() {
@@ -357,12 +365,12 @@ function render() {
 
     const name = document.createElement('div');
     name.className = 'name';
-    const yrTag = meta.birth_year ? ` (${meta.birth_year}-)` : '';
     const intvTgt = lang === 'en' ? 'ethw_source_eng' : 'translated_kor';
+    const tlTgt = lang === 'en' ? 'timelines_eng' : 'timelines_kor';
     const i18 = I18N[lang];
     name.innerHTML = `
-      <span class="pname" title="${escapeHtml(fullName)}${yrTag} · ${meta.event_count} events">${escapeHtml(fullName)}${yrTag}</span>
-      <a class="lnk" href="${REPO}/blob/main/timelines_kor/${p}.md" target="_blank">${i18.link_timeline}</a>
+      <span class="pname" title="${escapeHtml(fullName)} · ${meta.event_count} events">${escapeHtml(fullName)}</span>
+      <a class="lnk" href="${REPO}/blob/main/${tlTgt}/${p}.md" target="_blank">${i18.link_timeline}</a>
       <a class="lnk" href="${REPO}/blob/main/${intvTgt}/${p}.md" target="_blank">${i18.link_interview}</a>
     `;
     name.querySelector('.pname').onclick = () => {
@@ -392,14 +400,17 @@ function showTip(ev, e) {
   const t = document.getElementById('tooltip');
   const i = I18N[lang];
   const fullName = (VIZ_DATA.persons[e.person]?.full_name) || e.person;
+  // 언어에 따라 이벤트 텍스트와 year_raw 스왑
+  const eventText = (lang === 'en' && e.event_en) ? e.event_en : e.event;
+  const yearRaw = (lang === 'en' && e.year_raw_en) ? e.year_raw_en : e.year_raw;
   const yearLabel = e.year_inferred
-    ? i.tip_year_inferred(escapeHtml(e.year_raw), e.year)
-    : `(${escapeHtml(e.year_raw)})`;
+    ? i.tip_year_inferred(escapeHtml(yearRaw), e.year)
+    : `(${escapeHtml(yearRaw)})`;
   const typeLabel = lang === 'en' ? (TYPE_EN[e.type] || e.type) : e.type;
   const phaseLabel = PHASE_LABELS[lang][e.phase] || e.phase;
   t.innerHTML = `
     <div class="person">${escapeHtml(fullName)} <span class="year">${yearLabel}</span></div>
-    <div class="ev">${escapeHtml(e.event)}</div>
+    <div class="ev">${escapeHtml(eventText)}</div>
     <div class="meta">${typeLabel} / ${e.subtype} / ${phaseLabel}</div>
   `;
   t.classList.add('show');

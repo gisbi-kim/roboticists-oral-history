@@ -14,6 +14,7 @@ from collections import defaultdict
 BASE = os.path.dirname(os.path.abspath(__file__))
 CSV_PATH = os.path.join(BASE, 'events_tagged.csv')
 TIMELINES_DIR = os.path.join(BASE, 'timelines_kor')
+TIMELINES_ENG_DIR = os.path.join(BASE, 'timelines_eng')
 OUT_PATH = os.path.join(BASE, 'viz_data.json')
 
 YEAR_RE = re.compile(r'\b(18\d{2}|19\d{2}|20\d{2})\b')
@@ -68,11 +69,14 @@ def build_line_map(person):
     return mapping
 
 
-def parse_timeline_order(person):
-    """timelines_kor/{person}.md를 읽어 라인 순서대로 (line_no, year_raw, event, year)
+def parse_timeline_order(person, lang='kor'):
+    """timelines_{lang}/{person}.md를 읽어 라인 순서대로 (line_no, year_raw, event, year)
     리스트 반환. timeline 파일이 chronological order의 진실 소스."""
-    path = os.path.join(TIMELINES_DIR, f'{person}.md')
+    d = TIMELINES_DIR if lang == 'kor' else TIMELINES_ENG_DIR
+    path = os.path.join(d, f'{person}.md')
     out = []
+    if not os.path.exists(path):
+        return out
     in_code = False
     with open(path, 'r', encoding='utf-8') as f:
         for ln, raw in enumerate(f, 1):
@@ -152,6 +156,20 @@ def main():
                 '_csv_idx': csv_idx,
             })
 
+    # 영문 timeline 매핑: tagged event → (event_en, year_raw_en)
+    eng_map = {}  # (person, year_raw_norm, event_norm) → {event_en, year_raw_en}
+    for person in line_maps.keys():
+        ko_order = parse_timeline_order(person, 'kor')
+        en_order = parse_timeline_order(person, 'eng')
+        for i, k in enumerate(ko_order):
+            if i >= len(en_order):
+                break
+            key = (person, normalize(k['year_raw']), normalize(k['event']))
+            eng_map[key] = {
+                'event_en': en_order[i]['event'],
+                'year_raw_en': en_order[i]['year_raw'],
+            }
+
     # 연도 추론: timeline 파일의 라인 순서가 진실. 인물별 [min~max known] 안에서만.
     # 1) 인물별 timeline-order 리스트로 보간 결과 산출
     # 2) tagged event를 (year_raw_norm, event_norm)로 매칭해서 추론된 year 부착
@@ -197,16 +215,22 @@ def main():
                    normalize(order[i]['event']))
             inferred_by_key[key] = inferred_year
 
-    # tagged event에 추론 결과 부착
+    # tagged event에 추론 결과 + 영문 부착
     inferred = 0
+    eng_matched = 0
     for e in events:
-        if e['year'] is not None:
-            continue
         key = (e['person'], normalize(e['year_raw']), normalize(e['event']))
-        if key in inferred_by_key:
+        if e['year'] is None and key in inferred_by_key:
             e['year'] = inferred_by_key[key]
             e['year_inferred'] = True
             inferred += 1
+        if key in eng_map:
+            e['event_en'] = eng_map[key]['event_en']
+            e['year_raw_en'] = eng_map[key]['year_raw_en']
+            eng_matched += 1
+        else:
+            e['event_en'] = None
+            e['year_raw_en'] = None
 
     # _csv_idx 제거
     for e in events:
@@ -242,6 +266,7 @@ def main():
     print(f'year 보간 추론: {inferred}')
     print(f'year 결국 미상: {miss_year - inferred}')
     print(f'line_no 매핑 실패: {miss_line}')
+    print(f'영문 이벤트 매핑: {eng_matched}')
     print(f'연도 범위: {out["year_min"]} ~ {out["year_max"]}')
     print(f'출력: {OUT_PATH} ({os.path.getsize(OUT_PATH)/1024:.1f} KB)')
 
