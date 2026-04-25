@@ -1,5 +1,7 @@
 # Roboticists Oral History (영-한 병기)
 
+🌐 **인터랙티브 시각화**: <https://gisbi-kim.github.io/roboticists-oral-history/>
+
 세계 로봇공학 분야 거장 110인의 구술사(Oral History) 인터뷰 모음입니다.
 [IEEE History Center](https://ethw.org/Oral-History:List_of_all_Oral_Histories)와 [Engineering and Technology History Wiki (ETHW)](https://ethw.org/)에 공개된 자료를 기반으로 하며, 영문 원문과 한국어 번역본을 함께 제공합니다.
 
