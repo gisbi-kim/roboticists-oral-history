@@ -68,6 +68,31 @@ def build_line_map(person):
     return mapping
 
 
+def parse_timeline_order(person):
+    """timelines_kor/{person}.md를 읽어 라인 순서대로 (line_no, year_raw, event, year)
+    리스트 반환. timeline 파일이 chronological order의 진실 소스."""
+    path = os.path.join(TIMELINES_DIR, f'{person}.md')
+    out = []
+    in_code = False
+    with open(path, 'r', encoding='utf-8') as f:
+        for ln, raw in enumerate(f, 1):
+            line = raw.strip()
+            if line.startswith('```'):
+                in_code = not in_code
+                continue
+            if not in_code or not line:
+                continue
+            m = SEP_RE.match(line)
+            if not m:
+                continue
+            year_raw = m.group(1).strip()
+            event = m.group(2).strip()
+            year = extract_year(year_raw)
+            out.append({'line_no': ln, 'year_raw': year_raw,
+                        'event': event, 'year': year})
+    return out
+
+
 FULL_NAME_RE = re.compile(r'^#\s*(.+?)\s*[—–-]\s*행적')
 
 
@@ -127,29 +152,29 @@ def main():
                 '_csv_idx': csv_idx,
             })
 
-    # 연도 미상 이벤트의 연도 추론:
-    # 인물별로 timeline 순서대로 정렬한 뒤, 앞뒤 known year 사이를 선형 보간
-    by_person = defaultdict(list)
-    for e in events:
-        by_person[e['person']].append(e)
-
-    inferred = 0
-    for person, evs in by_person.items():
-        # 정렬: line_no 우선, 없으면 csv 순서
-        evs.sort(key=lambda e: (e['line_no'] if e['line_no'] is not None else 1e9,
-                                e['_csv_idx']))
-        n = len(evs)
-        years = [e['year'] for e in evs]
+    # 연도 추론: timeline 파일의 라인 순서가 진실. 인물별 [min~max known] 안에서만.
+    # 1) 인물별 timeline-order 리스트로 보간 결과 산출
+    # 2) tagged event를 (year_raw_norm, event_norm)로 매칭해서 추론된 year 부착
+    inferred_by_key = {}  # (person, year_raw_norm, event_norm) → year
+    for person in line_maps.keys():
+        order = parse_timeline_order(person)
+        if not order:
+            continue
+        years = [r['year'] for r in order]
+        known = [y for y in years if y is not None]
+        if not known:
+            continue  # 추론 불가
+        y_min, y_max = min(known), max(known)
+        n = len(order)
         for i in range(n):
             if years[i] is not None:
                 continue
-            # 앞쪽 가장 가까운 known
+            # 앞뒤 known 찾기
             p_idx, p_y = None, None
             for j in range(i - 1, -1, -1):
                 if years[j] is not None:
                     p_idx, p_y = j, years[j]
                     break
-            # 뒤쪽 가장 가까운 known
             s_idx, s_y = None, None
             for j in range(i + 1, n):
                 if years[j] is not None:
@@ -157,14 +182,30 @@ def main():
                     break
             if p_y is not None and s_y is not None:
                 ratio = (i - p_idx) / (s_idx - p_idx)
-                evs[i]['year'] = round(p_y + (s_y - p_y) * ratio)
+                inferred_year = round(p_y + (s_y - p_y) * ratio)
             elif p_y is not None:
-                evs[i]['year'] = min(p_y + min(i - p_idx, 3), 2024)  # 외삽 최대 +3년, 2024 캡
+                # 외삽 금지: 마지막 known에 그대로 붙임
+                inferred_year = p_y
             elif s_y is not None:
-                evs[i]['year'] = max(s_y - min(s_idx - i, 3), 1900)
+                inferred_year = s_y
             else:
                 continue
-            evs[i]['year_inferred'] = True
+            # 인물 범위 안으로 클램프
+            inferred_year = max(y_min, min(y_max, inferred_year))
+            order[i]['year'] = inferred_year
+            key = (person, normalize(order[i]['year_raw']),
+                   normalize(order[i]['event']))
+            inferred_by_key[key] = inferred_year
+
+    # tagged event에 추론 결과 부착
+    inferred = 0
+    for e in events:
+        if e['year'] is not None:
+            continue
+        key = (e['person'], normalize(e['year_raw']), normalize(e['event']))
+        if key in inferred_by_key:
+            e['year'] = inferred_by_key[key]
+            e['year_inferred'] = True
             inferred += 1
 
     # _csv_idx 제거

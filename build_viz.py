@@ -195,10 +195,8 @@ const I18N = {
     search_ph: '이름 (영문)',
     phase: '페이즈:',
     visible: (n) => `표시 중: ${n}명`,
-    tip_timeline: '→ 타임라인의 해당 라인 열기',
-    tip_interview: '→ 한국어 인터뷰 전문 열기',
     tip_year_inferred: (raw, y) => `(원문: "${raw}" · 추론 ${y}년)`,
-    footer: `데이터: <a href="${REPO}" target="_blank">${REPO}</a> · 클릭 시 GitHub의 한국어 인터뷰로 이동`,
+    footer: `데이터: <a href="${REPO}" target="_blank">${REPO}</a> · 셀/이름 클릭 시 GitHub의 한국어 인터뷰 열림`,
   },
   en: {
     title: 'Roboticists Oral History — Career Timeline',
@@ -211,10 +209,8 @@ const I18N = {
     search_ph: 'name',
     phase: 'Phase:',
     visible: (n) => `Showing: ${n} people`,
-    tip_timeline: '→ Open this line in timeline (Korean)',
-    tip_interview: '→ Open full English interview',
     tip_year_inferred: (raw, y) => `(source: "${raw}" · inferred ${y})`,
-    footer: `Data: <a href="${REPO}" target="_blank">${REPO}</a> · Click to open the original interview on GitHub`,
+    footer: `Data: <a href="${REPO}" target="_blank">${REPO}</a> · Click cell/name to open the original interview on GitHub`,
   },
 };
 
@@ -372,12 +368,6 @@ function showTip(ev, e) {
   clearTimeout(tipTimeout);
   const t = document.getElementById('tooltip');
   const i = I18N[lang];
-  const tlUrl = e.line_no
-    ? `${REPO}/blob/main/timelines_kor/${e.person}.md#L${e.line_no}`
-    : `${REPO}/blob/main/timelines_kor/${e.person}.md`;
-  const intUrl = lang === 'en'
-    ? `${REPO}/blob/main/ethw_source_eng/${e.person}.md`
-    : `${REPO}/blob/main/translated_kor/${e.person}.md`;
   const fullName = (VIZ_DATA.persons[e.person]?.full_name) || e.person;
   const yearLabel = e.year_inferred
     ? i.tip_year_inferred(escapeHtml(e.year_raw), e.year)
@@ -388,8 +378,6 @@ function showTip(ev, e) {
     <div class="person">${escapeHtml(fullName)} <span class="year">${yearLabel}</span></div>
     <div class="ev">${escapeHtml(e.event)}</div>
     <div class="meta">${typeLabel} / ${e.subtype} / ${phaseLabel}</div>
-    <a href="${tlUrl}" target="_blank">${i.tip_timeline}</a>
-    <a href="${intUrl}" target="_blank">${i.tip_interview}</a>
   `;
   t.classList.add('show');
   positionTip(ev);
@@ -407,10 +395,8 @@ function hideTip() {
   }, 250);
 }
 function clickEvent(e) {
-  const url = e.line_no
-    ? `${REPO}/blob/main/timelines_kor/${e.person}.md#L${e.line_no}`
-    : `${REPO}/blob/main/timelines_kor/${e.person}.md`;
-  window.open(url, '_blank');
+  const tgt = lang === 'en' ? 'ethw_source_eng' : 'translated_kor';
+  window.open(`${REPO}/blob/main/${tgt}/${e.person}.md`, '_blank');
 }
 function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, c => ({
