@@ -344,6 +344,7 @@ function render() {
       div.style.left = (200 + (e.year - Y_MIN) * COL_W) + 'px';
       div.style.background = TYPE_COLOR[e.type] || '#666';
       div.addEventListener('mouseenter', (ev) => showTip(ev, e));
+      div.addEventListener('mousemove', positionTip);
       div.addEventListener('mouseleave', hideTip);
       div.addEventListener('click', () => clickEvent(e));
       row.appendChild(div);
@@ -374,10 +375,17 @@ function showTip(ev, e) {
 }
 function positionTip(ev) {
   const t = document.getElementById('tooltip');
-  const x = ev.clientX + 12;
-  const y = ev.clientY + 12;
-  t.style.left = Math.min(x, window.innerWidth - 380) + 'px';
-  t.style.top = Math.min(y, window.innerHeight - 180) + 'px';
+  const tw = t.offsetWidth || 320;
+  const th = t.offsetHeight || 100;
+  // 기본: 커서 우하단 12px. 화면 밖이면 좌/상으로 뒤집기.
+  let x = ev.clientX + 12;
+  let y = ev.clientY + 12;
+  if (x + tw > window.innerWidth - 8) x = ev.clientX - tw - 12;
+  if (y + th > window.innerHeight - 8) y = ev.clientY - th - 12;
+  if (x < 8) x = 8;
+  if (y < 8) y = 8;
+  t.style.left = x + 'px';
+  t.style.top = y + 'px';
 }
 function hideTip() {
   tipTimeout = setTimeout(() => {
