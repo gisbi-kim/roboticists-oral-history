@@ -1531,13 +1531,16 @@ function closeInterviewChat() {
 
 function parseInterviewMarkdown(markdown) {
   const lines = markdown.replace(/\r\n/g, '\n').split('\n');
-  const start = lines.findIndex(line => /^##\s+(인터뷰|Interview)\s*$/.test(line.trim()));
+  const start = lines.findIndex(line => {
+    const s = line.trim();
+    return /^##\s+(인터뷰|Interview)\s*$/.test(s) || s === '---';
+  });
   const body = lines.slice(start >= 0 ? start + 1 : 0);
   const items = [];
   let currentSpeaker = '';
   let currentText = [];
   let section = '';
-  const speakerPattern = /^(Peter Asaro|Roland Siegwart):\s*$/i;
+  const speakerPattern = /^(\*\*)?([A-Z][A-Za-z .'-]+|Q):(\*\*)?\s*$/;
 
   for (const rawLine of body) {
     const line = rawLine.trim();
@@ -1551,8 +1554,7 @@ function parseInterviewMarkdown(markdown) {
     const speakerMatch = line.match(speakerPattern);
     if (speakerMatch) {
       flush();
-      currentSpeaker = speakerMatch[1].replace(/^peter asaro$/i, 'Peter Asaro')
-        .replace(/^roland siegwart$/i, 'Roland Siegwart');
+      currentSpeaker = normalizeSpeaker(speakerMatch[2]);
       continue;
     }
     if (/^<[^>]+>$/.test(line) && !currentSpeaker) {
@@ -1576,7 +1578,7 @@ function parseInterviewMarkdown(markdown) {
       items.push({
         kind: 'message',
         speaker: currentSpeaker,
-        side: currentSpeaker === 'Roland Siegwart' ? 'right' : 'left',
+        side: isInterviewerSpeaker(currentSpeaker) ? 'left' : 'right',
         text,
         section,
       });
@@ -1584,6 +1586,16 @@ function parseInterviewMarkdown(markdown) {
     currentSpeaker = '';
     currentText = [];
   }
+}
+
+function normalizeSpeaker(speaker) {
+  if (speaker === 'Q') return 'Interviewer';
+  return speaker.replace(/^peter asaro$/i, 'Peter Asaro')
+    .replace(/^roland siegwart$/i, 'Roland Siegwart');
+}
+
+function isInterviewerSpeaker(speaker) {
+  return /^(Interviewer|Peter Asaro|Selma|Matthew|Selma Sabanovic|Matthew Francisco)$/i.test(speaker);
 }
 
 function buildChatTopics() {
