@@ -185,6 +185,13 @@ footer a { color: var(--muted); }
 .chat-title { min-width: 0; flex: 1; }
 .chat-title strong, .chat-title span { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .chat-title span { margin-top: 3px; color: var(--muted); font-size: 12px; }
+.chat-view-toggle { display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 3px;
+                    border-radius: 7px; background: #e8e8e4; }
+.chat-view-toggle button { min-width: 74px; border: 0; border-radius: 5px; padding: 6px 9px;
+                           background: transparent; color: #5b625b; cursor: pointer;
+                           font-size: 12px; font-weight: 750; white-space: nowrap; }
+.chat-view-toggle button.active { background: #fff; color: var(--fg);
+                                  box-shadow: 0 1px 4px rgba(0,0,0,0.16); }
 .chat-close { width: 36px; height: 36px; border: 0; border-radius: 50%;
               background: #e8e8e4; color: #4c534e; font-size: 22px; line-height: 1;
               cursor: pointer; }
@@ -233,6 +240,8 @@ footer a { color: var(--muted); }
   .chat-shell { inset: 0; grid-template-columns: 190px minmax(0, 1fr); border-radius: 0; }
   .chat-side { padding: 12px 8px; }
   .chat-side h2 { font-size: 18px; }
+  .chat-head { gap: 8px; padding: 10px; }
+  .chat-view-toggle button { min-width: 52px; padding: 6px; }
   .chat-bubble { max-width: 90%; }
   .timeline-card { grid-template-columns: 1fr; gap: 5px; }
 }
@@ -327,6 +336,10 @@ footer a { color: var(--muted); }
           <strong id="chat_person_name"></strong>
           <span id="chat_message_count"></span>
         </div>
+        <div class="chat-view-toggle" aria-label="Modal view">
+          <button type="button" id="chat_view_timeline" data-chat-view="timeline"></button>
+          <button type="button" id="chat_view_interview" data-chat-view="interview"></button>
+        </div>
         <button type="button" class="chat-close" id="chat_close" aria-label="Close interview">×</button>
       </header>
       <div class="chat-search">
@@ -409,6 +422,7 @@ const I18N = {
     footer: `데이터: <a href="${REPO}" target="_blank">${REPO}</a>`,
     link_timeline: '[타임라인]',
     link_interview: '[인터뷰전문]',
+    link_view: '[보기]',
     tab_timeline: '커리어 시각화',
     tab_eda: 'EDA',
     chat_source: '원문 출처',
@@ -421,6 +435,8 @@ const I18N = {
     timeline_loading: '타임라인을 불러오는 중...',
     timeline_count: (n) => `${n} events`,
     timeline_title: '커리어 타임라인',
+    view_timeline: '타임라인',
+    view_interview: '인터뷰',
   },
   en: {
     title: 'Roboticists Oral History — Career Timeline',
@@ -440,6 +456,7 @@ const I18N = {
     footer: `Data: <a href="${REPO}" target="_blank">${REPO}</a>`,
     link_timeline: '[Timeline]',
     link_interview: '[Interview]',
+    link_view: '[View]',
     tab_timeline: 'Career Timeline',
     tab_eda: 'EDA',
     chat_source: 'Original source',
@@ -452,6 +469,8 @@ const I18N = {
     timeline_loading: 'Loading timeline...',
     timeline_count: (n) => `${n} events`,
     timeline_title: 'Career Timeline',
+    view_timeline: 'Timeline',
+    view_interview: 'Interview',
   },
 };
 
@@ -546,6 +565,8 @@ function applyLang() {
   document.getElementById('footer_text').innerHTML = t.footer;
   document.getElementById('tab_btn_timeline').textContent = t.tab_timeline;
   document.getElementById('tab_btn_eda').textContent = t.tab_eda;
+  document.getElementById('chat_view_timeline').textContent = t.view_timeline;
+  document.getElementById('chat_view_interview').textContent = t.view_interview;
 
   const sortSel = document.getElementById('sort');
   sortSel.options[0].textContent = t.sort_birth;
@@ -684,22 +705,15 @@ function render() {
 
     const name = document.createElement('div');
     name.className = 'name';
-    const intvTgt = lang === 'en' ? 'ethw_source_eng' : 'translated_kor';
-    const tlTgt = lang === 'en' ? 'timelines_eng' : 'timelines_kor';
     const i18 = I18N[lang];
     name.innerHTML = `
       <span class="pname" title="${escapeHtml(fullName)} · ${meta.event_count} events">${escapeHtml(fullName)}</span>
-      <a class="lnk timeline-link" href="${tlTgt}/${p}.md" data-person="${p}">${i18.link_timeline}</a>
-      <a class="lnk interview-link" href="${intvTgt}/${p}.md" data-person="${p}">${i18.link_interview}</a>
+      <a class="lnk profile-link" href="?view=interview&person=${p}" data-person="${p}">${i18.link_view}</a>
     `;
     name.querySelector('.pname').onclick = () => {
       openInterviewChat(p);
     };
-    name.querySelector('.timeline-link').onclick = (ev) => {
-      ev.preventDefault();
-      openTimelineModal(p);
-    };
-    name.querySelector('.interview-link').onclick = (ev) => {
+    name.querySelector('.profile-link').onclick = (ev) => {
       ev.preventDefault();
       openInterviewChat(p);
     };
@@ -1508,6 +1522,7 @@ async function openInterviewChat(person) {
   document.getElementById('chat_modal').classList.add('open');
   document.getElementById('chat_modal').setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
+  setChatViewButtons('interview');
   document.getElementById('chat_side_name').textContent = fullName;
   document.getElementById('chat_person_name').textContent = fullName;
   document.getElementById('chat_avatar').textContent = initials(fullName);
@@ -1540,6 +1555,12 @@ function closeInterviewChat() {
   document.body.style.overflow = '';
   chatCurrentPerson = null;
   replaceUrlWithState();
+}
+
+function setChatViewButtons(view) {
+  document.querySelectorAll('[data-chat-view]').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.chatView === view);
+  });
 }
 
 function parseInterviewMarkdown(markdown) {
@@ -1719,6 +1740,12 @@ document.getElementById('chat_search').addEventListener('input', (ev) => {
     renderChatMessages();
   }
 });
+document.getElementById('chat_view_timeline').addEventListener('click', () => {
+  if (chatCurrentPerson) openTimelineModal(chatCurrentPerson);
+});
+document.getElementById('chat_view_interview').addEventListener('click', () => {
+  if (chatCurrentPerson) openInterviewChat(chatCurrentPerson);
+});
 
 async function openTimelineModal(person) {
   chatCurrentPerson = person;
@@ -1732,6 +1759,7 @@ async function openTimelineModal(person) {
   document.getElementById('chat_modal').classList.add('open');
   document.getElementById('chat_modal').setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
+  setChatViewButtons('timeline');
   document.getElementById('chat_side_name').textContent = fullName;
   document.getElementById('chat_person_name').textContent = fullName;
   document.getElementById('chat_avatar').textContent = initials(fullName);
