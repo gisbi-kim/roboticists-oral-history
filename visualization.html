@@ -141,6 +141,91 @@ header { padding: 12px 18px; border-bottom: 1px solid var(--border); background:
 footer { padding: 8px 18px; color: var(--muted); font-size: 11px;
          border-top: 1px solid var(--border); background: #fff; }
 footer a { color: var(--muted); }
+
+.chat-modal { position: fixed; inset: 0; z-index: 200; display: none;
+              background: rgba(20, 28, 25, 0.34); }
+.chat-modal.open { display: block; }
+.chat-shell { position: absolute; inset: 22px; display: grid;
+              grid-template-columns: 260px minmax(0, 1fr); gap: 0;
+              background: #eef0ea; border: 1px solid rgba(0,0,0,0.22);
+              border-radius: 8px; overflow: hidden;
+              box-shadow: 0 26px 90px rgba(0,0,0,0.28); }
+.chat-side { min-height: 0; padding: 14px 12px; background: #f7f4ed;
+             border-right: 1px solid rgba(0,0,0,0.12); overflow: hidden;
+             display: flex; flex-direction: column; gap: 10px; }
+.chat-kicker { margin: 0; color: #1f7a65; font-size: 10px; font-weight: 700;
+               text-transform: uppercase; letter-spacing: 0.08em; }
+.chat-side h2 { margin: 0; font-size: 28px; line-height: 1.08; letter-spacing: 0; }
+.chat-source { border-top: 1px solid rgba(0,0,0,0.14); padding-top: 7px; }
+.chat-source span { display: block; margin-bottom: 5px; color: var(--muted);
+                    font-size: 10px; font-weight: 700; text-transform: uppercase;
+                    letter-spacing: 0.08em; }
+.chat-source a { display: block; margin: 0 0 4px; color: #087a5d; font-size: 11px;
+                 font-weight: 700; text-decoration: none; }
+.chat-source a:hover { text-decoration: underline; }
+.chat-topic-list { flex: 1 1 auto; min-height: 0; overflow-y: auto;
+                   overscroll-behavior: contain; display: grid; align-content: start;
+                   gap: 4px; }
+.chat-topic-list::-webkit-scrollbar, .chat-stream::-webkit-scrollbar { width: 10px; }
+.chat-topic-list::-webkit-scrollbar-thumb, .chat-stream::-webkit-scrollbar-thumb {
+  border: 3px solid transparent; border-radius: 999px; background: rgba(32,33,36,0.24);
+  background-clip: padding-box;
+}
+.chat-topic-list a { min-height: 30px; display: flex; align-items: center; padding: 4px 8px;
+                     border: 1px solid rgba(0,0,0,0.08); border-radius: 6px;
+                     background: rgba(255,255,255,0.58); color: var(--fg);
+                     font-size: 11px; line-height: 1.18; text-decoration: none; }
+.chat-topic-list a:hover { border-color: rgba(31,122,101,0.34); background: rgba(31,122,101,0.12); }
+.chat-main { height: 100%; min-height: 0; display: grid;
+             grid-template-rows: auto auto minmax(0, 1fr); background: #b9c7bd; }
+.chat-head { height: 70px; padding: 12px 16px; background: #f7f7f4;
+             border-bottom: 1px solid rgba(0,0,0,0.12); display: flex; align-items: center; gap: 12px; }
+.chat-avatar { width: 44px; height: 44px; flex: 0 0 44px; border-radius: 50%;
+               display: grid; place-items: center; background: #24433b; color: #fff; font-weight: 800; }
+.chat-title { min-width: 0; flex: 1; }
+.chat-title strong, .chat-title span { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.chat-title span { margin-top: 3px; color: var(--muted); font-size: 12px; }
+.chat-close { width: 36px; height: 36px; border: 0; border-radius: 50%;
+              background: #e8e8e4; color: #4c534e; font-size: 22px; line-height: 1;
+              cursor: pointer; }
+.chat-close:hover { background: #ddd; }
+.chat-search { position: relative; padding: 10px 14px; background: #ecece8;
+               border-bottom: 1px solid rgba(0,0,0,0.08); }
+.chat-search input { width: 100%; border: 1px solid rgba(0,0,0,0.10);
+                     border-radius: 7px; background: #fff; padding: 9px 12px; outline: none; }
+.chat-search input:focus { border-color: rgba(31,122,101,0.45);
+                           box-shadow: 0 0 0 3px rgba(31,122,101,0.12); }
+.chat-stream { min-height: 0; overflow: auto; padding: 18px 18px 30px;
+               background: linear-gradient(rgba(185,199,189,0.9), rgba(185,199,189,0.9)); }
+.chat-chip, .chat-note { width: fit-content; max-width: min(600px, 86%); margin: 14px auto;
+                         padding: 6px 11px; border-radius: 999px;
+                         background: rgba(255,255,255,0.58); color: #536158;
+                         border: 1px solid rgba(0,0,0,0.06); font-size: 12px; text-align: center; }
+.chat-msg { display: grid; margin: 9px 0; }
+.chat-msg.left { justify-items: start; }
+.chat-msg.right { justify-items: end; }
+.chat-speaker { margin: 0 0 4px 2px; color: rgba(32,33,36,0.62);
+                font-size: 12px; font-weight: 700; }
+.chat-msg.right .chat-speaker { margin-right: 2px; }
+.chat-bubble { width: fit-content; max-width: min(680px, 78%); padding: 11px 13px;
+               border-radius: 7px; line-height: 1.58; white-space: pre-wrap;
+               box-shadow: 0 1px 2px rgba(0,0,0,0.10); }
+.chat-msg.left .chat-bubble { background: #fff; border-top-left-radius: 2px; }
+.chat-msg.right .chat-bubble { background: #ffe36e; border: 1px solid #e3c955; border-top-right-radius: 2px; }
+.chat-time { display: block; margin-top: 7px; color: rgba(32,33,36,0.48);
+             font-size: 11px; text-align: right; font-variant-numeric: tabular-nums; }
+.chat-empty { margin-top: 42px; color: #536158; text-align: center; }
+.chat-mark { border-radius: 3px; background: rgba(31,122,101,0.18); color: inherit; padding: 0 2px; }
+@media (max-width: 760px) {
+  .chat-shell { inset: 0; grid-template-columns: 190px minmax(0, 1fr); border-radius: 0; }
+  .chat-side { padding: 12px 8px; }
+  .chat-side h2 { font-size: 18px; }
+  .chat-bubble { max-width: 90%; }
+}
+@media (max-width: 560px) {
+  .chat-shell { grid-template-columns: 1fr; }
+  .chat-side { display: none; }
+}
 </style>
 </head>
 <body>
@@ -207,6 +292,35 @@ footer a { color: var(--muted); }
 
 <div class="tab-pane" id="tab_eda">
   <div class="eda" id="eda_container"></div>
+</div>
+
+<div class="chat-modal" id="chat_modal" aria-hidden="true">
+  <div class="chat-shell" role="dialog" aria-modal="true" aria-labelledby="chat_person_name">
+    <aside class="chat-side" aria-label="Interview contents">
+      <p class="chat-kicker">Roboticists Oral History</p>
+      <h2 id="chat_side_name"></h2>
+      <section class="chat-source" aria-label="Original source">
+        <span id="chat_source_label"></span>
+        <a id="chat_ethw_link" href="https://ethw.org/Oral-History:List_of_all_Oral_Histories" target="_blank" rel="noreferrer"></a>
+        <a id="chat_md_link" href="#" target="_blank" rel="noreferrer"></a>
+      </section>
+      <nav class="chat-topic-list" id="chat_topic_list" aria-label="Interview sections"></nav>
+    </aside>
+    <section class="chat-main" aria-label="Rendered interview">
+      <header class="chat-head">
+        <div class="chat-avatar" id="chat_avatar" aria-hidden="true"></div>
+        <div class="chat-title">
+          <strong id="chat_person_name"></strong>
+          <span id="chat_message_count"></span>
+        </div>
+        <button type="button" class="chat-close" id="chat_close" aria-label="Close interview">×</button>
+      </header>
+      <div class="chat-search">
+        <input id="chat_search" type="search">
+      </div>
+      <div class="chat-stream" id="chat_stream" aria-live="polite"></div>
+    </section>
+  </div>
 </div>
 
 <footer>
@@ -283,6 +397,13 @@ const I18N = {
     link_interview: '[인터뷰전문]',
     tab_timeline: '커리어 시각화',
     tab_eda: 'EDA',
+    chat_source: '원문 출처',
+    chat_ethw: 'ETHW 원문 목록',
+    chat_md: 'Markdown 원문 보기',
+    chat_search: '대화 검색',
+    chat_loading: '인터뷰를 불러오는 중...',
+    chat_empty: '검색 결과가 없습니다.',
+    chat_count: (n) => `${n} messages`,
   },
   en: {
     title: 'Roboticists Oral History — Career Timeline',
@@ -304,6 +425,13 @@ const I18N = {
     link_interview: '[Interview]',
     tab_timeline: 'Career Timeline',
     tab_eda: 'EDA',
+    chat_source: 'Original source',
+    chat_ethw: 'ETHW source list',
+    chat_md: 'View Markdown source',
+    chat_search: 'Search conversation',
+    chat_loading: 'Loading transcript...',
+    chat_empty: 'No matching messages.',
+    chat_count: (n) => `${n} messages`,
   },
 };
 
@@ -542,10 +670,14 @@ function render() {
     name.innerHTML = `
       <span class="pname" title="${escapeHtml(fullName)} · ${meta.event_count} events">${escapeHtml(fullName)}</span>
       <a class="lnk" href="${REPO}/blob/main/${tlTgt}/${p}.md" target="_blank">${i18.link_timeline}</a>
-      <a class="lnk" href="${REPO}/blob/main/${intvTgt}/${p}.md" target="_blank">${i18.link_interview}</a>
+      <a class="lnk interview-link" href="${intvTgt}/${p}.md" data-person="${p}">${i18.link_interview}</a>
     `;
     name.querySelector('.pname').onclick = () => {
-      window.open(`${REPO}/blob/main/${intvTgt}/${p}.md`, '_blank');
+      openInterviewChat(p);
+    };
+    name.querySelector('.interview-link').onclick = (ev) => {
+      ev.preventDefault();
+      openInterviewChat(p);
     };
     row.appendChild(name);
 
@@ -1323,7 +1455,208 @@ function buildEDA() {
 }
 
 // 키보드: ←/→ 같은 인물의 이전/다음 셀, Esc 해제
+const CHAT_CACHE = {};
+let chatMessages = [];
+let chatCurrentPerson = null;
+let chatQuery = '';
+
+async function openInterviewChat(person) {
+  chatCurrentPerson = person;
+  chatQuery = '';
+  const meta = VIZ_DATA.persons[person] || {};
+  const fullName = meta.full_name || person;
+  const dir = lang === 'en' ? 'ethw_source_eng' : 'translated_kor';
+  const path = `${dir}/${person}.md`;
+  const t = I18N[lang];
+
+  document.getElementById('chat_modal').classList.add('open');
+  document.getElementById('chat_modal').setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('chat_side_name').textContent = fullName;
+  document.getElementById('chat_person_name').textContent = fullName;
+  document.getElementById('chat_avatar').textContent = initials(fullName);
+  document.getElementById('chat_source_label').textContent = t.chat_source;
+  document.getElementById('chat_ethw_link').textContent = t.chat_ethw;
+  document.getElementById('chat_md_link').textContent = t.chat_md;
+  document.getElementById('chat_md_link').href = `${REPO}/blob/main/${path}`;
+  document.getElementById('chat_search').placeholder = t.chat_search;
+  document.getElementById('chat_search').value = '';
+  document.getElementById('chat_message_count').textContent = t.chat_loading;
+  document.getElementById('chat_stream').innerHTML = `<p class="chat-empty">${escapeHtml(t.chat_loading)}</p>`;
+  document.getElementById('chat_topic_list').innerHTML = '';
+
+  const key = `${lang}:${person}`;
+  if (!CHAT_CACHE[key]) {
+    const res = await fetch(path);
+    if (!res.ok) throw new Error(`Could not load interview: ${path}`);
+    CHAT_CACHE[key] = parseInterviewMarkdown(await res.text());
+  }
+  chatMessages = CHAT_CACHE[key];
+  buildChatTopics();
+  renderChatMessages();
+}
+
+function closeInterviewChat() {
+  document.getElementById('chat_modal').classList.remove('open');
+  document.getElementById('chat_modal').setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+function parseInterviewMarkdown(markdown) {
+  const lines = markdown.replace(/\r\n/g, '\n').split('\n');
+  const start = lines.findIndex(line => /^##\s+(인터뷰|Interview)\s*$/.test(line.trim()));
+  const body = lines.slice(start >= 0 ? start + 1 : 0);
+  const items = [];
+  let currentSpeaker = '';
+  let currentText = [];
+  let section = '';
+  const speakerPattern = /^(Peter Asaro|Roland Siegwart):\s*$/i;
+
+  for (const rawLine of body) {
+    const line = rawLine.trim();
+    if (!line) continue;
+    if (/^###\s+/.test(line)) {
+      flush();
+      section = line.replace(/^###\s+/, '').trim();
+      items.push({ kind: 'section', section, id: chatSlug(section) });
+      continue;
+    }
+    const speakerMatch = line.match(speakerPattern);
+    if (speakerMatch) {
+      flush();
+      currentSpeaker = speakerMatch[1].replace(/^peter asaro$/i, 'Peter Asaro')
+        .replace(/^roland siegwart$/i, 'Roland Siegwart');
+      continue;
+    }
+    if (/^<[^>]+>$/.test(line) && !currentSpeaker) {
+      items.push({ kind: 'note', text: normalizeChatNote(line) });
+      continue;
+    }
+    if (currentSpeaker) currentText.push(line);
+  }
+  flush();
+  return items;
+
+  function flush() {
+    if (!currentSpeaker || currentText.length === 0) {
+      currentText = [];
+      return;
+    }
+    const text = currentText.join('\n\n').replace(/\s+$/g, '');
+    if (/^<[^>]+>$/.test(text)) {
+      items.push({ kind: 'note', text: normalizeChatNote(text) });
+    } else {
+      items.push({
+        kind: 'message',
+        speaker: currentSpeaker,
+        side: currentSpeaker === 'Roland Siegwart' ? 'right' : 'left',
+        text,
+        section,
+      });
+    }
+    currentSpeaker = '';
+    currentText = [];
+  }
+}
+
+function buildChatTopics() {
+  const list = document.getElementById('chat_topic_list');
+  list.innerHTML = '';
+  for (const item of chatMessages) {
+    if (item.kind !== 'section') continue;
+    const a = document.createElement('a');
+    a.href = `#${item.id}`;
+    a.textContent = item.section;
+    a.onclick = (ev) => {
+      ev.preventDefault();
+      document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+    list.appendChild(a);
+  }
+}
+
+function renderChatMessages() {
+  const t = I18N[lang];
+  const stream = document.getElementById('chat_stream');
+  const query = chatQuery.toLowerCase();
+  const items = query
+    ? chatMessages.filter(item => item.kind !== 'message' || item.text.toLowerCase().includes(query) || item.speaker.toLowerCase().includes(query))
+    : chatMessages;
+  stream.innerHTML = '';
+  let count = 0;
+  for (const [idx, item] of items.entries()) {
+    if (item.kind === 'section') {
+      const chip = document.createElement('div');
+      chip.className = 'chat-chip';
+      chip.id = item.id;
+      chip.textContent = item.section;
+      stream.appendChild(chip);
+      continue;
+    }
+    if (item.kind === 'note') {
+      const note = document.createElement('div');
+      note.className = 'chat-note';
+      note.textContent = item.text;
+      stream.appendChild(note);
+      continue;
+    }
+    count += 1;
+    const row = document.createElement('article');
+    row.className = `chat-msg ${item.side}`;
+    const speaker = document.createElement('div');
+    speaker.className = 'chat-speaker';
+    speaker.textContent = item.speaker;
+    const bubble = document.createElement('div');
+    bubble.className = 'chat-bubble';
+    bubble.innerHTML = `${highlightChat(escapeHtml(item.text), chatQuery)}<span class="chat-time">${chatTime(idx)}</span>`;
+    row.append(speaker, bubble);
+    stream.appendChild(row);
+  }
+  if (count === 0) {
+    stream.innerHTML = `<p class="chat-empty">${escapeHtml(t.chat_empty)}</p>`;
+  }
+  document.getElementById('chat_message_count').textContent = t.chat_count(count);
+}
+
+function normalizeChatNote(text) {
+  const cleaned = text.replace(/[<>]/g, '').trim();
+  return lang === 'ko' && cleaned === 'brief interruption' ? '잠시 중단' : cleaned;
+}
+
+function highlightChat(text, query) {
+  if (!query) return text;
+  const safeQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return text.replace(new RegExp(safeQuery, 'gi'), match => `<mark class="chat-mark">${match}</mark>`);
+}
+
+function chatSlug(text) {
+  return `chat-${text.toLowerCase().replace(/[^\w가-힣]+/g, '-').replace(/^-+|-+$/g, '')}`;
+}
+
+function initials(name) {
+  return name.split(/\s+/).filter(Boolean).slice(0, 2).map(part => part[0]).join('').toUpperCase();
+}
+
+function chatTime(index) {
+  const hour = 14 + Math.floor(index / 18);
+  const minute = (index * 7) % 60;
+  return `${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}`;
+}
+
+document.getElementById('chat_close').onclick = closeInterviewChat;
+document.getElementById('chat_modal').addEventListener('click', (ev) => {
+  if (ev.target.id === 'chat_modal') closeInterviewChat();
+});
+document.getElementById('chat_search').addEventListener('input', (ev) => {
+  chatQuery = ev.target.value.trim();
+  renderChatMessages();
+});
+
 document.addEventListener('keydown', (ev) => {
+  if (document.getElementById('chat_modal').classList.contains('open')) {
+    if (ev.key === 'Escape') closeInterviewChat();
+    return;
+  }
   if (!selectedDiv) return;
   if (ev.key === 'Escape') { ev.preventDefault(); clearSelection(); return; }
   if (ev.key !== 'ArrowLeft' && ev.key !== 'ArrowRight') return;
