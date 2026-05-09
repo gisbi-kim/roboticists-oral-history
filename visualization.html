@@ -969,27 +969,37 @@ function updateUrl() {
   urlUpdatePending = true;
   requestAnimationFrame(() => {
     urlUpdatePending = false;
-    const p = new URLSearchParams();
-    if (lang !== 'ko') p.set('lang', lang);
-    if (currentSort !== 'birth') p.set('sort', currentSort);
-    if (currentSearch) p.set('q', currentSearch);
-    if (currentPhase) p.set('phase', currentPhase);
-    if (yearMin !== Y_MIN) p.set('y1', yearMin);
-    if (yearMax !== Y_MAX) p.set('y2', yearMax);
-    const allTypes = Object.keys(TYPE_COLOR);
-    const off = allTypes.filter(t => !ALWAYS_ON_TYPES.has(t) && !activeTypes.has(t));
-    if (off.length > 0) {
-      // 짧게: 비활성만 기록 (보통 더 적음)
-      p.set('off', off.join(','));
-    }
-    if (selectedEvent) {
-      const key = `${selectedEvent.person}|${selectedEvent.year}|${selectedEvent.event.slice(0, 50)}`;
-      p.set('sel', key);
-    }
-    const qs = p.toString();
-    const url = window.location.pathname + (qs ? '?' + qs : '') + window.location.hash;
-    history.replaceState(null, '', url);
+    replaceUrlWithState();
   });
+}
+
+function replaceUrlWithState() {
+  const p = new URLSearchParams();
+  if (lang !== 'ko') p.set('lang', lang);
+  if (currentSort !== 'birth') p.set('sort', currentSort);
+  if (currentSearch) p.set('q', currentSearch);
+  if (currentPhase) p.set('phase', currentPhase);
+  if (yearMin !== Y_MIN) p.set('y1', yearMin);
+  if (yearMax !== Y_MAX) p.set('y2', yearMax);
+  const allTypes = Object.keys(TYPE_COLOR);
+  const off = allTypes.filter(t => !ALWAYS_ON_TYPES.has(t) && !activeTypes.has(t));
+  if (off.length > 0) {
+    // 짧게: 비활성만 기록 (보통 더 적음)
+    p.set('off', off.join(','));
+  }
+  if (selectedEvent) {
+    const key = `${selectedEvent.person}|${selectedEvent.year}|${selectedEvent.event.slice(0, 50)}`;
+    p.set('sel', key);
+  }
+  const modal = document.getElementById('chat_modal');
+  if (modal && modal.classList.contains('open') && chatCurrentPerson) {
+    const isTimeline = document.getElementById('chat_stream').classList.contains('timeline-stream');
+    p.set('view', isTimeline ? 'timeline' : 'interview');
+    p.set('person', chatCurrentPerson);
+  }
+  const qs = p.toString();
+  const url = window.location.pathname + (qs ? '?' + qs : '') + window.location.hash;
+  history.replaceState(null, '', url);
 }
 
 function applyUrlState() {
@@ -1521,12 +1531,15 @@ async function openInterviewChat(person) {
   chatMessages = CHAT_CACHE[key];
   buildChatTopics();
   renderChatMessages();
+  replaceUrlWithState();
 }
 
 function closeInterviewChat() {
   document.getElementById('chat_modal').classList.remove('open');
   document.getElementById('chat_modal').setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
+  chatCurrentPerson = null;
+  replaceUrlWithState();
 }
 
 function parseInterviewMarkdown(markdown) {
@@ -1585,6 +1598,18 @@ function parseInterviewMarkdown(markdown) {
     }
     currentSpeaker = '';
     currentText = [];
+  }
+}
+
+function applyOpenViewFromUrl() {
+  const p = new URLSearchParams(window.location.search);
+  const view = p.get('view');
+  const person = p.get('person');
+  if (!person || !VIZ_DATA.persons[person]) return;
+  if (view === 'timeline') {
+    openTimelineModal(person);
+  } else if (view === 'interview') {
+    openInterviewChat(person);
   }
 }
 
@@ -1730,6 +1755,7 @@ async function openTimelineModal(person) {
   timelineItems = TIMELINE_CACHE[key];
   buildTimelineTopics();
   renderTimelineItems();
+  replaceUrlWithState();
 }
 
 function parseTimelineMarkdown(markdown) {
@@ -1834,6 +1860,7 @@ applyUrlState();
 updateYearRangeUI();
 applyLang();
 applySelectionFromUrl();
+applyOpenViewFromUrl();
 </script>
 </body>
 </html>
