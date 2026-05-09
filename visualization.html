@@ -10,6 +10,7 @@
   --fg: #222;
   --muted: #777;
   --border: #e5e5e5;
+  --row-line: rgba(0,0,0,0.12);
   --row-h: 14px;
   --col-w: 7px;
   --name-w: 280px;
@@ -96,15 +97,16 @@ header { padding: 12px 18px; border-bottom: 1px solid var(--border); background:
 .year-header .tick.major { font-weight: 600; color: var(--fg); }
 
 .rows { position: relative; background-repeat: repeat; }
-.row { position: relative; height: var(--row-h); border-bottom: 1px solid rgba(0,0,0,0.03);
+.row { position: relative; height: var(--row-h); border-bottom: 1px solid var(--row-line);
        transition: background 0.08s; }
 .row:nth-child(even) { background: rgba(0,0,0,0.015); }
 .row.hl, .row.hl:nth-child(even) { background: #fff4c2; }
 .row.hl .name { background: #fff4c2; font-weight: 600; }
 .name { position: absolute; left: 0; top: 0; width: var(--name-w); padding: 0 8px;
+        height: var(--row-h);
         line-height: var(--row-h); font-size: 11px; color: var(--fg);
         white-space: nowrap; overflow: hidden;
-        border-right: 1px solid var(--border); background: #fff;
+        border-right: 1px solid var(--border); border-bottom: 1px solid var(--row-line); background: #fff;
         display: flex; align-items: center; gap: 4px; }
 .name .pname { flex: 1; overflow: hidden; text-overflow: ellipsis; cursor: pointer; }
 .name .pname:hover { color: #06c; text-decoration: underline; }
@@ -117,6 +119,7 @@ header { padding: 12px 18px; border-bottom: 1px solid var(--border); background:
 .event:hover { transform: scaleY(1.4); z-index: 4; }
 .event.inferred { opacity: 0.45; }
 .event.inferred:hover { opacity: 0.85; }
+.event.compared { outline: 2px dashed #111; outline-offset: 1px; z-index: 5; }
 .event.selected { outline: 2px solid #111; outline-offset: 1px; z-index: 6; }
 .event.selected.inferred { opacity: 1; }
 
@@ -124,11 +127,13 @@ header { padding: 12px 18px; border-bottom: 1px solid var(--border); background:
            border-radius: 6px; font-size: 12px; max-width: 360px; line-height: 1.5;
            pointer-events: none; opacity: 0; transition: opacity 0.1s; z-index: 100;
            box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
-.tooltip.show { opacity: 1; pointer-events: auto; }
+.tooltip.show { opacity: 1; pointer-events: none; }
 .tooltip .person { font-weight: 600; margin-bottom: 4px; }
 .tooltip .year { color: #aaa; font-size: 11px; font-weight: normal; }
 .tooltip .ev { margin: 4px 0; }
 .tooltip .meta { color: #aaa; font-size: 11px; }
+.tooltip .term { margin-top: 8px; padding-top: 7px; border-top: 1px solid rgba(255,255,255,0.2); }
+.tooltip .term strong { color: #fff; }
 .tooltip a { color: #6cf; text-decoration: none; display: block; margin-top: 6px;
              font-size: 11px; }
 .tooltip a:hover { text-decoration: underline; }
@@ -219,6 +224,8 @@ const REPO = "https://github.com/gisbi-kim/roboticists-oral-history";
 //   오렌지=활동(연구), 보라=비즈니스(창업), 청록(teal)=커뮤니티,
 //   노랑=명예, 인디고=네트워크, 딥 레드=실패, 짙은 갈색=외부 영향
 const TYPE_COLOR = {
+  '출생':         '#7F8C8D',
+  '연구 시작':    '#1F77B4',
   '개인사':       '#BDC3C7',
   '교육':         '#2980B9',
   '직업 이력':    '#229954',
@@ -232,6 +239,8 @@ const TYPE_COLOR = {
 };
 
 const TYPE_EN = {
+  '출생':         'Birth',
+  '연구 시작':    'Research Start',
   '개인사':       'Personal',
   '교육':         'Education',
   '직업 이력':    'Career',
@@ -306,6 +315,54 @@ const Y_MIN = VIZ_DATA.year_min;
 const Y_MAX = VIZ_DATA.year_max;
 const YEAR_SPAN = Y_MAX - Y_MIN + 1;
 
+const ANCHOR_BIRTH_TYPE = '출생';
+const ANCHOR_RESEARCH_START_TYPE = '연구 시작';
+const ALWAYS_ON_TYPES = new Set([ANCHOR_BIRTH_TYPE, ANCHOR_RESEARCH_START_TYPE]);
+const RESEARCH_START_PRIMARY = new Set(['ms_enroll', 'phd_enroll']);
+const RESEARCH_START_FALLBACK = new Set(['ms_graduate', 'phd_graduate', 'phd_thesis', 'proj_start']);
+
+function eventAnchorKey(e) {
+  return `${e.person}|${e.year}|${e.subtype}|${e.event}`;
+}
+
+function buildAlwaysVisibleAnchors() {
+  const anchors = new Map();
+  const researchByPerson = {};
+  const fallbackByPerson = {};
+
+  for (const e of VIZ_DATA.events) {
+    if (e.year == null) continue;
+    if (e.subtype === 'birth') anchors.set(eventAnchorKey(e), ANCHOR_BIRTH_TYPE);
+
+    if (e.phase !== 'grad') continue;
+    if (RESEARCH_START_PRIMARY.has(e.subtype)) {
+      if (!researchByPerson[e.person] || e.year < researchByPerson[e.person].year) {
+        researchByPerson[e.person] = e;
+      }
+    } else if (RESEARCH_START_FALLBACK.has(e.subtype)) {
+      if (!fallbackByPerson[e.person] || e.year < fallbackByPerson[e.person].year) {
+        fallbackByPerson[e.person] = e;
+      }
+    }
+  }
+
+  for (const p of Object.keys(VIZ_DATA.persons)) {
+    const anchor = researchByPerson[p] || fallbackByPerson[p];
+    if (anchor) anchors.set(eventAnchorKey(anchor), ANCHOR_RESEARCH_START_TYPE);
+  }
+  return anchors;
+}
+
+const ALWAYS_VISIBLE_ANCHORS = buildAlwaysVisibleAnchors();
+
+function isAlwaysVisibleAnchor(e) {
+  return ALWAYS_VISIBLE_ANCHORS.has(eventAnchorKey(e));
+}
+
+function getDisplayType(e) {
+  return ALWAYS_VISIBLE_ANCHORS.get(eventAnchorKey(e)) || e.type;
+}
+
 function computeColW() {
   // 사용 가능한 가로 너비를 연 수로 나눠서 cell 너비 결정
   const avail = window.innerWidth - NAME_W - 24;  // 24px 우측 여유
@@ -322,6 +379,8 @@ let yearMin = Y_MIN;
 let yearMax = Y_MAX;
 let selectedDiv = null;
 let selectedEvent = null;
+let compareDiv = null;
+let compareEvent = null;
 let urlUpdatePending = false;
 
 function applyLang() {
@@ -366,13 +425,20 @@ function buildLegend() {
   el.innerHTML = '';
   for (const [t, c] of Object.entries(TYPE_COLOR)) {
     const it = document.createElement('div');
-    it.className = 'item' + (activeTypes.has(t) ? '' : ' off');
+    const alwaysOn = ALWAYS_ON_TYPES.has(t);
+    it.className = 'item' + (activeTypes.has(t) || alwaysOn ? '' : ' off');
     const label = lang === 'en' ? TYPE_EN[t] : t;
     it.innerHTML = `<span class="swatch" style="background:${c}"></span><span>${label}</span>`;
     it.onclick = () => {
-      if (activeTypes.has(t)) activeTypes.delete(t);
-      else activeTypes.add(t);
-      it.classList.toggle('off');
+      if (alwaysOn) return;
+      const activeNonAnchor = Object.keys(TYPE_COLOR)
+        .filter(k => !ALWAYS_ON_TYPES.has(k) && activeTypes.has(k));
+      if (activeNonAnchor.length === 1 && activeNonAnchor[0] === t) {
+        activeTypes = new Set(Object.keys(TYPE_COLOR));
+      } else {
+        activeTypes = new Set([...ALWAYS_ON_TYPES, t]);
+      }
+      buildLegend();
       render();
       updateUrl();
     };
@@ -444,7 +510,8 @@ function render() {
   for (const e of VIZ_DATA.events) {
     if (e.year == null) continue;
     if (e.year < yearMin || e.year > yearMax) continue;
-    if (!activeTypes.has(e.type)) continue;
+    const displayType = getDisplayType(e);
+    if (!activeTypes.has(displayType) && !isAlwaysVisibleAnchor(e)) continue;
     if (currentPhase && e.phase !== currentPhase) continue;
     if (byPerson[e.person]) byPerson[e.person].push(e);
   }
@@ -486,13 +553,17 @@ function render() {
       const div = document.createElement('div');
       div.className = 'event' + (e.year_inferred ? ' inferred' : '');
       div.style.left = (NAME_W + (e.year - Y_MIN) * COL_W) + 'px';
-      div.style.background = TYPE_COLOR[e.type] || '#666';
+      div.style.background = TYPE_COLOR[getDisplayType(e)] || '#666';
       div._eventData = e;
       div.addEventListener('mouseenter', (ev) => showTip(ev, e));
       div.addEventListener('mousemove', positionTip);
       div.addEventListener('mouseleave', hideTip);
       div.addEventListener('click', (ev) => { ev.stopPropagation(); clickEvent(e, div); });
       // 선택 상태가 유지되도록 재렌더 후에도 같은 셀 다시 표시
+      if (compareEvent && e === compareEvent) {
+        div.classList.add('compared');
+        compareDiv = div;
+      }
       if (selectedEvent && e === selectedEvent) {
         div.classList.add('selected');
         selectedDiv = div;
@@ -517,7 +588,8 @@ function showTip(ev, e) {
   const yearLabel = e.year_inferred
     ? i.tip_year_inferred(escapeHtml(yearRaw), e.year)
     : `(${escapeHtml(yearRaw)})`;
-  const typeLabel = lang === 'en' ? (TYPE_EN[e.type] || e.type) : e.type;
+  const displayType = getDisplayType(e);
+  const typeLabel = lang === 'en' ? (TYPE_EN[displayType] || displayType) : displayType;
   const phaseLabel = PHASE_LABELS[lang][e.phase] || e.phase;
   t.innerHTML = `
     <div class="person">${escapeHtml(fullName)} <span class="year">${yearLabel}</span></div>
@@ -557,24 +629,73 @@ function clickEvent(e, div) {
     clearSelection();
     return;
   }
+  if (selectedEvent && selectedEvent.person === e.person) {
+    selectEvent(div, e, { compareWith: selectedEvent, compareDiv: selectedDiv });
+    return;
+  }
   selectEvent(div, e);
 }
 
-function selectEvent(div, e) {
+function selectEvent(div, e, opts = {}) {
   if (selectedDiv && selectedDiv !== div) selectedDiv.classList.remove('selected');
+  clearComparison();
   selectedDiv = div;
   selectedEvent = e;
   div.classList.add('selected');
+  if (opts.compareWith && opts.compareDiv && opts.compareWith.person === e.person) {
+    compareEvent = opts.compareWith;
+    compareDiv = opts.compareDiv;
+    compareDiv.classList.add('compared');
+  }
   showTipAtCell(div, e);
   updateUrl();
 }
 
+function clearComparison() {
+  if (compareDiv) compareDiv.classList.remove('compared');
+  compareDiv = null;
+  compareEvent = null;
+}
+
 function clearSelection() {
   if (selectedDiv) selectedDiv.classList.remove('selected');
+  clearComparison();
   selectedDiv = null;
   selectedEvent = null;
   document.getElementById('tooltip').classList.remove('show');
   updateUrl();
+}
+
+function eventDisplayText(e) {
+  return (lang === 'en' && e.event_en) ? e.event_en : e.event;
+}
+
+function comparisonHtml(a, b) {
+  if (!a || !b || a.person !== b.person || a === b) return '';
+  const y1 = a.year;
+  const y2 = b.year;
+  const delta = Math.abs(y2 - y1);
+  const arrow = y1 <= y2 ? '&rarr;' : '&larr;';
+  const first = escapeHtml(eventDisplayText(a));
+  const second = escapeHtml(eventDisplayText(b));
+  if (lang === 'en') {
+    const label = delta === 0 ? 'same year' : `${delta} year${delta === 1 ? '' : 's'}`;
+    return `
+      <div class="term">
+        <div><strong>Time term:</strong> ${y1} ${arrow} ${y2} = ${label}</div>
+        <div class="meta">from: ${first}</div>
+        <div class="meta">to: ${second}</div>
+      </div>
+    `;
+  }
+  const label = delta === 0 ? '같은 해' : `${delta}년`;
+  return `
+    <div class="term">
+      <div><strong>시간 간격:</strong> ${y1} ${arrow} ${y2} = ${label}</div>
+      <div class="meta">시작: ${first}</div>
+      <div class="meta">끝: ${second}</div>
+    </div>
+  `;
 }
 
 function showTipAtCell(div, e) {
@@ -589,7 +710,8 @@ function showTipAtCell(div, e) {
   const yearLabel = e.year_inferred
     ? i.tip_year_inferred(escapeHtml(yearRaw), e.year)
     : `(${escapeHtml(yearRaw)})`;
-  const typeLabel = lang === 'en' ? (TYPE_EN[e.type] || e.type) : e.type;
+  const displayType = getDisplayType(e);
+  const typeLabel = lang === 'en' ? (TYPE_EN[displayType] || displayType) : displayType;
   const phaseLabel = PHASE_LABELS[lang][e.phase] || e.phase;
   const hint = lang === 'en'
     ? '<div class="meta" style="margin-top:6px;color:#7af">← →: navigate · Esc: deselect</div>'
@@ -598,6 +720,7 @@ function showTipAtCell(div, e) {
     <div class="person">${escapeHtml(fullName)} <span class="year">${yearLabel}</span></div>
     <div class="ev">${escapeHtml(eventText)}</div>
     <div class="meta">${typeLabel} / ${e.subtype} / ${phaseLabel}</div>
+    ${comparisonHtml(compareEvent, e)}
     ${hint}
   `;
   t.classList.add('show');
@@ -698,9 +821,9 @@ function updateUrl() {
     if (yearMin !== Y_MIN) p.set('y1', yearMin);
     if (yearMax !== Y_MAX) p.set('y2', yearMax);
     const allTypes = Object.keys(TYPE_COLOR);
-    if (activeTypes.size !== allTypes.length) {
+    const off = allTypes.filter(t => !ALWAYS_ON_TYPES.has(t) && !activeTypes.has(t));
+    if (off.length > 0) {
       // 짧게: 비활성만 기록 (보통 더 적음)
-      const off = allTypes.filter(t => !activeTypes.has(t));
       p.set('off', off.join(','));
     }
     if (selectedEvent) {
@@ -723,7 +846,7 @@ function applyUrlState() {
   if (p.get('y2')) yearMax = parseInt(p.get('y2'), 10) || Y_MAX;
   if (p.get('off')) {
     const offSet = new Set(p.get('off').split(','));
-    activeTypes = new Set(Object.keys(TYPE_COLOR).filter(t => !offSet.has(t)));
+    activeTypes = new Set(Object.keys(TYPE_COLOR).filter(t => ALWAYS_ON_TYPES.has(t) || !offSet.has(t)));
   }
   // UI 동기화
   document.getElementById('sort').value = currentSort;
