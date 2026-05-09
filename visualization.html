@@ -216,11 +216,25 @@ footer a { color: var(--muted); }
              font-size: 11px; text-align: right; font-variant-numeric: tabular-nums; }
 .chat-empty { margin-top: 42px; color: #536158; text-align: center; }
 .chat-mark { border-radius: 3px; background: rgba(31,122,101,0.18); color: inherit; padding: 0 2px; }
+.timeline-stream { min-height: 0; overflow: auto; padding: 20px 18px 32px;
+                   background: #f4f2eb; }
+.timeline-card { display: grid; grid-template-columns: 150px minmax(0, 1fr);
+                 gap: 16px; margin: 0 0 10px; padding: 13px 14px;
+                 border: 1px solid rgba(0,0,0,0.10); border-radius: 7px;
+                 background: rgba(255,255,255,0.78);
+                 box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+.timeline-year { color: #1f7a65; font-weight: 800; line-height: 1.35; }
+.timeline-event { line-height: 1.55; }
+.timeline-card mark { border-radius: 3px; background: rgba(255,227,110,0.55); color: inherit; padding: 0 2px; }
+.timeline-source-note { margin: 0 0 14px; padding: 10px 12px; border-radius: 7px;
+                        border: 1px solid rgba(31,122,101,0.16);
+                        background: rgba(31,122,101,0.08); color: #46534b; line-height: 1.45; }
 @media (max-width: 760px) {
   .chat-shell { inset: 0; grid-template-columns: 190px minmax(0, 1fr); border-radius: 0; }
   .chat-side { padding: 12px 8px; }
   .chat-side h2 { font-size: 18px; }
   .chat-bubble { max-width: 90%; }
+  .timeline-card { grid-template-columns: 1fr; gap: 5px; }
 }
 @media (max-width: 560px) {
   .chat-shell { grid-template-columns: 1fr; }
@@ -404,6 +418,9 @@ const I18N = {
     chat_loading: '인터뷰를 불러오는 중...',
     chat_empty: '검색 결과가 없습니다.',
     chat_count: (n) => `${n} messages`,
+    timeline_loading: '타임라인을 불러오는 중...',
+    timeline_count: (n) => `${n} events`,
+    timeline_title: '커리어 타임라인',
   },
   en: {
     title: 'Roboticists Oral History — Career Timeline',
@@ -432,6 +449,9 @@ const I18N = {
     chat_loading: 'Loading transcript...',
     chat_empty: 'No matching messages.',
     chat_count: (n) => `${n} messages`,
+    timeline_loading: 'Loading timeline...',
+    timeline_count: (n) => `${n} events`,
+    timeline_title: 'Career Timeline',
   },
 };
 
@@ -669,11 +689,15 @@ function render() {
     const i18 = I18N[lang];
     name.innerHTML = `
       <span class="pname" title="${escapeHtml(fullName)} · ${meta.event_count} events">${escapeHtml(fullName)}</span>
-      <a class="lnk" href="${REPO}/blob/main/${tlTgt}/${p}.md" target="_blank">${i18.link_timeline}</a>
+      <a class="lnk timeline-link" href="${tlTgt}/${p}.md" data-person="${p}">${i18.link_timeline}</a>
       <a class="lnk interview-link" href="${intvTgt}/${p}.md" data-person="${p}">${i18.link_interview}</a>
     `;
     name.querySelector('.pname').onclick = () => {
       openInterviewChat(p);
+    };
+    name.querySelector('.timeline-link').onclick = (ev) => {
+      ev.preventDefault();
+      openTimelineModal(p);
     };
     name.querySelector('.interview-link').onclick = (ev) => {
       ev.preventDefault();
@@ -1456,7 +1480,9 @@ function buildEDA() {
 
 // 키보드: ←/→ 같은 인물의 이전/다음 셀, Esc 해제
 const CHAT_CACHE = {};
+const TIMELINE_CACHE = {};
 let chatMessages = [];
+let timelineItems = [];
 let chatCurrentPerson = null;
 let chatQuery = '';
 
@@ -1482,6 +1508,7 @@ async function openInterviewChat(person) {
   document.getElementById('chat_search').placeholder = t.chat_search;
   document.getElementById('chat_search').value = '';
   document.getElementById('chat_message_count').textContent = t.chat_loading;
+  document.getElementById('chat_stream').className = 'chat-stream';
   document.getElementById('chat_stream').innerHTML = `<p class="chat-empty">${escapeHtml(t.chat_loading)}</p>`;
   document.getElementById('chat_topic_list').innerHTML = '';
 
@@ -1649,8 +1676,110 @@ document.getElementById('chat_modal').addEventListener('click', (ev) => {
 });
 document.getElementById('chat_search').addEventListener('input', (ev) => {
   chatQuery = ev.target.value.trim();
-  renderChatMessages();
+  if (document.getElementById('chat_stream').classList.contains('timeline-stream')) {
+    renderTimelineItems();
+  } else {
+    renderChatMessages();
+  }
 });
+
+async function openTimelineModal(person) {
+  chatCurrentPerson = person;
+  chatQuery = '';
+  const meta = VIZ_DATA.persons[person] || {};
+  const fullName = meta.full_name || person;
+  const dir = lang === 'en' ? 'timelines_eng' : 'timelines_kor';
+  const path = `${dir}/${person}.md`;
+  const t = I18N[lang];
+
+  document.getElementById('chat_modal').classList.add('open');
+  document.getElementById('chat_modal').setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  document.getElementById('chat_side_name').textContent = fullName;
+  document.getElementById('chat_person_name').textContent = fullName;
+  document.getElementById('chat_avatar').textContent = initials(fullName);
+  document.getElementById('chat_source_label').textContent = t.chat_source;
+  document.getElementById('chat_ethw_link').textContent = t.chat_ethw;
+  document.getElementById('chat_md_link').textContent = t.chat_md;
+  document.getElementById('chat_md_link').href = `${REPO}/blob/main/${path}`;
+  document.getElementById('chat_search').placeholder = t.chat_search;
+  document.getElementById('chat_search').value = '';
+  document.getElementById('chat_message_count').textContent = t.timeline_loading;
+  document.getElementById('chat_stream').className = 'timeline-stream';
+  document.getElementById('chat_stream').innerHTML = `<p class="chat-empty">${escapeHtml(t.timeline_loading)}</p>`;
+  document.getElementById('chat_topic_list').innerHTML = '';
+
+  const key = `${lang}:${person}`;
+  if (!TIMELINE_CACHE[key]) {
+    const res = await fetch(path);
+    if (!res.ok) throw new Error(`Could not load timeline: ${path}`);
+    TIMELINE_CACHE[key] = parseTimelineMarkdown(await res.text());
+  }
+  timelineItems = TIMELINE_CACHE[key];
+  buildTimelineTopics();
+  renderTimelineItems();
+}
+
+function parseTimelineMarkdown(markdown) {
+  const source = (markdown.match(/^>\s*(.+)$/m) || [null, ''])[1];
+  const code = (markdown.match(/```([\s\S]*?)```/) || [null, ''])[1] || '';
+  const items = [];
+  for (const rawLine of code.split('\n')) {
+    const line = rawLine.trim();
+    if (!line) continue;
+    const parts = line.split(/\s{2,}/);
+    const period = parts.shift() || '';
+    const event = parts.join(' ').replace(/^[-–—>·\s]+/, '').trim();
+    if (period && event) items.push({ period, event, id: chatSlug(`${period}-${items.length}`) });
+  }
+  return { source, items };
+}
+
+function buildTimelineTopics() {
+  const list = document.getElementById('chat_topic_list');
+  list.innerHTML = '';
+  for (const item of timelineItems.items) {
+    const a = document.createElement('a');
+    a.href = `#${item.id}`;
+    a.textContent = item.period;
+    a.onclick = (ev) => {
+      ev.preventDefault();
+      document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+    list.appendChild(a);
+  }
+}
+
+function renderTimelineItems() {
+  const t = I18N[lang];
+  const stream = document.getElementById('chat_stream');
+  const query = chatQuery.toLowerCase();
+  const items = query
+    ? timelineItems.items.filter(item => item.period.toLowerCase().includes(query) || item.event.toLowerCase().includes(query))
+    : timelineItems.items;
+  stream.className = 'timeline-stream';
+  stream.innerHTML = '';
+  if (timelineItems.source) {
+    const source = document.createElement('p');
+    source.className = 'timeline-source-note';
+    source.textContent = timelineItems.source;
+    stream.appendChild(source);
+  }
+  for (const item of items) {
+    const card = document.createElement('article');
+    card.className = 'timeline-card';
+    card.id = item.id;
+    card.innerHTML = `
+      <div class="timeline-year">${highlightChat(escapeHtml(item.period), chatQuery)}</div>
+      <div class="timeline-event">${highlightChat(escapeHtml(item.event), chatQuery)}</div>
+    `;
+    stream.appendChild(card);
+  }
+  if (items.length === 0) {
+    stream.innerHTML = `<p class="chat-empty">${escapeHtml(t.chat_empty)}</p>`;
+  }
+  document.getElementById('chat_message_count').textContent = t.timeline_count(items.length);
+}
 
 document.addEventListener('keydown', (ev) => {
   if (document.getElementById('chat_modal').classList.contains('open')) {
